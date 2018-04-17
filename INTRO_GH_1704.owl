@@ -12,6 +12,8 @@
     <owl:Ontology rdf:about="http://www.semanticweb.org/oberreb4/ontologies/2018/2/untitled-ontology-22">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">INTRO</rdfs:label>
         <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">work in progress April 17th 2018</owl:versionInfo>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bernhard Oberreither</dc:creator>
+        <dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">INTRO - the intertextual relationships ontology</dc:title>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Author: Bernhard Oberreither</rdfs:comment>
     </owl:Ontology>
     
