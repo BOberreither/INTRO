@@ -8,13 +8,13 @@ The term ‘intertextual relations is to be understood in the broadest sense. Th
 
 ## What is it good for?
 The ontology is intended to provide the means for 
-> creating an RDF-layer that could accompany every ‘traditional’ paper in literary studies, modelling the findings of this paper in a machine-readable way.
-> theoretically: formulating findings in the field of literary studies directly in RDF.
+- creating an RDF-layer that could accompany every ‘traditional’ paper in literary studies, modelling the findings of this paper in a machine-readable way.
+- theoretically: formulating findings in the field of literary studies directly in RDF.
 
 ## What's next?
 The ontology is a work in progress. Pending work includes:
-> further alignment with relevant ontologies (CiTO for the classification of scholarly citation acts, FRBRoo for bibliographical data; CIDOC, DoCO etc.); 
-> testing, refining and expanding the ontology in the course of one or more case studies
-> alignment with TEI-Standards
-> reinforcing self-referentiality: By now, the ontology manages to depict scholarly citation acts if they are found in a statement on a pre-existing paper, meaning: the scholarly statement itself has to be text-based. By introducing a new class (‘scholarly reference’ in addition to “reference”) and extending the use of some properties (e.g. “has referring entity”) to statements made in RDF, the ontology will provide users with a valuable option.
-> differentiation between the core concepts of the ontology and the extensions that are non-essential and in fact depend on the respective application (i.e. between the ontology any data set can use among other ontologies and an ontology that is ‘saturated’ towards self-sufficiency). In this process, some of the imports will probably be removed.
+- further alignment with relevant ontologies (CiTO for the classification of scholarly citation acts, FRBRoo for bibliographical data; CIDOC, DoCO etc.); 
+- testing, refining and expanding the ontology in the course of one or more case studies
+- alignment with TEI-Standards
+- reinforcing self-referentiality: By now, the ontology manages to depict scholarly citation acts if they are found in a statement on a pre-existing paper, meaning: the scholarly statement itself has to be text-based. By introducing a new class (‘scholarly reference’ in addition to “reference”) and extending the use of some properties (e.g. “has referring entity”) to statements made in RDF, the ontology will provide users with a valuable option.
+- differentiation between the core concepts of the ontology and the extensions that are non-essential and in fact depend on the respective application (i.e. between the ontology any data set can use among other ontologies and an ontology that is ‘saturated’ towards self-sufficiency). In this process, some of the imports will probably be removed.
