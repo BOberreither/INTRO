@@ -21,4 +21,4 @@ The ontology is a work in progress. Pending work includes:
 - reinforcing self-referentiality: By now, the ontology manages to depict scholarly citation acts if they are found in a statement on a pre-existing paper, meaning: the scholarly statement itself has to be text-based. By introducing a new class (‘scholarly reference’ in addition to “reference”) and extending the use of some properties (e.g. “has referring entity”) to statements made in RDF, the ontology will provide users with a valuable option.
 - differentiation between the core concepts of the ontology and the extensions that are non-essential and in fact depend on the respective application (i.e. between the ontology any data set can use among other ontologies and an ontology that is ‘saturated’ towards self-sufficiency). In this process, some of the imports will probably be removed.
 
-Feedback is wellcome! - Bernhard.Oberreither@univie.ac.at
+Feedback is welcome! - Bernhard.Oberreither@univie.ac.at
