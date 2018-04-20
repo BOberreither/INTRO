@@ -13,15 +13,6 @@ The ontology is intended to provide the means for
 - creating an RDF-layer that could accompany every ‘traditional’ paper in literary studies, modelling the findings of this paper in a machine-readable way.
 - theoretically: formulating findings in the field of literary studies directly in RDF.
 
-## Two Examples
-Here are two examples of how classes and properties of INTRO work together to model common acts of scholarly practice.
-
-### Modelling a Reference
-
- 
-
-### Modelling an Interpretive Act
-
 ## What's next?
 The ontology is a work in progress. Pending work includes:
 - further alignment with relevant ontologies (CiTO for the classification of scholarly citation acts, FRBRoo for bibliographical data; CIDOC, DoCO etc.); 
