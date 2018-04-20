@@ -18,6 +18,8 @@ Here are two examples of how classes and properties of INTRO work together to mo
 
 ### Modelling a Reference
 
+ 
+
 ### Modelling an Interpretive Act
 
 ## What's next?
@@ -29,3 +31,5 @@ The ontology is a work in progress. Pending work includes:
 - differentiation between the core concepts of the ontology and the extensions that are non-essential and in fact depend on the respective application (i.e. between the ontology any data set can use among other ontologies and an ontology that is ‘saturated’ towards self-sufficiency). In this process, some of the imports will probably be removed.
 
 Feedback is welcome! - Bernhard.Oberreither@univie.ac.at
+
+
