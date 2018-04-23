@@ -17,10 +17,18 @@ The ontology is intended to provide the means for
 Here are some examples of how INTRO's classes and properties work together to model common scholarly activities.
 
 ### Modelling an interpretive Act with INTRO
-
 This diagram illustrates how INTRO depicts any basic interpretive act: A scholar identifies a certain feature in a text, say: a leitmotif (a semantic feature; features provided by INTRO include formal, rhetoric and semantic features). This act, the 'interpretament', is through different stages linked to the concrete text-passage as well as to the abstract notion of the literary 'work' in question. The diagram also shows how the interpretament is itself a feature actuailzed in a text (in this case: a research paper).
 
 ![alt text](https://github.com/BOberreither/INTRO/blob/master/INTRO_%20Modelling%20the%20Interpretament.jpg)
+
+### Modelling an intertextual reference with INTRO
+This diagram shows how an intertextual reference can be modelled with INTRO.
+- In the bottom section you see the two texts linked by the reference, one referring to the other (here: concrete passages, could be wider: a reference to/from a work, a reference to a larger entity like a 'discourse' etc.).
+- In the mid section you see 'the reference', which of course only exists as an abstract idea, an assumption (made by, for instance, a scholar), as well as (optional) the feature that provides the grounds for the reference (could be a formal feature linking the two texts in question, could be a certain motif etc.).
+- In the upper section you see how the interpretive act of identifying a reference is modelled and linked to the text (the research paper) the interpretive act can be found in as well as to the specification of the type of the intertextual relationship identified. These types themselves, although abstract notions, have a (and are here linked to their) textual basis - the numerous definitions given in literary theory.
+
+![alt text](https://github.com/BOberreither/INTRO/blob/master/INTRO_%20Modelling%20a%20Reference.jpg)
+
 
 ## What's next?
 The ontology is a work in progress. Pending work includes:
