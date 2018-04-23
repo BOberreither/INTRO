@@ -14,7 +14,7 @@ The ontology is intended to provide the means for
 - theoretically: formulating findings in the field of literary studies directly in RDF.
 
 ## Examples
-Here are some examples of how INTRO's classes and properties work together to model common scholarly activities.
+Here are some examples of how INTRO's classes and properties work together to model common scholarly activities, most of which are - in one way or the other - essentially concerned with intertextual relationships. (Two examples are given, more examples follow.)
 
 ### Modelling an interpretive Act with INTRO
 This diagram illustrates how INTRO depicts any basic interpretive act: A scholar identifies a certain feature in a text, say: a leitmotif (a semantic feature; features provided by INTRO include formal, rhetoric and semantic features). This act, the 'interpretament', is through different stages linked to the concrete text-passage as well as to the abstract notion of the literary 'work' in question. The diagram also shows how the interpretament is itself a feature actuailzed in a text (in this case: a research paper).
