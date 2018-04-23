@@ -13,6 +13,15 @@ The ontology is intended to provide the means for
 - creating an RDF-layer that could accompany every ‘traditional’ paper in literary studies, modelling the findings of this paper in a machine-readable way.
 - theoretically: formulating findings in the field of literary studies directly in RDF.
 
+## Examples
+Here are some examples of how INTRO's classes and properties work together to model common scholarly activities.
+
+### Modelling an interpretive Act with INTRO
+
+This diagram illustrates how INTRO depicts any basic interpretive act: A scholar identifies a certain feature in a text, say: a leitmotif (a semantic feature; features provided by INTRO include formal, rhetoric and semantic features). This act, the 'interpretament', is through different stages linked to the concrete text-passage as well as to the abstract notion of the literary 'work' in question. The diagram also shows how the interpretament is itself a feature actuailzed in a text (in this case: a research paper).
+
+![alt text](https://github.com/BOberreither/INTRO/blob/master/INTRO_%20Modelling%20the%20Interpretament.jpg)
+
 ## What's next?
 The ontology is a work in progress. Pending work includes:
 - further alignment with relevant ontologies (CiTO for the classification of scholarly citation acts, FRBRoo for bibliographical data; CIDOC, DoCO etc.); 
