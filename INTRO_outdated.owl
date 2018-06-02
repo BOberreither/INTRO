@@ -5208,9 +5208,13 @@ A Reference is possibly identified in an interpretative.</rdfs:comment>
         <rdf:type rdf:resource="http://iflastandards.info/ns/fr/frbr/frbroo/F3_Manifestation_Product_Type"/>
         <frbroo:R4i_comprises_carriers_of rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_outdated.owl#Caretta_Book"/>
         <hasProductTypeFragment rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_outdated.owl#CarettaCaretta_Passage1"/>
+        <isAppurtenantElement rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_outdated.owl#TransT_DiscourseOnFashion"/>
         <isAppurtenantElement rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_outdated.owl#TransT_OeuvreOfPaulusHochgatterer"/>
         <isDiscussedIn rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_outdated.owl#SomeDissertation_Interpretament2"/>
         <showsActualization rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_outdated.owl#CarettaCaretta_JudgementFashion"/>
+        <showsActualization rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_outdated.owl#CarettaCaretta_ThemeFashion"/>
+        <showsCharacteristics rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_outdated.owl#CarettaCaretta_Characteristic1"/>
+        <showsCharacteristics rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_outdated.owl#CarettaCaretta_Characteristic2"/>
         <hasBibliographicalData>Hochgatterer, Paulus: Caretta Caretta. A Novel. Transl. and with an afterword by Todd C. Hanlin. Riverside, CA: Ariadne Press 2010 (Studies in Austrian Literature, Culture and Thought. Translation Series).</hasBibliographicalData>
         <rdfs:label>&quot;CC&quot; - Buchausgabe</rdfs:label>
     </owl:NamedIndividual>
@@ -5250,6 +5254,7 @@ A Reference is possibly identified in an interpretative.</rdfs:comment>
     <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_outdated.owl#CarettaCaretta_Fragment1">
         <rdf:type rdf:resource="http://iflastandards.info/ns/fr/frbr/frbroo/F23_Expression_Fragment"/>
         <frbroo:R15i_is_fragment_of rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_outdated.owl#Caretta_Book"/>
+        <fragmentCarriersProvidedBy rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_outdated.owl#CarettaCaretta_Passage1"/>
         <rdfs:label>&quot;CC&quot; - Passage</rdfs:label>
     </owl:NamedIndividual>
     
@@ -5260,7 +5265,9 @@ A Reference is possibly identified in an interpretative.</rdfs:comment>
     <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_outdated.owl#CarettaCaretta_JudgementFashion">
         <rdf:type rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_outdated.owl#ActualizationOfFeature"/>
         <actualizationFoundOn rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_outdated.owl#CarettaCaretta_1stEd"/>
+        <actualizesFeature rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_outdated.owl#SemEnt_JudgementFashion"/>
         <actualizesSemanticFeature rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_outdated.owl#SemEnt_JudgementFashion"/>
+        <constitutes rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_outdated.owl#CarettaCaretta_Characteristic2"/>
         <rdfs:label>&quot;CC&quot; - Urteil Modefetisch</rdfs:label>
     </owl:NamedIndividual>
     
@@ -5300,6 +5307,7 @@ A Reference is possibly identified in an interpretative.</rdfs:comment>
         <rdf:type rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_outdated.owl#ActualizationOfFeature"/>
         <actualizationFoundOn rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_outdated.owl#CarettaCaretta_1stEd"/>
         <actualizesSemanticFeature rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_outdated.owl#SemEnt_ThemeFashion"/>
+        <constitutes rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_outdated.owl#CarettaCaretta_Characteristic1"/>
         <rdfs:label>&quot;CC&quot; - Modefetisch</rdfs:label>
     </owl:NamedIndividual>
     
@@ -5309,7 +5317,9 @@ A Reference is possibly identified in an interpretative.</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_outdated.owl#Caretta_Book">
         <rdf:type rdf:resource="http://iflastandards.info/ns/fr/frbr/frbroo/F22_Self-Contained_Expression"/>
+        <frbroo:R15_has_fragment rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_outdated.owl#CarettaCaretta_Fragment1"/>
         <frbroo:R3i_realises rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_outdated.owl#Caretta_Work"/>
+        <frbroo:R4_carriers_provided_by rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_outdated.owl#CarettaCaretta_1stEd"/>
         <hasBibliographicalData>Hochgatterer, Paulus: Caretta Caretta</hasBibliographicalData>
         <rdfs:label>&quot;CC&quot; - Buch</rdfs:label>
     </owl:NamedIndividual>
@@ -5356,6 +5366,7 @@ A Reference is possibly identified in an interpretative.</rdfs:comment>
     <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_outdated.owl#ItsAMagicalWorld_Book">
         <rdf:type rdf:resource="http://iflastandards.info/ns/fr/frbr/frbroo/F2_Expression"/>
         <frbroo:R3i_realises rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_outdated.owl#ItsAMagicalWorld_Work"/>
+        <frbroo:R4_carriers_provided_by rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_outdated.owl#ItsAMagicalWorld_1stEd"/>
         <hasBibliographicalData>Watterson, Bill: It&apos;s a Magical World</hasBibliographicalData>
         <rdfs:label>&quot;MW&quot; - Buch</rdfs:label>
     </owl:NamedIndividual>
@@ -5391,6 +5402,7 @@ A Reference is possibly identified in an interpretative.</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_outdated.owl#ItsAMagicalWorld_Work">
         <rdf:type rdf:resource="http://iflastandards.info/ns/fr/frbr/frbroo/F1_Work"/>
+        <frbroo:R3_is_realised_in rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_outdated.owl#ItsAMagicalWorld_Book"/>
         <isAppurtenantElement rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_outdated.owl#TransT_OeuvreOfBillWatterson"/>
         <hasBibliographicalData>(Watterson, Bill): (It&apos;s a magical World)</hasBibliographicalData>
         <rdfs:label>&quot;MW&quot; - [platon] &apos;Werk&apos;</rdfs:label>
@@ -5628,6 +5640,7 @@ Im ersten Intertext – Down down down – ist von der unaufhaltsamen Höllenfah
 
     <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_outdated.owl#SomeDissertation_Work">
         <rdf:type rdf:resource="http://iflastandards.info/ns/fr/frbr/frbroo/F1_Work"/>
+        <frbroo:R3_is_realised_in rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_outdated.owl#SomeDissertation_Book"/>
         <rdfs:label>Diss. - [platon]. Werk</rdfs:label>
     </owl:NamedIndividual>
     
