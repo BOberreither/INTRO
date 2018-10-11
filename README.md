@@ -6,7 +6,7 @@ INTRO - an <b>In</b>tertextual <b>R</b>elationships <b>O</b>ntology for literary
 INTRO is an ontology for the field of literary studies for representing intertextual relations.
 The term ‘intertextual relations is to be understood in the broadest sense. The domain of the ontology includes everything from the identification and characterization of concrete acts of literary (or scholarly) citations or allusions (etc.) to the identification of features that allow to include a text into a larger context (e.g. an epoch, a discourse, an oeuvre ...). INTRO also provides classes and properties necessary to link these findings to their theoretical background or to findings in other research literature, thus covering a large number of scholarly acts.
 
-Here is a <a href="http://www.visualdataweb.de/webvowl/#iri=https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_current.owl">link to a visualization</a> created with WebVOWL.
+Here is a <a href="http://www.visualdataweb.de/webvowl/#iri=https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_current.owl">link to a visualization</a> created with WebVOWL.
 
 ## What is it good for?
 The ontology is intended to provide the means for 
