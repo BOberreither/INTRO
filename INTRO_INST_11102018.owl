@@ -1,0 +1,1257 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_INST_11102018.owl#"
+     xml:base="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_INST_11102018.owl"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:int="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl">
+
+
+    <!--
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+
+
+    <!-- http://purl.org/spar/cito/agreesWith -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/spar/cito/agreesWith">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#INT_PunnedCiTOProperties"/>
+        <dc:description xml:lang="en">Example: We share Galileo&apos;s opinion: the Earth moves [X].</dc:description>
+        <rdfs:comment xml:lang="en">The citing entity agrees with statements, ideas or conclusions presented in the cited entity.</rdfs:comment>
+        <rdfs:label xml:lang="en">agrees with</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- http://purl.org/spar/cito/citesAsAuthority -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/spar/cito/citesAsAuthority">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#INT_PunnedCiTOProperties"/>
+        <dc:description xml:lang="en">Example: Newton asserted that we are like dwarfs standing on the shoulders of giants [X].</dc:description>
+        <rdfs:comment xml:lang="en">The citing entity cites the cited entity as one that provides an authoritative description or definition of the subject under discussion.</rdfs:comment>
+        <rdfs:label xml:lang="en">cites as authority</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- http://purl.org/spar/cito/citesAsDataSource -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/spar/cito/citesAsDataSource">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#INT_PunnedCiTOProperties"/>
+        <dc:description xml:lang="en">Example: Italy has more than ten thousand kilometers of shoreline: see [X].</dc:description>
+        <rdfs:comment xml:lang="en">The citing entity cites the cited entity as source of data.</rdfs:comment>
+        <rdfs:label xml:lang="en">cites as data source</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- http://purl.org/spar/cito/citesAsEvidence -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/spar/cito/citesAsEvidence">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#INT_PunnedCiTOProperties"/>
+        <dc:description xml:lang="en">Example: We found an unquestionable demonstration of our hypothesis in [X].</dc:description>
+        <rdfs:comment xml:lang="en">The citing entity cites the cited entity as source of factual evidence for statements it contains.</rdfs:comment>
+        <rdfs:label xml:lang="en">cites as evidence</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- http://purl.org/spar/cito/citesAsMetadataDocument -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/spar/cito/citesAsMetadataDocument">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#INT_PunnedCiTOProperties"/>
+        <dc:description xml:lang="en">Example: Basic bibliographic, entity and project metadata relating to this article, recorded in a structured machine-readable form, is available as an additional file [X] accompanying this paper.</dc:description>
+        <rdfs:comment xml:lang="en">The citing entity cites the cited entity as being the container of metadata describing the citing entity.</rdfs:comment>
+        <rdfs:label xml:lang="en">cites as metadata document</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- http://purl.org/spar/cito/citesAsPotentialSolution -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/spar/cito/citesAsPotentialSolution">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#INT_PunnedCiTOProperties"/>
+        <dc:description xml:lang="en">Example: This risk could be avoided using the approach shown in [X].</dc:description>
+        <rdfs:comment xml:lang="en">The citing entity cites the cited entity as providing or containing a possible solution to the issues being discussed.</rdfs:comment>
+        <rdfs:label xml:lang="en">cites as potential solution</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- http://purl.org/spar/cito/citesAsRecommendedReading -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/spar/cito/citesAsRecommendedReading">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#INT_PunnedCiTOProperties"/>
+        <dc:description xml:lang="en">Example: To our knowledge, [X] is the best source of exercises about UML, making it a valuable proposal for beginners.</dc:description>
+        <rdfs:comment xml:lang="en">The citing entity cites the cited entity as an item of recommended reading.  This property can be used, for example, to describe references in a lecture reading list, where the cited references are relevant to the general topic of the lecture, but might not be individually cited within the text of the lecture.  Similarly, it could be used to describe items in a &apos;Suggested further reading&apos; list at the end of a book chapter.</rdfs:comment>
+        <rdfs:label xml:lang="en">cites as recommended reading</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- http://purl.org/spar/cito/citesAsRelated -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/spar/cito/citesAsRelated">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#INT_PunnedCiTOProperties"/>
+        <dc:description xml:lang="en">Example: An analysis similar to what we proposed here is presented in [X].</dc:description>
+        <rdfs:comment xml:lang="en">The citing entity cites the cited entity as one that is related.</rdfs:comment>
+        <rdfs:label xml:lang="en">cites as related</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- http://purl.org/spar/cito/citesAsSourceDocument -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/spar/cito/citesAsSourceDocument">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#INT_PunnedCiTOProperties"/>
+        <dc:description xml:lang="en">Example: Several sections of this work are based on our literature review of the topic published as journal article [X].</dc:description>
+        <rdfs:comment xml:lang="en">The citing entity cites the cited entity as being the entity from which the citing entity is derived, or about which the citing entity contains metadata.</rdfs:comment>
+        <rdfs:label xml:lang="en">cites as source document</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- http://purl.org/spar/cito/citesForInformation -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/spar/cito/citesForInformation">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#INT_PunnedCiTOProperties"/>
+        <dc:description xml:lang="en">Example: The grammar of Pascal was introduced in [X].</dc:description>
+        <rdfs:comment xml:lang="en">The citing entity cites the cited entity as a source of information on the subject under discussion.</rdfs:comment>
+        <rdfs:label xml:lang="en">cites for information</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- http://purl.org/spar/cito/compiles -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/spar/cito/compiles">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#INT_PunnedCiTOProperties"/>
+        <dc:description xml:lang="en">Example: This book gathers interviews with academic researchers of several disciplines [X].</dc:description>
+        <dc:description xml:lang="en">Note: This property has been imported from the CiTO4Data ontology, usage of which has been deprecated.</dc:description>
+        <rdfs:comment xml:lang="en">The citing entity is used to create or compile the cited entity.</rdfs:comment>
+        <rdfs:label xml:lang="en">compiles</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- http://purl.org/spar/cito/confirms -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/spar/cito/confirms">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#INT_PunnedCiTOProperties"/>
+        <dc:description xml:lang="en">Example: Our findings are similar to those published in [X].</dc:description>
+        <rdfs:comment xml:lang="en">The citing entity confirms facts, ideas or statements presented in the cited entity.</rdfs:comment>
+        <rdfs:label xml:lang="en">confirms</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- http://purl.org/spar/cito/containsAssertionFrom -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/spar/cito/containsAssertionFrom">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#INT_PunnedCiTOProperties"/>
+        <dc:description xml:lang="en">Example: We think that to stand on the top of giants [X] is a valuable principle to follow for our own research.</dc:description>
+        <rdfs:comment xml:lang="en">The citing entity contains a statement of fact or a logical assertion (or a collection of such facts and/or assertions) originally present in the cited entity.   This object property is designed to be used to relate a separate abstract, summary or nanopublication to the cited entity upon which it is based.</rdfs:comment>
+        <rdfs:label xml:lang="en">contains assertion from</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- http://purl.org/spar/cito/corrects -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/spar/cito/corrects">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#INT_PunnedCiTOProperties"/>
+        <dc:description xml:lang="en">Example: The result published in [X] is partially wrong, the correct result is 42.</dc:description>
+        <rdfs:comment xml:lang="en">The citing entity corrects statements, ideas or conclusions presented in the cited entity.</rdfs:comment>
+        <rdfs:label xml:lang="en">corrects</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- http://purl.org/spar/cito/credits -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/spar/cito/credits">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#INT_PunnedCiTOProperties"/>
+        <dc:description xml:lang="en">Example: Galileo was the first to observe Jupiter&apos;s satellites [X].</dc:description>
+        <rdfs:comment xml:lang="en">The citing entity acknowledges contributions made by the cited entity.</rdfs:comment>
+        <rdfs:label xml:lang="en">credits</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- http://purl.org/spar/cito/critiques -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/spar/cito/critiques">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#INT_PunnedCiTOProperties"/>
+        <dc:description xml:lang="en">Example: The ideas presented in [X] are badly substantantiated.</dc:description>
+        <rdfs:comment xml:lang="en">The citing entity critiques statements, ideas or conclusions presented in the cited entity.</rdfs:comment>
+        <rdfs:label xml:lang="en">critiques</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- http://purl.org/spar/cito/derides -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/spar/cito/derides">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#INT_PunnedCiTOProperties"/>
+        <dc:description xml:lang="en">Example: The ideas published in [X] are incredibly stupid.</dc:description>
+        <rdfs:comment xml:lang="en">The citing entity express derision for the cited entity, or for ideas or conclusions contained within it.</rdfs:comment>
+        <rdfs:label xml:lang="en">derides</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- http://purl.org/spar/cito/describes -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/spar/cito/describes">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#INT_PunnedCiTOProperties"/>
+        <dc:description xml:lang="en">Example: Galileo&apos;s book [X] is a dialog among three scientists about Copernicus&apos; eliocentric theory.</dc:description>
+        <rdfs:comment xml:lang="en">The citing entity describes the cited entity.</rdfs:comment>
+        <rdfs:label xml:lang="en">describes</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- http://purl.org/spar/cito/disagreesWith -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/spar/cito/disagreesWith">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#INT_PunnedCiTOProperties"/>
+        <dc:description xml:lang="en">Example: We do not share Galileo&apos;s opinion [X]: the Earth does not move.</dc:description>
+        <rdfs:comment xml:lang="en">The citing entity disagrees with statements, ideas or conclusions presented in the cited entity.</rdfs:comment>
+        <rdfs:label xml:lang="en">disagrees with</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- http://purl.org/spar/cito/discusses -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/spar/cito/discusses">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#INT_PunnedCiTOProperties"/>
+        <dc:description xml:lang="en">Example: We now examine if Galileo is right when he writes [X] that the Earth moves.</dc:description>
+        <rdfs:comment xml:lang="en">The citing entity discusses statements, ideas or conclusions presented in the cited entity.</rdfs:comment>
+        <rdfs:label xml:lang="en">discusses</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- http://purl.org/spar/cito/disputes -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/spar/cito/disputes">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#INT_PunnedCiTOProperties"/>
+        <dc:description xml:lang="en">Example: We doubt that Galileo is right when he writes [X] that the Earth moves.</dc:description>
+        <rdfs:comment xml:lang="en">The citing entity disputes statements, ideas or conclusions presented in the cited entity.</rdfs:comment>
+        <rdfs:label xml:lang="en">disputes</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- http://purl.org/spar/cito/documents -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/spar/cito/documents">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#INT_PunnedCiTOProperties"/>
+        <dc:description xml:lang="en">Example: Herein we report in detail the complete set of ontological rules defined in the Overlapping Ontology [X].</dc:description>
+        <rdfs:comment>The citing entity documents information about the cited entity.</rdfs:comment>
+        <rdfs:label xml:lang="en">documents</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- http://purl.org/spar/cito/extends -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/spar/cito/extends">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#INT_PunnedCiTOProperties"/>
+        <dc:description xml:lang="en">Example: We add to Galileo&apos;s findings concerning the Earth [X] that also the Moon moves.</dc:description>
+        <rdfs:comment xml:lang="en">The citing entity extends facts, ideas or understandings presented in the cited entity.</rdfs:comment>
+        <rdfs:label xml:lang="en">extends</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- http://purl.org/spar/cito/givesSupportTo -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/spar/cito/givesSupportTo">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#INT_PunnedCiTOProperties"/>
+        <rdfs:comment xml:lang="en">The cited entity provides intellectual or factual support for the citing entity.</rdfs:comment>
+        <rdfs:label xml:lang="en">gives support to</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- http://purl.org/spar/cito/includesExcerptFrom -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/spar/cito/includesExcerptFrom">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#INT_PunnedCiTOProperties"/>
+        <dc:description xml:lang="en">An excerpt is more general than a quotation. It is generally used to indicate a re-published extract from a book, instruction manual, film, radio programme, etc, that need not be what someone said.  For example:
+
+    Oxford 01865
+    Oxshott 01372
+    Oxted 01883
+    Oxton 01578
+
+    is an excerpt from the UK Dialling Codes section of the Oxford Telephone Directory.</dc:description>
+        <dc:description xml:lang="en">Example: In her work, the author states that even though most Human Information Behaviour researchers are familiar with the literature related to their studies, it is not uncommon for investigators to fail to see the benefits they may gain from previous mistakes [X].</dc:description>
+        <rdfs:comment xml:lang="en">The citing entity includes one or more excerpts from the cited entity.</rdfs:comment>
+        <rdfs:label xml:lang="en">includes excerpt from</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- http://purl.org/spar/cito/includesQuotationFrom -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/spar/cito/includesQuotationFrom">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#INT_PunnedCiTOProperties"/>
+        <dc:description xml:lang="en">A quotation is a repetition of what someone has said, and is presented &quot;within quotation marks&quot;, for example:
+
+    On June 4th 1940, Winston Churchill made a speech on the radio that has since become famous, that included the words: &quot; . . . we shall fight on the beaches, we shall fight on the landing grounds, we shall fight in the fields and in the streets, we shall fight in the hills; we shall never surrender . . .&quot;</dc:description>
+        <dc:description xml:lang="en">Example: As Newton wrote in [X]: &quot;We are like dwarfs standing on the shoulders of giants&quot;.</dc:description>
+        <rdfs:comment xml:lang="en">The citing entity includes one or more quotations from the cited entity.</rdfs:comment>
+        <rdfs:label xml:lang="en">includes quotation from</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- http://purl.org/spar/cito/isCitedForInformationBy -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/spar/cito/isCitedForInformationBy">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#INT_PunnedCiTOProperties"/>
+        <rdfs:comment xml:lang="en">The cited entity is cited as a source of information on the subject under discussion in the citing entity.</rdfs:comment>
+        <rdfs:label xml:lang="en">is cited for information by</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- http://purl.org/spar/cito/likes -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/spar/cito/likes">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#INT_PunnedCiTOProperties"/>
+        <rdfs:comment xml:lang="en">A property that permits you to express appreciation of or interest in something that is the object of the RDF triple, or to express that it is worth thinking about even if you do not agree with its content, enabling social media &apos;likes&apos; statements to be encoded in RDF.  Use of this property does NOT imply the existence of a formal citation of the entity that is &apos;liked&apos;.</rdfs:comment>
+        <rdfs:label xml:lang="en">likes</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- http://purl.org/spar/cito/linksTo -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/spar/cito/linksTo">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#INT_PunnedCiTOProperties"/>
+        <dc:description xml:lang="en">Example: The BioSharing registry (https://biosharing.org) can be of use as it describes the standards in detail, including versions where applicable.</dc:description>
+        <rdfs:comment xml:lang="en">The citing entity provides a link, in the form of an HTTP Uniform Resource Locator (URL), to the cited entity.</rdfs:comment>
+        <rdfs:label xml:lang="en">links to</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- http://purl.org/spar/cito/obtainsBackgroundFrom -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/spar/cito/obtainsBackgroundFrom">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#INT_PunnedCiTOProperties"/>
+        <dc:description xml:lang="en">Example: There is a need for more observational studies and studies using narrative causation to describe the potential contribution of information in problem-solving and decision-making [X]; our work addresses these needs.</dc:description>
+        <rdfs:comment xml:lang="en">The citing entity obtains background information from the cited entity.</rdfs:comment>
+        <rdfs:label xml:lang="en">obtains background from</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- http://purl.org/spar/cito/obtainsSupportFrom -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/spar/cito/obtainsSupportFrom">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#INT_PunnedCiTOProperties"/>
+        <dc:description xml:lang="en">Example: Our ideas were also shared by Doe et al. [X].</dc:description>
+        <rdfs:comment xml:lang="en">The citing entity obtains intellectual or factual support from the cited entity.</rdfs:comment>
+        <rdfs:label xml:lang="en">obtains support from</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- http://purl.org/spar/cito/parodies -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/spar/cito/parodies">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#INT_PunnedCiTOProperties"/>
+        <dc:description xml:lang="en">Example: We act as giants on the shoulders of dwarfs [X]!</dc:description>
+        <rdfs:comment xml:lang="en">The citing entity imitates the characteristic style or content of the cited entity for comic effect, usually without explicit citation.</rdfs:comment>
+        <rdfs:label xml:lang="en">parodies</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- http://purl.org/spar/cito/plagiarizes -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/spar/cito/plagiarizes">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#INT_PunnedCiTOProperties"/>
+        <dc:description xml:lang="en">Example: The conclusion of our dissertation can be summarised by the following motto, we created specifically for this purpose: we are like dwarfs standing on the shoulders of giants.</dc:description>
+        <rdfs:comment xml:lang="en">A property indicating that the author of the citing entity plagiarizes the cited entity, by including textual or other elements from the cited entity without formal acknowledgement of their source.  The citing entity thus contains no explicit citation of the cited entity, according to the norms of scholarly practice, but cites it implicitly.</rdfs:comment>
+        <rdfs:label xml:lang="en">plagiarizes</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- http://purl.org/spar/cito/qualifies -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/spar/cito/qualifies">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#INT_PunnedCiTOProperties"/>
+        <dc:description xml:lang="en">Example: Galileo&apos;s masterpiece &apos;Dialogo sopra i due massimi sistemi del mondo&apos; [X] is formally a dialog and substantially a scientific pamphlet.</dc:description>
+        <rdfs:comment xml:lang="en">The citing entity qualifies or places conditions or restrictions upon statements, ideas or conclusions presented in the cited entity.</rdfs:comment>
+        <rdfs:label xml:lang="en">qualifies</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- http://purl.org/spar/cito/refutes -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/spar/cito/refutes">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#INT_PunnedCiTOProperties"/>
+        <dc:description xml:lang="en">Example: We do not think that all their arguments in favour of their own and against the other strategies are equally convincing [X].</dc:description>
+        <rdfs:comment xml:lang="en">The citing entity refutes statements, ideas or conclusions presented in the cited entity.</rdfs:comment>
+        <rdfs:label xml:lang="en">refutes</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- http://purl.org/spar/cito/repliesTo -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/spar/cito/repliesTo">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#INT_PunnedCiTOProperties"/>
+        <dc:description xml:lang="en">Example: We will not investigate the issues of the approach proposed in [X] here, but rather we introduce yet another alternative.</dc:description>
+        <rdfs:comment xml:lang="en">The citing entity replies to statements, ideas or criticisms presented in the cited entity.</rdfs:comment>
+        <rdfs:label xml:lang="en">replies to</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- http://purl.org/spar/cito/retracts -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/spar/cito/retracts">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#INT_PunnedCiTOProperties"/>
+        <dc:description xml:lang="en">Example: We wrote that the Earth moves in [X]; we now retire such statement.</dc:description>
+        <rdfs:comment xml:lang="en">The citing entity constitutes a formal retraction of the cited entity.</rdfs:comment>
+        <rdfs:label xml:lang="en">retracts</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- http://purl.org/spar/cito/reviews -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/spar/cito/reviews">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#INT_PunnedCiTOProperties"/>
+        <dc:description xml:lang="en">Example: This paper discusses Toulmin&apos;s methodology in modelling argumentation [X], focussing on highlighting advantages and drawbacks of the application of such a methodology in the Social Web.</dc:description>
+        <rdfs:comment xml:lang="en">The citing entity reviews statements, ideas or conclusions presented in the cited entity.</rdfs:comment>
+        <rdfs:label xml:lang="en">reviews</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- http://purl.org/spar/cito/ridicules -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/spar/cito/ridicules">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#INT_PunnedCiTOProperties"/>
+        <dc:description xml:lang="en">Example: Galileo said that the Earth &quot;moves&quot; [X]; really? And where is it going?</dc:description>
+        <rdfs:comment xml:lang="en">The citing entity ridicules the cited entity or aspects of its contents.</rdfs:comment>
+        <rdfs:label xml:lang="en">ridicules</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- http://purl.org/spar/cito/speculatesOn -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/spar/cito/speculatesOn">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#INT_PunnedCiTOProperties"/>
+        <dc:description xml:lang="en">Example: We believe that if Galileo believed that Earth goes around the Sun [X], he also should believe that Moon goes around Earth.</dc:description>
+        <rdfs:comment xml:lang="en">The citing entity speculates on something within or related to the cited entity, without firm evidence.</rdfs:comment>
+        <rdfs:label xml:lang="en">speculates on</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- http://purl.org/spar/cito/supports -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/spar/cito/supports">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#INT_PunnedCiTOProperties"/>
+        <dc:description xml:lang="en">Example: We support Galileo&apos;s statement [X], that Earth moves.</dc:description>
+        <rdfs:comment xml:lang="en">The citing entity provides intellectual or factual support for statements, ideas or conclusions presented in the cited entity.</rdfs:comment>
+        <rdfs:label xml:lang="en">supports</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- http://purl.org/spar/cito/updates -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/spar/cito/updates">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#INT_PunnedCiTOProperties"/>
+        <dc:description xml:lang="en">Example: Earth moves, said Galileo [X]; in addition, we can say now it moves very fast.</dc:description>
+        <rdfs:comment xml:lang="en">The citing entity updates statements, ideas, hypotheses or understanding presented in the cited entity.</rdfs:comment>
+        <rdfs:label xml:lang="en">updates</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- http://purl.org/spar/cito/usesConclusionsFrom -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/spar/cito/usesConclusionsFrom">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#INT_PunnedCiTOProperties"/>
+        <dc:description xml:lang="en">Example: Building upon Galileo&apos;s findings [X], we discovered that all the planets move.</dc:description>
+        <rdfs:comment xml:lang="en">The citing entity describes work that uses conclusions presented in the cited entity.</rdfs:comment>
+        <rdfs:label xml:lang="en">uses conclusions from</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- http://purl.org/spar/cito/usesDataFrom -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/spar/cito/usesDataFrom">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#INT_PunnedCiTOProperties"/>
+        <dc:description xml:lang="en">Example: Using the information collected from our recent study [X], we can estimate that there are tens of millions of HTML forms with potentially useful deep-web content.</dc:description>
+        <rdfs:comment xml:lang="en">The citing entity describes work that uses data presented in the cited entity.</rdfs:comment>
+        <rdfs:label xml:lang="en">uses data from</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- http://purl.org/spar/cito/usesMethodIn -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/spar/cito/usesMethodIn">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#INT_PunnedCiTOProperties"/>
+        <dc:description xml:lang="en">Example: We follow [X] in using design patterns for testing.</dc:description>
+        <rdfs:comment xml:lang="en">The citing entity describes work that uses a method detailed in the cited entity.</rdfs:comment>
+        <rdfs:label xml:lang="en">uses method in</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#Act_Character_Alice -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#Act_Character_Alice">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#INT2_ActualizationOfFeature"/>
+        <R17_actualizes_feature rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#Alice"/>
+        <R18_actualization_found_on rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#Kubrick,_Eyes"/>
+        <rdfs:label>A.01 (Alice)</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#Act_Character_Beatrice -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#Act_Character_Beatrice">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#INT2_ActualizationOfFeature"/>
+        <R17_actualizes_feature rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#Beatrice"/>
+        <R18_actualization_found_on rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#Shakespeare,_Much_Ado"/>
+        <rdfs:label>A.07 (Beatrice)</rdfs:label>
+        <rdfs:label>F.07 Beatrice (Much Ado about Nothing)</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#Act_Character_Bill -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#Act_Character_Bill">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#INT2_ActualizationOfFeature"/>
+        <R17_actualizes_feature rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#Feat_Character_Bill"/>
+        <R18_actualization_found_on rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#Kubrick,_Eyes"/>
+        <rdfs:label>A.03 (Bill)</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#Act_Character_Brangäne -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#Act_Character_Brangäne">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#INT2_ActualizationOfFeature"/>
+        <R17_actualizes_feature rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#Brangäne"/>
+        <R18_actualization_found_on rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#Wagner,_Tristan"/>
+        <rdfs:label>A.08 (Brangaene)</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#Act_Character_Hippolyta -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#Act_Character_Hippolyta">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#INT2_ActualizationOfFeature"/>
+        <R17_actualizes_feature rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#Hippolyta"/>
+        <R18_actualization_found_on rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#Shakespeare,_Midsummer"/>
+        <rdfs:label>A.06 (Hippolyta)</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#Act_Character_Klara -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#Act_Character_Klara">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#INT2_ActualizationOfFeature"/>
+        <R17_actualizes_feature rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#Klara"/>
+        <R18_actualization_found_on rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#Hoffmann,_Sandmann"/>
+        <rdfs:label>A.04 (Klara)</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#Act_Character_Marla -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#Act_Character_Marla">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#INT2_ActualizationOfFeature"/>
+        <R17_actualizes_feature rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#Marla"/>
+        <R18_actualization_found_on rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#Fincher,_Fight_Club"/>
+        <rdfs:label>A.02 (Marla)</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#Act_Character_Portia -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#Act_Character_Portia">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#INT2_ActualizationOfFeature"/>
+        <R17_actualizes_feature rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#Portia"/>
+        <R18_actualization_found_on rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#Shakespeare,_Merchant"/>
+        <rdfs:label>A.09 (Portia)</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#Act_Character_Princess -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#Act_Character_Princess">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#INT2_ActualizationOfFeature"/>
+        <R17_actualizes_feature rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#Princess"/>
+        <R18_actualization_found_on rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#Shakespeare,_Love&apos;s_Labours"/>
+        <rdfs:label>A.10 (Princess)</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#Act_Clara -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#Act_Clara">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#INT2_ActualizationOfFeature"/>
+        <R17_actualizes_feature rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#Clara"/>
+        <R18_actualization_found_on rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#Brown,_Wieland"/>
+        <rdfs:label>A.05 (Clara)</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#Act_ClearSightedDaughter -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#Act_ClearSightedDaughter">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#INT2_ActualizationOfFeature"/>
+        <R17_actualizes_feature rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#Clear_Sighted_Daughter"/>
+        <R18_actualization_found_on rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#Act_Character_Alice"/>
+        <R18_actualization_found_on rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#Act_Character_Beatrice"/>
+        <R18_actualization_found_on rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#Act_Character_Brangäne"/>
+        <R18_actualization_found_on rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#Act_Character_Hippolyta"/>
+        <R18_actualization_found_on rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#Act_Character_Klara"/>
+        <R18_actualization_found_on rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#Act_Character_Marla"/>
+        <R18_actualization_found_on rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#Act_Character_Portia"/>
+        <R18_actualization_found_on rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#Act_Character_Princess"/>
+        <R18_actualization_found_on rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#Act_Clara"/>
+        <rdfs:label>A.11 (Clear Sighted Daughter)</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#Act_Def_rewriting -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#Act_Def_rewriting">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#INT2_ActualizationOfFeature"/>
+        <R17_actualizes_feature rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#Feat_Definition"/>
+        <R18_actualization_found_on rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#Pass._Def._Cross-Mapping"/>
+        <R4_defines rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#rewriting"/>
+        <rdfs:label>A.12 (Def. &apos;Rewriting&apos;)</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#Act_Hysterikerin -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#Act_Hysterikerin">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#INT2_ActualizationOfFeature"/>
+        <R17_actualizes_feature rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#Feat_Character_Hysterikerin"/>
+        <R18_actualization_found_on rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#Freud,_Hysterie"/>
+        <rdfs:label>A.13 (Hysteric)</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#Act_Interpretation1 -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#Act_Interpretation1">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#INT2_ActualizationOfFeature"/>
+        <R17_actualizes_feature rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#Feat_Interpretation1"/>
+        <R18_actualization_found_on rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#Textpassage1"/>
+        <rdfs:label>A.14 (Interpr.1)</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#Act_Interpretation2 -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#Act_Interpretation2">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#INT2_ActualizationOfFeature"/>
+        <R17_actualizes_feature rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#Feat_Interpretation2"/>
+        <R18_actualization_found_on rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#TextPassage2"/>
+        <rdfs:label>A.15 (Interpr.2)</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#Act_Interpretation_CrossMapping -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#Act_Interpretation_CrossMapping">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#INT2_ActualizationOfFeature"/>
+        <R17_actualizes_feature rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#Feat_Interpretation_CrossMapping"/>
+        <R18_actualization_found_on rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#Bronfen,_Cross-Mapping"/>
+        <rdfs:comment>Together with A.17, this INT5 Actualization of Feature is the minimum variant of modelling the knowledge represented in a text.</rdfs:comment>
+        <rdfs:label>A.16 (Interpr.3)</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#Act_Summary_Bronfen_CrossMapping -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#Act_Summary_Bronfen_CrossMapping">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#INT2_ActualizationOfFeature"/>
+        <R17_actualizes_feature rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#Feat_Summary"/>
+        <R18_actualization_found_on rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#Summ_&apos;Cross-Mapping&apos;"/>
+        <rdfs:comment>Together with A.16, this INT5 Actualization of Feature is the minimum variant of modelling the knowledge represented in a text.</rdfs:comment>
+        <rdfs:label>A.17 (Summary)</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#Alice -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#Alice">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#INT_IndividualCharacter"/>
+        <rdfs:label>F.01 Alice (Eyes Wide Shut)</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#Beatrice -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#Beatrice">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#INT_IndividualCharacter"/>
+        <rdfs:label>F.07 Beatrice (Much Ado about Nothing)</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#Brangäne -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#Brangäne">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#INT_IndividualCharacter"/>
+        <rdfs:label>F.08 Brangaene (Tristan und Isolde)</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#Clara -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#Clara">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#INT_IndividualCharacter"/>
+        <rdfs:label>F.05 Clara (Wieland)</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#Clear_Sighted_Daughter -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#Clear_Sighted_Daughter">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#INT_TypeOfCharacter"/>
+        <R17_feature_actualized_in rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#Act_ClearSightedDaughter"/>
+        <rdfs:label>F.11 Clear Sighted Daughter</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#Def_Clear_Sigthed_Daughter -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#Def_Clear_Sigthed_Daughter">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#INT1_TextPassage"/>
+        <R41_has_location>p. 116</R41_has_location>
+        <R44_has_wording>die klugen Heldinnen der Komödien, die in dem Sinne ein Gegengewicht zu den Hexen und schönen Toten der Tragödien darstellen, insofern sie für ein Aushandeln des sie beschränkenden und kränkenden Gesetzes einstehen, anstatt dieses radikal zu überschreiten: Portia in Merchant of Venice, die Prinzessin in Love’s Labour’s Lost, Beatrice in Much Ado about Nothing.
+Vornehmlich seit dem epistemischen Bruch, den der Historiker Michel Foucault um 1800 ansetzt, um den Anfang der Moderne festzulegen, flackern mit neuer Brisanz spezifische Figurierungen des weiblichen Subjekts wieder auf. Sie fungieren als Stellvertreterinnen genau jenes kulturellen Kodes, der der Frau eigentlich seit der Renaissance eine dominante Position innerhalb der symbolischen Ordnung absprach […].</R44_has_wording>
+    </owl:NamedIndividual>
+
+
+
+    <!-- https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#Feat_Character_Bill -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#Feat_Character_Bill">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#INT_IndividualCharacter"/>
+        <rdfs:label>F.03 Bill (Eyes Wide Shut)</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#Feat_Character_Hysterikerin -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#Feat_Character_Hysterikerin">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#INT_TypeOfCharacter"/>
+        <rdfs:label>F.13 Hysteric (Studien)</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#Feat_CrossMapping_IntRels -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#Feat_CrossMapping_IntRels">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#INT3_IntertextualRelationship"/>
+        <R12_has_referred_to_entity rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#Brown,_Wieland"/>
+        <R12_has_referred_to_entity rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#Fincher,_Fight_Club"/>
+        <R12_has_referred_to_entity rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#Freud,_Hysterie"/>
+        <R12_has_referred_to_entity rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#Hoffmann,_Sandmann"/>
+        <R12_has_referred_to_entity rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#Kubrick,_Eyes"/>
+        <R12_has_referred_to_entity rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#Shakespeare,_Merchant"/>
+        <R12_has_referred_to_entity rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#Shakespeare,_Midsummer"/>
+        <R12_has_referred_to_entity rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#Shakespeare,_Much_Ado"/>
+        <R12_has_referred_to_entity rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#Shakespeare,_Love&apos;s_Labours"/>
+        <R12_has_referred_to_entity rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#Wagner,_Tristan"/>
+        <R13_has_referring_entity rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#Bronfen,_Cross-Mapping"/>
+        <R19_has_type rdf:resource="http://purl.org/spar/cito/discusses"/>
+        <R21_is_identified_by rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#Interpretament_CrossMapping2"/>
+        <rdfs:label>IR.181 Intertextual Relation 4</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#Feat_CrossMapping_Ref -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#Feat_CrossMapping_Ref">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#INT3_IntertextualRelationship"/>
+        <R12_has_referred_to_entity rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#Cavell,_Pursuit"/>
+        <R12_has_referred_to_entity rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#Greenblatt,_Circulation"/>
+        <R12_has_referred_to_entity rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#Stafford,_Visual_Analogy"/>
+        <R13_has_referring_entity rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#Bronfen,_Cross-Mapping"/>
+        <R19_has_type rdf:resource="http://purl.org/spar/cito/usesMethodIn"/>
+        <R21_is_identified_by rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#Interpretament_CrossMapping2"/>
+        <rdfs:label>IR.182 Intertextual Relation 5</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#Feat_CrossMapping_Sources -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#Feat_CrossMapping_Sources">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#INT3_IntertextualRelationship"/>
+        <R12_has_referred_to_entity rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#Butler,_Bodies"/>
+        <R12_has_referred_to_entity rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#Butler,_Gender_Trouble"/>
+        <R12_has_referred_to_entity rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#Foucault,_Savoir"/>
+        <R12_has_referred_to_entity rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#Freud,_Hysterie"/>
+        <R13_has_referring_entity rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#Bronfen,_Cross-Mapping"/>
+        <R19_has_type rdf:resource="http://purl.org/spar/cito/citesForInformation"/>
+        <R21_is_identified_by rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#Interpretament_CrossMapping2"/>
+        <rdfs:label>IR.183 Intertextual Relation 6</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#Feat_Definition -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#Feat_Definition">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#INT_Definition"/>
+        <rdfs:label>F.12 Definition (&apos;Rewriting&apos;)</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#Feat_Interpretation1 -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#Feat_Interpretation1">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#INT_Interpretation"/>
+        <rdfs:label>F.14 Interpretation1</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#Feat_Interpretation2 -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#Feat_Interpretation2">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#INT_Interpretation"/>
+        <rdfs:label>F.15 Interpretation2</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#Feat_Interpretation_CrossMapping -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#Feat_Interpretation_CrossMapping">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#INT_Interpretation"/>
+        <rdfs:label>F.16 Interpretation (Cross Mapping)</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#Feat_Summary -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#Feat_Summary">
+        <rdf:type rdf:resource="http://purl.org/spar/doco/Abstract"/>
+        <rdfs:label>F.17 Summary (Cross Mapping)</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#Hippolyta -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#Hippolyta">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#INT_IndividualCharacter"/>
+    </owl:NamedIndividual>
+
+
+
+    <!-- https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#IntRel1 -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#IntRel1">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#INT3_IntertextualRelationship"/>
+        <R19_has_type rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#TypeIntRel_Analogy"/>
+        <R24_has_related_entity rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#Act_Character_Alice"/>
+        <R24_has_related_entity rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#Act_Character_Klara"/>
+        <rdfs:label>IR.14 Intertextual Relation1</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#IntRel2 -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#IntRel2">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#INT3_IntertextualRelationship"/>
+        <R12_has_referred_to_entity rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#Act_Character_Klara"/>
+        <R13_has_referring_entity rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#Act_Character_Alice"/>
+        <R19_has_type rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#rewriting"/>
+        <rdfs:label>IR.15 Intertextual Relation2</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#IntRel3 -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#IntRel3">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#INT3_IntertextualRelationship"/>
+        <R12_has_referred_to_entity rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#Act_Hysterikerin"/>
+        <R13_has_referring_entity rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#Act_Character_Bill"/>
+        <R19_has_type rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#rewriting"/>
+        <rdfs:label>IR.16 Intertextual Relation3</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#Interpretament1 -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#Interpretament1">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#INT7_Interpretament"/>
+        <R21_identifies rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#IntRel1"/>
+        <R2_consists_in rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#Act_Interpretation1"/>
+        <rdfs:label>I.14 Interpretament1</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#Interpretament2 -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#Interpretament2">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#INT7_Interpretament"/>
+        <R21_identifies rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#IntRel2"/>
+        <R21_identifies rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#IntRel3"/>
+        <R2_consists_in rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#Act_Interpretation2"/>
+        <rdfs:label>I.15 Interpretament2</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#Interpretament_CrossMapping -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#Interpretament_CrossMapping">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#INT7_Interpretament"/>
+        <R21_identifies rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#Act_Character_Alice"/>
+        <R21_identifies rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#Act_Character_Beatrice"/>
+        <R21_identifies rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#Act_Character_Brangäne"/>
+        <R21_identifies rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#Act_Character_Hippolyta"/>
+        <R21_identifies rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#Act_Character_Klara"/>
+        <R21_identifies rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#Act_Character_Marla"/>
+        <R21_identifies rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#Act_Character_Portia"/>
+        <R21_identifies rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#Act_Character_Princess"/>
+        <R21_identifies rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#Act_Clara"/>
+        <R21_identifies rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#Act_ClearSightedDaughter"/>
+        <R2_consists_in rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#Act_Interpretation_CrossMapping"/>
+        <rdfs:label>I.16 Interpretament3</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#Interpretament_CrossMapping2 -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#Interpretament_CrossMapping2">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#INT7_Interpretament"/>
+        <R21_identifies rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#Feat_CrossMapping_IntRels"/>
+        <R21_identifies rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#Feat_CrossMapping_Ref"/>
+        <R21_identifies rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#Feat_CrossMapping_Sources"/>
+        <rdfs:label>I.18 Interpretament4</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#Klara -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#Klara">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#INT_IndividualCharacter"/>
+        <rdfs:label>F.04 Klara (Sandmann)</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#Marla -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#Marla">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#INT_IndividualCharacter"/>
+        <rdfs:label>F.02 Marla (Fight Club)</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#Pass._Def._Cross-Mapping -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#Pass._Def._Cross-Mapping">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#INT1_TextPassage"/>
+        <R10_is_Text_Passage_of rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#Bronfen,_Cross-Mapping"/>
+        <R41_has_location>p. 111</R41_has_location>
+        <R44_has_wording>Vom Konzept der Umschrift als kultureller Kraft ausgehend, die ästhetische Werke den Tod ihrer Autoren und das Ableben der Kultur, aus der sie entstammen, überleben lässt, soll im Folgenden ein Interpretationsverfahren des cross-mapping als Beispiel für die Möglichkeit von kulturwissenschaftlicher [...] Arbeit vorgestellt werden: Das Aufeinanderlegen und Kartographieren von Denkfiguren. Beim Verfahren des cross-mapping geht es um das Feststellen und Festhalten von Ähnlichkeiten, die sich zwischen ästhetischen Werken ergeben, für die keine eindeutigen intertextuellen Beziehungen im Sinne von explizit thematisierten Einflüssen festgemacht werden können. Es geht darum, die Transformation, die sich durch die Bewegung von einer historischen Zeit in die andere ergibt, hervorzuheben oder die Bewegung von einem medialen Diskurs in einen anderen nachzuzeichnen.</R44_has_wording>
+        <rdfs:label>P.01 Def. &apos;Rewriting&apos; (&apos;Cross Mapping&apos;)</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#Portia -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#Portia">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#INT_IndividualCharacter"/>
+        <rdfs:label>F.09 Portia (Merchant of Venice)</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#Princess -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#Princess">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#INT_IndividualCharacter"/>
+        <rdfs:label>F.10 Princess (Love&apos;s Labour&apos;s Lost)</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#TextPassage2 -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#TextPassage2">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#INT1_TextPassage"/>
+        <R10_is_Text_Passage_of rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#Bronfen,_Cross-Mapping"/>
+        <R41_has_location>p. 125</R41_has_location>
+        <R44_has_wording>Mit anderen Worten, das vorgeschlagene cross-mapping lässt in Stanley Kubricks Eyes Wide Shut zwei Umschriften erkennen: Zum einen das Nachleben Brockden-Browns Clara wie auch E.T.A. Hoffmanns Klara in der Gestalt von Alice, insofern sie einerseits die eigene Verführbarkeit zugibt, gleichzeitig aber auch ihren Widerstand gegen dieses transgressive und für ihre Familie zerstörerische Begehren zum Ausdruck bringt. Zum anderen inszeniert Stanley Kubrick aber auch das Nachleben der hysterischen Geste des Phantasierens, die Sigmund Freud Ende des 19. Jahrhunderts für seine hauptsächlich weiblichen Patientinnen theoretisch zu fassen suchte.</R44_has_wording>
+        <rdfs:label>P.04 Kubrick/Hoffmann/Freud (&apos;Cross Mapping&apos;)</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#Textpassage1 -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#Textpassage1">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#INT1_TextPassage"/>
+        <R10_is_Text_Passage_of rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#Bronfen,_Cross-Mapping"/>
+        <R41_has_location>p. 123</R41_has_location>
+        <R44_has_wording>Wie E.T.A. Hoffmans Klara weiß Kubricks Alice (Nicole Kidman) nicht nur von den Dämonen, die einen in seiner Traumwelt heimsuchen können, sondern nimmt auch die Botschaft ernst, die diese Gestalten des Unbewussten dem Subjekt übermitteln.</R44_has_wording>
+        <rdfs:label>P.03 Klara/Alice (&apos;Cross Mapping&apos;)</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#TypeIntRel_Analogy -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#TypeIntRel_Analogy">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#INT12_CommonConceptsOfIntertextuality"/>
+        <rdfs:label>IT.01 Analogy</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#rewriting -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#rewriting">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#INT15_IntertextualityInIntTheories"/>
+        <rdfs:label>IT.02 Rewriting</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#Bronfen,_Cross-Mapping -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#Bronfen,_Cross-Mapping">
+        <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F24_Publication_Expression"/>
+        <R10_has_Text_Passage rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#Pass._Def._Cross-Mapping"/>
+        <rdfs:label>T.01 Bronfen, E.: Cross Mapping (2002)</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#Brown,_Wieland -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#Brown,_Wieland">
+        <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F24_Publication_Expression"/>
+        <rdfs:label>T.11 Brown, C.: Wieland (1998)</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#Butler,_Bodies -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#Butler,_Bodies">
+        <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F24_Publication_Expression"/>
+        <rdfs:label>T.06 Butler, J.: Bodies that Matter (1993)</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#Butler,_Gender_Trouble -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#Butler,_Gender_Trouble">
+        <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F24_Publication_Expression"/>
+        <rdfs:label>T.07 Butler, J.: Gender Trouble (1990)</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#Cavell,_Pursuit -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#Cavell,_Pursuit">
+        <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F24_Publication_Expression"/>
+        <rdfs:label>T.02 Cavell, S.: Pursuits of Happiness (1981)</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#Fincher,_Fight_Club -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#Fincher,_Fight_Club">
+        <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F24_Publication_Expression"/>
+        <rdfs:label>T.09 Fincher, D.: Fight Club (1999)</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#Foucault,_Savoir -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#Foucault,_Savoir">
+        <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F24_Publication_Expression"/>
+        <rdfs:label>T.05 Foucault, M.: La Volenté de savoir (1976)</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#Freud,_Hysterie -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#Freud,_Hysterie">
+        <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F24_Publication_Expression"/>
+        <rdfs:label>T.12 Freud, S.: Studien über Hysterie (1952)</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#Greenblatt,_Circulation -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#Greenblatt,_Circulation">
+        <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F24_Publication_Expression"/>
+        <rdfs:label>T.03 Greenblatt, Stephen: The Circulation ... (1988)</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#Hoffmann,_Sandmann -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#Hoffmann,_Sandmann">
+        <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F24_Publication_Expression"/>
+        <rdfs:label>T.10 Hoffmann, E.T.A.: Der Sandmann (1976)</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#Kubrick,_Eyes -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#Kubrick,_Eyes">
+        <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F24_Publication_Expression"/>
+        <rdfs:label>T.08 Kubrick, S.: Eyes Wide Shut (1999)</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#Shakespeare,_Merchant -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#Shakespeare,_Merchant">
+        <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F2_Expression"/>
+        <rdfs:label>T.17 Shakespeare, W.: The Merchant of Venice, 1596/99</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#Shakespeare,_Midsummer -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#Shakespeare,_Midsummer">
+        <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F2_Expression"/>
+        <rdfs:label>T.16 Shakespeare, W.: A Midsummer Night&apos;s Dream, 1595/96</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#Shakespeare,_Much_Ado -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#Shakespeare,_Much_Ado">
+        <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F2_Expression"/>
+        <rdfs:label>T.15 Shakespeare, W.: Much Ado about Nothing, 1598/99</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#Shakespeare,_Love&apos;s_Labours -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#Shakespeare,_Love&apos;s_Labours">
+        <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F2_Expression"/>
+        <rdfs:label>T.14 Shakespeare, W.: Love&apos;s Labour&apos;s Lost, c. 1595</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#Stafford,_Visual_Analogy -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#Stafford,_Visual_Analogy">
+        <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F24_Publication_Expression"/>
+        <rdfs:label>T.04 Stafford, B.: Visual Analogy (1999)</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#Summ_&apos;Cross-Mapping&apos; -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#Summ_&apos;Cross-Mapping&apos;">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#INT1_TextPassage"/>
+        <R10_is_Text_Passage_of rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#Bronfen,_Cross-Mapping"/>
+        <R41_has_location>p. 114f.</R41_has_location>
+        <R44_has_wording>eine Lektüre zweier zeitgenössischer Filme im Rückbezug auf literarische Texte [...], die um die Frage kreisen, wie das weibliche Subjekt sich in Bezug auf die symbolischen Kodes und Gesetze, die es definieren, entwirft bzw. wie es durch diese symbolische Ordnung konzipiert wird.</R44_has_wording>
+        <rdfs:label>P.02 Summary (&apos;Cross Mapping&apos;)</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#Wagner,_Tristan -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_BETA_09112018.owl#Wagner,_Tristan">
+        <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F2_Expression"/>
+        <rdfs:label>T.13 Wagner, R.: Tristan und Isolde, 1857-59</rdfs:label>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
