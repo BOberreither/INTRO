@@ -20,8 +20,6 @@ INTRO IRI: https://purl.org/lso/intro/intro/currentbeta
  
 INTRO on GitHub: https://github.com/BOberreither/INTRO
 
-INTRO Documentation: http://www.essepuntato.it/lode/https://purl.org/lso/intro/intro/currentbeta
-
 Version info: BETA - Subclasses are subject to refinement and addition; provisional state indicatet by &quot;INT&quot;-IRIs/Labels without number</rdfs:comment>
         <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BETA</owl:versionInfo>
         <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> Bernhard Oberreither </dc:creator>
