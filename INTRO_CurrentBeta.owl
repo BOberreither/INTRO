@@ -21,7 +21,7 @@ INTRO IRI: https://w3id.org/lso/intro/currentbeta#
 
 INTRO on GitHub: https://github.com/BOberreither/INTRO
 
-Version info: BETA - Subclasses are subject to refinement and addition; provisional state indicatet by &quot;INT&quot;-IRIs/Labels without number
+Version info: BETA - Subclasses are subject to refinement and addition; provisional state indicated by &quot;INT&quot;-IRIs/Labels without number
 
 Special Thanks to: Ingo Börner</rdfs:comment>
         <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> Bernhard Oberreither </dc:creator>
