@@ -1,5 +1,5 @@
 # INTRO
-INTRO - an <b>In</b>tertextual <b>R</b>elationships <b>O</b>ntology for literary studies
+INTRO - an <b>In</b>ter<b>t</b>extual <b>R</b>elationships <b>O</b>ntology for literary studies
 (work in progress)
 
 ## What is INTRO?
