@@ -1,6 +1,7 @@
 # INTRO
 INTRO - an <b>In</b>ter<b>t</b>extual <b>R</b>elationships <b>O</b>ntology for literary studies
 (work in progress)
+Ontology IRI: https://w3id.org/lso/intro/currentbeta#
 
 ## What is INTRO?
 INTRO is an ontology for the field of literary studies for representing intertextual relations.
