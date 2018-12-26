@@ -19,9 +19,8 @@ The ontology is intended to provide the means for
 
 ## What's next?
 The ontology is a work in progress. Pending work includes:
-- further alignment with relevant ontologies (CiTO for the classification of scholarly citation acts, FRBRoo for bibliographical data; CIDOC, DoCO etc.); 
+- further alignment with relevant ontologies; 
 - testing, refining and expanding the ontology in the course of one or more case studies
-- looking into possible alignment with TEI-Standards
 
 
 Feedback is welcome! - Bernhard.Oberreither@univie.ac.at
