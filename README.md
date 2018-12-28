@@ -29,6 +29,8 @@ The ontology is a work in progress. Pending work includes:
 - further alignment with relevant ontologies; 
 - testing, refining and expanding the ontology in the course of one or more case studies
 
+(Feedback is welcome: Bernhard.Oberreither@univie.ac.at)
+
 <center>*******************************************</center>
 
 # INTRO Further Information
@@ -181,3 +183,26 @@ f22 self contained expression
 r25 is section of
 <br><i>is in range of</i><br>
 r25 has section
+
+
+## TYPICAL USE CASES
+
+### Text A refers to text B.
+Modeling: An INT07 Interpretament R21 identifies an INT03 Intertextual Relationship which R13 has referring entity Text A and R12 has referred to entity Text B, both texts being - for instance - F24 Publication Expressions.
+
+### Text A refers to Text B  by showing a certain text feature, e.g.: a fictional character that occurred in text B.
+Modeling: An INT02 Actualization of Feature is r18 found on a text A - e.g. a F24 Publication Expression -, and r17 actualizes an INT09 Semantic Feature (e.g. ‚villain‘, ‚Faust‘, …).<br>
+Also, an INT02 Actualization of Feature is r18 found on another text, text B - e.g. a F24 Publication Expression -, and r17 actualizes the same INT09 Semantic Feature.<br>
+An INT07 Interpretament R21 identifies an INT03 Intertextual Relationship which R13 has referring entity INT02 Actualization of Feature (on text A) and R12 has referred to entity INT02 Actualization of Feature (on Text B).
+
+### A passage in text A shows a feature suggesting that text A belongs to text corpus C (e.g. an epoch).
+Modeling: An INT02 Actualization of Feature is r18 found on an INT01 Text Passage D - which R10 is text passage of an F24 Publication Expression -, and r17 actualizes an INT09 Formal Feature (e.g. the iambic pentameter).<br>
+This INT02 Actualization of Feature r2 constitutes an INT05 Characteristic which r1 supports affiliation to an INT06 Architextual Entity, corpus C (said epoch).
+
+### A feature of a passage in text A can be explained with the help of some standard reference book (text B) - for instance: a rhetorical figure with the help of Lausberg's standard work on the topic.
+Modeling (one option): 
+An INT07 Interpretament identifies an INT02 Actualization of Feature. This INT02 Actualization of Feature is r18 found on an INT01 Text Passage - which R10 is text passage of text A, an F24 Publication Expression -, and r17 actualizes an INT08 Rhetorical Feature (e.g. a ‚hyperbole‘). <br>
+Another INT02 Actualization of Feature is r18 found on an INT01 Text Passage - which R10 is text passage of text B (e.g. Lausberg's standard work), an F24 Publication Expression -, and r17 actualizes an INT09 Semantic Feature, a definition. This INT02 Actualization of Feature r4 defines the INT08 Rhetorical Feature ‚hyperbole‘ and r23 provides support for the INT07 Interpretament.
+
+### (more following ...)
+
