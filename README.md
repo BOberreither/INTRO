@@ -164,6 +164,7 @@ INT11 Type of Intertextual Relationship
 IRI: https://w3id.org/lso/intro/currentbeta#INT14_IntertextuailtyInRhetoric
 <br>This class comprises intertextual relationships that can be found in rhetoric.
 <br><br><i>has super-classes</i><br>
+INT11 Type of Intertextual Relationship
 
 ### INT15 Intertextuality in Intertextuality Theories
 IRI: https://w3id.org/lso/intro/currentbeta#INT15_IntertextualityInIntTheories
