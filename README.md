@@ -4,27 +4,44 @@ INTRO - an <b>In</b>ter<b>t</b>extual <b>R</b>elationships <b>O</b>ntology for l
 
 Ontology IRI: https://w3id.org/lso/intro/currentbeta#
 
-## WHAT IS INTRO?
+
+<center>+++++++++++++++++++++</center>
+
+## CONTENTS
+
+  <h4><a href="#whatisintro">> What is INTRO?</a></h3>
+  <h4><a href="#scope">> Scope</a></h3>
+  <h4><a href="#modelingprinciples">> Modeling Principles</a></h3>
+  <h4><a href="#granularity">> Granularity</a></h3>
+  <h4><a href="#whatsnext">> What's next?</a></h3>
+  <h4><a href="#further">> INTRO - Further Information</a></h3>
+    <h5><a href="#centralclasses">> Central Classes</a></h3>
+    <h5><a href="#usecases">> Typical Usecases</a></h3>
+
+<center>+++++++++++++++++++++</center>
+
+
+## <a name="whatisintro"/>WHAT IS INTRO?
 INTRO is an ontology for the field of literary studies for representing knowledge on intertextual relations.
 
 Here is a <a href="http://www.visualdataweb.de/webvowl/#iri=https://raw.githubusercontent.com/BOberreither/INTRO/master/INTRO_CurrentBeta.owl">link to a visualization</a> created with WebVOWL.
 
-## SCOPE 
+## <a name="scope"/>SCOPE 
 INTRO is an ontology designed to represent knowledge on intertextuality in literary studies by modelling the discussion or identification of intertextuality and other features in texts, as conducted e.g. in a research paper. It can be, but is not necessarily based on such a pre-existing research outcome: While INTRO can provide an existing research paper with a second, RDF-based layer to duplicate the contents of the paper in a machine readable way, it can also be used to formulate research outcome directly in Linked Data.
 
 The term ‘intertextuality' is to be understood in the broadest sense, including concrete intertextual relationships like citation, allusion, plagiarism etc. as well as intertextuality in a very general sense, like the relation between a text and a text corpus (e.g. a genre, an epoch, an oeuvre). It also includes the relation between e.g. a research paper and its research objects and secondary literature.
 
 Intertextual relations can be represented as relations between texts on any ontological level: from the abstract notion of work to the text as a recognizable textual structure or the text as an identifiable publication (all these being imported FRBRoo-classes) to text passages or text corpora (‚architextual entities‘ like epochs, genres, oeuvres etc.).
 
-## MODELING PRINCIPLES
+## <a name="modelingprinciples"/>MODELING PRINCIPLES
 Given the specific status of knowledge in literary studies, the ontology does not allow to formulate statements asserting that  texts just ‚have‘ features. Instead, identifying text features is always modeled as an ‚actualization’ of an abstract notion in a reading of said text; knowledge about texts (as about cultural artifacts in general) is the outcome of an interpretative act, an ‚interpretament’, which identifies intertextual relationships, text features (which intertextual relationships can be based on) and characteristics (features linking texts to larger text corpora).
 
 Since there are many theoretical frameworks for literary studies, the ontology focusses on their common denominators: In the field of literary studies, this common denominator is the text as research object. The common denominator in the field of intertextuality studies is the text-text-relation. So the central concept on which the ontology is founded on is textualism. Thus the topic of discourse is - at first - reduced to texts, text features and text relations, cutting out everything else from authorship, to reception, events, intentions, motivation, culture, systems, institutions etc. Textualismus in its restrictions is the perfect meta modell for the integration of theoretical frameworks of all kinds, which can be implemented as e.g. 'types' of intertextual relationships (like 'influence', 'paratextuality', 'paradigmatic relation', etc.).
 
-## GRANULARITY
+## <a name="granularity"/>GRANULARITY
 INTRO is capable of modeling knowledge in different degrees of granularity: It allows to give rough overviews of relations between texts or text corpora, but can also account for text features as identified in distinct text passages and their relations to features identified in other texts/text passages. In the case of modeling pre-existing research outcomes (e.g.: an existing research paper), it allows to give abstract-like overviews, accounting for its objects and sources, as well as representations of the content of such publications down to the level of a single paragraph.
 
-## What's next?
+## <a name="whatsnext"/>What's next?
 The ontology is a work in progress. Pending work includes:
 - further alignment with relevant ontologies; 
 - testing, refining and expanding the ontology in the course of one or more case studies
@@ -33,9 +50,9 @@ The ontology is a work in progress. Pending work includes:
 
 <center>*******************************************</center>
 
-# INTRO Further Information
+# <a name="further"/>INTRO Further Information
 
-## CENTRAL CLASSES
+## <a name="centralclasses"/>CENTRAL CLASSES
 <small>(extracted with <a href="http://www.essepuntato.it/lode">lode</a>)</small>
 
 ### INT01 Text Passage
@@ -185,7 +202,7 @@ r25 is section of
 r25 has section
 
 
-## TYPICAL USE CASES
+## <a name="usecases"/>TYPICAL USE CASES
 
 ### Text A refers to text B.
 Modeling: An INT07 Interpretament R21 identifies an INT03 Intertextual Relationship which R13 has referring entity Text A and R12 has referred to entity Text B, both texts being - for instance - F24 Publication Expressions.
