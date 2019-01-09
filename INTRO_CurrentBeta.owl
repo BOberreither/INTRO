@@ -1,0 +1,2494 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://w3id.org/lso/intro/currentbeta#"
+     xml:base="https://w3id.org/lso/intro/currentbeta"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <owl:Ontology rdf:about="https://w3id.org/lso/intro/currentbeta">
+        <owl:imports rdf:resource="http://purl.org/spar/doco/2015-07-03"/>
+        <owl:imports rdf:resource="http://erlangen-crm.org/efrbroo/"/>
+        <dc:title xml:lang="en">INTRO - the Intertextual Relationships Ontology</dc:title>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">INTRO</rdfs:label>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BETA 11 December 2018</owl:versionInfo>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">WHAT IS INTRO?
+INTRO is an ontology for the field of literary studies for representing intertextual relations. The term ‘intertextual relations&apos; is to be understood in the broadest sense. The domain of the ontology includes everything from the identification and characterization of concrete acts of literary (or scholarly) citations or allusions (etc.) to the identification of features that allow to include a text into a larger context (e.g. an epoch, a discourse, an oeuvre ...). INTRO also provides classes and properties necessary to link these findings to their theoretical background or to findings in other research literature, thus covering a large number of scholarly acts.
+
+INTRO IRI: https://w3id.org/lso/intro/currentbeta#
+
+INTRO on GitHub: https://github.com/BOberreither/INTRO
+
+Version info: BETA - Subclasses are subject to refinement and addition; provisional state indicated by &quot;INT&quot;-IRIs/Labels without number
+
+Special Thanks to: Ingo Börner</rdfs:comment>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> Bernhard Oberreither </dc:creator>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/description -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/description"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://w3id.org/lso/intro/currentbeta#R10_has_Text_Passage -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/lso/intro/currentbeta#R10_has_Text_Passage">
+        <owl:inverseOf rdf:resource="https://w3id.org/lso/intro/currentbeta#R10_is_Text_Passage_of"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://erlangen-crm.org/efrbroo/F1_Work"/>
+                    <rdf:Description rdf:about="http://erlangen-crm.org/efrbroo/F2_Expression"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="https://w3id.org/lso/intro/currentbeta#INT1_TextPassage"/>
+        <rdfs:comment>Links a work or an expression (ideally: a F24 Publication Expression) to a INT1 Text passage from that text, e.g. the book with the ISBN 978-0307278630 to a passage on page three of this book.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/lso/intro/currentbeta#R10_is_Text_Passage_of -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/lso/intro/currentbeta#R10_is_Text_Passage_of">
+        <rdfs:domain rdf:resource="https://w3id.org/lso/intro/currentbeta#INT1_TextPassage"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://erlangen-crm.org/efrbroo/F1_Work"/>
+                    <rdf:Description rdf:about="http://erlangen-crm.org/efrbroo/F2_Expression"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+        <rdfs:comment>Links an INT1 Text Passage from a text to that text (work or expression, ideally: a F24 Publication Expression), e.g. a passage on page three of the book with the ISBN 978-0307278630 to that book.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/lso/intro/currentbeta#R11_has_fragment -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/lso/intro/currentbeta#R11_has_fragment">
+        <owl:inverseOf rdf:resource="https://w3id.org/lso/intro/currentbeta#R11_is_fragment_of"/>
+        <rdfs:domain rdf:resource="https://w3id.org/lso/intro/currentbeta#INT1_TextPassage"/>
+        <rdfs:range rdf:resource="https://w3id.org/lso/intro/currentbeta#INT1_TextPassage"/>
+        <rdfs:comment>Links an INT1 Text Passage to shorter INT1 Text Passages it contains.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/lso/intro/currentbeta#R11_is_fragment_of -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/lso/intro/currentbeta#R11_is_fragment_of">
+        <rdfs:domain rdf:resource="https://w3id.org/lso/intro/currentbeta#INT1_TextPassage"/>
+        <rdfs:range rdf:resource="https://w3id.org/lso/intro/currentbeta#INT1_TextPassage"/>
+        <rdfs:comment>Links an INT1 Text Passage to a larger INT1 Text Passage it is a part of.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/lso/intro/currentbeta#R12_has_referred_to_entity -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/lso/intro/currentbeta#R12_has_referred_to_entity">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/lso/intro/currentbeta#R24_has_related_entity"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/lso/intro/currentbeta#R12_is_referred_to_entity"/>
+        <rdfs:domain rdf:resource="https://w3id.org/lso/intro/currentbeta#INT3_IntertextualRelationship"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://erlangen-crm.org/efrbroo/F1_Work"/>
+                    <rdf:Description rdf:about="http://erlangen-crm.org/efrbroo/F2_Expression"/>
+                    <rdf:Description rdf:about="https://w3id.org/lso/intro/currentbeta#INT2_ActualizationOfFeature"/>
+                    <rdf:Description rdf:about="https://w3id.org/lso/intro/currentbeta#INT6_ArchitextualEntity"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+        <rdfs:comment>Links an INT3 Intertextual Relationship to the entity referred to in the intertextual relationship (a text on any ontological level or a feature actualized in the text in question).</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/lso/intro/currentbeta#R12_is_referred_to_entity -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/lso/intro/currentbeta#R12_is_referred_to_entity">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/lso/intro/currentbeta#R24_is_related_entity"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://erlangen-crm.org/efrbroo/F1_Work"/>
+                    <rdf:Description rdf:about="http://erlangen-crm.org/efrbroo/F2_Expression"/>
+                    <rdf:Description rdf:about="https://w3id.org/lso/intro/currentbeta#INT2_ActualizationOfFeature"/>
+                    <rdf:Description rdf:about="https://w3id.org/lso/intro/currentbeta#INT6_ArchitextualEntity"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="https://w3id.org/lso/intro/currentbeta#INT3_IntertextualRelationship"/>
+        <rdfs:comment>Links the referred tp entity (a text on any ontological level or a feature actualized in a text) to the INT3 Intertextual Relationship it is a part of.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/lso/intro/currentbeta#R13_has_referring_entity -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/lso/intro/currentbeta#R13_has_referring_entity">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/lso/intro/currentbeta#R24_has_related_entity"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/lso/intro/currentbeta#R13_is_referring_entity"/>
+        <rdfs:domain rdf:resource="https://w3id.org/lso/intro/currentbeta#INT3_IntertextualRelationship"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://erlangen-crm.org/efrbroo/F1_Work"/>
+                    <rdf:Description rdf:about="http://erlangen-crm.org/efrbroo/F2_Expression"/>
+                    <rdf:Description rdf:about="https://w3id.org/lso/intro/currentbeta#INT2_ActualizationOfFeature"/>
+                    <rdf:Description rdf:about="https://w3id.org/lso/intro/currentbeta#INT6_ArchitextualEntity"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+        <rdfs:comment>Links an INT3 Intertextual Relationship to a referring entity (a text on any ontological level or a feature actualized in the text in question).</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/lso/intro/currentbeta#R13_is_referring_entity -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/lso/intro/currentbeta#R13_is_referring_entity">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/lso/intro/currentbeta#R24_is_related_entity"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://erlangen-crm.org/efrbroo/F1_Work"/>
+                    <rdf:Description rdf:about="http://erlangen-crm.org/efrbroo/F2_Expression"/>
+                    <rdf:Description rdf:about="https://w3id.org/lso/intro/currentbeta#INT2_ActualizationOfFeature"/>
+                    <rdf:Description rdf:about="https://w3id.org/lso/intro/currentbeta#INT6_ArchitextualEntity"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="https://w3id.org/lso/intro/currentbeta#INT3_IntertextualRelationship"/>
+        <rdfs:comment>Links the referring entity (a text on any ontological level or a feature actualized in a text) to the INT3 Intertextual Relationship it is a part of.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/lso/intro/currentbeta#R14_likeness_supported_by -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/lso/intro/currentbeta#R14_likeness_supported_by">
+        <owl:inverseOf rdf:resource="https://w3id.org/lso/intro/currentbeta#R14_supports_likeness"/>
+        <rdfs:domain rdf:resource="https://w3id.org/lso/intro/currentbeta#INT6_ArchitextualEntity"/>
+        <rdfs:range rdf:resource="https://w3id.org/lso/intro/currentbeta#INT5_Characteristic"/>
+        <rdfs:comment>Links an INT6 Architextual Entity to an INT5 Characteristic that, found on a text, establishes a likeness to the INT6 Architextual Entity. For Example: The appearance of a ghost in a text establishes a likeness to the &apos;Gothic novel&apos;.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/lso/intro/currentbeta#R14_supports_likeness -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/lso/intro/currentbeta#R14_supports_likeness">
+        <rdfs:domain rdf:resource="https://w3id.org/lso/intro/currentbeta#INT5_Characteristic"/>
+        <rdfs:range rdf:resource="https://w3id.org/lso/intro/currentbeta#INT6_ArchitextualEntity"/>
+        <rdfs:comment>Links an INT5 Characteristic to an INT6 Architextual Entity if the INT5 Characteristic, found on a text, establishes a likeness to the INT6 Architextual Entity. For Example: The appearance of a ghost in a text establishes a likeness to the &apos;Gothic novel&apos;.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/lso/intro/currentbeta#R15_non-affiliation_supported_by -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/lso/intro/currentbeta#R15_non-affiliation_supported_by">
+        <owl:inverseOf rdf:resource="https://w3id.org/lso/intro/currentbeta#R15_supports_non-affiliation"/>
+        <rdfs:domain rdf:resource="https://w3id.org/lso/intro/currentbeta#INT6_ArchitextualEntity"/>
+        <rdfs:range rdf:resource="https://w3id.org/lso/intro/currentbeta#INT5_Characteristic"/>
+        <rdfs:comment>Links an INT6 Architextual Entity to a INT5 Characteristic that, found on a text, is a reason to consider the text not an element of the INT6 Architextual Entity. For Example: The appearance of a teenage vampire could be a reason to consider a text not a representative of a &apos;Bildungsroman&apos;.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/lso/intro/currentbeta#R15_supports_non-affiliation -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/lso/intro/currentbeta#R15_supports_non-affiliation">
+        <rdfs:domain rdf:resource="https://w3id.org/lso/intro/currentbeta#INT5_Characteristic"/>
+        <rdfs:range rdf:resource="https://w3id.org/lso/intro/currentbeta#INT6_ArchitextualEntity"/>
+        <rdfs:comment>Links an INT5 Characteristic, that, found on a text, is a reason to consider the text not an element of a specific INT6 Architextual Entity, to that INT6 Architextual Entity. For example: The appearance of a ghost is a reason not to consider a text a representative of the genre &apos;crime fiction&apos;.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/lso/intro/currentbeta#R16_supports_unlikeness -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/lso/intro/currentbeta#R16_supports_unlikeness">
+        <owl:inverseOf rdf:resource="https://w3id.org/lso/intro/currentbeta#R16_unlikeness_supported_by"/>
+        <rdfs:domain rdf:resource="https://w3id.org/lso/intro/currentbeta#INT5_Characteristic"/>
+        <rdfs:range rdf:resource="https://w3id.org/lso/intro/currentbeta#INT6_ArchitextualEntity"/>
+        <rdfs:comment>Links an INT5 Characteristic to an INT6 Architextual Entity if the INT5 Characteristic, found on a text, establishes an unlikeness to the INT6 Architextual Entity. For Example: The appearance of a ghost in a text establishes an unlikeness to the &apos;crime novel&apos;.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/lso/intro/currentbeta#R16_unlikeness_supported_by -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/lso/intro/currentbeta#R16_unlikeness_supported_by">
+        <rdfs:domain rdf:resource="https://w3id.org/lso/intro/currentbeta#INT6_ArchitextualEntity"/>
+        <rdfs:range rdf:resource="https://w3id.org/lso/intro/currentbeta#INT5_Characteristic"/>
+        <rdfs:comment>Links an INT6 Architextual Entity to an INT5 Characteristic that, found on a text, establishes an unlikeness to the INT6 Architextual Entity. For Example: The appearance of a space ship in a text establishes an unlikeness to the &apos;Gothic novel&apos;.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/lso/intro/currentbeta#R17_actualizes_feature -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/lso/intro/currentbeta#R17_actualizes_feature">
+        <owl:inverseOf rdf:resource="https://w3id.org/lso/intro/currentbeta#R17_feature_actualized_in"/>
+        <rdfs:domain rdf:resource="https://w3id.org/lso/intro/currentbeta#INT2_ActualizationOfFeature"/>
+        <rdfs:range rdf:resource="https://w3id.org/lso/intro/currentbeta#INT4_ReceptionalEntity"/>
+        <rdfs:comment>Links the specific INT2 Actualization of Feature to the (abstract concept of the) feature it actualizes, a INT4 Receptional Entity.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/lso/intro/currentbeta#R17_feature_actualized_in -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/lso/intro/currentbeta#R17_feature_actualized_in">
+        <rdfs:domain rdf:resource="https://w3id.org/lso/intro/currentbeta#INT4_ReceptionalEntity"/>
+        <rdfs:range rdf:resource="https://w3id.org/lso/intro/currentbeta#INT2_ActualizationOfFeature"/>
+        <rdfs:comment>Links the INT4 Receptional Entity, the feature, to an INT2 Actualization of Feature (that is itself linked to a specific text).</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/lso/intro/currentbeta#R18_actualization_found_on -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/lso/intro/currentbeta#R18_actualization_found_on">
+        <owl:inverseOf rdf:resource="https://w3id.org/lso/intro/currentbeta#R18_shows_actualization"/>
+        <rdfs:domain rdf:resource="https://w3id.org/lso/intro/currentbeta#INT2_ActualizationOfFeature"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://erlangen-crm.org/efrbroo/F1_Work"/>
+                    <rdf:Description rdf:about="http://erlangen-crm.org/efrbroo/F2_Expression"/>
+                    <rdf:Description rdf:about="https://w3id.org/lso/intro/currentbeta#INT2_ActualizationOfFeature"/>
+                    <rdf:Description rdf:about="https://w3id.org/lso/intro/currentbeta#INT6_ArchitextualEntity"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+        <rdfs:comment>Links an INT2 Actualization of Feature to the text (on any ontological level) or another INT2 Actualization of Feature it is found on.
+(Actualizations found on actualizations - in cases where, e.g., the actualization of the feature &quot;Individual Character&quot; can be read as the actualization of the feature &quot;Character Type&quot;.)</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/lso/intro/currentbeta#R18_shows_actualization -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/lso/intro/currentbeta#R18_shows_actualization">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://erlangen-crm.org/efrbroo/F1_Work"/>
+                    <rdf:Description rdf:about="http://erlangen-crm.org/efrbroo/F2_Expression"/>
+                    <rdf:Description rdf:about="https://w3id.org/lso/intro/currentbeta#INT2_ActualizationOfFeature"/>
+                    <rdf:Description rdf:about="https://w3id.org/lso/intro/currentbeta#INT6_ArchitextualEntity"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="https://w3id.org/lso/intro/currentbeta#INT2_ActualizationOfFeature"/>
+        <rdfs:comment>Links a text (on any ontological level) or an INT2 Actualization of Feature to an INT2 Actualization of Feature found on it.
+(Actualizations found on actualizations - in cases where, e.g., the actualization of the feature &quot;Individual Character&quot; can be read as the actualization of the feature &quot;Character Type&quot;.)</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/lso/intro/currentbeta#R19_has_type -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/lso/intro/currentbeta#R19_has_type">
+        <rdfs:subPropertyOf rdf:resource="http://erlangen-crm.org/current/P2_has_type"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/lso/intro/currentbeta#R19_is_type_of"/>
+        <rdfs:domain rdf:resource="https://w3id.org/lso/intro/currentbeta#INT3_IntertextualRelationship"/>
+        <rdfs:range rdf:resource="https://w3id.org/lso/intro/currentbeta#INT11_TypeOfIntertextualRelationship"/>
+        <rdfs:comment>Links an INT3 Intertextual Relationship to its INT22 Type of Intertextual Relationship.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/lso/intro/currentbeta#R19_is_type_of -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/lso/intro/currentbeta#R19_is_type_of">
+        <rdfs:subPropertyOf rdf:resource="http://erlangen-crm.org/current/P2i_is_type_of"/>
+        <rdfs:domain rdf:resource="https://w3id.org/lso/intro/currentbeta#INT11_TypeOfIntertextualRelationship"/>
+        <rdfs:range rdf:resource="https://w3id.org/lso/intro/currentbeta#INT3_IntertextualRelationship"/>
+        <rdfs:comment>Links a INT22 Type of Intertextual Relationship to the INT3 Intertextual Relationship of that Type.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/lso/intro/currentbeta#R1_affiliation_supported_by -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/lso/intro/currentbeta#R1_affiliation_supported_by">
+        <owl:inverseOf rdf:resource="https://w3id.org/lso/intro/currentbeta#R1_supports_affiliation_to"/>
+        <rdfs:domain rdf:resource="https://w3id.org/lso/intro/currentbeta#INT6_ArchitextualEntity"/>
+        <rdfs:range rdf:resource="https://w3id.org/lso/intro/currentbeta#INT5_Characteristic"/>
+        <rdfs:comment>Links an INT6 Architextual Entity to a INT5 Characteristic that, found on a text, is a reason to consider the text an element of the INT6 Architextual Entity. For example: The appearance of a ghost is a reason to consider a text a representative of the &apos;Gothic novel&apos;.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/lso/intro/currentbeta#R1_supports_affiliation_to -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/lso/intro/currentbeta#R1_supports_affiliation_to">
+        <rdfs:domain rdf:resource="https://w3id.org/lso/intro/currentbeta#INT5_Characteristic"/>
+        <rdfs:range rdf:resource="https://w3id.org/lso/intro/currentbeta#INT6_ArchitextualEntity"/>
+        <rdfs:comment>Links to an INT6 Architextual Entity a INT5 Characteristic that, if found on a text, is a reason to consider the text an element of the INT6 Architextual Entity. For example: The appearance of a ghost is a reason to consider a text a representative of the &apos;Gothic novel&apos;.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/lso/intro/currentbeta#R20_discusses -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/lso/intro/currentbeta#R20_discusses">
+        <rdfs:subPropertyOf rdf:resource="http://erlangen-crm.org/current/P67_refers_to"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/lso/intro/currentbeta#R20_is_discussed_in"/>
+        <rdfs:domain rdf:resource="https://w3id.org/lso/intro/currentbeta#INT7_Interpretament"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://erlangen-crm.org/efrbroo/F1_Work"/>
+                    <rdf:Description rdf:about="http://erlangen-crm.org/efrbroo/F2_Expression"/>
+                    <rdf:Description rdf:about="https://w3id.org/lso/intro/currentbeta#INT6_ArchitextualEntity"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+        <rdfs:comment>Links an INT7 Interpretament to the textual instance (on any ontological level) it discusses.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/lso/intro/currentbeta#R20_is_discussed_in -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/lso/intro/currentbeta#R20_is_discussed_in">
+        <rdfs:subPropertyOf rdf:resource="http://erlangen-crm.org/current/P67i_is_referred_to_by"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://erlangen-crm.org/efrbroo/F1_Work"/>
+                    <rdf:Description rdf:about="http://erlangen-crm.org/efrbroo/F2_Expression"/>
+                    <rdf:Description rdf:about="https://w3id.org/lso/intro/currentbeta#INT6_ArchitextualEntity"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="https://w3id.org/lso/intro/currentbeta#INT7_Interpretament"/>
+        <rdfs:comment>Links a textual instance (on any ontological level) to the INT7 Interpretament it is discussed in.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/lso/intro/currentbeta#R21_identifies -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/lso/intro/currentbeta#R21_identifies">
+        <rdfs:subPropertyOf rdf:resource="http://erlangen-crm.org/current/P67_refers_to"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/lso/intro/currentbeta#R21_is_identified_by"/>
+        <rdfs:domain rdf:resource="https://w3id.org/lso/intro/currentbeta#INT7_Interpretament"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/lso/intro/currentbeta#INT2_ActualizationOfFeature"/>
+                    <rdf:Description rdf:about="https://w3id.org/lso/intro/currentbeta#INT3_IntertextualRelationship"/>
+                    <rdf:Description rdf:about="https://w3id.org/lso/intro/currentbeta#INT5_Characteristic"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+        <rdfs:comment>Links an INT7 Interpretament to the INT5 Characteristic, the INT3 Intertextual Relationship or the INT2 Actualization of Feature it identifies.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/lso/intro/currentbeta#R21_is_identified_by -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/lso/intro/currentbeta#R21_is_identified_by">
+        <rdfs:subPropertyOf rdf:resource="http://erlangen-crm.org/current/P67i_is_referred_to_by"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/lso/intro/currentbeta#INT2_ActualizationOfFeature"/>
+                    <rdf:Description rdf:about="https://w3id.org/lso/intro/currentbeta#INT3_IntertextualRelationship"/>
+                    <rdf:Description rdf:about="https://w3id.org/lso/intro/currentbeta#INT5_Characteristic"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="https://w3id.org/lso/intro/currentbeta#INT7_Interpretament"/>
+        <rdfs:comment>Links an INT5 Characteristic, an INT3 Intertextual Relationship or an INT2 Actualization of Featurea to the INT44 Interpretament it is identified in.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/lso/intro/currentbeta#R22_provides_similarity_for_reference -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/lso/intro/currentbeta#R22_provides_similarity_for_reference">
+        <owl:inverseOf rdf:resource="https://w3id.org/lso/intro/currentbeta#R22_reference_is_based_on_similarity"/>
+        <rdfs:domain rdf:resource="https://w3id.org/lso/intro/currentbeta#INT4_ReceptionalEntity"/>
+        <rdfs:range rdf:resource="https://w3id.org/lso/intro/currentbeta#INT3_IntertextualRelationship"/>
+        <rdfs:comment>Links an INT4 Receptional Entity to a INT3 Intertextual Relationship it provides the similarity for, the similarity being necessary for the detection of the INT3 Intertextual Relationship. States that an INT3 Intertextual Relationship is based on a similarity, i.e. the actualization of the same INT4 Receptional Entity in two different texts.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/lso/intro/currentbeta#R22_reference_is_based_on_similarity -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/lso/intro/currentbeta#R22_reference_is_based_on_similarity">
+        <rdfs:domain rdf:resource="https://w3id.org/lso/intro/currentbeta#INT3_IntertextualRelationship"/>
+        <rdfs:range rdf:resource="https://w3id.org/lso/intro/currentbeta#INT4_ReceptionalEntity"/>
+        <rdfs:comment>Links an INT3 Intertextual Relationship to an INT4 Receptional Entity that provides the similarity necessary for the detection of the INT3 Intertextual Relationship. States that an INT3 Intertextual Relationship is based on a similarity, i.e. the actualization of the same receptional entity in two different texts.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/lso/intro/currentbeta#R23_provides_support_for -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/lso/intro/currentbeta#R23_provides_support_for">
+        <owl:inverseOf rdf:resource="https://w3id.org/lso/intro/currentbeta#R23_support_provided_by"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://erlangen-crm.org/efrbroo/F1_Work"/>
+                    <rdf:Description rdf:about="http://erlangen-crm.org/efrbroo/F2_Expression"/>
+                    <rdf:Description rdf:about="https://w3id.org/lso/intro/currentbeta#INT2_ActualizationOfFeature"/>
+                    <rdf:Description rdf:about="https://w3id.org/lso/intro/currentbeta#INT6_ArchitextualEntity"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/lso/intro/currentbeta#INT2_ActualizationOfFeature"/>
+                    <rdf:Description rdf:about="https://w3id.org/lso/intro/currentbeta#INT3_IntertextualRelationship"/>
+                    <rdf:Description rdf:about="https://w3id.org/lso/intro/currentbeta#INT4_ReceptionalEntity"/>
+                    <rdf:Description rdf:about="https://w3id.org/lso/intro/currentbeta#INT5_Characteristic"/>
+                    <rdf:Description rdf:about="https://w3id.org/lso/intro/currentbeta#INT7_Interpretament"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+        <rdfs:comment>Relates a source (a text on any ontological level or an actualization of a feature on said source) to the outcome of a receptional or interpretative act (an INT5 Characteristic, an INT2 Actualization of Feature, a INT4 Receptional Entity, an INT3 Intertextual Relationship, an INT7 Interpretament) to support it.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/lso/intro/currentbeta#R23_support_provided_by -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/lso/intro/currentbeta#R23_support_provided_by">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/lso/intro/currentbeta#INT2_ActualizationOfFeature"/>
+                    <rdf:Description rdf:about="https://w3id.org/lso/intro/currentbeta#INT3_IntertextualRelationship"/>
+                    <rdf:Description rdf:about="https://w3id.org/lso/intro/currentbeta#INT4_ReceptionalEntity"/>
+                    <rdf:Description rdf:about="https://w3id.org/lso/intro/currentbeta#INT5_Characteristic"/>
+                    <rdf:Description rdf:about="https://w3id.org/lso/intro/currentbeta#INT7_Interpretament"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://erlangen-crm.org/efrbroo/F1_Work"/>
+                    <rdf:Description rdf:about="http://erlangen-crm.org/efrbroo/F2_Expression"/>
+                    <rdf:Description rdf:about="https://w3id.org/lso/intro/currentbeta#INT2_ActualizationOfFeature"/>
+                    <rdf:Description rdf:about="https://w3id.org/lso/intro/currentbeta#INT6_ArchitextualEntity"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+        <rdfs:comment>Relates the decision made in any receptional or interpretative act - the determination of an INT5 Characteristic, an INT2 Actualization of Feature, a INT4 Receptional Entity, an INT3 Intertextual Relationship, an INT7 Interpretament - to a source that can support this decision (a text on any ontological level or one of its features).</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/lso/intro/currentbeta#R24_has_related_entity -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/lso/intro/currentbeta#R24_has_related_entity">
+        <owl:inverseOf rdf:resource="https://w3id.org/lso/intro/currentbeta#R24_is_related_entity"/>
+        <rdfs:domain rdf:resource="https://w3id.org/lso/intro/currentbeta#INT3_IntertextualRelationship"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://erlangen-crm.org/efrbroo/F1_Work"/>
+                    <rdf:Description rdf:about="http://erlangen-crm.org/efrbroo/F2_Expression"/>
+                    <rdf:Description rdf:about="https://w3id.org/lso/intro/currentbeta#INT2_ActualizationOfFeature"/>
+                    <rdf:Description rdf:about="https://w3id.org/lso/intro/currentbeta#INT6_ArchitextualEntity"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+        <rdfs:comment>Links any INT4 Intertextual Relationship to a text (on any ontological level) or INT5 Actualization of Feature that is part of the INT4 Intertextual Relationship.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/lso/intro/currentbeta#R24_is_related_entity -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/lso/intro/currentbeta#R24_is_related_entity">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://erlangen-crm.org/efrbroo/F1_Work"/>
+                    <rdf:Description rdf:about="http://erlangen-crm.org/efrbroo/F2_Expression"/>
+                    <rdf:Description rdf:about="https://w3id.org/lso/intro/currentbeta#INT2_ActualizationOfFeature"/>
+                    <rdf:Description rdf:about="https://w3id.org/lso/intro/currentbeta#INT6_ArchitextualEntity"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="https://w3id.org/lso/intro/currentbeta#INT3_IntertextualRelationship"/>
+        <rdfs:comment>Links any text (on any ontological level) or INT2 Actualization of Feature to the INT3 Intertextual Relationship it is a part of.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/lso/intro/currentbeta#R25_has_section -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/lso/intro/currentbeta#R25_has_section">
+        <owl:inverseOf rdf:resource="https://w3id.org/lso/intro/currentbeta#R25_is_section_of"/>
+        <rdfs:domain rdf:resource="http://erlangen-crm.org/efrbroo/F24_Publication_Expression"/>
+        <rdfs:range rdf:resource="https://w3id.org/lso/intro/currentbeta#INT16_PublicationExpressionSection"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/lso/intro/currentbeta#R25_is_section_of -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/lso/intro/currentbeta#R25_is_section_of">
+        <rdfs:domain rdf:resource="https://w3id.org/lso/intro/currentbeta#INT16_PublicationExpressionSection"/>
+        <rdfs:range rdf:resource="http://erlangen-crm.org/efrbroo/F24_Publication_Expression"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/lso/intro/currentbeta#R2_consists_in -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/lso/intro/currentbeta#R2_consists_in">
+        <owl:inverseOf rdf:resource="https://w3id.org/lso/intro/currentbeta#R2_constitutes"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/lso/intro/currentbeta#INT5_Characteristic"/>
+                    <rdf:Description rdf:about="https://w3id.org/lso/intro/currentbeta#INT7_Interpretament"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="https://w3id.org/lso/intro/currentbeta#INT2_ActualizationOfFeature"/>
+        <rdfs:comment>Links an INT5 Characteristic of a text to the INT5 Actualization of Feature in order to state that the Feature is &apos;characteristic&apos;, meaning: it affiliates the text with an architextual entity.
+Also used to link an INT7 Interpretament to the INT2 Actualization of feature, in this case: of the semantic feature INT Interpretation.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/lso/intro/currentbeta#R2_constitutes -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/lso/intro/currentbeta#R2_constitutes">
+        <rdfs:domain rdf:resource="https://w3id.org/lso/intro/currentbeta#INT2_ActualizationOfFeature"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/lso/intro/currentbeta#INT5_Characteristic"/>
+                    <rdf:Description rdf:about="https://w3id.org/lso/intro/currentbeta#INT7_Interpretament"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+        <rdfs:comment>States that an INT2 Actualization of feature in a specific text can be seen as a characteristic and thus affiliating the text with an architextual entity.
+Also used to state that the actualization of the semantic feature INT_Interpretation can be seen as an INT7 Interpretament and thus identify INT3 Intertextual Relationships, INT5 Characteristics and so on.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/lso/intro/currentbeta#R3_constellates -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/lso/intro/currentbeta#R3_constellates">
+        <owl:inverseOf rdf:resource="https://w3id.org/lso/intro/currentbeta#R3_is_constellated_by"/>
+        <rdfs:domain rdf:resource="https://w3id.org/lso/intro/currentbeta#INT_Constellation"/>
+        <rdfs:range rdf:resource="https://w3id.org/lso/intro/currentbeta#INT2_ActualizationOfFeature"/>
+        <rdfs:comment>Links an INT Constellation to the elements (INT2 Actualizations of Feature) that together form that INT Constellation.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/lso/intro/currentbeta#R3_is_constellated_by -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/lso/intro/currentbeta#R3_is_constellated_by">
+        <rdfs:domain rdf:resource="https://w3id.org/lso/intro/currentbeta#INT2_ActualizationOfFeature"/>
+        <rdfs:range rdf:resource="https://w3id.org/lso/intro/currentbeta#INT_Constellation"/>
+        <rdfs:comment>Links INT2 Actualizations of Feature of at least two INT4 Receptional Entitiess with the INT Constellation they form (i.e. stating that they do so).</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/lso/intro/currentbeta#R4_defines -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/lso/intro/currentbeta#R4_defines">
+        <owl:inverseOf rdf:resource="https://w3id.org/lso/intro/currentbeta#R4_is_defined_in"/>
+        <rdfs:domain rdf:resource="https://w3id.org/lso/intro/currentbeta#INT2_ActualizationOfFeature"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/lso/intro/currentbeta#INT11_TypeOfIntertextualRelationship"/>
+                    <rdf:Description rdf:about="https://w3id.org/lso/intro/currentbeta#INT4_ReceptionalEntity"/>
+                    <rdf:Description rdf:about="https://w3id.org/lso/intro/currentbeta#INT6_ArchitextualEntity"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+        <rdfs:comment>Relates an actualization (usually: of the semantic feature &apos;INT Definition&apos;) to a type of intertextual relationship and to receptional and architextual entities and thereby links a concept - e.g. &apos;discourse&apos; - to a definition - e.g. a text passage in Foucault&apos;s writings.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/lso/intro/currentbeta#R4_is_defined_in -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/lso/intro/currentbeta#R4_is_defined_in">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/lso/intro/currentbeta#INT11_TypeOfIntertextualRelationship"/>
+                    <rdf:Description rdf:about="https://w3id.org/lso/intro/currentbeta#INT4_ReceptionalEntity"/>
+                    <rdf:Description rdf:about="https://w3id.org/lso/intro/currentbeta#INT6_ArchitextualEntity"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="https://w3id.org/lso/intro/currentbeta#INT2_ActualizationOfFeature"/>
+        <rdfs:comment>Relates an INT11 Type of Intertextual Relationship or an INT4 Receptional, or INT6 Architextual Entity to the INT2 Actualization of a Feature (usually: of the semantic feature &apos;definition&apos;) in order to link a definition - e.g. a text passage in Foucault&apos;s writings - to the concept it defines - e.g. &apos;discourse&apos;.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/lso/intro/currentbeta#R5_has_appurtenant_element -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/lso/intro/currentbeta#R5_has_appurtenant_element">
+        <owl:inverseOf rdf:resource="https://w3id.org/lso/intro/currentbeta#R5_is_appurtenant_element"/>
+        <rdfs:domain rdf:resource="https://w3id.org/lso/intro/currentbeta#INT6_ArchitextualEntity"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://erlangen-crm.org/efrbroo/F1_Work"/>
+                    <rdf:Description rdf:about="http://erlangen-crm.org/efrbroo/F2_Expression"/>
+                    <rdf:Description rdf:about="https://w3id.org/lso/intro/currentbeta#INT6_ArchitextualEntity"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+        <rdfs:comment>Links an INT6 Transtextual Entity to a text (on any ontological level) that is an element of the transtextual entity.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/lso/intro/currentbeta#R5_is_appurtenant_element -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/lso/intro/currentbeta#R5_is_appurtenant_element">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://erlangen-crm.org/efrbroo/F1_Work"/>
+                    <rdf:Description rdf:about="http://erlangen-crm.org/efrbroo/F2_Expression"/>
+                    <rdf:Description rdf:about="https://w3id.org/lso/intro/currentbeta#INT6_ArchitextualEntity"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="https://w3id.org/lso/intro/currentbeta#INT6_ArchitextualEntity"/>
+        <rdfs:comment>Links a text (on any ontological level) to an INT6 Transtextual Entity that it is an element of.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/lso/intro/currentbeta#R6_has_representative_element -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/lso/intro/currentbeta#R6_has_representative_element">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/lso/intro/currentbeta#R5_has_appurtenant_element"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/lso/intro/currentbeta#R6_is_representative_element"/>
+        <rdfs:domain rdf:resource="https://w3id.org/lso/intro/currentbeta#INT6_ArchitextualEntity"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://erlangen-crm.org/efrbroo/F1_Work"/>
+                    <rdf:Description rdf:about="http://erlangen-crm.org/efrbroo/F2_Expression"/>
+                    <rdf:Description rdf:about="https://w3id.org/lso/intro/currentbeta#INT6_ArchitextualEntity"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+        <rdfs:comment>Links an INT6 Transtextual Entity to a text (on any ontological level) that is representative for the transtextual entity.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/lso/intro/currentbeta#R6_is_representative_element -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/lso/intro/currentbeta#R6_is_representative_element">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/lso/intro/currentbeta#R5_is_appurtenant_element"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://erlangen-crm.org/efrbroo/F1_Work"/>
+                    <rdf:Description rdf:about="http://erlangen-crm.org/efrbroo/F2_Expression"/>
+                    <rdf:Description rdf:about="https://w3id.org/lso/intro/currentbeta#INT6_ArchitextualEntity"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="https://w3id.org/lso/intro/currentbeta#INT6_ArchitextualEntity"/>
+        <rdfs:comment>Links a text (on any ontological level) to an INT6 Transtextual Entity that it is representative for.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/lso/intro/currentbeta#R7_has_initial_element -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/lso/intro/currentbeta#R7_has_initial_element">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/lso/intro/currentbeta#R5_has_appurtenant_element"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/lso/intro/currentbeta#R7_is_initial_element"/>
+        <rdfs:domain rdf:resource="https://w3id.org/lso/intro/currentbeta#INT6_ArchitextualEntity"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://erlangen-crm.org/efrbroo/F1_Work"/>
+                    <rdf:Description rdf:about="http://erlangen-crm.org/efrbroo/F2_Expression"/>
+                    <rdf:Description rdf:about="https://w3id.org/lso/intro/currentbeta#INT6_ArchitextualEntity"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+        <rdfs:comment>Links an INT6 Transtextual Entity to a text (on any ontological level) that is initial for the transtextual entity.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/lso/intro/currentbeta#R7_is_initial_element -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/lso/intro/currentbeta#R7_is_initial_element">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/lso/intro/currentbeta#R5_is_appurtenant_element"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://erlangen-crm.org/efrbroo/F1_Work"/>
+                    <rdf:Description rdf:about="http://erlangen-crm.org/efrbroo/F2_Expression"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="https://w3id.org/lso/intro/currentbeta#INT6_ArchitextualEntity"/>
+        <rdfs:comment>Links a text (on any ontological level) to an INT6 Transtextual Entity that it is initial for.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/lso/intro/currentbeta#R8_has_opinion_object -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/lso/intro/currentbeta#R8_has_opinion_object">
+        <owl:inverseOf rdf:resource="https://w3id.org/lso/intro/currentbeta#R8_is_opinion_object_of"/>
+        <rdfs:domain rdf:resource="https://w3id.org/lso/intro/currentbeta#INT_Opinion"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:comment>Links an INT Opinion to its object - for example an opinion with the theme fashion (to make it an opinion about fashion).</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/lso/intro/currentbeta#R8_is_opinion_object_of -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/lso/intro/currentbeta#R8_is_opinion_object_of">
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="https://w3id.org/lso/intro/currentbeta#INT_Opinion"/>
+        <rdfs:comment>Links an object with an INT Opinion about it.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/lso/intro/currentbeta#R9_has_preceding_interpretament -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/lso/intro/currentbeta#R9_has_preceding_interpretament">
+        <owl:inverseOf rdf:resource="https://w3id.org/lso/intro/currentbeta#R9_has_subsequent_interpretament"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/lso/intro/currentbeta#INT7_Interpretament"/>
+        <rdfs:range rdf:resource="https://w3id.org/lso/intro/currentbeta#INT7_Interpretament"/>
+        <rdfs:comment>Links an INT7 Interpretamet to another INT7 Interpretament preceding it (logically or chronologically).</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/lso/intro/currentbeta#R9_has_subsequent_interpretament -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/lso/intro/currentbeta#R9_has_subsequent_interpretament">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/lso/intro/currentbeta#INT7_Interpretament"/>
+        <rdfs:range rdf:resource="https://w3id.org/lso/intro/currentbeta#INT7_Interpretament"/>
+        <rdfs:comment>Links an INT7 Interpretamet to another INT7 Interpretament following it (logically or chronologically).</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://w3id.org/lso/intro/currentbeta#R40_has_bibliographical_data -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/lso/intro/currentbeta#R40_has_bibliographical_data">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://erlangen-crm.org/efrbroo/F1_Work"/>
+                    <rdf:Description rdf:about="http://erlangen-crm.org/efrbroo/F2_Expression"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Links a text (work or expression) to its bibliographical data, represented as a data string. (A shortcut for modelling bibliographical data with FRBRoo.)</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/lso/intro/currentbeta#R41_has_location -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/lso/intro/currentbeta#R41_has_location">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/lso/intro/currentbeta#INT16_PublicationExpressionSection"/>
+                    <rdf:Description rdf:about="https://w3id.org/lso/intro/currentbeta#INT1_TextPassage"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Defines the exact location of an INT1 Text Passage or an INT16 Publication Expression Section in a F24 Publication Expression, e.g. by giving page or paragraph numbers.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/lso/intro/currentbeta#R42_has_paraphrase_or_definition -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/lso/intro/currentbeta#R42_has_paraphrase_or_definition">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/lso/intro/currentbeta#INT11_TypeOfIntertextualRelationship"/>
+                    <rdf:Description rdf:about="https://w3id.org/lso/intro/currentbeta#INT2_ActualizationOfFeature"/>
+                    <rdf:Description rdf:about="https://w3id.org/lso/intro/currentbeta#INT4_ReceptionalEntity"/>
+                    <rdf:Description rdf:about="https://w3id.org/lso/intro/currentbeta#INT5_Characteristic"/>
+                    <rdf:Description rdf:about="https://w3id.org/lso/intro/currentbeta#INT6_ArchitextualEntity"/>
+                    <rdf:Description rdf:about="https://w3id.org/lso/intro/currentbeta#INT7_Interpretament"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Links pretty much everything to a data string prividing a definition for it. (A shortcut for modelling the definition as an INT2 Actualization of Feature.)</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/lso/intro/currentbeta#R43_has_specification -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/lso/intro/currentbeta#R43_has_specification">
+        <rdfs:domain rdf:resource="https://w3id.org/lso/intro/currentbeta#INT_Constellation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Links an INT Constellation to a data string defining or describing it more closely.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/lso/intro/currentbeta#R44_has_wording -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/lso/intro/currentbeta#R44_has_wording">
+        <rdfs:domain rdf:resource="https://w3id.org/lso/intro/currentbeta#INT1_TextPassage"/>
+        <rdfs:comment>Links an INT1 Text Passage to a data string providing the exact wording of the text passage.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/orb/1.0/Header -->
+
+    <owl:Class rdf:about="http://purl.org/orb/1.0/Header">
+        <owl:equivalentClass rdf:resource="http://purl.org/spar/doco/FrontMatter"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/currentbeta#INT10_FormalFeature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/spar/deo/BibliographicReference -->
+
+    <owl:Class rdf:about="http://purl.org/spar/deo/BibliographicReference">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/currentbeta#INT10_FormalFeature"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/currentbeta#INT_Pragmatic_Feature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/spar/deo/Caption -->
+
+    <owl:Class rdf:about="http://purl.org/spar/deo/Caption">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/currentbeta#INT10_FormalFeature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/spar/deo/DiscourseElement -->
+
+    <owl:Class rdf:about="http://purl.org/spar/deo/DiscourseElement">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/currentbeta#INT10_FormalFeature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/spar/deo/Reference -->
+
+    <owl:Class rdf:about="http://purl.org/spar/deo/Reference">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/currentbeta#INT10_FormalFeature"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/currentbeta#INT_Pragmatic_Feature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/spar/doco/Abstract -->
+
+    <owl:Class rdf:about="http://purl.org/spar/doco/Abstract">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/currentbeta#INT10_FormalFeature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/spar/doco/Afterword -->
+
+    <owl:Class rdf:about="http://purl.org/spar/doco/Afterword">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.org/spar/doco/Section"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.org/dc/terms/isPartOf"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.org/spar/doco/BackMatter"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A literary device that is often found at the end of a piece of literature. It generally covers the story of how the book came into being, or how the idea for the book was developed. Alternatively, it may be written by someone other than the author of the book, and may discuss the work&apos;s historical or cultural context, if the work is being reissued many years after its original publication.</rdfs:comment>
+        <rdfs:label xml:lang="en">afterword</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/spar/doco/Appendix -->
+
+    <owl:Class rdf:about="http://purl.org/spar/doco/Appendix">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.org/spar/doco/Section"/>
+                            <rdf:Description rdf:about="http://www.essepuntato.it/2008/12/pattern#HeadedContainer"/>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.org/dc/terms/isPartOf"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.org/spar/doco/BackMatter"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A supplemental addition to the main work. It may contain data, more detailed information about methods and materials, or provide additional detail concerning the information found in the main work.</rdfs:comment>
+        <rdfs:label xml:lang="en">appendix</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/spar/doco/BackMatter -->
+
+    <owl:Class rdf:about="http://purl.org/spar/doco/BackMatter">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.org/spar/deo/DiscourseElement"/>
+                    <rdf:Description rdf:about="http://www.essepuntato.it/2008/12/pattern#Container"/>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.essepuntato.it/2008/12/pattern#isContainedBy"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:complementOf>
+                            <owl:Class>
+                                <owl:unionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://purl.org/spar/doco/BackMatter"/>
+                                    <rdf:Description rdf:about="http://purl.org/spar/doco/BodyMatter"/>
+                                    <rdf:Description rdf:about="http://purl.org/spar/doco/FrontMatter"/>
+                                </owl:unionOf>
+                            </owl:Class>
+                        </owl:complementOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">The final principle part of a document, in which is usually found the bibliography, index, appendixes, etc.</rdfs:comment>
+        <rdfs:label xml:lang="en">back matter</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/spar/doco/Bibliography -->
+
+    <owl:Class rdf:about="http://purl.org/spar/doco/Bibliography">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/currentbeta#INT10_FormalFeature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/spar/doco/BodyMatter -->
+
+    <owl:Class rdf:about="http://purl.org/spar/doco/BodyMatter">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.org/spar/deo/DiscourseElement"/>
+                    <rdf:Description rdf:about="http://www.essepuntato.it/2008/12/pattern#Container"/>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.essepuntato.it/2008/12/pattern#isContainedBy"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:complementOf>
+                            <owl:Class>
+                                <owl:unionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://purl.org/spar/doco/BackMatter"/>
+                                    <rdf:Description rdf:about="http://purl.org/spar/doco/BodyMatter"/>
+                                    <rdf:Description rdf:about="http://purl.org/spar/doco/FrontMatter"/>
+                                </owl:unionOf>
+                            </owl:Class>
+                        </owl:complementOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">The central principle part of a document, that contains the real content. It may be subdivided hierarchically by the use of chapters and sections.</rdfs:comment>
+        <rdfs:label xml:lang="en">body matter</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/spar/doco/Chapter -->
+
+    <owl:Class rdf:about="http://purl.org/spar/doco/Chapter">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.org/spar/deo/DiscourseElement"/>
+                    <rdf:Description rdf:about="http://www.essepuntato.it/2008/12/pattern#HeadedContainer"/>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.essepuntato.it/2008/12/pattern#contains"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.org/spar/doco/Paragraph"/>
+                            <rdf:Description rdf:about="http://purl.org/spar/doco/Section"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.essepuntato.it/2008/12/pattern#contains"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:complementOf rdf:resource="http://purl.org/spar/doco/Chapter"/>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A principle division of the body matter of a large document, such as a book, a report or a legislative document.</rdfs:comment>
+        <rdfs:label xml:lang="en">chapter</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/spar/doco/ChapterLabel -->
+
+    <owl:Class rdf:about="http://purl.org/spar/doco/ChapterLabel">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.org/spar/doco/Label"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.org/dc/terms/isPartOf"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.org/spar/doco/Chapter"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://purl.org/spar/doco/SectionLabel"/>
+        <rdfs:comment xml:lang="en">A block containing a label for the chapter, that may include the chapter number.</rdfs:comment>
+        <rdfs:label xml:lang="en">chapter label</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/spar/doco/Colophon -->
+
+    <owl:Class rdf:about="http://purl.org/spar/doco/Colophon">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.org/spar/doco/Section"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.org/dc/terms/isPartOf"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:unionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://purl.org/spar/doco/BackMatter"/>
+                                    <rdf:Description rdf:about="http://purl.org/spar/doco/FrontMatter"/>
+                                </owl:unionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A brief description of publication or production notes relevant to the document.</rdfs:comment>
+        <rdfs:label xml:lang="en">colophon</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/spar/doco/ComplexRunInQuotation -->
+
+    <owl:Class rdf:about="http://purl.org/spar/doco/ComplexRunInQuotation">
+        <rdfs:subClassOf rdf:resource="http://purl.org/spar/deo/DiscourseElement"/>
+        <rdfs:comment xml:lang="en">A quotation with a complex structure, that is included inline and is usually enclosed within quotation marks.</rdfs:comment>
+        <rdfs:label xml:lang="en">complex run-in quotation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/spar/doco/Figure -->
+
+    <owl:Class rdf:about="http://purl.org/spar/doco/Figure">
+        <rdfs:subClassOf rdf:resource="http://purl.org/spar/deo/DiscourseElement"/>
+        <rdfs:comment xml:lang="en">A communication object comprising one or more graphics, drawings, images, or other visual representations..</rdfs:comment>
+        <rdfs:label xml:lang="en">figure</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/spar/doco/FigureLabel -->
+
+    <owl:Class rdf:about="http://purl.org/spar/doco/FigureLabel">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.org/spar/doco/Label"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.org/dc/terms/isPartOf"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.org/spar/doco/FigureBox"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A block containing a label for the figure box, that may include the figure number.</rdfs:comment>
+        <rdfs:label xml:lang="en">figure label</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/spar/doco/Footnote -->
+
+    <owl:Class rdf:about="http://purl.org/spar/doco/Footnote">
+        <rdfs:subClassOf rdf:resource="http://purl.org/spar/deo/DiscourseElement"/>
+        <rdfs:comment xml:lang="en">A structure within a sentence that permits the author to make a comment or to cite another publication in support of the text, or both. A footnote is normally flagged by a superscript number immediately following that portion of the text to which it relates. For convenience of reading, the text of the footnote is usually printed at the bottom of the page or at the end of a text.</rdfs:comment>
+        <rdfs:label xml:lang="en">footnote</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/spar/doco/Foreword -->
+
+    <owl:Class rdf:about="http://purl.org/spar/doco/Foreword">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.org/spar/doco/Section"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.org/dc/terms/isPartOf"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.org/spar/doco/FrontMatter"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A section in a book or report, usually written by someone other than the author, that introduces or commends the document to the reader. It may include description of the interaction between the writer of the foreword and the author.</rdfs:comment>
+        <rdfs:label xml:lang="en">foreword</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/spar/doco/Formula -->
+
+    <owl:Class rdf:about="http://purl.org/spar/doco/Formula">
+        <rdfs:subClassOf rdf:resource="http://purl.org/spar/deo/DiscourseElement"/>
+        <rdfs:comment xml:lang="en">A unit of information expressed in mathematical, chemical or logical symbols and language.</rdfs:comment>
+        <rdfs:label xml:lang="en">formula</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/spar/doco/FormulaBox -->
+
+    <owl:Class rdf:about="http://purl.org/spar/doco/FormulaBox">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.org/spar/deo/DiscourseElement"/>
+                            <rdf:Description rdf:about="http://www.essepuntato.it/2008/12/pattern#Container"/>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.org/dc/terms/hasPart"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.org/spar/doco/Formula"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A space within a document that contains one or more formulae.</rdfs:comment>
+        <rdfs:label xml:lang="en">formula box</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/spar/doco/FrontMatter -->
+
+    <owl:Class rdf:about="http://purl.org/spar/doco/FrontMatter">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.org/spar/deo/DiscourseElement"/>
+                    <rdf:Description rdf:about="http://www.essepuntato.it/2008/12/pattern#Container"/>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.essepuntato.it/2008/12/pattern#isContainedBy"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:complementOf>
+                            <owl:Class>
+                                <owl:unionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://purl.org/spar/doco/BackMatter"/>
+                                    <rdf:Description rdf:about="http://purl.org/spar/doco/BodyMatter"/>
+                                    <rdf:Description rdf:about="http://purl.org/spar/doco/FrontMatter"/>
+                                </owl:unionOf>
+                            </owl:Class>
+                        </owl:complementOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">The initial principle part of a document, usually containing self-referential metadata. In a book, this typically includes its title, authors, publisher, publication date, ISBN and copyright declaration, together with the preface, foreword, table of content, etc. In a journal article, the front matter is normally restricted to the title, authors and the authors&apos; affiliation details, although the latter may alternatively be included in a footnote or the back matter. In books, the front matter pages may be numbered in lowercase Roman numerals.</rdfs:comment>
+        <rdfs:label xml:lang="en">front matter</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/spar/doco/Glossary -->
+
+    <owl:Class rdf:about="http://purl.org/spar/doco/Glossary">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.org/spar/doco/Section"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.org/dc/terms/isPartOf"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:unionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://purl.org/spar/doco/BackMatter"/>
+                                    <rdf:Description rdf:about="http://purl.org/spar/doco/FrontMatter"/>
+                                </owl:unionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A set of definitions of words or phrases of importance to the work, normally alphabetized. In longer works of fiction, the entries may contains places and characters.</rdfs:comment>
+        <rdfs:label xml:lang="en">glossary</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/spar/doco/Index -->
+
+    <owl:Class rdf:about="http://purl.org/spar/doco/Index">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.org/spar/doco/Section"/>
+                            <rdf:Description rdf:about="http://www.essepuntato.it/2008/12/pattern#HeadedContainer"/>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.org/dc/terms/isPartOf"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.org/spar/doco/BackMatter"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/dc/terms/hasPart"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.org/spar/doco/ListOfReferences"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.essepuntato.it/2008/12/pattern#contains"/>
+                                <owl:allValuesFrom>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://purl.org/dc/terms/relation"/>
+                                        <owl:someValuesFrom rdf:resource="http://purl.org/spar/doco/TextChunk"/>
+                                    </owl:Restriction>
+                                </owl:allValuesFrom>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A section containing a list of references to information on the named topic of importance to the content of the document. The references may be to page numbers, paragraph numbers, section numbers or chapter numbers within the document.</rdfs:comment>
+        <rdfs:label xml:lang="en">index</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/spar/doco/Label -->
+
+    <owl:Class rdf:about="http://purl.org/spar/doco/Label">
+        <rdfs:subClassOf rdf:resource="http://purl.org/spar/deo/DiscourseElement"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.essepuntato.it/2008/12/pattern#isContainedBy"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.essepuntato.it/2008/12/pattern#Block"/>
+                            <rdf:Description rdf:about="http://www.essepuntato.it/2008/12/pattern#Container"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A block containing text, that may include a number (e.g., &quot;Chapter Three&quot;, &quot;3.2&quot;, &quot;Figure 1&quot;, &quot;Table&quot;), used to identify an item within the document, for example a chapter, a figure, a section or a table.</rdfs:comment>
+        <rdfs:label xml:lang="en">label</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/spar/doco/Line -->
+
+    <owl:Class rdf:about="http://purl.org/spar/doco/Line">
+        <rdfs:subClassOf rdf:resource="http://purl.org/spar/deo/DiscourseElement"/>
+        <rdfs:subClassOf rdf:resource="http://www.essepuntato.it/2008/12/pattern#Block"/>
+        <rdfs:comment xml:lang="en">A line in poetry is a unit of language into which a poem is divided which operates on principles which are distinct from and not necessarily coincident with grammatical structures, such as the sentence or clauses in sentences.
+
+A distinct numbered group of lines in verse is normally called a stanza.</rdfs:comment>
+        <rdfs:label xml:lang="en">line</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/spar/doco/List -->
+
+    <owl:Class rdf:about="http://purl.org/spar/doco/List">
+        <rdfs:subClassOf rdf:resource="http://purl.org/spar/deo/DiscourseElement"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.essepuntato.it/2008/12/pattern#Table"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.essepuntato.it/2008/12/pattern#contains"/>
+                        <owl:someValuesFrom rdf:resource="http://www.essepuntato.it/2008/12/pattern#Pattern"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.essepuntato.it/2008/12/pattern#contains"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.essepuntato.it/2008/12/pattern#Block"/>
+                            <rdf:Description rdf:about="http://www.essepuntato.it/2008/12/pattern#Field"/>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://www.essepuntato.it/2008/12/pattern#Container"/>
+                                    <owl:Class>
+                                        <owl:complementOf>
+                                            <owl:Class>
+                                                <owl:unionOf rdf:parseType="Collection">
+                                                    <rdf:Description rdf:about="http://www.essepuntato.it/2008/12/pattern#HeadedContainer"/>
+                                                    <rdf:Description rdf:about="http://www.essepuntato.it/2008/12/pattern#Table"/>
+                                                </owl:unionOf>
+                                            </owl:Class>
+                                        </owl:complementOf>
+                                    </owl:Class>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">An enumeration of items.</rdfs:comment>
+        <rdfs:label xml:lang="en">list</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/spar/doco/Paragraph -->
+
+    <owl:Class rdf:about="http://purl.org/spar/doco/Paragraph">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.org/spar/deo/DiscourseElement"/>
+                            <rdf:Description rdf:about="http://www.essepuntato.it/2008/12/pattern#Block"/>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.essepuntato.it/2008/12/pattern#contains"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.org/spar/doco/Sentence"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A self-contained unit of discourse that deals with a particular point or idea. Paragraphs contains one or more sentences. The start of a paragraph is indicated by beginning on a new line, which may be indented or separated by a small vertical space by the preceding paragraph. </rdfs:comment>
+        <rdfs:label xml:lang="en">paragraph</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/spar/doco/Preface -->
+
+    <owl:Class rdf:about="http://purl.org/spar/doco/Preface">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.org/spar/doco/Section"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.org/dc/terms/isPartOf"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.org/spar/doco/FrontMatter"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A section describing how the document came into being, or how the idea for it was developed. The preface may contains acknowledgements. The preface to a later edition of the work often explains in what respect that edition differs from previous ones.</rdfs:comment>
+        <rdfs:label xml:lang="en">preface</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/spar/doco/Section -->
+
+    <owl:Class rdf:about="http://purl.org/spar/doco/Section">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.org/spar/deo/DiscourseElement"/>
+                    <rdf:Description rdf:about="http://www.essepuntato.it/2008/12/pattern#HeadedContainer"/>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.essepuntato.it/2008/12/pattern#contains"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.org/spar/doco/Paragraph"/>
+                            <rdf:Description rdf:about="http://purl.org/spar/doco/Section"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.essepuntato.it/2008/12/pattern#contains"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:complementOf rdf:resource="http://purl.org/spar/doco/Chapter"/>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A logical division of the text, usually numbered and/or titled, which may contain subsections.</rdfs:comment>
+        <rdfs:label xml:lang="en">section</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/spar/doco/SectionLabel -->
+
+    <owl:Class rdf:about="http://purl.org/spar/doco/SectionLabel">
+        <rdfs:subClassOf rdf:resource="http://purl.org/spar/doco/Label"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/dc/terms/isPartOf"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/spar/doco/Section"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A block containing a label for the section, that may include the section number.</rdfs:comment>
+        <rdfs:label xml:lang="en">section label</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/spar/doco/Sentence -->
+
+    <owl:Class rdf:about="http://purl.org/spar/doco/Sentence">
+        <rdfs:subClassOf rdf:resource="http://purl.org/spar/deo/DiscourseElement"/>
+        <rdfs:subClassOf rdf:resource="http://www.essepuntato.it/2008/12/pattern#Inline"/>
+        <rdfs:comment xml:lang="en">An expression in natural language forming a single grammatical unit. A sentence minimally consists of a subject and an intransitive verb, or a subject, a transitive verb and an object, and may include additional dependent clauses. In written text, a sentence is always terminated by a full stop. A sentence can include words grouped meaningfully to express a statement, a question, an exclamation, a request or a command.</rdfs:comment>
+        <rdfs:label xml:lang="en">sentence</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/spar/doco/Stanza -->
+
+    <owl:Class rdf:about="http://purl.org/spar/doco/Stanza">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.org/spar/deo/DiscourseElement"/>
+                            <rdf:Description rdf:about="http://www.essepuntato.it/2008/12/pattern#Container"/>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.essepuntato.it/2008/12/pattern#contains"/>
+                        <owl:allValuesFrom rdf:resource="http://purl.org/spar/doco/Line"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A unit within a larger poem. A stanza consists of a grouping of lines, set off by a vertical space from other stanzas, that usually has a set pattern of meter and rhyme.</rdfs:comment>
+        <rdfs:label xml:lang="en">stanza</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/spar/doco/Subtitle -->
+
+    <owl:Class rdf:about="http://purl.org/spar/doco/Subtitle">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/currentbeta#INT10_FormalFeature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/spar/doco/TableLabel -->
+
+    <owl:Class rdf:about="http://purl.org/spar/doco/TableLabel">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.org/spar/doco/Label"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.org/dc/terms/isPartOf"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.org/spar/doco/TableBox"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A block containing a label for the table box, that may include the table number.</rdfs:comment>
+        <rdfs:label xml:lang="en">table label</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/spar/doco/TableOfContents -->
+
+    <owl:Class rdf:about="http://purl.org/spar/doco/TableOfContents">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.org/spar/doco/Section"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.org/dc/terms/isPartOf"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:unionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://purl.org/spar/doco/BackMatter"/>
+                                    <rdf:Description rdf:about="http://purl.org/spar/doco/FrontMatter"/>
+                                </owl:unionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/dc/terms/hasPart"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.org/spar/doco/ListOfReferences"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.essepuntato.it/2008/12/pattern#contains"/>
+                                <owl:allValuesFrom>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://purl.org/dc/terms/relation"/>
+                                        <owl:someValuesFrom rdf:resource="http://purl.org/spar/doco/Section"/>
+                                    </owl:Restriction>
+                                </owl:allValuesFrom>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A section of the document listing all the chapters and sections, identified by their titles and referenced to their locations in the document. The table of contents may include a list of the front-matter and back-matter items, in addition to the body-matter items.  Where the document is a journal or magazine issue, the table of content lists the constituent items contained in that issue, typically by title, authors and first page number.</rdfs:comment>
+        <rdfs:label xml:lang="en">table of contents</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/spar/doco/Title -->
+
+    <owl:Class rdf:about="http://purl.org/spar/doco/Title">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/currentbeta#INT10_FormalFeature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://salt.semanticauthoring.org/ontologies/sro#Abstract -->
+
+    <owl:Class rdf:about="http://salt.semanticauthoring.org/ontologies/sro#Abstract">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/currentbeta#INT10_FormalFeature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.essepuntato.it/2008/12/pattern#Block -->
+
+    <owl:Class rdf:about="http://www.essepuntato.it/2008/12/pattern#Block">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/currentbeta#INT10_FormalFeature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.essepuntato.it/2008/12/pattern#Container -->
+
+    <owl:Class rdf:about="http://www.essepuntato.it/2008/12/pattern#Container">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/currentbeta#INT10_FormalFeature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.essepuntato.it/2008/12/pattern#Field -->
+
+    <owl:Class rdf:about="http://www.essepuntato.it/2008/12/pattern#Field">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/currentbeta#INT10_FormalFeature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.essepuntato.it/2008/12/pattern#HeadedContainer -->
+
+    <owl:Class rdf:about="http://www.essepuntato.it/2008/12/pattern#HeadedContainer">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/currentbeta#INT10_FormalFeature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.essepuntato.it/2008/12/pattern#Inline -->
+
+    <owl:Class rdf:about="http://www.essepuntato.it/2008/12/pattern#Inline">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/currentbeta#INT10_FormalFeature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.essepuntato.it/2008/12/pattern#Pattern -->
+
+    <owl:Class rdf:about="http://www.essepuntato.it/2008/12/pattern#Pattern">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/currentbeta#INT10_FormalFeature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.essepuntato.it/2008/12/pattern#Table -->
+
+    <owl:Class rdf:about="http://www.essepuntato.it/2008/12/pattern#Table">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/currentbeta#INT10_FormalFeature"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lso/intro/currentbeta#INT10_FormalFeature -->
+
+    <owl:Class rdf:about="https://w3id.org/lso/intro/currentbeta#INT10_FormalFeature">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/currentbeta#INT4_ReceptionalEntity"/>
+        <rdfs:comment>This class comprises subclasses for every formal aspect of a text: Subclasses will provide the general terms (e.g. &apos;stanza&apos;), instances are meant to be specific types (e.g. &apos;Sapphic stanza&apos;). Subclasses are derived from existing ontologies (in this case: the DoCO Document Components Ontology).
+
+(Subclasses are still object to further refinement and addition; to indicate their provisional status they are not numbered.)</rdfs:comment>
+        <rdfs:label>INT10 Formal Feature</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lso/intro/currentbeta#INT11_TypeOfIntertextualRelationship -->
+
+    <owl:Class rdf:about="https://w3id.org/lso/intro/currentbeta#INT11_TypeOfIntertextualRelationship">
+        <rdfs:subClassOf rdf:resource="http://erlangen-crm.org/current/E55_Type"/>
+        <rdfs:comment>This class comprises (as subclasses) the many classifications of intertextual relationships that can be found, for example, in research literature, but also in greek rhetoric, in genre theory and so on.</rdfs:comment>
+        <rdfs:label>INT11 Type of Intertextual Relationship</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lso/intro/currentbeta#INT12_CommonConceptsOfIntertextuality -->
+
+    <owl:Class rdf:about="https://w3id.org/lso/intro/currentbeta#INT12_CommonConceptsOfIntertextuality">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/currentbeta#INT11_TypeOfIntertextualRelationship"/>
+        <rdfs:comment>This class comprises common concepts of intertextual relationships such as &apos;citation&apos;, &apos;plagiarism&apos;, &apos;allusion&apos; and so on; no further definition is necessary.</rdfs:comment>
+        <rdfs:label>INT12 Common Concepts of Intertextuality</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lso/intro/currentbeta#INT13_IntertextualityInGenreTheory -->
+
+    <owl:Class rdf:about="https://w3id.org/lso/intro/currentbeta#INT13_IntertextualityInGenreTheory">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/currentbeta#INT11_TypeOfIntertextualRelationship"/>
+        <rdfs:comment>This class comprises intertextual relationships that can be found in genre theory.</rdfs:comment>
+        <rdfs:label>INT13 Intertextuality in Genre Theory</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lso/intro/currentbeta#INT14_IntertextuailtyInRhetoric -->
+
+    <owl:Class rdf:about="https://w3id.org/lso/intro/currentbeta#INT14_IntertextuailtyInRhetoric">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/currentbeta#INT11_TypeOfIntertextualRelationship"/>
+        <rdfs:comment>This class comprises intertextual relationships that can be found in rhetoric.</rdfs:comment>
+        <rdfs:label>INT14 Intertextuality in Rhetoric</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lso/intro/currentbeta#INT15_IntertextualityInIntTheories -->
+
+    <owl:Class rdf:about="https://w3id.org/lso/intro/currentbeta#INT15_IntertextualityInIntTheories">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/currentbeta#INT11_TypeOfIntertextualRelationship"/>
+        <rdfs:comment>This class comprises intertextual relationships that can be found in research literature dedicated to intertextuality theory.</rdfs:comment>
+        <rdfs:label>INT15 Intertextuality in Intertextuality Theories</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lso/intro/currentbeta#INT16_PublicationExpressionSection -->
+
+    <owl:Class rdf:about="https://w3id.org/lso/intro/currentbeta#INT16_PublicationExpressionSection">
+        <rdfs:subClassOf rdf:resource="http://erlangen-crm.org/efrbroo/F22_Self-Contained_Expression"/>
+        <rdfs:comment>This class comprises self contained expressions as they are represented in F24 Publication Expressions. INT11 Publication Expression Sections are in themselves complete, have a year and place of publication, page numbers etc. and are thus identifiable (and citable) as distinct expressions in a volume containing more than one of those.
+They are not identical to/subclasses of F24 Publication Expressions, since they only make a part of it; they are not identical to F22 Self Contained Expressions, since they have distinct bibliographical metadata.</rdfs:comment>
+        <rdfs:label>INT16 Publication Expression Section</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lso/intro/currentbeta#INT1_TextPassage -->
+
+    <owl:Class rdf:about="https://w3id.org/lso/intro/currentbeta#INT1_TextPassage">
+        <rdfs:subClassOf rdf:resource="http://erlangen-crm.org/efrbroo/F2_Expression"/>
+        <rdfs:comment>An addition to FRBRoo due to the focus of this ontology.
+FRBRoo&apos;s &apos;Expression Fragment&apos; is by definition a fragment of an expression, which is the immaterial realisation of a work - and for this reason cannot be object of a citation or a detailed bibliographical record (an expression has no page numbers). The FRBRoo &apos;Publication Expression&apos; is itself an immaterial (ideal) version of a text. However it adds concreteness to the &apos;Expression&apos;, it has a publisher, a publishing date, page numbers, an ISBN and so on. The Publication Expression is a text on the ontological level usually cited in literary studies.
+The INT1 Text Passage is an identifiable part (a paragraph, a couple of lines, and so forth) of the &apos;Publication Expression&apos; - a &apos;Publication Expression Fragment&apos;, so to speak.
+
+For Example:
+- the words &apos;Abandon all hope ye who enter here&apos; from page 3 of the publication identified by the ISBN 978-0307278630.</rdfs:comment>
+        <rdfs:label>INT01 Text Passage</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lso/intro/currentbeta#INT2_ActualizationOfFeature -->
+
+    <owl:Class rdf:about="https://w3id.org/lso/intro/currentbeta#INT2_ActualizationOfFeature">
+        <rdfs:subClassOf rdf:resource="http://erlangen-crm.org/current/E28_Conceptual_Object"/>
+        <rdfs:comment>The fact that a certain text shows - in its own specific way - a certain feature (which itself is an abstract concept and takes form in many texts), e.g. a motif, an atmosphere, a theme, a figure of speech.
+
+Examples:
+- the specific actualization of the motif of patricide in Sophokles&apos; &apos;Ödipus Rex&apos;.
+- the specific actualization of the Faust-subject in Goethe&apos;s &apos;Faust&apos;.
+- the specific actualization of the iambic pentameter in Rilke&apos;s &apos;Archaischer Torso Apollos&quot;.</rdfs:comment>
+        <rdfs:label>INT02 Actualization of Feature</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lso/intro/currentbeta#INT3_IntertextualRelationship -->
+
+    <owl:Class rdf:about="https://w3id.org/lso/intro/currentbeta#INT3_IntertextualRelationship">
+        <rdfs:subClassOf rdf:resource="http://erlangen-crm.org/current/E28_Conceptual_Object"/>
+        <rdfs:comment>This class is meant for the abstract notion of an intertextual relationship as it is identified by a reader (and is not to be confused with the rhetorical entity &apos;quotation&apos;). Every INT3 Intertextual Relationship has at least 2 related entities, which are texts (on any ontological level) or INT2 Actualizations of Features.
+An INT3 Intertextual Relationship is possibly identified in an interpretative.</rdfs:comment>
+        <rdfs:label>INT03 Intertextual Relationship</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lso/intro/currentbeta#INT4_ReceptionalEntity -->
+
+    <owl:Class rdf:about="https://w3id.org/lso/intro/currentbeta#INT4_ReceptionalEntity">
+        <rdfs:subClassOf rdf:resource="http://erlangen-crm.org/current/E28_Conceptual_Object"/>
+        <rdfs:comment>This class comprises features that &apos;are in&apos; or &apos;can be found in&apos; or &apos;can be read out of&apos; a text, apart from the wording itself. INT2 Actualizations of these features are the results of a mental process that is applied to a text and that made out distinct abstract concepts which are themselves seperate from the text and take a specific, yet identifiable form in the text.
+This class therefore has an extremely wide scope, its subclasses are open to additions and are to be populated from relevant reference works (e.g. the subclass &apos;Rhetorical Entity&apos; could contain concepts based on Lausberg&apos;s &apos;Handbook of Literary Rhetoric&apos;, many lemmata from the &apos;Princeton Handbook of Poetic Terms&apos; could populate the subclass &quot;Formal Entity&quot; and so on).
+It is highly likely (and welcome) that the instances of subclasses or sub-subclasses of the class &apos;receptional Entity&apos; are instances or sub-subclasses of more than one subclass (e.g. that a rhetorical entity is at the same time a semantic entity as in the case of an &apos;argument&apos; or &apos;narrator&apos;).</rdfs:comment>
+        <rdfs:label>INT04 Receptional Entity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lso/intro/currentbeta#INT5_Characteristic -->
+
+    <owl:Class rdf:about="https://w3id.org/lso/intro/currentbeta#INT5_Characteristic">
+        <rdfs:subClassOf rdf:resource="http://erlangen-crm.org/current/E28_Conceptual_Object"/>
+        <rdfs:comment>The concept that the INT2 Actualization of a certain feature can indicate to a text&apos;s affiliation or likeness to an architextual entity. A Characteristic is identified in an interpretative and is thus itself based on text.
+
+Examples:
+- how the actualization of the theme &apos;fashion&apos; in many german novels from 1995 to 2001 supports their affiliation to the movement (or school, or epoch) &apos;German Pop Literature&apos;.
+- how the actualization of the underdog detective in Wolf Haas&apos; &apos;Silentium&apos; supports the novel&apos;s affiliation to the genre &apos;hardboiled crime fiction&apos;.</rdfs:comment>
+        <rdfs:label>INT05 Characteristic</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lso/intro/currentbeta#INT6_ArchitextualEntity -->
+
+    <owl:Class rdf:about="https://w3id.org/lso/intro/currentbeta#INT6_ArchitextualEntity">
+        <rdfs:subClassOf rdf:resource="http://erlangen-crm.org/current/E28_Conceptual_Object"/>
+        <rdfs:comment>An INT6 Architextual Entity consists in a number of texts which in some way give reason to see them as connected, related, sharing a common feature.
+Examples for INT6 Architextual Entities can be disourses (texts sharing a discousive element, a topic etc.), genres (texts sharing genre conventions), a discipline (texts deriving from the same disciplinary background), an oeuvre (texts written by the same person), national literatures (texts whose authors share a nationality) etc.</rdfs:comment>
+        <rdfs:label>INT06 Architextual Entity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lso/intro/currentbeta#INT7_Interpretament -->
+
+    <owl:Class rdf:about="https://w3id.org/lso/intro/currentbeta#INT7_Interpretament">
+        <rdfs:subClassOf rdf:resource="http://erlangen-crm.org/current/E89_Propositional_Object"/>
+        <rdfs:comment>The abstract content of a interpretative act.
+An interpretament identifies references, actualizations of features or characteristics that assign texts to a transtextual entity.
+Interpretaments themselves can originate in texts and thus be actualizations of the semantic feature &apos;Interpretation&apos;.
+
+Examples:
+- the statement that Umberto Eco&apos;s &apos;The Name of the Rose&apos; features a detective character.
+- the statement that Umberto Eco&apos;s &apos;The Name of the Rose&apos; contains references to Arthur Conan Doyle&apos;s &apos;Sherlock Holmes&apos;.
+- the statement that Umberto Exo&apos;s &apos;The Name of the Rose&apos; is set in the 14th century.
+- the conclusion that Umberto Eco&apos;s &apos;The Name of the Rose&apos; belongs to the genre &apos;postmodern crime novel&apos;.</rdfs:comment>
+        <rdfs:label>INT07 Interpretament</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lso/intro/currentbeta#INT8_RhetoricalFeature -->
+
+    <owl:Class rdf:about="https://w3id.org/lso/intro/currentbeta#INT8_RhetoricalFeature">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/currentbeta#INT4_ReceptionalEntity"/>
+        <rdfs:comment>This class comprises every aspect of a text that can be described in terms of rhetorics - ranging from the occurrence of rhetorical tropes (figures of speech) to parts of a e.g. research paper like &apos;introduction&apos; or &apos;quotation&apos; (pragmatic entities) to aspects of the narrative act such as &apos;voice&apos; or &apos;narrating time&apos; (narratological entities).</rdfs:comment>
+        <rdfs:label>INT08 Rhetorical Feature</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lso/intro/currentbeta#INT9_SemanticFeature -->
+
+    <owl:Class rdf:about="https://w3id.org/lso/intro/currentbeta#INT9_SemanticFeature">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/currentbeta#INT4_ReceptionalEntity"/>
+        <rdfs:comment>This class comprises every semantic aspect of a text: from the common notions of &apos;plot&apos; or &apos;character&apos; up to the specific classification of forms such as &apos;situational motif&apos;.
+(Subclasses are still object to further refinement and addition; to indicate their provisional status they are not numbered.)</rdfs:comment>
+        <rdfs:label>INT09 Semantic Feature</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lso/intro/currentbeta#INT_Act_Drama -->
+
+    <owl:Class rdf:about="https://w3id.org/lso/intro/currentbeta#INT_Act_Drama">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/currentbeta#INT10_FormalFeature"/>
+        <rdfs:label>INT Act (Drama)</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lso/intro/currentbeta#INT_Atmosphere -->
+
+    <owl:Class rdf:about="https://w3id.org/lso/intro/currentbeta#INT_Atmosphere">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/currentbeta#INT9_SemanticFeature"/>
+        <rdfs:label>INT Atmosphere</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lso/intro/currentbeta#INT_Character -->
+
+    <owl:Class rdf:about="https://w3id.org/lso/intro/currentbeta#INT_Character">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/currentbeta#INT9_SemanticFeature"/>
+        <rdfs:label>INT Character</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lso/intro/currentbeta#INT_Constellation -->
+
+    <owl:Class rdf:about="https://w3id.org/lso/intro/currentbeta#INT_Constellation">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/currentbeta#INT9_SemanticFeature"/>
+        <rdfs:label>INT Constellation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lso/intro/currentbeta#INT_Definition -->
+
+    <owl:Class rdf:about="https://w3id.org/lso/intro/currentbeta#INT_Definition">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/currentbeta#INT9_SemanticFeature"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/currentbeta#INT_Pragmatic_Feature"/>
+        <rdfs:label>INT Definition</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lso/intro/currentbeta#INT_Description -->
+
+    <owl:Class rdf:about="https://w3id.org/lso/intro/currentbeta#INT_Description">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/currentbeta#INT9_SemanticFeature"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/currentbeta#INT_Pragmatic_Feature"/>
+        <rdfs:label>INT Description</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lso/intro/currentbeta#INT_Discipline -->
+
+    <owl:Class rdf:about="https://w3id.org/lso/intro/currentbeta#INT_Discipline">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/currentbeta#INT6_ArchitextualEntity"/>
+        <rdfs:label>INT Discipline</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lso/intro/currentbeta#INT_Discourse -->
+
+    <owl:Class rdf:about="https://w3id.org/lso/intro/currentbeta#INT_Discourse">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/currentbeta#INT6_ArchitextualEntity"/>
+        <rdfs:label>INT Discourse</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lso/intro/currentbeta#INT_Epoch -->
+
+    <owl:Class rdf:about="https://w3id.org/lso/intro/currentbeta#INT_Epoch">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/currentbeta#INT6_ArchitextualEntity"/>
+        <rdfs:label>INT Epoch</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lso/intro/currentbeta#INT_Event -->
+
+    <owl:Class rdf:about="https://w3id.org/lso/intro/currentbeta#INT_Event">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/currentbeta#INT_Plot"/>
+        <rdfs:label>INT Event</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lso/intro/currentbeta#INT_FigurativeMeaning -->
+
+    <owl:Class rdf:about="https://w3id.org/lso/intro/currentbeta#INT_FigurativeMeaning">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/currentbeta#INT9_SemanticFeature"/>
+        <rdfs:label>INT Figurative Meaning</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lso/intro/currentbeta#INT_Figure_of_Speech -->
+
+    <owl:Class rdf:about="https://w3id.org/lso/intro/currentbeta#INT_Figure_of_Speech">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/currentbeta#INT8_RhetoricalFeature"/>
+        <rdfs:comment>The class comprises figures of speech. Since there are countless classification systems (the most common dividing figures into tropoi - metaphor, metonymy ... - and schemata/figurae, further dividing the latter into figures of thougth and figures of word, further dividing the latter into grammatical and rhetorical figures of word), no subclasses will be provided.</rdfs:comment>
+        <rdfs:label>INT Figure of Speech</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lso/intro/currentbeta#INT_Genre_Trias -->
+
+    <owl:Class rdf:about="https://w3id.org/lso/intro/currentbeta#INT_Genre_Trias">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/currentbeta#INT6_ArchitextualEntity"/>
+        <rdfs:label>INT Genre (Trias)</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lso/intro/currentbeta#INT_Genre_subTrias -->
+
+    <owl:Class rdf:about="https://w3id.org/lso/intro/currentbeta#INT_Genre_subTrias">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/currentbeta#INT6_ArchitextualEntity"/>
+        <rdfs:label>INT Genre (sub Trias)</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lso/intro/currentbeta#INT_IndividualCharacter -->
+
+    <owl:Class rdf:about="https://w3id.org/lso/intro/currentbeta#INT_IndividualCharacter">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/currentbeta#INT_Character"/>
+        <rdfs:label>INT Individual Character</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lso/intro/currentbeta#INT_IndividualPlace -->
+
+    <owl:Class rdf:about="https://w3id.org/lso/intro/currentbeta#INT_IndividualPlace">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/currentbeta#INT_Place"/>
+        <rdfs:label>INT Individual Place</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lso/intro/currentbeta#INT_Interpretation -->
+
+    <owl:Class rdf:about="https://w3id.org/lso/intro/currentbeta#INT_Interpretation">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/currentbeta#INT9_SemanticFeature"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/currentbeta#INT_Pragmatic_Feature"/>
+        <rdfs:label>INT Interpretation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lso/intro/currentbeta#INT_Leitmotiv -->
+
+    <owl:Class rdf:about="https://w3id.org/lso/intro/currentbeta#INT_Leitmotiv">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/currentbeta#INT_Motif"/>
+        <rdfs:label>INT Leitmotiv</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lso/intro/currentbeta#INT_Mood -->
+
+    <owl:Class rdf:about="https://w3id.org/lso/intro/currentbeta#INT_Mood">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/currentbeta#INT9_SemanticFeature"/>
+        <rdfs:label>INT Mood</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lso/intro/currentbeta#INT_Motif -->
+
+    <owl:Class rdf:about="https://w3id.org/lso/intro/currentbeta#INT_Motif">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/currentbeta#INT9_SemanticFeature"/>
+        <rdfs:label>INT Motif</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lso/intro/currentbeta#INT_Movement -->
+
+    <owl:Class rdf:about="https://w3id.org/lso/intro/currentbeta#INT_Movement">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/currentbeta#INT6_ArchitextualEntity"/>
+        <rdfs:label>INT Movement</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lso/intro/currentbeta#INT_Narratological_Entity -->
+
+    <owl:Class rdf:about="https://w3id.org/lso/intro/currentbeta#INT_Narratological_Entity">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/currentbeta#INT8_RhetoricalFeature"/>
+        <rdfs:comment>This class comprises narratological concepts. Due to the plurality of narratological frameworks no subclasses will be provided.</rdfs:comment>
+        <rdfs:label>INT Narratological Entity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lso/intro/currentbeta#INT_Oeuvre -->
+
+    <owl:Class rdf:about="https://w3id.org/lso/intro/currentbeta#INT_Oeuvre">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/currentbeta#INT6_ArchitextualEntity"/>
+        <rdfs:label>INT Oeuvre</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lso/intro/currentbeta#INT_Opinion -->
+
+    <owl:Class rdf:about="https://w3id.org/lso/intro/currentbeta#INT_Opinion">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/currentbeta#INT9_SemanticFeature"/>
+        <rdfs:label>INT Opinion</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lso/intro/currentbeta#INT_PartSubtitle -->
+
+    <owl:Class rdf:about="https://w3id.org/lso/intro/currentbeta#INT_PartSubtitle">
+        <rdfs:subClassOf rdf:resource="http://purl.org/spar/doco/Subtitle"/>
+        <rdfs:label>INT Part Subtitle</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lso/intro/currentbeta#INT_PartTitle -->
+
+    <owl:Class rdf:about="https://w3id.org/lso/intro/currentbeta#INT_PartTitle">
+        <rdfs:subClassOf rdf:resource="http://purl.org/spar/doco/Title"/>
+        <rdfs:label>INT Part Title</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lso/intro/currentbeta#INT_Place -->
+
+    <owl:Class rdf:about="https://w3id.org/lso/intro/currentbeta#INT_Place">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/currentbeta#INT9_SemanticFeature"/>
+        <rdfs:label>INT Place</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lso/intro/currentbeta#INT_Plot -->
+
+    <owl:Class rdf:about="https://w3id.org/lso/intro/currentbeta#INT_Plot">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/currentbeta#INT9_SemanticFeature"/>
+        <rdfs:label>INT Plot</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lso/intro/currentbeta#INT_Pragmatic_Feature -->
+
+    <owl:Class rdf:about="https://w3id.org/lso/intro/currentbeta#INT_Pragmatic_Feature">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/currentbeta#INT8_RhetoricalFeature"/>
+        <rdfs:comment>This class comprises parts of a text in this regard that they pursue a certain purpose, and do so in a way that is apparent on the text surface or by application of certain conventions or handed-down standards. Subclasses can range from &apos;argument&apos; to &apos;quotation&apos; to &apos;bibliographic reference&apos;.
+Subclasses of this class are in part derived from existing ontologies such as the &apos;SPAR Document Component Ontology&apos;.
+
+(Subclasses are still object to further refinement and addition; to indicate their provisional status they are not numbered.)</rdfs:comment>
+        <rdfs:label>INT Pragmatic Feature</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lso/intro/currentbeta#INT_PunnedCiTOProperties -->
+
+    <owl:Class rdf:about="https://w3id.org/lso/intro/currentbeta#INT_PunnedCiTOProperties">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/currentbeta#INT12_CommonConceptsOfIntertextuality"/>
+        <rdfs:comment>All Instances in this class are to be derived from CiTO - the Citation Typing Ontology. CiTO IRIs originally identifying object properties are used as IRIs for the instances in this class. Original source: http://purl.org/spar/cito.xml.
+
+Reference: Peroni, S., Shotton, D. (2012). FaBiO and CiTO: ontologies for describing bibliographic resources and citations. In Journal of Web Semantics: Science, Services and Agents on the World Wide Web, 17 (December 2012): 33-43. Amsterdam, The Netherlands: Elsevier. https://doi.org/10.1016/j.websem.2012.08.001
+Open Access at: http://speroni.web.cs.unibo.it/publications/peroni-2012-fabio-cito-ontologies.pdf</rdfs:comment>
+        <rdfs:label>INT Punned CiTO Properties</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lso/intro/currentbeta#INT_Scene_Drama -->
+
+    <owl:Class rdf:about="https://w3id.org/lso/intro/currentbeta#INT_Scene_Drama">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/currentbeta#INT10_FormalFeature"/>
+        <rdfs:label>INT Scene (Drama)</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lso/intro/currentbeta#INT_School -->
+
+    <owl:Class rdf:about="https://w3id.org/lso/intro/currentbeta#INT_School">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/currentbeta#INT6_ArchitextualEntity"/>
+        <rdfs:label>INT School</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lso/intro/currentbeta#INT_SituationalMotif -->
+
+    <owl:Class rdf:about="https://w3id.org/lso/intro/currentbeta#INT_SituationalMotif">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/currentbeta#INT_Motif"/>
+        <rdfs:label>INT Situational Motif</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lso/intro/currentbeta#INT_SpaciallyDefinedArchitext -->
+
+    <owl:Class rdf:about="https://w3id.org/lso/intro/currentbeta#INT_SpaciallyDefinedArchitext">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/currentbeta#INT6_ArchitextualEntity"/>
+        <rdfs:label>INT Geographically Defined Architext</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lso/intro/currentbeta#INT_SpatialMotif -->
+
+    <owl:Class rdf:about="https://w3id.org/lso/intro/currentbeta#INT_SpatialMotif">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/currentbeta#INT_Motif"/>
+        <rdfs:label>INT Spatial Motif</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lso/intro/currentbeta#INT_State -->
+
+    <owl:Class rdf:about="https://w3id.org/lso/intro/currentbeta#INT_State">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/currentbeta#INT_Plot"/>
+        <rdfs:label>INT State</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lso/intro/currentbeta#INT_Subject -->
+
+    <owl:Class rdf:about="https://w3id.org/lso/intro/currentbeta#INT_Subject">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/currentbeta#INT9_SemanticFeature"/>
+        <rdfs:label>INT Subject</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lso/intro/currentbeta#INT_Subtext -->
+
+    <owl:Class rdf:about="https://w3id.org/lso/intro/currentbeta#INT_Subtext">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/currentbeta#INT9_SemanticFeature"/>
+        <rdfs:label>INT Subtext</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lso/intro/currentbeta#INT_Tableau_Drama -->
+
+    <owl:Class rdf:about="https://w3id.org/lso/intro/currentbeta#INT_Tableau_Drama">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/currentbeta#INT10_FormalFeature"/>
+        <rdfs:label>INT Tableau (Drama)</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lso/intro/currentbeta#INT_TemporalMotif -->
+
+    <owl:Class rdf:about="https://w3id.org/lso/intro/currentbeta#INT_TemporalMotif">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/currentbeta#INT_Motif"/>
+        <rdfs:label>INT Temporal Motif</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lso/intro/currentbeta#INT_TemporallyDefinedArchitext -->
+
+    <owl:Class rdf:about="https://w3id.org/lso/intro/currentbeta#INT_TemporallyDefinedArchitext">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/currentbeta#INT6_ArchitextualEntity"/>
+        <rdfs:label>INT Temporally Defined Architext</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lso/intro/currentbeta#INT_Theme -->
+
+    <owl:Class rdf:about="https://w3id.org/lso/intro/currentbeta#INT_Theme">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/currentbeta#INT9_SemanticFeature"/>
+        <rdfs:label>INT Theme</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lso/intro/currentbeta#INT_Theory -->
+
+    <owl:Class rdf:about="https://w3id.org/lso/intro/currentbeta#INT_Theory">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/currentbeta#INT9_SemanticFeature"/>
+        <rdfs:label>INT Theory</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lso/intro/currentbeta#INT_TimeSpan -->
+
+    <owl:Class rdf:about="https://w3id.org/lso/intro/currentbeta#INT_TimeSpan">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/currentbeta#INT9_SemanticFeature"/>
+        <rdfs:label>INT Timespan</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lso/intro/currentbeta#INT_Topic -->
+
+    <owl:Class rdf:about="https://w3id.org/lso/intro/currentbeta#INT_Topic">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/currentbeta#INT9_SemanticFeature"/>
+        <rdfs:label>INT Topic</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lso/intro/currentbeta#INT_Topos -->
+
+    <owl:Class rdf:about="https://w3id.org/lso/intro/currentbeta#INT_Topos">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/currentbeta#INT9_SemanticFeature"/>
+        <rdfs:label>INT Topos</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lso/intro/currentbeta#INT_TypeMotif -->
+
+    <owl:Class rdf:about="https://w3id.org/lso/intro/currentbeta#INT_TypeMotif">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/currentbeta#INT_Motif"/>
+        <rdfs:label>INT Type Motif</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lso/intro/currentbeta#INT_TypeOfCharacter -->
+
+    <owl:Class rdf:about="https://w3id.org/lso/intro/currentbeta#INT_TypeOfCharacter">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/currentbeta#INT_Character"/>
+        <rdfs:label>INT Type of Character</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lso/intro/currentbeta#INT_TypeOfPlace -->
+
+    <owl:Class rdf:about="https://w3id.org/lso/intro/currentbeta#INT_TypeOfPlace">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/currentbeta#INT_Place"/>
+        <rdfs:label>INT Type of Place</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lso/intro/currentbeta#INT_VarietyOfText -->
+
+    <owl:Class rdf:about="https://w3id.org/lso/intro/currentbeta#INT_VarietyOfText">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/currentbeta#INT6_ArchitextualEntity"/>
+        <rdfs:label>INT Variety of Text</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://purl.org/spar/doco/Abstract"/>
+            <rdf:Description rdf:about="http://purl.org/spar/doco/Afterword"/>
+            <rdf:Description rdf:about="http://purl.org/spar/doco/Appendix"/>
+            <rdf:Description rdf:about="http://purl.org/spar/doco/Colophon"/>
+            <rdf:Description rdf:about="http://purl.org/spar/doco/Foreword"/>
+            <rdf:Description rdf:about="http://purl.org/spar/doco/Glossary"/>
+            <rdf:Description rdf:about="http://purl.org/spar/doco/Index"/>
+            <rdf:Description rdf:about="http://purl.org/spar/doco/ListOfFigures"/>
+            <rdf:Description rdf:about="http://purl.org/spar/doco/ListOfTables"/>
+            <rdf:Description rdf:about="http://purl.org/spar/doco/Preface"/>
+            <rdf:Description rdf:about="http://purl.org/spar/doco/TableOfContents"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://purl.org/spar/doco/BackMatter"/>
+            <rdf:Description rdf:about="http://purl.org/spar/doco/BodyMatter"/>
+            <rdf:Description rdf:about="http://purl.org/spar/doco/CaptionedBox"/>
+            <rdf:Description rdf:about="http://purl.org/spar/doco/Chapter"/>
+            <rdf:Description rdf:about="http://purl.org/spar/doco/ComplexRunInQuotation"/>
+            <rdf:Description rdf:about="http://purl.org/spar/doco/Footnote"/>
+            <rdf:Description rdf:about="http://purl.org/spar/doco/Formula"/>
+            <rdf:Description rdf:about="http://purl.org/spar/doco/FormulaBox"/>
+            <rdf:Description rdf:about="http://purl.org/spar/doco/FrontMatter"/>
+            <rdf:Description rdf:about="http://purl.org/spar/doco/List"/>
+            <rdf:Description rdf:about="http://purl.org/spar/doco/Part"/>
+            <rdf:Description rdf:about="http://purl.org/spar/doco/Section"/>
+            <rdf:Description rdf:about="http://purl.org/spar/doco/Table"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://purl.org/spar/doco/Label"/>
+            <rdf:Description rdf:about="http://purl.org/spar/doco/Paragraph"/>
+            <rdf:Description rdf:about="http://purl.org/spar/doco/Subtitle"/>
+            <rdf:Description rdf:about="http://purl.org/spar/doco/Title"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://purl.org/spar/doco/Sentence"/>
+            <rdf:Description rdf:about="http://purl.org/spar/doco/SimpleRunInQuotation"/>
+            <rdf:Description rdf:about="http://purl.org/spar/doco/TextChunk"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+
