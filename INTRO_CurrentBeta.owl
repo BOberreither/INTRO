@@ -894,7 +894,7 @@ Also used to state that the actualization of the semantic feature INT_Interpreta
             </owl:Class>
         </rdfs:domain>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:comment>Links pretty much everything to a data string prividing a definition for it. (A shortcut for modelling the definition as an INT2 Actualization of Feature.)</rdfs:comment>
+        <rdfs:comment>Links pretty much everything to a data string providing a definition for it. (A shortcut for modelling the definition as an INT2 Actualization of Feature.)</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -2102,6 +2102,15 @@ Examples:
     
 
 
+    <!-- https://w3id.org/lso/intro/currentbeta#INT_IndividualObject -->
+
+    <owl:Class rdf:about="https://w3id.org/lso/intro/currentbeta#INT_IndividualObject">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/currentbeta#INT_Object"/>
+        <rdfs:label>INT Individual Object</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/lso/intro/currentbeta#INT_IndividualPlace -->
 
     <owl:Class rdf:about="https://w3id.org/lso/intro/currentbeta#INT_IndividualPlace">
@@ -2163,6 +2172,15 @@ Examples:
         <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/currentbeta#INT8_RhetoricalFeature"/>
         <rdfs:comment>This class comprises narratological concepts. Due to the plurality of narratological frameworks no subclasses will be provided.</rdfs:comment>
         <rdfs:label>INT Narratological Entity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lso/intro/currentbeta#INT_Object -->
+
+    <owl:Class rdf:about="https://w3id.org/lso/intro/currentbeta#INT_Object">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/currentbeta#INT9_SemanticFeature"/>
+        <rdfs:label>INT Object</rdfs:label>
     </owl:Class>
     
 
@@ -2418,12 +2436,418 @@ Open Access at: http://speroni.web.cs.unibo.it/publications/peroni-2012-fabio-ci
     
 
 
+    <!-- https://w3id.org/lso/intro/currentbeta#INT_TypicalObject -->
+
+    <owl:Class rdf:about="https://w3id.org/lso/intro/currentbeta#INT_TypicalObject">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/currentbeta#INT_Object"/>
+        <rdfs:label>INT Typical Object</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/lso/intro/currentbeta#INT_VarietyOfText -->
 
     <owl:Class rdf:about="https://w3id.org/lso/intro/currentbeta#INT_VarietyOfText">
         <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/currentbeta#INT6_ArchitextualEntity"/>
         <rdfs:label>INT Variety of Text</rdfs:label>
     </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://w3id.org/lso/intro/currentbeta#Act_Alice -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lso/intro/currentbeta#Act_Alice">
+        <rdf:type rdf:resource="https://w3id.org/lso/intro/currentbeta#INT2_ActualizationOfFeature"/>
+        <R17_actualizes_feature rdf:resource="https://w3id.org/lso/intro/currentbeta#Feat_Alice"/>
+        <R18_actualization_found_on rdf:resource="https://w3id.org/lso/intro/currentbeta#Kubrick_EyesWideShut"/>
+        <R24_is_related_entity rdf:resource="https://w3id.org/lso/intro/currentbeta#IR5"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lso/intro/currentbeta#Act_Bill -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lso/intro/currentbeta#Act_Bill">
+        <rdf:type rdf:resource="https://w3id.org/lso/intro/currentbeta#INT2_ActualizationOfFeature"/>
+        <R17_actualizes_feature rdf:resource="https://w3id.org/lso/intro/currentbeta#Feat_Bill"/>
+        <R18_actualization_found_on rdf:resource="https://w3id.org/lso/intro/currentbeta#Kubrick_EyesWideShut"/>
+        <R24_is_related_entity rdf:resource="https://w3id.org/lso/intro/currentbeta#IR4"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lso/intro/currentbeta#Act_Clara -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lso/intro/currentbeta#Act_Clara">
+        <rdf:type rdf:resource="https://w3id.org/lso/intro/currentbeta#INT2_ActualizationOfFeature"/>
+        <R17_actualizes_feature rdf:resource="https://w3id.org/lso/intro/currentbeta#Feat_Clara"/>
+        <R18_actualization_found_on rdf:resource="https://w3id.org/lso/intro/currentbeta#Brown_Wieland"/>
+        <R24_is_related_entity rdf:resource="https://w3id.org/lso/intro/currentbeta#IR5"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lso/intro/currentbeta#Act_Definition -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lso/intro/currentbeta#Act_Definition">
+        <rdf:type rdf:resource="https://w3id.org/lso/intro/currentbeta#INT2_ActualizationOfFeature"/>
+        <R17_actualizes_feature rdf:resource="https://w3id.org/lso/intro/currentbeta#Feat_Definition"/>
+        <R18_actualization_found_on rdf:resource="https://w3id.org/lso/intro/currentbeta#Pass2_Def"/>
+        <R4_defines rdf:resource="https://w3id.org/lso/intro/currentbeta#ReWriting"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lso/intro/currentbeta#Act_Hysteric -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lso/intro/currentbeta#Act_Hysteric">
+        <rdf:type rdf:resource="https://w3id.org/lso/intro/currentbeta#INT2_ActualizationOfFeature"/>
+        <R17_actualizes_feature rdf:resource="https://w3id.org/lso/intro/currentbeta#Feat_Hysteric"/>
+        <R18_actualization_found_on rdf:resource="https://w3id.org/lso/intro/currentbeta#Freud_Studien"/>
+        <R24_is_related_entity rdf:resource="https://w3id.org/lso/intro/currentbeta#IR4"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lso/intro/currentbeta#Act_Interpretation -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lso/intro/currentbeta#Act_Interpretation">
+        <rdf:type rdf:resource="https://w3id.org/lso/intro/currentbeta#INT2_ActualizationOfFeature"/>
+        <R17_actualizes_feature rdf:resource="https://w3id.org/lso/intro/currentbeta#Feat_Interpretation"/>
+        <R18_actualization_found_on rdf:resource="https://w3id.org/lso/intro/currentbeta#Pass1_Int"/>
+        <R2_constitutes rdf:resource="https://w3id.org/lso/intro/currentbeta#INT2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lso/intro/currentbeta#Act_Klara -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lso/intro/currentbeta#Act_Klara">
+        <rdf:type rdf:resource="https://w3id.org/lso/intro/currentbeta#INT2_ActualizationOfFeature"/>
+        <R17_actualizes_feature rdf:resource="https://w3id.org/lso/intro/currentbeta#Feat_Klara"/>
+        <R18_actualization_found_on rdf:resource="https://w3id.org/lso/intro/currentbeta#Hoffmann_Sandmann"/>
+        <R24_is_related_entity rdf:resource="https://w3id.org/lso/intro/currentbeta#IR5"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lso/intro/currentbeta#Bronfen_CrossMapping -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lso/intro/currentbeta#Bronfen_CrossMapping">
+        <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F24_Publication_Expression"/>
+        <R10_has_Text_Passage rdf:resource="https://w3id.org/lso/intro/currentbeta#Pass1_Int"/>
+        <R10_has_Text_Passage rdf:resource="https://w3id.org/lso/intro/currentbeta#Pass2_Def"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lso/intro/currentbeta#Brown_Wieland -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lso/intro/currentbeta#Brown_Wieland">
+        <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F24_Publication_Expression"/>
+        <R18_shows_actualization rdf:resource="https://w3id.org/lso/intro/currentbeta#Act_Clara"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lso/intro/currentbeta#Butler_GenderTrouble -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lso/intro/currentbeta#Butler_GenderTrouble">
+        <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F24_Publication_Expression"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lso/intro/currentbeta#Cavell_Pursuits -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lso/intro/currentbeta#Cavell_Pursuits">
+        <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F24_Publication_Expression"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lso/intro/currentbeta#Feat_Alice -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lso/intro/currentbeta#Feat_Alice">
+        <rdf:type rdf:resource="https://w3id.org/lso/intro/currentbeta#INT_IndividualCharacter"/>
+        <R17_feature_actualized_in rdf:resource="https://w3id.org/lso/intro/currentbeta#Act_Alice"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lso/intro/currentbeta#Feat_Bill -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lso/intro/currentbeta#Feat_Bill">
+        <rdf:type rdf:resource="https://w3id.org/lso/intro/currentbeta#INT_IndividualCharacter"/>
+        <R17_feature_actualized_in rdf:resource="https://w3id.org/lso/intro/currentbeta#Act_Bill"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lso/intro/currentbeta#Feat_Clara -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lso/intro/currentbeta#Feat_Clara">
+        <rdf:type rdf:resource="https://w3id.org/lso/intro/currentbeta#INT_IndividualCharacter"/>
+        <R17_feature_actualized_in rdf:resource="https://w3id.org/lso/intro/currentbeta#Act_Clara"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lso/intro/currentbeta#Feat_Definition -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lso/intro/currentbeta#Feat_Definition">
+        <rdf:type rdf:resource="https://w3id.org/lso/intro/currentbeta#INT_Definition"/>
+        <R17_feature_actualized_in rdf:resource="https://w3id.org/lso/intro/currentbeta#Act_Definition"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lso/intro/currentbeta#Feat_Hysteric -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lso/intro/currentbeta#Feat_Hysteric">
+        <rdf:type rdf:resource="https://w3id.org/lso/intro/currentbeta#INT_TypeOfCharacter"/>
+        <R17_feature_actualized_in rdf:resource="https://w3id.org/lso/intro/currentbeta#Act_Hysteric"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lso/intro/currentbeta#Feat_Interpretation -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lso/intro/currentbeta#Feat_Interpretation">
+        <rdf:type rdf:resource="https://w3id.org/lso/intro/currentbeta#INT_Interpretation"/>
+        <R17_feature_actualized_in rdf:resource="https://w3id.org/lso/intro/currentbeta#Act_Interpretation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lso/intro/currentbeta#Feat_Klara -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lso/intro/currentbeta#Feat_Klara">
+        <rdf:type rdf:resource="https://w3id.org/lso/intro/currentbeta#INT_IndividualCharacter"/>
+        <R17_feature_actualized_in rdf:resource="https://w3id.org/lso/intro/currentbeta#Act_Klara"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lso/intro/currentbeta#Fincher_FightClub -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lso/intro/currentbeta#Fincher_FightClub">
+        <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F24_Publication_Expression"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lso/intro/currentbeta#Foucault_Volonte -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lso/intro/currentbeta#Foucault_Volonte">
+        <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F24_Publication_Expression"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lso/intro/currentbeta#Freud_Studien -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lso/intro/currentbeta#Freud_Studien">
+        <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F24_Publication_Expression"/>
+        <R18_shows_actualization rdf:resource="https://w3id.org/lso/intro/currentbeta#Act_Hysteric"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lso/intro/currentbeta#Greenblatt_Circulation -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lso/intro/currentbeta#Greenblatt_Circulation">
+        <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F24_Publication_Expression"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lso/intro/currentbeta#Hoffmann_Sandmann -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lso/intro/currentbeta#Hoffmann_Sandmann">
+        <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F24_Publication_Expression"/>
+        <R18_shows_actualization rdf:resource="https://w3id.org/lso/intro/currentbeta#Act_Klara"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lso/intro/currentbeta#INT1 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lso/intro/currentbeta#INT1">
+        <rdf:type rdf:resource="https://w3id.org/lso/intro/currentbeta#INT7_Interpretament"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lso/intro/currentbeta#INT2 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lso/intro/currentbeta#INT2">
+        <rdf:type rdf:resource="https://w3id.org/lso/intro/currentbeta#INT7_Interpretament"/>
+        <R21_identifies rdf:resource="https://w3id.org/lso/intro/currentbeta#IR4"/>
+        <R21_identifies rdf:resource="https://w3id.org/lso/intro/currentbeta#IR5"/>
+        <R2_consists_in rdf:resource="https://w3id.org/lso/intro/currentbeta#Act_Interpretation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lso/intro/currentbeta#IR1 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lso/intro/currentbeta#IR1">
+        <rdf:type rdf:resource="https://w3id.org/lso/intro/currentbeta#INT3_IntertextualRelationship"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lso/intro/currentbeta#IR2 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lso/intro/currentbeta#IR2">
+        <rdf:type rdf:resource="https://w3id.org/lso/intro/currentbeta#INT3_IntertextualRelationship"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lso/intro/currentbeta#IR3 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lso/intro/currentbeta#IR3">
+        <rdf:type rdf:resource="https://w3id.org/lso/intro/currentbeta#INT3_IntertextualRelationship"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lso/intro/currentbeta#IR4 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lso/intro/currentbeta#IR4">
+        <rdf:type rdf:resource="https://w3id.org/lso/intro/currentbeta#INT3_IntertextualRelationship"/>
+        <R19_has_type rdf:resource="https://w3id.org/lso/intro/currentbeta#ReWriting"/>
+        <R21_is_identified_by rdf:resource="https://w3id.org/lso/intro/currentbeta#INT2"/>
+        <R24_has_related_entity rdf:resource="https://w3id.org/lso/intro/currentbeta#Act_Bill"/>
+        <R24_has_related_entity rdf:resource="https://w3id.org/lso/intro/currentbeta#Act_Hysteric"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lso/intro/currentbeta#IR5 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lso/intro/currentbeta#IR5">
+        <rdf:type rdf:resource="https://w3id.org/lso/intro/currentbeta#INT3_IntertextualRelationship"/>
+        <R19_has_type rdf:resource="https://w3id.org/lso/intro/currentbeta#ReWriting"/>
+        <R21_is_identified_by rdf:resource="https://w3id.org/lso/intro/currentbeta#INT2"/>
+        <R24_has_related_entity rdf:resource="https://w3id.org/lso/intro/currentbeta#Act_Alice"/>
+        <R24_has_related_entity rdf:resource="https://w3id.org/lso/intro/currentbeta#Act_Clara"/>
+        <R24_has_related_entity rdf:resource="https://w3id.org/lso/intro/currentbeta#Act_Klara"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lso/intro/currentbeta#InformationCitation -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lso/intro/currentbeta#InformationCitation">
+        <rdf:type rdf:resource="https://w3id.org/lso/intro/currentbeta#INT11_TypeOfIntertextualRelationship"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lso/intro/currentbeta#Kubrick_EyesWideShut -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lso/intro/currentbeta#Kubrick_EyesWideShut">
+        <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F24_Publication_Expression"/>
+        <R18_shows_actualization rdf:resource="https://w3id.org/lso/intro/currentbeta#Act_Alice"/>
+        <R18_shows_actualization rdf:resource="https://w3id.org/lso/intro/currentbeta#Act_Bill"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lso/intro/currentbeta#MethodUse -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lso/intro/currentbeta#MethodUse">
+        <rdf:type rdf:resource="https://w3id.org/lso/intro/currentbeta#INT11_TypeOfIntertextualRelationship"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lso/intro/currentbeta#Pass1_Int -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lso/intro/currentbeta#Pass1_Int">
+        <rdf:type rdf:resource="https://w3id.org/lso/intro/currentbeta#INT1_TextPassage"/>
+        <R10_is_Text_Passage_of rdf:resource="https://w3id.org/lso/intro/currentbeta#Bronfen_CrossMapping"/>
+        <R18_shows_actualization rdf:resource="https://w3id.org/lso/intro/currentbeta#Act_Interpretation"/>
+        <R41_has_location>p. 125</R41_has_location>
+        <R44_has_wording>Mit anderen Worten, das vorgeschlagene cross-mapping lässt in Stanley Kubricks Eyes Wide Shut zwei Umschriften erkennen: Zum einen das Nachleben Brockden-Browns Clara wie auch E.T.A. Hoffmanns Klara in der Gestalt von Alice, insofern sie einerseits die eigene Verführbarkeit zugibt, gleichzeitig aber auch ihren Widerstand gegen dieses transgressive und für ihre Familie zerstörerische Begehren zum Ausdruck bringt. Zum anderen inszeniert Stanley Kubrick [an Bill] aber auch das Nachleben der hysterischen Geste des Phantasierens, die Sigmund Freud Ende des 19. Jahrhunderts für seine hauptsächlich weiblichen Patientinnen theoretisch zu fassen suchte.</R44_has_wording>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lso/intro/currentbeta#Pass2_Def -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lso/intro/currentbeta#Pass2_Def">
+        <rdf:type rdf:resource="https://w3id.org/lso/intro/currentbeta#INT1_TextPassage"/>
+        <R10_is_Text_Passage_of rdf:resource="https://w3id.org/lso/intro/currentbeta#Bronfen_CrossMapping"/>
+        <R18_shows_actualization rdf:resource="https://w3id.org/lso/intro/currentbeta#Act_Definition"/>
+        <R41_has_location>p.111</R41_has_location>
+        <R44_has_wording>Umschrift als kulturelle[] Kraft [...], die ästhetische Werke den Tod ihrer Autoren und das Ableben der Kultur, aus der sie entstammen, überleben lässt, [die sich manifestiert in] Ähnlichkeiten, die sich zwischen ästhetischen Werken ergeben, für die keine eindeutigen intertextuellen Beziehungen im Sinne von explizit thematisierten Einflüssen festgemacht werden können. Es geht darum, die Transformation, die sich durch die Bewegung von einer historischen Zeit in die andere ergibt, hervorzuheben oder die Bewegung von einem medialen Diskurs in einen anderen nachzuzeichnen.</R44_has_wording>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lso/intro/currentbeta#ReWriting -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lso/intro/currentbeta#ReWriting">
+        <rdf:type rdf:resource="https://w3id.org/lso/intro/currentbeta#INT15_IntertextualityInIntTheories"/>
+        <R19_is_type_of rdf:resource="https://w3id.org/lso/intro/currentbeta#IR4"/>
+        <R19_is_type_of rdf:resource="https://w3id.org/lso/intro/currentbeta#IR5"/>
+        <R4_is_defined_in rdf:resource="https://w3id.org/lso/intro/currentbeta#Act_Definition"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lso/intro/currentbeta#Shakespeare_LovesLaboursLost -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lso/intro/currentbeta#Shakespeare_LovesLaboursLost">
+        <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F24_Publication_Expression"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lso/intro/currentbeta#Shakespeare_Merchant -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lso/intro/currentbeta#Shakespeare_Merchant">
+        <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F24_Publication_Expression"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lso/intro/currentbeta#Stafford_VisualAnalogy -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lso/intro/currentbeta#Stafford_VisualAnalogy">
+        <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F24_Publication_Expression"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lso/intro/currentbeta#TopicOfInterp -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lso/intro/currentbeta#TopicOfInterp">
+        <rdf:type rdf:resource="https://w3id.org/lso/intro/currentbeta#INT11_TypeOfIntertextualRelationship"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lso/intro/currentbeta#Wagner_Tristan -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lso/intro/currentbeta#Wagner_Tristan">
+        <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F24_Publication_Expression"/>
+    </owl:NamedIndividual>
     
 
 
