@@ -342,8 +342,8 @@
         <rdf:type rdf:resource="https://w3id.org/lso/intro/currentbeta#INT1_TextPassage"/>
         <intro:R10_is_Text_Passage_of rdf:resource="https://w3id.org/lso/intro/instances01#Bronfen_CrossMapping"/>
         <intro:R18_shows_actualization rdf:resource="https://w3id.org/lso/intro/instances01#Act_Interpretation"/>
-        <intro:R41_has_location>p. 125</R41_has_location>
-        <intro:R44_has_wording>Mit anderen Worten, das vorgeschlagene cross-mapping lässt in Stanley Kubricks Eyes Wide Shut zwei Umschriften erkennen: Zum einen das Nachleben Brockden-Browns Clara wie auch E.T.A. Hoffmanns Klara in der Gestalt von Alice, insofern sie einerseits die eigene Verführbarkeit zugibt, gleichzeitig aber auch ihren Widerstand gegen dieses transgressive und für ihre Familie zerstörerische Begehren zum Ausdruck bringt. Zum anderen inszeniert Stanley Kubrick [an Bill] aber auch das Nachleben der hysterischen Geste des Phantasierens, die Sigmund Freud Ende des 19. Jahrhunderts für seine hauptsächlich weiblichen Patientinnen theoretisch zu fassen suchte.</R44_has_wording>
+        <intro:R41_has_location>p. 125</intro:R41_has_location>
+        <intro:R44_has_wording>Mit anderen Worten, das vorgeschlagene cross-mapping lässt in Stanley Kubricks Eyes Wide Shut zwei Umschriften erkennen: Zum einen das Nachleben Brockden-Browns Clara wie auch E.T.A. Hoffmanns Klara in der Gestalt von Alice, insofern sie einerseits die eigene Verführbarkeit zugibt, gleichzeitig aber auch ihren Widerstand gegen dieses transgressive und für ihre Familie zerstörerische Begehren zum Ausdruck bringt. Zum anderen inszeniert Stanley Kubrick [an Bill] aber auch das Nachleben der hysterischen Geste des Phantasierens, die Sigmund Freud Ende des 19. Jahrhunderts für seine hauptsächlich weiblichen Patientinnen theoretisch zu fassen suchte.</intro:R44_has_wording>
     </owl:NamedIndividual>
 
 
@@ -354,8 +354,8 @@
         <rdf:type rdf:resource="https://w3id.org/lso/intro/currentbeta#INT1_TextPassage"/>
         <intro:R10_is_Text_Passage_of rdf:resource="https://w3id.org/lso/intro/instances01#Bronfen_CrossMapping"/>
         <intro:R18_shows_actualization rdf:resource="https://w3id.org/lso/intro/instances01#Act_Definition"/>
-        <intro:R41_has_location>p.111</R41_has_location>
-        <intro:R44_has_wording>Umschrift als kulturelle[] Kraft [...], die ästhetische Werke den Tod ihrer Autoren und das Ableben der Kultur, aus der sie entstammen, überleben lässt, [die sich manifestiert in] Ähnlichkeiten, die sich zwischen ästhetischen Werken ergeben, für die keine eindeutigen intertextuellen Beziehungen im Sinne von explizit thematisierten Einflüssen festgemacht werden können. Es geht darum, die Transformation, die sich durch die Bewegung von einer historischen Zeit in die andere ergibt, hervorzuheben oder die Bewegung von einem medialen Diskurs in einen anderen nachzuzeichnen.</R44_has_wording>
+        <intro:R41_has_location>p.111</intro:R41_has_location>
+        <intro:R44_has_wording>Umschrift als kulturelle[] Kraft [...], die ästhetische Werke den Tod ihrer Autoren und das Ableben der Kultur, aus der sie entstammen, überleben lässt, [die sich manifestiert in] Ähnlichkeiten, die sich zwischen ästhetischen Werken ergeben, für die keine eindeutigen intertextuellen Beziehungen im Sinne von explizit thematisierten Einflüssen festgemacht werden können. Es geht darum, die Transformation, die sich durch die Bewegung von einer historischen Zeit in die andere ergibt, hervorzuheben oder die Bewegung von einem medialen Diskurs in einen anderen nachzuzeichnen.</intro:R44_has_wording>
     </owl:NamedIndividual>
 
 
