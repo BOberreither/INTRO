@@ -9,14 +9,15 @@ Ontology IRI: https://w3id.org/lso/intro/currentbeta#
 
 ## CONTENTS
 
-  <h4><a href="#whatisintro">> What is INTRO?</a></h3>
-  <h4><a href="#scope">> Scope</a></h3>
-  <h4><a href="#modelingprinciples">> Modeling Principles</a></h3>
-  <h4><a href="#granularity">> Granularity</a></h3>
-  <h4><a href="#whatsnext">> What's next?</a></h3>
-  <h4><a href="#further">> INTRO - Further Information</a></h3>
-    <h5><a href="#centralclasses">> Central Classes</a></h3>
-    <h5><a href="#usecases">> Typical Usecases</a></h3>
+<a href="#whatisintro">What is INTRO?</a><br>
+<a href="#scope">Scope</a><br>
+<a href="#modelingprinciples">Modeling Principles</a><br>
+<a href="#granularity">Granularity</a><br>
+<a href="#socomplicated"/>(By the way: Does it have to be so complicated?)</a><br>
+<a href="#whatsnext">What's next?</a><br>
+<a href="#further">INTRO - Further Information</a><br>
+-- <a href="#centralclasses">Central Classes</a><br>
+-- <a href="#usecases">Typical Usecases</a><br>
 
 <center>+++++++++++++++++++++</center>
 
@@ -40,6 +41,10 @@ Since there are many theoretical frameworks for literary studies, the ontology f
 
 ## <a name="granularity"/>GRANULARITY
 INTRO is capable of modeling knowledge in different degrees of granularity: It allows to give rough overviews of relations between texts or text corpora, but can also account for text features as identified in distinct text passages and their relations to features identified in other texts/text passages. In the case of modeling pre-existing research outcomes (e.g.: an existing research paper), it allows to give abstract-like overviews, accounting for its objects and sources, as well as representations of the content of such publications down to the level of a single paragraph.
+
+## <a name="socomplicated"/>By the way: Does it have to be so complicated?
+**Answer 1: YES.** INTRO is built to represent (a fraction of) our day-to-day work, which sooner or later consists in intellectual operations we have grown accustomed to - up to a point where we are unaware of the large number of different acts we perform each time. Modelling them with an ontology inevitably calls to mind all these steps implicit in our work, and only by doing so an ontology can represent our research outcome adequately. So yes, some complexity is unavoidable.<br><br>
+**Answer 2: NO.** INTRO is an ontology like all the others: As long as you don't violate class and property definitions, take what you need - and leave the rest. Take one *INT03 Intertextual Relationship*, link it with *r24 has related entity* to some text (modeled with FRBRoo, bibframe, dublin core ...), and you're good to go. Maybe add one *INT11 Type of Intertextual Relationship*.
 
 ## <a name="whatsnext"/>What's next?
 The ontology is a work in progress. Pending work includes:
