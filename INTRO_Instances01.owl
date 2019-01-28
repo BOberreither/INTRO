@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns="https://w3id.org/lso/intro/instances01#"
      xml:base="https://w3id.org/lso/intro/instances01"
-     xmlns:intro="https://w3id.org/lso/intro/currentbeta#"
+     xmlns:intro="https://w3id.org/lso/intro/Beta201901#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
@@ -82,7 +82,7 @@
          <rdf:type rdf:resource="https://w3id.org/lso/intro/currentbeta#INT2_ActualizationOfFeature"/>
          <intro:R17_actualizes_feature rdf:resource="https://w3id.org/lso/intro/instances01#Feat_Interpretation"/>
          <intro:R18_actualization_found_on rdf:resource="https://w3id.org/lso/intro/instances01#Pass1_Int"/>
-         <intro:R2_constitutes rdf:resource="https://w3id.org/lso/intro/instances01#INT2"/>
+         <intro:R26_constitutes_Interpretament rdf:resource="https://w3id.org/lso/intro/instances01#INT2"/>
          <rdfs:label>Act. &quot;Interpretation&quot;</rdfs:label>
      </owl:NamedIndividual>
 
@@ -285,7 +285,7 @@
          <rdf:type rdf:resource="https://w3id.org/lso/intro/currentbeta#INT7_Interpretament"/>
          <intro:R21_identifies rdf:resource="https://w3id.org/lso/intro/instances01#IR4"/>
          <intro:R21_identifies rdf:resource="https://w3id.org/lso/intro/instances01#IR5"/>
-         <intro:R2_consists_in rdf:resource="https://w3id.org/lso/intro/instances01#Act_Interpretation"/>
+         <intro:R26_consists_in_Interpretation rdf:resource="https://w3id.org/lso/intro/instances01#Act_Interpretation"/>
          <rdfs:label>Interpretament 2</rdfs:label>
      </owl:NamedIndividual>
 
