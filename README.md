@@ -16,23 +16,23 @@ Test Case: https://w3id.org/lso/intro/instances01
 
 ## CONTENTS
 
-    <a href="#whatisintro">What is INTRO?</a>
+   <a href="#whatisintro">What is INTRO?</a>
 
-    <a href="#scope">Scope</a>
+   <a href="#scope">Scope</a>
 
-    <a href="#modelingprinciples">Modeling Principles</a>
+   <a href="#modelingprinciples">Modeling Principles</a>
 
-    <a href="#granularity">Granularity</a>
+   <a href="#granularity">Granularity</a>
 
-    <a href="#socomplicated"/>(By the way: Does it have to be so complicated?)</a>
+   <a href="#socomplicated"/>(By the way: Does it have to be so complicated?)</a>
 
-    <a href="#whatsnext">What's next?</a>
+   <a href="#whatsnext">What's next?</a>
 
-    <a href="#further">INTRO - Further Information</a>
+   <a href="#further">INTRO - Further Information</a>
 
-        <a href="#centralclasses">Central Classes</a>
+   <a href="#centralclasses">Central Classes</a>
 
-        <a href="#usecases">Typical Usecases</a>
+   <a href="#usecases">Typical Usecases</a>
 
 
 <center>+++++++++++++++++++++</center>
