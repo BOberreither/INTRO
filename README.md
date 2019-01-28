@@ -6,11 +6,7 @@ Ontology IRI: https://w3id.org/lso/intro/currentbeta#
 
 Latest Version IRI: https://w3id.org/lso/intro/beta201901#
 
-Test Case: https://w3id.org/lso/intro/instances01 
-
-> consistent with version beta201901
-
-> visualization (lodlive) - possible starting point: http://en.lodlive.it/?https://w3id.org/lso/intro/instances01#INT1
+Test Case: https://w3id.org/lso/intro/instances01 (consistent with version beta201901; visualization (lodlive) - possible starting point: http://en.lodlive.it/?https://w3id.org/lso/intro/instances01#INT1 )
 
 <center>+++++++++++++++++++++</center>
 
