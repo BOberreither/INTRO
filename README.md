@@ -8,23 +8,32 @@ Latest Version IRI: https://w3id.org/lso/intro/beta201901#
 
 Test Case: https://w3id.org/lso/intro/instances01 
 
-    > consistent with version beta201901
+> consistent with version beta201901
 
-    > visualization (lodlive) - possible starting point: http://en.lodlive.it/?https://w3id.org/lso/intro/instances01#INT1
+> visualization (lodlive) - possible starting point: http://en.lodlive.it/?https://w3id.org/lso/intro/instances01#INT1
 
 <center>+++++++++++++++++++++</center>
 
 ## CONTENTS
 
-<a href="#whatisintro">What is INTRO?</a><br>
-<a href="#scope">Scope</a><br>
-<a href="#modelingprinciples">Modeling Principles</a><br>
-<a href="#granularity">Granularity</a><br>
-<a href="#socomplicated"/>(By the way: Does it have to be so complicated?)</a><br>
-<a href="#whatsnext">What's next?</a><br>
-<a href="#further">INTRO - Further Information</a><br>
--- <a href="#centralclasses">Central Classes</a><br>
--- <a href="#usecases">Typical Usecases</a><br>
+    <a href="#whatisintro">What is INTRO?</a>
+
+    <a href="#scope">Scope</a>
+
+    <a href="#modelingprinciples">Modeling Principles</a>
+
+    <a href="#granularity">Granularity</a>
+
+    <a href="#socomplicated"/>(By the way: Does it have to be so complicated?)</a>
+
+    <a href="#whatsnext">What's next?</a>
+
+    <a href="#further">INTRO - Further Information</a>
+
+        <a href="#centralclasses">Central Classes</a>
+
+        <a href="#usecases">Typical Usecases</a>
+
 
 <center>+++++++++++++++++++++</center>
 
