@@ -2345,13 +2345,6 @@ Examples:
         <rdfs:label>INT Part Title</rdfs:label>
     </owl:Class>
     
-
-
-    <!-- https://w3id.org/lso/intro/beta201901#INT_Perspective -->
-
-    <owl:Class rdf:about="https://w3id.org/lso/intro/beta201901#INT_Perspective">
-        <rdfs:label>INT Perspective</rdfs:label>
-    </owl:Class>
     
 
 
