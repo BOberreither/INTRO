@@ -1931,6 +1931,8 @@ They are not identical to/subclasses of F24 Publication Expressions, since they 
 FRBRoo&apos;s &apos;Expression Fragment&apos; is by definition a fragment of an expression, which is the immaterial realisation of a work - and for this reason cannot be object of a citation or a detailed bibliographical record (an expression has no page numbers). The FRBRoo &apos;Publication Expression&apos; is itself an immaterial (ideal) version of a text. However it adds concreteness to the &apos;Expression&apos;, it has a publisher, a publishing date, page numbers, an ISBN and so on. The Publication Expression is a text on the ontological level usually cited in literary studies.
 The INT1 Text Passage is an identifiable part (a paragraph, a couple of lines, and so forth) of the &apos;Publication Expression&apos; - a &apos;Publication Expression Fragment&apos;, so to speak.
 
+NOTE: In order to link instances of this class to online resources, it is recommended to refer to the &apos;open annotation standard&apos;, to be precise: to link text passages with oa.hasselector to instances of the subclasses of oa:selector.
+
 For Example:
 - the words &apos;Abandon all hope ye who enter here&apos; from page 3 of the publication identified by the ISBN 978-0307278630.</rdfs:comment>
         <rdfs:label>INT01 Text Passage</rdfs:label>
