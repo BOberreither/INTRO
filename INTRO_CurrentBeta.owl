@@ -2346,11 +2346,7 @@ Examples:
     
 
 
-    <!-- https://w3id.org/lso/intro/currentbeta#INT_Perspective -->
-
-    <owl:Class rdf:about="https://w3id.org/lso/intro/currentbeta#INT_Perspective">
-        <rdfs:label>INT Perspective</rdfs:label>
-    </owl:Class>
+    
     
 
 
