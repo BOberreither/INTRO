@@ -61,7 +61,7 @@ The ontology is a work in progress. Pending work includes:
 - further alignment with relevant ontologies; 
 - testing, refining and expanding the ontology in the course of one or more case studies
 
-(Feedback is welcome: Bernhard.Oberreither@univie.ac.at)
+(Feedback is welcome: Bernhard.Oberreither@oeaw.ac.at)
 
 <center>*******************************************</center>
 
