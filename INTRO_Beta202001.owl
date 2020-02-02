@@ -14,7 +14,7 @@
         <owl:imports rdf:resource="http://erlangen-crm.org/efrbroo/"/>
         <dc:title xml:lang="en">INTRO - the Intertextual Relationships Ontology</dc:title>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">INTRO</rdfs:label>
-        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BETA 11 December 2018</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BETA Jan 2020</owl:versionInfo>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">WHAT IS INTRO?
 INTRO is an ontology for the field of literary studies for representing intertextual relations. The term ‘intertextual relations&apos; is to be understood in the broadest sense. The domain of the ontology includes everything from the identification and characterization of concrete acts of literary (or scholarly) citations or allusions (etc.) to the identification of features that allow to include a text into a larger context (e.g. an epoch, a discourse, an oeuvre ...). INTRO also provides classes and properties necessary to link these findings to their theoretical background or to findings in other research literature, thus covering a large number of scholarly acts.
 
