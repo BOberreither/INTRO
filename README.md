@@ -1,6 +1,7 @@
 # INTRO 
+## > > Outdated - New Version Coming Really Soon! < <
 INTRO - an <b>In</b>ter<b>t</b>extual <b>R</b>elationships <b>O</b>ntology for literary studies
-(<b>outdated version - new version pending</b>)
+
 
 Ontology IRI: https://w3id.org/lso/intro/currentbeta#
 
