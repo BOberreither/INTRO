@@ -168,7 +168,7 @@
         <owl:inverseOf rdf:resource="https://w3id.org/lso/intro/currentbeta#R10_is_Text_Passage_of"/>
         <rdfs:domain rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object"/>
         <rdfs:range rdf:resource="https://w3id.org/lso/intro/currentbeta#INT1_TextPassage"/>
-        <rdfs:comment>Links a work or an expression (ideally: a F24 Publication Expression) to a INT1 Text passage from that text, e.g. the book with the ISBN 978-0307278630 to a passage on page three of this book.</rdfs:comment>
+        <rdfs:comment>Links a text – usually: a work or an expression – to a INT1 Text passage from that text, e.g. the book with the ISBN 978-0307278630 to a passage on page three of this book.</rdfs:comment>
     </owl:ObjectProperty>
     
 
@@ -178,7 +178,7 @@
     <owl:ObjectProperty rdf:about="https://w3id.org/lso/intro/currentbeta#R10_is_Text_Passage_of">
         <rdfs:domain rdf:resource="https://w3id.org/lso/intro/currentbeta#INT1_TextPassage"/>
         <rdfs:range rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object"/>
-        <rdfs:comment>Links an INT1 Text Passage from a text to that text (work or expression, ideally: a F24 Publication Expression), e.g. a passage on page three of the book with the ISBN 978-0307278630 to that book.</rdfs:comment>
+        <rdfs:comment>Links an INT1 Text Passage from a text to that text, e.g. a passage on page three of the book with the ISBN 978-0307278630 to that book.</rdfs:comment>
     </owl:ObjectProperty>
     
 
@@ -240,7 +240,7 @@
             </owl:Class>
         </rdfs:domain>
         <rdfs:range rdf:resource="https://w3id.org/lso/intro/currentbeta#INT3_IntertextualRelationship"/>
-        <rdfs:comment>Links the referred tp entity (a text on any ontological level or a feature actualized in a text) to the INT3 Intertextual Relationship it is a part of.</rdfs:comment>
+        <rdfs:comment>Links the referred to entity (a text on any ontological level or a feature actualized in a text) to the INT3 Intertextual Relationship it is a part of.</rdfs:comment>
     </owl:ObjectProperty>
     
 
@@ -594,6 +594,7 @@
         <owl:inverseOf rdf:resource="https://w3id.org/lso/intro/currentbeta#R25_is_segment_of"/>
         <rdfs:domain rdf:resource="https://cidoc-crm.org/frbroo/sites/default/files/FRBR2.4-draft.rdfs#F24_Publication_Expression"/>
         <rdfs:range rdf:resource="https://w3id.org/lso/intro/currentbeta#INT16_Segment"/>
+        <rdfs:comment>Links a F24 Publication Expression to a INT16 Segment it contains (the segment in turn R16 incorporates an INT1 Text Passage or an F22 Expression).</rdfs:comment>
     </owl:ObjectProperty>
     
 
@@ -1842,7 +1843,7 @@
         <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E90_Symbolic_Object"/>
         <rdfs:comment>This class comprises expressions (e.g. texts represented as F22 Self-contained Expressions) or parts thereof as they are represented in F24 Publication Expressions. INT16 Segments can be located inside the F24 Publication Expression or their physical carriers by means of page numbers etc. and are thus identifiable (and citable).
 They are not identical to/subclasses of F24 Publication Expressions, since they only make a part of it (whereas the F24 definition means the &quot;overall content&quot; of a publication); they are not identical to F22 Self Contained Expressions, since they have distinct bibliographical metadata and are not necessarily &apos;complete&apos; in any sense; they are not identical to F23 Expression Fragments, because they are not seperated from their original context.
-The INT16 Segment can be linked to a F22 Self-contained Expression or a INT1 Text passage through CIDOC-CRMs &quot;P165 incorporates&quot;. It can be linked to a physical carrier through &quot;P128 is carried by&quot;.</rdfs:comment>
+The INT16 Segment can be linked to a F22 Self-contained Expression or a INT1 Text passage through &quot;R16 incorporates&quot;. It can be linked to a physical carrier (like FRBRoos &quot;F4_Manifestation_Singleton&quot;) through &quot;P128 is carried by&quot;.</rdfs:comment>
         <rdfs:label>INT16 Segment</rdfs:label>
     </owl:Class>
     
@@ -1877,7 +1878,7 @@ The INT16 Segment can be linked to a F22 Self-contained Expression or a INT1 Tex
 			The &quot;INT1 TextPassage&quot; is a means of modelling an identifiable part of an E73 Information Object or its subclasses – without that part being removed from its source Information Object. (In contrast, FRBRoo&apos;s &apos;Expression Fragment&apos; is by definition a result of an accidental or deliberate isolation separating the fragment from its source text.)  
 			
 			Examples:
-			The words &apos;Abandon all hope ye who enter here&apos; from page 3 of the publication identified by the ISBN 978-0307278630.
+			The words &apos;Abandon all hope ye who enter here&apos; from Canto III of Dante's Inferno.
 			The first four lines of Rilke&apos;s poem &quot;Archaischer Torso Apollos&quot;
 			The last item on a shopping list.
 		
@@ -1891,8 +1892,12 @@ The INT16 Segment can be linked to a F22 Self-contained Expression or a INT1 Tex
 
     <owl:Class rdf:about="https://w3id.org/lso/intro/currentbeta#INT2_ActualizationOfFeature">
         <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E28_Conceptual_Object"/>
-        <rdfs:comment>The fact that a certain text shows - in its own specific way - a certain feature (which itself is an abstract concept and takes form in many texts), e.g. a motif, an atmosphere, a theme, a figure of speech. Examples: - the specific actualization of the motif of patricide in
-			Sophokles&apos; &apos;Ödipus Rex&apos;. - the specific actualization of the Faust-subject in Goethe&apos;s &apos;Faust&apos;. - the specific actualization of the iambic pentameter in Rilke&apos;s &apos;Archaischer Torso Apollos&quot;.</rdfs:comment>
+        <rdfs:comment>
+            The fact that a certain text shows - in its own specific way - a certain feature (which itself is an abstract concept and takes form in many texts), e.g. a motif, an atmosphere, a theme, a figure of speech. Examples:
+            - the specific actualization of the motif of patricide in Sophokles&apos; &apos;Ödipus Rex&apos;. 
+            - the specific actualization of the Faust-subject in Goethe&apos;s &apos;Faust&apos;. 
+            - the specific actualization of the iambic pentameter in Rilke&apos;s &apos;Archaischer Torso Apollos&quot;.
+        </rdfs:comment>
         <rdfs:label>INT2 Actualization of Feature</rdfs:label>
     </owl:Class>
     
@@ -1902,8 +1907,7 @@ The INT16 Segment can be linked to a F22 Self-contained Expression or a INT1 Tex
 
     <owl:Class rdf:about="https://w3id.org/lso/intro/currentbeta#INT3_IntertextualRelationship">
         <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E28_Conceptual_Object"/>
-        <rdfs:comment>This class is meant for the abstract notion of an intertextual relationship as it is identified by a reader (and is not to be confused with the rhetorical entity &apos;quotation&apos;). Every INT3 Intertextual Relationship has at least 2 related entities, which are texts (on
-			any ontological level) or INT2 Actualizations of Features. An INT3 Intertextual Relationship is possibly identified in an interpretative.</rdfs:comment>
+        <rdfs:comment>This class is meant for the abstract notion of an intertextual relationship as it is identified by a reader (and is not to the same as the rhetorical entity &apos;quotation&apos;). Every INT3 Intertextual Relationship has at least 2 related entities, which are texts (on any ontological level) or INT2 Actualizations of Features. An INT3 Intertextual Relationship is possibly identified in an interpretative.</rdfs:comment>
         <rdfs:label>INT3 Intertextual Relationship</rdfs:label>
     </owl:Class>
     
@@ -1913,11 +1917,7 @@ The INT16 Segment can be linked to a F22 Self-contained Expression or a INT1 Tex
 
     <owl:Class rdf:about="https://w3id.org/lso/intro/currentbeta#INT4_ReceptionalEntity">
         <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E28_Conceptual_Object"/>
-        <rdfs:comment>This class comprises features that &apos;are in&apos; or &apos;can be found in&apos; or &apos;can be read out of&apos; a text, apart from the wording itself. INT2 Actualizations of these features are the results of a mental process that is applied to a text and that made out
-			distinct abstract concepts which are themselves seperate from the text and take a specific, yet identifiable form in the text. This class therefore has an extremely wide scope, its subclasses are open to additions and are to be populated from relevant reference works (e.g. the subclass
-			&apos;Rhetorical Entity&apos; could contain concepts based on Lausberg&apos;s &apos;Handbook of Literary Rhetoric&apos;, many lemmata from the &apos;Princeton Handbook of Poetic Terms&apos; could populate the subclass &quot;Formal Entity&quot; and so on). It is highly likely (and
-			welcome) that the instances of subclasses or sub-subclasses of the class &apos;receptional Entity&apos; are instances or sub-subclasses of more than one subclass (e.g. that a rhetorical entity is at the same time a semantic entity as in the case of an &apos;argument&apos; or
-			&apos;narrator&apos;).</rdfs:comment>
+        <rdfs:comment>This class comprises features that &apos;are in&apos; or &apos;can be found in&apos; or &apos;can be read out of&apos; a text, apart from the wording itself. INT2 Actualizations of these features are the results of a mental process that is applied to a text and that made out distinct abstract concepts which are themselves seperate from the text and take a specific, yet identifiable form in the text. This class therefore has an extremely wide scope, its subclasses are open to additions and are to be populated from relevant reference works (e.g. the subclass &apos;Rhetorical Entity&apos; could contain concepts based on Lausberg&apos;s &apos;Handbook of Literary Rhetoric&apos;, many lemmata from the &apos;Princeton Handbook of Poetic Terms&apos; could populate the subclass &quot;Formal Entity&quot; and so on). It is highly likely (and welcome) that the instances of subclasses or sub-subclasses of the class &apos;receptional Entity&apos; are instances or sub-subclasses of more than one subclass (e.g. that a rhetorical entity is at the same time a semantic entity as in the case of an &apos;argument&apos; or &apos;narrator&apos;).</rdfs:comment>
         <rdfs:label>INT4 Receptional Entity</rdfs:label>
     </owl:Class>
     
@@ -1927,8 +1927,12 @@ The INT16 Segment can be linked to a F22 Self-contained Expression or a INT1 Tex
 
     <owl:Class rdf:about="https://w3id.org/lso/intro/currentbeta#INT6_ArchitextualEntity">
         <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E28_Conceptual_Object"/>
-        <rdfs:comment>An INT6 Architextual Entity consists in a number of texts which in some way give reason to see them as connected, related, sharing a common feature. Examples for INT6 Architextual Entities can be disourses (texts sharing a discousive element, a topic etc.), genres (texts
-			sharing genre conventions), a discipline (texts deriving from the same disciplinary background), an oeuvre (texts written by the same person), national literatures (texts whose authors share a nationality) etc.</rdfs:comment>
+        <rdfs:comment>An INT6 Architextual Entity consists in a number of texts which in some way give reason to see them as connected, related, sharing a common feature. Examples for INT6 Architextual Entities can be 
+            - discourses (texts sharing a discoursive element, a topic etc.)
+            - genres (texts sharing genre conventions)
+            - a discipline (texts deriving from the same disciplinary background)
+            - an oeuvre (texts written by the same person)
+            - national literatures (texts whose authors share a nationality) etc.</rdfs:comment>
         <rdfs:label>INT6 Architextual Entity</rdfs:label>
     </owl:Class>
     
@@ -1938,9 +1942,11 @@ The INT16 Segment can be linked to a F22 Self-contained Expression or a INT1 Tex
 
     <owl:Class rdf:about="https://w3id.org/lso/intro/currentbeta#INT7_Interpretament">
         <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
-        <rdfs:comment>The abstract content of a interpretative act. An interpretament identifies references, actualizations of features or characteristics that assign texts to a transtextual entity. Interpretaments themselves can originate in texts and thus be actualizations of the semantic feature
-			&apos;Interpretation&apos;. Examples: - the statement that Umberto Eco&apos;s &apos;The Name of the Rose&apos; features a detective character. - the statement that Umberto Eco&apos;s &apos;The Name of the Rose&apos; contains references to Arthur Conan Doyle&apos;s &apos;Sherlock
-			Holmes&apos;. - the statement that Umberto Exo&apos;s &apos;The Name of the Rose&apos; is set in the 14th century. - the conclusion that Umberto Eco&apos;s &apos;The Name of the Rose&apos; belongs to the genre &apos;postmodern crime novel&apos;.</rdfs:comment>
+        <rdfs:comment>The abstract content of a interpretative act. An interpretament identifies references, actualizations of features or characteristics that assign texts to a transtextual entity. Interpretaments themselves can originate in texts and thus be actualizations of the semantic feature &apos;Interpretation&apos;. Examples:
+            - the statement that Umberto Eco&apos;s &apos;The Name of the Rose&apos; features a detective character. 
+            - the statement that Umberto Eco&apos;s &apos;The Name of the Rose&apos; contains references to Arthur Conan Doyle&apos;s &apos;Sherlock Holmes&apos;. 
+            - the statement that Umberto Exo&apos;s &apos;The Name of the Rose&apos; is set in the 14th century. 
+            - the conclusion that Umberto Eco&apos;s &apos;The Name of the Rose&apos; belongs to the genre &apos;postmodern crime novel&apos;.</rdfs:comment>
         <rdfs:label>INT7 Interpretament</rdfs:label>
     </owl:Class>
     
@@ -1950,8 +1956,7 @@ The INT16 Segment can be linked to a F22 Self-contained Expression or a INT1 Tex
 
     <owl:Class rdf:about="https://w3id.org/lso/intro/currentbeta#INT8_RhetoricalFeature">
         <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/currentbeta#INT4_ReceptionalEntity"/>
-        <rdfs:comment>This class comprises every aspect of a text that can be described in terms of rhetorics - ranging from the occurrence of rhetorical tropes (figures of speech) to parts of a e.g. research paper like &apos;introduction&apos; or &apos;quotation&apos; (pragmatic entities) to
-			aspects of the narrative act such as &apos;voice&apos; or &apos;narrating time&apos; (narratological entities).</rdfs:comment>
+        <rdfs:comment>This class comprises every aspect of a text that can be described in terms of rhetorics - ranging from the occurrence of rhetorical tropes (figures of speech) to parts of a e.g. research paper like &apos;introduction&apos; or &apos;quotation&apos; (pragmatic entities) to aspects of the narrative act such as &apos;voice&apos; or &apos;narrating time&apos; (narratological entities).</rdfs:comment>
         <rdfs:label>INT8 Rhetorical Feature</rdfs:label>
     </owl:Class>
     
@@ -1961,8 +1966,7 @@ The INT16 Segment can be linked to a F22 Self-contained Expression or a INT1 Tex
 
     <owl:Class rdf:about="https://w3id.org/lso/intro/currentbeta#INT9_SemanticFeature">
         <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/currentbeta#INT4_ReceptionalEntity"/>
-        <rdfs:comment>This class comprises every semantic aspect of a text: from the common notions of &apos;plot&apos; or &apos;character&apos; up to the specific classification of forms such as &apos;situational motif&apos;. (Subclasses are still object to further refinement and addition; to
-			indicate their provisional status they are not numbered.)</rdfs:comment>
+        <rdfs:comment>This class comprises every semantic aspect of a text: from the common notions of &apos;plot&apos; or &apos;character&apos; up to the specific classification of forms such as &apos;situational motif&apos;. (Subclasses are still object to further refinement and addition; to indicate their provisional status they are not numbered.)</rdfs:comment>
         <rdfs:label>INT9 Semantic Feature</rdfs:label>
     </owl:Class>
     
@@ -2101,8 +2105,7 @@ The INT16 Segment can be linked to a F22 Self-contained Expression or a INT1 Tex
 
     <owl:Class rdf:about="https://w3id.org/lso/intro/currentbeta#INT_Figure_of_Speech">
         <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/currentbeta#INT8_RhetoricalFeature"/>
-        <rdfs:comment>The class comprises figures of speech. Since there are countless classification systems (the most common dividing figures into tropoi - metaphor, metonymy ... - and schemata/figurae, further dividing the latter into figures of thougth and figures of word, further dividing the
-			latter into grammatical and rhetorical figures of word), no subclasses will be provided.</rdfs:comment>
+        <rdfs:comment>The class comprises figures of speech. Since there are countless classification systems (the most common dividing figures into tropoi - metaphor, metonymy ... - and schemata/figurae, further dividing the latter into figures of thougth and figures of word, further dividing the latter into grammatical and rhetorical figures of word), no subclasses will be provided.</rdfs:comment>
         <rdfs:label>INT Figure of Speech</rdfs:label>
     </owl:Class>
     
@@ -2222,8 +2225,7 @@ The INT16 Segment can be linked to a F22 Self-contained Expression or a INT1 Tex
 
     <owl:Class rdf:about="https://w3id.org/lso/intro/currentbeta#INT_Narratological_Entity">
         <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/currentbeta#INT_GenreSpecifics"/>
-        <rdfs:comment>This class comprises narratological concepts insofar as they correlate with rhetorical concepts (like &apos;speech&apos;, &apos;distance&apos;, &apos;perspective&apos; etc.). Due to the plurality of narratological frameworks, no subclasses will be provided at this
-			point.</rdfs:comment>
+        <rdfs:comment>This class comprises narratological concepts insofar as they correlate with rhetorical concepts (like &apos;speech&apos;, &apos;distance&apos;, &apos;perspective&apos; etc.). Due to the plurality of narratological frameworks, no subclasses will be provided at this point.</rdfs:comment>
         <rdfs:label>INT Narratological Entity</rdfs:label>
     </owl:Class>
     
@@ -2296,9 +2298,7 @@ The INT16 Segment can be linked to a F22 Self-contained Expression or a INT1 Tex
 
     <owl:Class rdf:about="https://w3id.org/lso/intro/currentbeta#INT_Pragmatic_Feature">
         <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/currentbeta#INT8_RhetoricalFeature"/>
-        <rdfs:comment>This class comprises parts of a text in this regard that they pursue a certain purpose, and do so in a way that is apparent on the text surface or by application of certain conventions or handed-down standards. Subclasses can range from &apos;argument&apos; to
-			&apos;quotation&apos; to &apos;bibliographic reference&apos;. Subclasses of this class are in part derived from existing ontologies such as the &apos;SPAR Document Component Ontology&apos;. (Subclasses are still object to further refinement and addition; to indicate their provisional
-			status they are not numbered.)</rdfs:comment>
+        <rdfs:comment>This class comprises parts of a text in this regard that they pursue a certain purpose, and do so in a way that is apparent on the text surface or by application of certain conventions or handed-down standards. Subclasses can range from &apos;argument&apos; to &apos;quotation&apos; to &apos;bibliographic reference&apos;. Subclasses of this class are in part derived from existing ontologies such as the &apos;SPAR Document Component Ontology&apos;. (Subclasses are still object to further refinement and addition; to indicate their provisional status they are not numbered.)</rdfs:comment>
         <rdfs:label>INT Pragmatic Feature</rdfs:label>
     </owl:Class>
     
@@ -2308,9 +2308,7 @@ The INT16 Segment can be linked to a F22 Self-contained Expression or a INT1 Tex
 
     <owl:Class rdf:about="https://w3id.org/lso/intro/currentbeta#INT_PunnedCiTOProperties">
         <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/currentbeta#INT12_CommonConceptsOfIntertextuality"/>
-        <rdfs:comment>All Instances in this class are to be derived from CiTO - the Citation Typing Ontology. CiTO IRIs originally identifying object properties are used as IRIs for the instances in this class. Original source: http://purl.org/spar/cito.xml. Reference: Peroni, S., Shotton, D.
-			(2012). FaBiO and CiTO: ontologies for describing bibliographic resources and citations. In Journal of Web Semantics: Science, Services and Agents on the World Wide Web, 17 (December 2012): 33-43. Amsterdam, The Netherlands: Elsevier. https://doi.org/10.1016/j.websem.2012.08.001 Open
-			Access at: http://speroni.web.cs.unibo.it/publications/peroni-2012-fabio-cito-ontologies.pdf</rdfs:comment>
+        <rdfs:comment>All Instances in this class are to be derived from CiTO - the Citation Typing Ontology. CiTO IRIs originally identifying object properties are used as IRIs for the instances in this class. Original source: http://purl.org/spar/cito.xml. Reference: Peroni, S., Shotton, D. (2012). FaBiO and CiTO: ontologies for describing bibliographic resources and citations. In Journal of Web Semantics: Science, Services and Agents on the World Wide Web, 17 (December 2012): 33-43. Amsterdam, The Netherlands: Elsevier. https://doi.org/10.1016/j.websem.2012.08.001 Open Access at: http://speroni.web.cs.unibo.it/publications/peroni-2012-fabio-cito-ontologies.pdf</rdfs:comment>
         <rdfs:label>INT Punned CiTO Properties</rdfs:label>
     </owl:Class>
     

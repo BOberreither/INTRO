@@ -168,7 +168,7 @@
         <owl:inverseOf rdf:resource="https://w3id.org/lso/intro/beta202304#R10_is_Text_Passage_of"/>
         <rdfs:domain rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object"/>
         <rdfs:range rdf:resource="https://w3id.org/lso/intro/beta202304#INT1_TextPassage"/>
-        <rdfs:comment>Links a work or an expression (ideally: a F24 Publication Expression) to a INT1 Text passage from that text, e.g. the book with the ISBN 978-0307278630 to a passage on page three of this book.</rdfs:comment>
+        <rdfs:comment>Links a text – usually: a work or an expression – to a INT1 Text passage from that text, e.g. the book with the ISBN 978-0307278630 to a passage on page three of this book.</rdfs:comment>
     </owl:ObjectProperty>
     
 
@@ -178,7 +178,7 @@
     <owl:ObjectProperty rdf:about="https://w3id.org/lso/intro/beta202304#R10_is_Text_Passage_of">
         <rdfs:domain rdf:resource="https://w3id.org/lso/intro/beta202304#INT1_TextPassage"/>
         <rdfs:range rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object"/>
-        <rdfs:comment>Links an INT1 Text Passage from a text to that text (work or expression, ideally: a F24 Publication Expression), e.g. a passage on page three of the book with the ISBN 978-0307278630 to that book.</rdfs:comment>
+        <rdfs:comment>Links an INT1 Text Passage from a text to that text, e.g. a passage on page three of the book with the ISBN 978-0307278630 to that book.</rdfs:comment>
     </owl:ObjectProperty>
     
 
@@ -594,6 +594,7 @@
         <owl:inverseOf rdf:resource="https://w3id.org/lso/intro/beta202304#R25_is_segment_of"/>
         <rdfs:domain rdf:resource="https://cidoc-crm.org/frbroo/sites/default/files/FRBR2.4-draft.rdfs#F24_Publication_Expression"/>
         <rdfs:range rdf:resource="https://w3id.org/lso/intro/beta202304#INT16_Segment"/>
+        <rdfs:comment>Links a F24 Publication Expression to a INT16 Segment it contains (the segment in turn R16 incorporates an INT1 Text Passage or an F22 Expression).</rdfs:comment>
     </owl:ObjectProperty>
     
 
