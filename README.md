@@ -10,6 +10,9 @@ Latest Version IRI: https://w3id.org/lso/intro/beta202304#
 
 **PROUD TO BE AWESOME:** INTRO is on the CLARIAH list of <a href="https://github.com/CLARIAH/awesome-humanities-ontologies">Awesome Ontologies for Digital Humanities"</a>!
 
+**PROJECTS FEATURING INTRO:** Projects already using or currently implementing INTRO:
+- <a href="https://semantickraus.acdh.oeaw.ac.at">SemanticKraus - Connecting Kraus Scholarship to the Semantic Web</a>
+- <a href="https://www.romanticperiodpoetry.org/">Romantic Period Poetry Archive</a>
 
 
 ## CONTENTS
