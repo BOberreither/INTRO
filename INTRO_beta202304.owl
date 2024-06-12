@@ -375,7 +375,7 @@
         <owl:inverseOf rdf:resource="https://w3id.org/lso/intro/beta202304#R19_is_type_of"/>
         <rdfs:domain rdf:resource="https://w3id.org/lso/intro/beta202304#INT3_IntertextualRelationship"/>
         <rdfs:range rdf:resource="https://w3id.org/lso/intro/beta202304#INT11_TypeOfIntertextualRelationship"/>
-        <rdfs:comment>Links an INT3 Intertextual Relationship to its INT22 Type of Intertextual Relationship.</rdfs:comment>
+        <rdfs:comment>Links an INT3 Intertextual Relationship to its INT11 Type of Intertextual Relationship.</rdfs:comment>
     </owl:ObjectProperty>
     
 
@@ -386,7 +386,7 @@
         <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P2i_is_type_of"/>
         <rdfs:domain rdf:resource="https://w3id.org/lso/intro/beta202304#INT11_TypeOfIntertextualRelationship"/>
         <rdfs:range rdf:resource="https://w3id.org/lso/intro/beta202304#INT3_IntertextualRelationship"/>
-        <rdfs:comment>Links a INT22 Type of Intertextual Relationship to the INT3 Intertextual Relationship of that Type.</rdfs:comment>
+        <rdfs:comment>Links a INT11 Type of Intertextual Relationship to the INT3 Intertextual Relationship of that Type.</rdfs:comment>
     </owl:ObjectProperty>
     
 
