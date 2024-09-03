@@ -32,7 +32,7 @@
             One differentiation INTRO is built on is the one between a 'passage' and a 'segment'. These two concepts are parallel to LRMs F2 Expression and F3 Manifestation, in the way that the former (Expression, Passage) embody a more abstract concept of the text and of its parts, while the latter (Manifestation, Segment) refer to the form a text and its parts take when they are manifested in a specific way or version, e.g. at the stage of a certain published edition. Examples include a passage from Goethe's "Faust", Act V, vs. a passage from Act V. of a specific edition of Goethe's "Faust". Only the latter one is a citable entity in the sense that it has a place and a date of publication, a publisher, and a page number attached to it; the former can be manifested in many of the latter.
             These differentiations suffice for an outside view of expressions / manifestations and their parts. When confronted with expression form and contents and the like – here combined in the notion of 'feature' –, another level comes into play. A basic orientation can be obtained from Edmund Husserl's notion of image, respectively his separation of the image ("Bild") from its carrier ("Bildding") and its content ("Bildsujet") as discussed in "Phantasie und Bildbewusstsein" (1904/1905; parallel and clarified nomenclature can be found e.g. in Wolfram Pichler's and Ralph Ubl's "Bildtheorie zur Einführung", 2014, where the three notions are called – my translation – image vehicle, image object, and image referent). While Husserl's carrier combines the F4 Item and the F3 Manifestation of an image (which, with regard to paintings, can easily fall together – as painting is, now following Nelson Goodman, an 'autographic' art) and the image itself corresponds to the F2 Expression, all the features an image can actualize fall in his third category ("Bildsujet"). This third category – the question of what is 'in' an image or text, what can be 'seen on' resp. 'read out' of it, etc. – is provided by the interaction of two classes of INTRO: The F4 Feature and the INT2 Actualization of Feature. The 'feature' is the more abstract concept separate from the specific text/image. One and the same feature (e.g. chiaroscuro painting, a hero character, a plotline, etc.) can be identified in multiple texts/images, while the specific actualization of the feature is bound to the respective text/image.
             This trias of an expression's manifestation, the expression itself, and its contents (as features) is again expanded by the question of referentiality. There is a notable difference between a feature (usually: a semantic feature) and a possible, but not necessary reference to an external entity. The ontology makes use of a very basic notion of referentiality with regard to texts and images: Actualized features can themselves actualize the feature of being a reference to a real-world entity. (Note that this construction offers a quite simple answer to the question if the reference to a fictitious entity - e.g. a unicorn - is a reference at all. It's not; the unicorn is, in this case, a semantic feature.)
-            Throughout the Ontology, the term 'relation' is to be understood in the broadest sense. The ontology instantiates relations between (textual, pictorial) entities or features thereof; while it does not pose any restrictions on the notion of 'relation', it provides subclasses for expressing the medial aspect (intertextual, interpictorial, intermedial) as well as classes for further specification.  The ontology also provides the opportunity to link these specifications (as well as many other of its concepts) to the scholarly discourse they are the subject of.
+            Throughout the ontology, the term 'relation' is to be understood in the broadest sense. The ontology instantiates relations between (textual, pictorial) entities or features thereof; while it does not pose any restrictions on the notion of 'relation', it provides subclasses for expressing the medial aspect (intertextual, interpictorial, intermedial) as well as classes for further specification.  The ontology also provides the opportunity to link these specifications (as well as many other of its concepts) to the scholarly discourse they are the subject of.
             This way, INTRO covers a large portion of scholarly practice; some of the subclasses of INT9 Semantic Feature in combination with object properties linking these features also allow - to some degree - for the reconstruction of the argumentative structure of, e.g., research papers (as they allow for the reconstruction of the contents of literary works).
         
         References:
@@ -203,36 +203,36 @@
     
 
 
-    <!-- https://w3id.org/lso/intro/beta202304#R10_hasPassage -->
+    <!-- https://w3id.org/lso/intro/beta202408#R10_hasPassage -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/lso/intro/beta202304#R10_hasPassage">
-        <owl:inverseOf rdf:resource="https://w3id.org/lso/intro/beta202304#R10i_isPassageOf"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/lso/intro/beta202408#R10_hasPassage">
+        <owl:inverseOf rdf:resource="https://w3id.org/lso/intro/beta202408#R10i_isPassageOf"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object"/>
-                    <rdf:Description rdf:about="https://w3id.org/lso/intro/beta202304#INT1_Passage"/>
+                    <rdf:Description rdf:about="https://w3id.org/lso/intro/beta202408#INT1_Passage"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
-        <rdfs:range rdf:resource="https://w3id.org/lso/intro/beta202304#INT1_Passage"/>
+        <rdfs:range rdf:resource="https://w3id.org/lso/intro/beta202408#INT1_Passage"/>
         <rdfs:comment xml:lang="en">Links a text or an image – usually: a work or an expression – to a INT1 Passage from that text or image, e.g. a book to a passage on page three of this book, or a painting to an area on this paining.</rdfs:comment>
         <rdfs:label xml:lang="en">R10 has passage</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://w3id.org/lso/intro/beta202304#R10i_isPassageOf -->
+    <!-- https://w3id.org/lso/intro/beta202408#R10i_isPassageOf -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/lso/intro/beta202304#R10i_isPassageOf">
+    <owl:ObjectProperty rdf:about="https://w3id.org/lso/intro/beta202408#R10i_isPassageOf">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
-        <rdfs:domain rdf:resource="https://w3id.org/lso/intro/beta202304#INT1_Passage"/>
+        <rdfs:domain rdf:resource="https://w3id.org/lso/intro/beta202408#INT1_Passage"/>
         <rdfs:range>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object"/>
-                    <rdf:Description rdf:about="https://w3id.org/lso/intro/beta202304#INT1_Passage"/>
+                    <rdf:Description rdf:about="https://w3id.org/lso/intro/beta202408#INT1_Passage"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:range>
@@ -241,20 +241,20 @@
     
 
 
-    <!-- https://w3id.org/lso/intro/beta202304#R12_hasReferredToEntity -->
+    <!-- https://w3id.org/lso/intro/beta202408#R12_hasReferredToEntity -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/lso/intro/beta202304#R12_hasReferredToEntity">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/lso/intro/beta202304#R24_hasRelatedEntity"/>
-        <owl:inverseOf rdf:resource="https://w3id.org/lso/intro/beta202304#R12i_isReferredToEntity"/>
-        <rdfs:domain rdf:resource="https://w3id.org/lso/intro/beta202304#INT3_Interrelation"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/lso/intro/beta202408#R12_hasReferredToEntity">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/lso/intro/beta202408#R24_hasRelatedEntity"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/lso/intro/beta202408#R12i_isReferredToEntity"/>
+        <rdfs:domain rdf:resource="https://w3id.org/lso/intro/beta202408#INT3_Interrelation"/>
         <rdfs:range>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
                     <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object"/>
-                    <rdf:Description rdf:about="https://w3id.org/lso/intro/beta202304#INT1_Passage"/>
-                    <rdf:Description rdf:about="https://w3id.org/lso/intro/beta202304#INT2_ActualizationOfFeature"/>
-                    <rdf:Description rdf:about="https://w3id.org/lso/intro/beta202304#INT6_Architext"/>
+                    <rdf:Description rdf:about="https://w3id.org/lso/intro/beta202408#INT1_Passage"/>
+                    <rdf:Description rdf:about="https://w3id.org/lso/intro/beta202408#INT2_ActualizationOfFeature"/>
+                    <rdf:Description rdf:about="https://w3id.org/lso/intro/beta202408#INT6_Architext"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:range>
@@ -264,41 +264,41 @@
     
 
 
-    <!-- https://w3id.org/lso/intro/beta202304#R12i_isReferredToEntity -->
+    <!-- https://w3id.org/lso/intro/beta202408#R12i_isReferredToEntity -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/lso/intro/beta202304#R12i_isReferredToEntity">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/lso/intro/beta202304#R24i_isRelatedEntity"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/lso/intro/beta202408#R12i_isReferredToEntity">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/lso/intro/beta202408#R24i_isRelatedEntity"/>
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
                     <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object"/>
-                    <rdf:Description rdf:about="https://w3id.org/lso/intro/beta202304#INT1_Passage"/>
-                    <rdf:Description rdf:about="https://w3id.org/lso/intro/beta202304#INT2_ActualizationOfFeature"/>
-                    <rdf:Description rdf:about="https://w3id.org/lso/intro/beta202304#INT6_Architext"/>
+                    <rdf:Description rdf:about="https://w3id.org/lso/intro/beta202408#INT1_Passage"/>
+                    <rdf:Description rdf:about="https://w3id.org/lso/intro/beta202408#INT2_ActualizationOfFeature"/>
+                    <rdf:Description rdf:about="https://w3id.org/lso/intro/beta202408#INT6_Architext"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
-        <rdfs:range rdf:resource="https://w3id.org/lso/intro/beta202304#INT3_Interrelation"/>
+        <rdfs:range rdf:resource="https://w3id.org/lso/intro/beta202408#INT3_Interrelation"/>
         <rdfs:label xml:lang="en">R12i is referred to entity</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://w3id.org/lso/intro/beta202304#R13_hasReferringEntity -->
+    <!-- https://w3id.org/lso/intro/beta202408#R13_hasReferringEntity -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/lso/intro/beta202304#R13_hasReferringEntity">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/lso/intro/beta202304#R24_hasRelatedEntity"/>
-        <owl:inverseOf rdf:resource="https://w3id.org/lso/intro/beta202304#R13i_isReferringEntity"/>
-        <rdfs:domain rdf:resource="https://w3id.org/lso/intro/beta202304#INT3_Interrelation"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/lso/intro/beta202408#R13_hasReferringEntity">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/lso/intro/beta202408#R24_hasRelatedEntity"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/lso/intro/beta202408#R13i_isReferringEntity"/>
+        <rdfs:domain rdf:resource="https://w3id.org/lso/intro/beta202408#INT3_Interrelation"/>
         <rdfs:range>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
                     <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object"/>
-                    <rdf:Description rdf:about="https://w3id.org/lso/intro/beta202304#INT1_Passage"/>
-                    <rdf:Description rdf:about="https://w3id.org/lso/intro/beta202304#INT2_ActualizationOfFeature"/>
-                    <rdf:Description rdf:about="https://w3id.org/lso/intro/beta202304#INT6_Architext"/>
+                    <rdf:Description rdf:about="https://w3id.org/lso/intro/beta202408#INT1_Passage"/>
+                    <rdf:Description rdf:about="https://w3id.org/lso/intro/beta202408#INT2_ActualizationOfFeature"/>
+                    <rdf:Description rdf:about="https://w3id.org/lso/intro/beta202408#INT6_Architext"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:range>
@@ -308,37 +308,37 @@
     
 
 
-    <!-- https://w3id.org/lso/intro/beta202304#R13i_isReferringEntity -->
+    <!-- https://w3id.org/lso/intro/beta202408#R13i_isReferringEntity -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/lso/intro/beta202304#R13i_isReferringEntity">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/lso/intro/beta202304#R24i_isRelatedEntity"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/lso/intro/beta202408#R13i_isReferringEntity">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/lso/intro/beta202408#R24i_isRelatedEntity"/>
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
                     <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object"/>
-                    <rdf:Description rdf:about="https://w3id.org/lso/intro/beta202304#INT1_Passage"/>
-                    <rdf:Description rdf:about="https://w3id.org/lso/intro/beta202304#INT2_ActualizationOfFeature"/>
-                    <rdf:Description rdf:about="https://w3id.org/lso/intro/beta202304#INT6_Architext"/>
+                    <rdf:Description rdf:about="https://w3id.org/lso/intro/beta202408#INT1_Passage"/>
+                    <rdf:Description rdf:about="https://w3id.org/lso/intro/beta202408#INT2_ActualizationOfFeature"/>
+                    <rdf:Description rdf:about="https://w3id.org/lso/intro/beta202408#INT6_Architext"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
-        <rdfs:range rdf:resource="https://w3id.org/lso/intro/beta202304#INT3_Interrelation"/>
+        <rdfs:range rdf:resource="https://w3id.org/lso/intro/beta202408#INT3_Interrelation"/>
         <rdfs:label xml:lang="en">R13i is referring entity</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://w3id.org/lso/intro/beta202304#R16_incorporates -->
+    <!-- https://w3id.org/lso/intro/beta202408#R16_incorporates -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/lso/intro/beta202304#R16_incorporates">
-        <owl:inverseOf rdf:resource="https://w3id.org/lso/intro/beta202304#R16i_isIncorporatedIn"/>
-        <rdfs:domain rdf:resource="https://w3id.org/lso/intro/beta202304#INT16_Segment"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/lso/intro/beta202408#R16_incorporates">
+        <owl:inverseOf rdf:resource="https://w3id.org/lso/intro/beta202408#R16i_isIncorporatedIn"/>
+        <rdfs:domain rdf:resource="https://w3id.org/lso/intro/beta202408#INT16_Segment"/>
         <rdfs:range>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object"/>
-                    <rdf:Description rdf:about="https://w3id.org/lso/intro/beta202304#INT1_Passage"/>
+                    <rdf:Description rdf:about="https://w3id.org/lso/intro/beta202408#INT1_Passage"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:range>
@@ -348,79 +348,79 @@
     
 
 
-    <!-- https://w3id.org/lso/intro/beta202304#R16i_isIncorporatedIn -->
+    <!-- https://w3id.org/lso/intro/beta202408#R16i_isIncorporatedIn -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/lso/intro/beta202304#R16i_isIncorporatedIn">
+    <owl:ObjectProperty rdf:about="https://w3id.org/lso/intro/beta202408#R16i_isIncorporatedIn">
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object"/>
-                    <rdf:Description rdf:about="https://w3id.org/lso/intro/beta202304#INT1_Passage"/>
+                    <rdf:Description rdf:about="https://w3id.org/lso/intro/beta202408#INT1_Passage"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
-        <rdfs:range rdf:resource="https://w3id.org/lso/intro/beta202304#INT16_Segment"/>
+        <rdfs:range rdf:resource="https://w3id.org/lso/intro/beta202408#INT16_Segment"/>
         <rdfs:label xml:lang="en">R16i is incorporated in</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://w3id.org/lso/intro/beta202304#R17_actualizesFeature -->
+    <!-- https://w3id.org/lso/intro/beta202408#R17_actualizesFeature -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/lso/intro/beta202304#R17_actualizesFeature">
-        <owl:inverseOf rdf:resource="https://w3id.org/lso/intro/beta202304#R17i_featureActualizedIn"/>
-        <rdfs:domain rdf:resource="https://w3id.org/lso/intro/beta202304#INT2_ActualizationOfFeature"/>
-        <rdfs:range rdf:resource="https://w3id.org/lso/intro/beta202304#INT4_Feature"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/lso/intro/beta202408#R17_actualizesFeature">
+        <owl:inverseOf rdf:resource="https://w3id.org/lso/intro/beta202408#R17i_featureActualizedIn"/>
+        <rdfs:domain rdf:resource="https://w3id.org/lso/intro/beta202408#INT2_ActualizationOfFeature"/>
+        <rdfs:range rdf:resource="https://w3id.org/lso/intro/beta202408#INT4_Feature"/>
         <rdfs:comment xml:lang="en">Links the specific INT2 Actualization of Feature to the (abstract concept of the) feature it actualizes, an INT4 Feature.</rdfs:comment>
         <rdfs:label xml:lang="en">R17 actualizes feature</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://w3id.org/lso/intro/beta202304#R17i_featureActualizedIn -->
+    <!-- https://w3id.org/lso/intro/beta202408#R17i_featureActualizedIn -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/lso/intro/beta202304#R17i_featureActualizedIn">
-        <rdfs:domain rdf:resource="https://w3id.org/lso/intro/beta202304#INT4_Feature"/>
-        <rdfs:range rdf:resource="https://w3id.org/lso/intro/beta202304#INT2_ActualizationOfFeature"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/lso/intro/beta202408#R17i_featureActualizedIn">
+        <rdfs:domain rdf:resource="https://w3id.org/lso/intro/beta202408#INT4_Feature"/>
+        <rdfs:range rdf:resource="https://w3id.org/lso/intro/beta202408#INT2_ActualizationOfFeature"/>
         <rdfs:label xml:lang="en">R17i feature actualized in</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://w3id.org/lso/intro/beta202304#R18_showsActualization -->
+    <!-- https://w3id.org/lso/intro/beta202408#R18_showsActualization -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/lso/intro/beta202304#R18_showsActualization">
-        <owl:inverseOf rdf:resource="https://w3id.org/lso/intro/beta202304#R18i_actualizationFoundOn"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/lso/intro/beta202408#R18_showsActualization">
+        <owl:inverseOf rdf:resource="https://w3id.org/lso/intro/beta202408#R18i_actualizationFoundOn"/>
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
                     <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object"/>
-                    <rdf:Description rdf:about="https://w3id.org/lso/intro/beta202304#INT1_Passage"/>
-                    <rdf:Description rdf:about="https://w3id.org/lso/intro/beta202304#INT2_ActualizationOfFeature"/>
-                    <rdf:Description rdf:about="https://w3id.org/lso/intro/beta202304#INT6_Architext"/>
+                    <rdf:Description rdf:about="https://w3id.org/lso/intro/beta202408#INT1_Passage"/>
+                    <rdf:Description rdf:about="https://w3id.org/lso/intro/beta202408#INT2_ActualizationOfFeature"/>
+                    <rdf:Description rdf:about="https://w3id.org/lso/intro/beta202408#INT6_Architext"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
-        <rdfs:range rdf:resource="https://w3id.org/lso/intro/beta202304#INT2_ActualizationOfFeature"/>
+        <rdfs:range rdf:resource="https://w3id.org/lso/intro/beta202408#INT2_ActualizationOfFeature"/>
         <rdfs:comment xml:lang="en">Links a text (on any ontological level) or an INT2 Actualization of Feature to an INT2 Actualization of Feature found on it. (Actualizations found on actualizations - this occurs in cases where, e.g., the actualization of the feature &quot;Individual Character&quot; can be read as the actualization of the feature &quot;Character Type&quot;.)</rdfs:comment>
         <rdfs:label xml:lang="en">R18 shows actualization</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://w3id.org/lso/intro/beta202304#R18i_actualizationFoundOn -->
+    <!-- https://w3id.org/lso/intro/beta202408#R18i_actualizationFoundOn -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/lso/intro/beta202304#R18i_actualizationFoundOn">
-        <rdfs:domain rdf:resource="https://w3id.org/lso/intro/beta202304#INT2_ActualizationOfFeature"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/lso/intro/beta202408#R18i_actualizationFoundOn">
+        <rdfs:domain rdf:resource="https://w3id.org/lso/intro/beta202408#INT2_ActualizationOfFeature"/>
         <rdfs:range>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
                     <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object"/>
-                    <rdf:Description rdf:about="https://w3id.org/lso/intro/beta202304#INT1_Passage"/>
-                    <rdf:Description rdf:about="https://w3id.org/lso/intro/beta202304#INT2_ActualizationOfFeature"/>
-                    <rdf:Description rdf:about="https://w3id.org/lso/intro/beta202304#INT6_Architext"/>
+                    <rdf:Description rdf:about="https://w3id.org/lso/intro/beta202408#INT1_Passage"/>
+                    <rdf:Description rdf:about="https://w3id.org/lso/intro/beta202408#INT2_ActualizationOfFeature"/>
+                    <rdf:Description rdf:about="https://w3id.org/lso/intro/beta202408#INT6_Architext"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:range>
@@ -429,42 +429,42 @@
     
 
 
-    <!-- https://w3id.org/lso/intro/beta202304#R19_hasType -->
+    <!-- https://w3id.org/lso/intro/beta202408#R19_hasType -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/lso/intro/beta202304#R19_hasType">
+    <owl:ObjectProperty rdf:about="https://w3id.org/lso/intro/beta202408#R19_hasType">
         <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P2_has_type"/>
-        <owl:inverseOf rdf:resource="https://w3id.org/lso/intro/beta202304#R19i_isTypeOf"/>
-        <rdfs:domain rdf:resource="https://w3id.org/lso/intro/beta202304#INT3_Interrelation"/>
-        <rdfs:range rdf:resource="https://w3id.org/lso/intro/beta202304#INT11_TypeOfInterrelation"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/lso/intro/beta202408#R19i_isTypeOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/lso/intro/beta202408#INT3_Interrelation"/>
+        <rdfs:range rdf:resource="https://w3id.org/lso/intro/beta202408#INT11_TypeOfInterrelation"/>
         <rdfs:comment xml:lang="en">Links an INT3 Interrelation to its INT11 Type of Interrelation.</rdfs:comment>
         <rdfs:label xml:lang="en">R19 has type</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://w3id.org/lso/intro/beta202304#R19i_isTypeOf -->
+    <!-- https://w3id.org/lso/intro/beta202408#R19i_isTypeOf -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/lso/intro/beta202304#R19i_isTypeOf">
+    <owl:ObjectProperty rdf:about="https://w3id.org/lso/intro/beta202408#R19i_isTypeOf">
         <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P2i_is_type_of"/>
-        <rdfs:domain rdf:resource="https://w3id.org/lso/intro/beta202304#INT11_TypeOfInterrelation"/>
-        <rdfs:range rdf:resource="https://w3id.org/lso/intro/beta202304#INT3_Interrelation"/>
+        <rdfs:domain rdf:resource="https://w3id.org/lso/intro/beta202408#INT11_TypeOfInterrelation"/>
+        <rdfs:range rdf:resource="https://w3id.org/lso/intro/beta202408#INT3_Interrelation"/>
         <rdfs:label xml:lang="en">R19i is type of</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://w3id.org/lso/intro/beta202304#R20_discusses -->
+    <!-- https://w3id.org/lso/intro/beta202408#R20_discusses -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/lso/intro/beta202304#R20_discusses">
+    <owl:ObjectProperty rdf:about="https://w3id.org/lso/intro/beta202408#R20_discusses">
         <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P67_refers_to"/>
-        <owl:inverseOf rdf:resource="https://w3id.org/lso/intro/beta202304#R20i_isDiscussedIn"/>
-        <rdfs:domain rdf:resource="https://w3id.org/lso/intro/beta202304#INT_Interpretation"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/lso/intro/beta202408#R20i_isDiscussedIn"/>
+        <rdfs:domain rdf:resource="https://w3id.org/lso/intro/beta202408#INT_Interpretation"/>
         <rdfs:range>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
                     <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object"/>
-                    <rdf:Description rdf:about="https://w3id.org/lso/intro/beta202304#INT6_Architext"/>
+                    <rdf:Description rdf:about="https://w3id.org/lso/intro/beta202408#INT6_Architext"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:range>
@@ -474,36 +474,36 @@
     
 
 
-    <!-- https://w3id.org/lso/intro/beta202304#R20i_isDiscussedIn -->
+    <!-- https://w3id.org/lso/intro/beta202408#R20i_isDiscussedIn -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/lso/intro/beta202304#R20i_isDiscussedIn">
+    <owl:ObjectProperty rdf:about="https://w3id.org/lso/intro/beta202408#R20i_isDiscussedIn">
         <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P67i_is_referred_to_by"/>
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
                     <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object"/>
-                    <rdf:Description rdf:about="https://w3id.org/lso/intro/beta202304#INT6_Architext"/>
+                    <rdf:Description rdf:about="https://w3id.org/lso/intro/beta202408#INT6_Architext"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
-        <rdfs:range rdf:resource="https://w3id.org/lso/intro/beta202304#INT_Interpretation"/>
+        <rdfs:range rdf:resource="https://w3id.org/lso/intro/beta202408#INT_Interpretation"/>
         <rdfs:label xml:lang="en">R20i is discussed in</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://w3id.org/lso/intro/beta202304#R21_identifies -->
+    <!-- https://w3id.org/lso/intro/beta202408#R21_identifies -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/lso/intro/beta202304#R21_identifies">
+    <owl:ObjectProperty rdf:about="https://w3id.org/lso/intro/beta202408#R21_identifies">
         <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P67_refers_to"/>
-        <owl:inverseOf rdf:resource="https://w3id.org/lso/intro/beta202304#R21i_isIdentifiedBy"/>
-        <rdfs:domain rdf:resource="https://w3id.org/lso/intro/beta202304#INT_Interpretation"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/lso/intro/beta202408#R21i_isIdentifiedBy"/>
+        <rdfs:domain rdf:resource="https://w3id.org/lso/intro/beta202408#INT_Interpretation"/>
         <rdfs:range>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="https://w3id.org/lso/intro/beta202304#INT2_ActualizationOfFeature"/>
-                    <rdf:Description rdf:about="https://w3id.org/lso/intro/beta202304#INT3_Interrelation"/>
+                    <rdf:Description rdf:about="https://w3id.org/lso/intro/beta202408#INT2_ActualizationOfFeature"/>
+                    <rdf:Description rdf:about="https://w3id.org/lso/intro/beta202408#INT3_Interrelation"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:range>
@@ -513,67 +513,67 @@
     
 
 
-    <!-- https://w3id.org/lso/intro/beta202304#R21i_isIdentifiedBy -->
+    <!-- https://w3id.org/lso/intro/beta202408#R21i_isIdentifiedBy -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/lso/intro/beta202304#R21i_isIdentifiedBy">
+    <owl:ObjectProperty rdf:about="https://w3id.org/lso/intro/beta202408#R21i_isIdentifiedBy">
         <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P67i_is_referred_to_by"/>
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="https://w3id.org/lso/intro/beta202304#INT2_ActualizationOfFeature"/>
-                    <rdf:Description rdf:about="https://w3id.org/lso/intro/beta202304#INT3_Interrelation"/>
+                    <rdf:Description rdf:about="https://w3id.org/lso/intro/beta202408#INT2_ActualizationOfFeature"/>
+                    <rdf:Description rdf:about="https://w3id.org/lso/intro/beta202408#INT3_Interrelation"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
-        <rdfs:range rdf:resource="https://w3id.org/lso/intro/beta202304#INT_Interpretation"/>
+        <rdfs:range rdf:resource="https://w3id.org/lso/intro/beta202408#INT_Interpretation"/>
         <rdfs:label xml:lang="en">R21i is identified by</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://w3id.org/lso/intro/beta202304#R22_providesSimilarityForRelation -->
+    <!-- https://w3id.org/lso/intro/beta202408#R22_providesSimilarityForRelation -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/lso/intro/beta202304#R22_providesSimilarityForRelation">
-        <owl:inverseOf rdf:resource="https://w3id.org/lso/intro/beta202304#R22i_relationIsBasedOnSimilarity"/>
-        <rdfs:domain rdf:resource="https://w3id.org/lso/intro/beta202304#INT4_Feature"/>
-        <rdfs:range rdf:resource="https://w3id.org/lso/intro/beta202304#INT3_Interrelation"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/lso/intro/beta202408#R22_providesSimilarityForRelation">
+        <owl:inverseOf rdf:resource="https://w3id.org/lso/intro/beta202408#R22i_relationIsBasedOnSimilarity"/>
+        <rdfs:domain rdf:resource="https://w3id.org/lso/intro/beta202408#INT4_Feature"/>
+        <rdfs:range rdf:resource="https://w3id.org/lso/intro/beta202408#INT3_Interrelation"/>
         <rdfs:comment xml:lang="en">Links an INT4 Feature to an INT3 Interrelation it provides the similarity for, the similarity being necessary for the detection of the INT3 Interrelation. States that an INT3 Interrelation is based on a similarity, i.e. the actualization of the same INT4 Feature in two different texts.</rdfs:comment>
         <rdfs:label xml:lang="en">R22 provides similarity for relation</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://w3id.org/lso/intro/beta202304#R22i_relationIsBasedOnSimilarity -->
+    <!-- https://w3id.org/lso/intro/beta202408#R22i_relationIsBasedOnSimilarity -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/lso/intro/beta202304#R22i_relationIsBasedOnSimilarity">
-        <rdfs:domain rdf:resource="https://w3id.org/lso/intro/beta202304#INT3_Interrelation"/>
-        <rdfs:range rdf:resource="https://w3id.org/lso/intro/beta202304#INT4_Feature"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/lso/intro/beta202408#R22i_relationIsBasedOnSimilarity">
+        <rdfs:domain rdf:resource="https://w3id.org/lso/intro/beta202408#INT3_Interrelation"/>
+        <rdfs:range rdf:resource="https://w3id.org/lso/intro/beta202408#INT4_Feature"/>
         <rdfs:label xml:lang="en">R22i relation is based on similarity</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://w3id.org/lso/intro/beta202304#R23_providesSupportFor -->
+    <!-- https://w3id.org/lso/intro/beta202408#R23_providesSupportFor -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/lso/intro/beta202304#R23_providesSupportFor">
-        <owl:inverseOf rdf:resource="https://w3id.org/lso/intro/beta202304#R23i_supportProvidedBy"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/lso/intro/beta202408#R23_providesSupportFor">
+        <owl:inverseOf rdf:resource="https://w3id.org/lso/intro/beta202408#R23i_supportProvidedBy"/>
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
                     <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object"/>
-                    <rdf:Description rdf:about="https://w3id.org/lso/intro/beta202304#INT1_Passage"/>
-                    <rdf:Description rdf:about="https://w3id.org/lso/intro/beta202304#INT2_ActualizationOfFeature"/>
-                    <rdf:Description rdf:about="https://w3id.org/lso/intro/beta202304#INT6_Architext"/>
+                    <rdf:Description rdf:about="https://w3id.org/lso/intro/beta202408#INT1_Passage"/>
+                    <rdf:Description rdf:about="https://w3id.org/lso/intro/beta202408#INT2_ActualizationOfFeature"/>
+                    <rdf:Description rdf:about="https://w3id.org/lso/intro/beta202408#INT6_Architext"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
         <rdfs:range>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="https://w3id.org/lso/intro/beta202304#INT2_ActualizationOfFeature"/>
-                    <rdf:Description rdf:about="https://w3id.org/lso/intro/beta202304#INT3_Interrelation"/>
-                    <rdf:Description rdf:about="https://w3id.org/lso/intro/beta202304#INT4_Feature"/>
+                    <rdf:Description rdf:about="https://w3id.org/lso/intro/beta202408#INT2_ActualizationOfFeature"/>
+                    <rdf:Description rdf:about="https://w3id.org/lso/intro/beta202408#INT3_Interrelation"/>
+                    <rdf:Description rdf:about="https://w3id.org/lso/intro/beta202408#INT4_Feature"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:range>
@@ -583,15 +583,15 @@
     
 
 
-    <!-- https://w3id.org/lso/intro/beta202304#R23i_supportProvidedBy -->
+    <!-- https://w3id.org/lso/intro/beta202408#R23i_supportProvidedBy -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/lso/intro/beta202304#R23i_supportProvidedBy">
+    <owl:ObjectProperty rdf:about="https://w3id.org/lso/intro/beta202408#R23i_supportProvidedBy">
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="https://w3id.org/lso/intro/beta202304#INT2_ActualizationOfFeature"/>
-                    <rdf:Description rdf:about="https://w3id.org/lso/intro/beta202304#INT3_Interrelation"/>
-                    <rdf:Description rdf:about="https://w3id.org/lso/intro/beta202304#INT4_Feature"/>
+                    <rdf:Description rdf:about="https://w3id.org/lso/intro/beta202408#INT2_ActualizationOfFeature"/>
+                    <rdf:Description rdf:about="https://w3id.org/lso/intro/beta202408#INT3_Interrelation"/>
+                    <rdf:Description rdf:about="https://w3id.org/lso/intro/beta202408#INT4_Feature"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
@@ -600,9 +600,9 @@
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
                     <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object"/>
-                    <rdf:Description rdf:about="https://w3id.org/lso/intro/beta202304#INT1_Passage"/>
-                    <rdf:Description rdf:about="https://w3id.org/lso/intro/beta202304#INT2_ActualizationOfFeature"/>
-                    <rdf:Description rdf:about="https://w3id.org/lso/intro/beta202304#INT6_Architext"/>
+                    <rdf:Description rdf:about="https://w3id.org/lso/intro/beta202408#INT1_Passage"/>
+                    <rdf:Description rdf:about="https://w3id.org/lso/intro/beta202408#INT2_ActualizationOfFeature"/>
+                    <rdf:Description rdf:about="https://w3id.org/lso/intro/beta202408#INT6_Architext"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:range>
@@ -611,19 +611,19 @@
     
 
 
-    <!-- https://w3id.org/lso/intro/beta202304#R24_hasRelatedEntity -->
+    <!-- https://w3id.org/lso/intro/beta202408#R24_hasRelatedEntity -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/lso/intro/beta202304#R24_hasRelatedEntity">
-        <owl:inverseOf rdf:resource="https://w3id.org/lso/intro/beta202304#R24i_isRelatedEntity"/>
-        <rdfs:domain rdf:resource="https://w3id.org/lso/intro/beta202304#INT3_Interrelation"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/lso/intro/beta202408#R24_hasRelatedEntity">
+        <owl:inverseOf rdf:resource="https://w3id.org/lso/intro/beta202408#R24i_isRelatedEntity"/>
+        <rdfs:domain rdf:resource="https://w3id.org/lso/intro/beta202408#INT3_Interrelation"/>
         <rdfs:range>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
                     <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object"/>
-                    <rdf:Description rdf:about="https://w3id.org/lso/intro/beta202304#INT1_Passage"/>
-                    <rdf:Description rdf:about="https://w3id.org/lso/intro/beta202304#INT2_ActualizationOfFeature"/>
-                    <rdf:Description rdf:about="https://w3id.org/lso/intro/beta202304#INT6_Architext"/>
+                    <rdf:Description rdf:about="https://w3id.org/lso/intro/beta202408#INT1_Passage"/>
+                    <rdf:Description rdf:about="https://w3id.org/lso/intro/beta202408#INT2_ActualizationOfFeature"/>
+                    <rdf:Description rdf:about="https://w3id.org/lso/intro/beta202408#INT6_Architext"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:range>
@@ -635,81 +635,81 @@ The skos:boradMatch states that this property is a more specific version of oa:h
     
 
 
-    <!-- https://w3id.org/lso/intro/beta202304#R24i_isRelatedEntity -->
+    <!-- https://w3id.org/lso/intro/beta202408#R24i_isRelatedEntity -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/lso/intro/beta202304#R24i_isRelatedEntity">
+    <owl:ObjectProperty rdf:about="https://w3id.org/lso/intro/beta202408#R24i_isRelatedEntity">
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
                     <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object"/>
-                    <rdf:Description rdf:about="https://w3id.org/lso/intro/beta202304#INT1_Passage"/>
-                    <rdf:Description rdf:about="https://w3id.org/lso/intro/beta202304#INT2_ActualizationOfFeature"/>
-                    <rdf:Description rdf:about="https://w3id.org/lso/intro/beta202304#INT6_Architext"/>
+                    <rdf:Description rdf:about="https://w3id.org/lso/intro/beta202408#INT1_Passage"/>
+                    <rdf:Description rdf:about="https://w3id.org/lso/intro/beta202408#INT2_ActualizationOfFeature"/>
+                    <rdf:Description rdf:about="https://w3id.org/lso/intro/beta202408#INT6_Architext"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
-        <rdfs:range rdf:resource="https://w3id.org/lso/intro/beta202304#INT3_Interrelation"/>
+        <rdfs:range rdf:resource="https://w3id.org/lso/intro/beta202408#INT3_Interrelation"/>
         <rdfs:label xml:lang="en">R24i is related entity</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://w3id.org/lso/intro/beta202304#R25_hasSegment -->
+    <!-- https://w3id.org/lso/intro/beta202408#R25_hasSegment -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/lso/intro/beta202304#R25_hasSegment">
-        <owl:inverseOf rdf:resource="https://w3id.org/lso/intro/beta202304#R25i_isSegmentOf"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/lso/intro/beta202408#R25_hasSegment">
+        <owl:inverseOf rdf:resource="https://w3id.org/lso/intro/beta202408#R25i_isSegmentOf"/>
         <rdfs:domain rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F3_Manifestation"/>
-        <rdfs:range rdf:resource="https://w3id.org/lso/intro/beta202304#INT16_Segment"/>
+        <rdfs:range rdf:resource="https://w3id.org/lso/intro/beta202408#INT16_Segment"/>
         <rdfs:comment xml:lang="en">Links a F3 Manifestation to a INT16 Segment it contains (the segment in turn R16 incorporates an INT1 Passage or an F2 Expression).</rdfs:comment>
         <rdfs:label xml:lang="en">R25 has segment</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://w3id.org/lso/intro/beta202304#R25i_isSegmentOf -->
+    <!-- https://w3id.org/lso/intro/beta202408#R25i_isSegmentOf -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/lso/intro/beta202304#R25i_isSegmentOf">
-        <rdfs:domain rdf:resource="https://w3id.org/lso/intro/beta202304#INT16_Segment"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/lso/intro/beta202408#R25i_isSegmentOf">
+        <rdfs:domain rdf:resource="https://w3id.org/lso/intro/beta202408#INT16_Segment"/>
         <rdfs:range rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F3_Manifestation"/>
         <rdfs:label xml:lang="en">R25i is segment of</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://w3id.org/lso/intro/beta202304#R3_constellates -->
+    <!-- https://w3id.org/lso/intro/beta202408#R3_constellates -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/lso/intro/beta202304#R3_constellates">
-        <owl:inverseOf rdf:resource="https://w3id.org/lso/intro/beta202304#R3i_isConstellatedBy"/>
-        <rdfs:domain rdf:resource="https://w3id.org/lso/intro/beta202304#INT_Constellation"/>
-        <rdfs:range rdf:resource="https://w3id.org/lso/intro/beta202304#INT2_ActualizationOfFeature"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/lso/intro/beta202408#R3_constellates">
+        <owl:inverseOf rdf:resource="https://w3id.org/lso/intro/beta202408#R3i_isConstellatedBy"/>
+        <rdfs:domain rdf:resource="https://w3id.org/lso/intro/beta202408#INT_Constellation"/>
+        <rdfs:range rdf:resource="https://w3id.org/lso/intro/beta202408#INT2_ActualizationOfFeature"/>
         <rdfs:comment xml:lang="en">Links an INT Constellation to the elements (INT2 Actualizations of Feature) that together form that INT Constellation.</rdfs:comment>
         <rdfs:label xml:lang="en">R3 constellates</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://w3id.org/lso/intro/beta202304#R3i_isConstellatedBy -->
+    <!-- https://w3id.org/lso/intro/beta202408#R3i_isConstellatedBy -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/lso/intro/beta202304#R3i_isConstellatedBy">
-        <rdfs:domain rdf:resource="https://w3id.org/lso/intro/beta202304#INT2_ActualizationOfFeature"/>
-        <rdfs:range rdf:resource="https://w3id.org/lso/intro/beta202304#INT_Constellation"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/lso/intro/beta202408#R3i_isConstellatedBy">
+        <rdfs:domain rdf:resource="https://w3id.org/lso/intro/beta202408#INT2_ActualizationOfFeature"/>
+        <rdfs:range rdf:resource="https://w3id.org/lso/intro/beta202408#INT_Constellation"/>
         <rdfs:label xml:lang="en">R3i ist constellated by</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://w3id.org/lso/intro/beta202304#R4_defines -->
+    <!-- https://w3id.org/lso/intro/beta202408#R4_defines -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/lso/intro/beta202304#R4_defines">
-        <owl:inverseOf rdf:resource="https://w3id.org/lso/intro/beta202304#R4i_isDefinedIn"/>
-        <rdfs:domain rdf:resource="https://w3id.org/lso/intro/beta202304#INT2_ActualizationOfFeature"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/lso/intro/beta202408#R4_defines">
+        <owl:inverseOf rdf:resource="https://w3id.org/lso/intro/beta202408#R4i_isDefinedIn"/>
+        <rdfs:domain rdf:resource="https://w3id.org/lso/intro/beta202408#INT2_ActualizationOfFeature"/>
         <rdfs:range>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="https://w3id.org/lso/intro/beta202304#INT11_TypeOfInterrelation"/>
-                    <rdf:Description rdf:about="https://w3id.org/lso/intro/beta202304#INT4_Feature"/>
-                    <rdf:Description rdf:about="https://w3id.org/lso/intro/beta202304#INT6_Architext"/>
+                    <rdf:Description rdf:about="https://w3id.org/lso/intro/beta202408#INT11_TypeOfInterrelation"/>
+                    <rdf:Description rdf:about="https://w3id.org/lso/intro/beta202408#INT4_Feature"/>
+                    <rdf:Description rdf:about="https://w3id.org/lso/intro/beta202408#INT6_Architext"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:range>
@@ -719,30 +719,30 @@ The skos:boradMatch states that this property is a more specific version of oa:h
     
 
 
-    <!-- https://w3id.org/lso/intro/beta202304#R4i_isDefinedIn -->
+    <!-- https://w3id.org/lso/intro/beta202408#R4i_isDefinedIn -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/lso/intro/beta202304#R4i_isDefinedIn">
+    <owl:ObjectProperty rdf:about="https://w3id.org/lso/intro/beta202408#R4i_isDefinedIn">
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="https://w3id.org/lso/intro/beta202304#INT11_TypeOfInterrelation"/>
-                    <rdf:Description rdf:about="https://w3id.org/lso/intro/beta202304#INT4_Feature"/>
-                    <rdf:Description rdf:about="https://w3id.org/lso/intro/beta202304#INT6_Architext"/>
+                    <rdf:Description rdf:about="https://w3id.org/lso/intro/beta202408#INT11_TypeOfInterrelation"/>
+                    <rdf:Description rdf:about="https://w3id.org/lso/intro/beta202408#INT4_Feature"/>
+                    <rdf:Description rdf:about="https://w3id.org/lso/intro/beta202408#INT6_Architext"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
-        <rdfs:range rdf:resource="https://w3id.org/lso/intro/beta202304#INT2_ActualizationOfFeature"/>
+        <rdfs:range rdf:resource="https://w3id.org/lso/intro/beta202408#INT2_ActualizationOfFeature"/>
         <rdfs:label xml:lang="en">R4i is defined in</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://w3id.org/lso/intro/beta202304#R8_hasOpinionObject -->
+    <!-- https://w3id.org/lso/intro/beta202408#R8_hasOpinionObject -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/lso/intro/beta202304#R8_hasOpinionObject">
+    <owl:ObjectProperty rdf:about="https://w3id.org/lso/intro/beta202408#R8_hasOpinionObject">
         <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P67_refers_to"/>
-        <owl:inverseOf rdf:resource="https://w3id.org/lso/intro/beta202304#R8i_isOpinionObjectOf"/>
-        <rdfs:domain rdf:resource="https://w3id.org/lso/intro/beta202304#INT_Opinion"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/lso/intro/beta202408#R8i_isOpinionObjectOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/lso/intro/beta202408#INT_Opinion"/>
         <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:comment xml:lang="en">Links an INT Opinion to its object - for example an opinion with the theme fashion (to make it an opinion about fashion).</rdfs:comment>
         <rdfs:label xml:lang="en">R8 has opinion object</rdfs:label>
@@ -750,36 +750,36 @@ The skos:boradMatch states that this property is a more specific version of oa:h
     
 
 
-    <!-- https://w3id.org/lso/intro/beta202304#R8i_isOpinionObjectOf -->
+    <!-- https://w3id.org/lso/intro/beta202408#R8i_isOpinionObjectOf -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/lso/intro/beta202304#R8i_isOpinionObjectOf">
+    <owl:ObjectProperty rdf:about="https://w3id.org/lso/intro/beta202408#R8i_isOpinionObjectOf">
         <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P67i_is_referred_to_by"/>
         <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-        <rdfs:range rdf:resource="https://w3id.org/lso/intro/beta202304#INT_Opinion"/>
+        <rdfs:range rdf:resource="https://w3id.org/lso/intro/beta202408#INT_Opinion"/>
         <rdfs:label xml:lang="en">R8i is opinion object of</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://w3id.org/lso/intro/beta202304#R9_hasSubsequentFeature -->
+    <!-- https://w3id.org/lso/intro/beta202408#R9_hasSubsequentFeature -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/lso/intro/beta202304#R9_hasSubsequentFeature">
-        <owl:inverseOf rdf:resource="https://w3id.org/lso/intro/beta202304#R9i_hasPrecedingFeature"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/lso/intro/beta202408#R9_hasSubsequentFeature">
+        <owl:inverseOf rdf:resource="https://w3id.org/lso/intro/beta202408#R9i_hasPrecedingFeature"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
-        <rdfs:domain rdf:resource="https://w3id.org/lso/intro/beta202304#INT4_Feature"/>
-        <rdfs:range rdf:resource="https://w3id.org/lso/intro/beta202304#INT4_Feature"/>
+        <rdfs:domain rdf:resource="https://w3id.org/lso/intro/beta202408#INT4_Feature"/>
+        <rdfs:range rdf:resource="https://w3id.org/lso/intro/beta202408#INT4_Feature"/>
         <rdfs:comment xml:lang="en">Links an INT4 Feature to another INT4 Feature immediately following it (logically or chronologically); this object property was mostly designed for the representation of the structure of research papers, where one definition, interpretation, etc., follows another.</rdfs:comment>
         <rdfs:label xml:lang="en">R9 has subsequent feature</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://w3id.org/lso/intro/beta202304#R9i_hasPrecedingFeature -->
+    <!-- https://w3id.org/lso/intro/beta202408#R9i_hasPrecedingFeature -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/lso/intro/beta202304#R9i_hasPrecedingFeature">
+    <owl:ObjectProperty rdf:about="https://w3id.org/lso/intro/beta202408#R9i_hasPrecedingFeature">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
-        <rdfs:domain rdf:resource="https://w3id.org/lso/intro/beta202304#INT4_Feature"/>
-        <rdfs:range rdf:resource="https://w3id.org/lso/intro/beta202304#INT4_Feature"/>
+        <rdfs:domain rdf:resource="https://w3id.org/lso/intro/beta202408#INT4_Feature"/>
+        <rdfs:range rdf:resource="https://w3id.org/lso/intro/beta202408#INT4_Feature"/>
         <rdfs:label xml:lang="en">R9i has preceding feature</rdfs:label>
     </owl:ObjectProperty>
     
@@ -788,14 +788,14 @@ The skos:boradMatch states that this property is a more specific version of oa:h
     <!-- https://w3id.org/lso/intro/beta202408#R30_hasTextPassage -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/lso/intro/beta202408#R30_hasTextPassage">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/lso/intro/beta202304#R10_hasPassage"/>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/lso/intro/beta202408#R10_hasPassage"/>
         <owl:inverseOf rdf:resource="https://w3id.org/lso/intro/beta202408#R30i_isTextPassageOf"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object"/>
-                    <rdf:Description rdf:about="https://w3id.org/lso/intro/beta202304#INT1_Passage"/>
+                    <rdf:Description rdf:about="https://w3id.org/lso/intro/beta202408#INT1_Passage"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
@@ -808,14 +808,14 @@ The skos:boradMatch states that this property is a more specific version of oa:h
     <!-- https://w3id.org/lso/intro/beta202408#R30i_isTextPassageOf -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/lso/intro/beta202408#R30i_isTextPassageOf">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/lso/intro/beta202304#R10i_isPassageOf"/>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/lso/intro/beta202408#R10i_isPassageOf"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
         <rdfs:domain rdf:resource="https://w3id.org/lso/intro/beta202408#INT21_TextPassage"/>
         <rdfs:range>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object"/>
-                    <rdf:Description rdf:about="https://w3id.org/lso/intro/beta202304#INT1_Passage"/>
+                    <rdf:Description rdf:about="https://w3id.org/lso/intro/beta202408#INT1_Passage"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:range>
@@ -827,14 +827,14 @@ The skos:boradMatch states that this property is a more specific version of oa:h
     <!-- https://w3id.org/lso/intro/beta202408#R31_hasImageArea -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/lso/intro/beta202408#R31_hasImageArea">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/lso/intro/beta202304#R10_hasPassage"/>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/lso/intro/beta202408#R10_hasPassage"/>
         <owl:inverseOf rdf:resource="https://w3id.org/lso/intro/beta202408#R31i_isImageAreaOf"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object"/>
-                    <rdf:Description rdf:about="https://w3id.org/lso/intro/beta202304#INT1_Passage"/>
+                    <rdf:Description rdf:about="https://w3id.org/lso/intro/beta202408#INT1_Passage"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
@@ -847,14 +847,14 @@ The skos:boradMatch states that this property is a more specific version of oa:h
     <!-- https://w3id.org/lso/intro/beta202408#R31i_isImageAreaOf -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/lso/intro/beta202408#R31i_isImageAreaOf">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/lso/intro/beta202304#R10i_isPassageOf"/>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/lso/intro/beta202408#R10i_isPassageOf"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
         <rdfs:domain rdf:resource="https://w3id.org/lso/intro/beta202408#INT22_ImageArea"/>
         <rdfs:range>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object"/>
-                    <rdf:Description rdf:about="https://w3id.org/lso/intro/beta202304#INT1_Passage"/>
+                    <rdf:Description rdf:about="https://w3id.org/lso/intro/beta202408#INT1_Passage"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:range>
@@ -874,9 +874,9 @@ The skos:boradMatch states that this property is a more specific version of oa:h
     
 
 
-    <!-- https://w3id.org/lso/intro/beta202304#R40_hasBibliographicalData -->
+    <!-- https://w3id.org/lso/intro/beta202408#R40_hasBibliographicalData -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/lso/intro/beta202304#R40_hasBibliographicalData">
+    <owl:DatatypeProperty rdf:about="https://w3id.org/lso/intro/beta202408#R40_hasBibliographicalData">
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -892,14 +892,14 @@ The skos:boradMatch states that this property is a more specific version of oa:h
     
 
 
-    <!-- https://w3id.org/lso/intro/beta202304#R41_hasLocation -->
+    <!-- https://w3id.org/lso/intro/beta202408#R41_hasLocation -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/lso/intro/beta202304#R41_hasLocation">
+    <owl:DatatypeProperty rdf:about="https://w3id.org/lso/intro/beta202408#R41_hasLocation">
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="https://w3id.org/lso/intro/beta202304#INT16_Segment"/>
-                    <rdf:Description rdf:about="https://w3id.org/lso/intro/beta202304#INT1_Passage"/>
+                    <rdf:Description rdf:about="https://w3id.org/lso/intro/beta202408#INT16_Segment"/>
+                    <rdf:Description rdf:about="https://w3id.org/lso/intro/beta202408#INT1_Passage"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
@@ -912,9 +912,9 @@ Can be replaced by oa:hasSelector to specify the location utilizing the multiple
     
 
 
-    <!-- https://w3id.org/lso/intro/beta202304#R42_hasParaphraseOrDefinition -->
+    <!-- https://w3id.org/lso/intro/beta202408#R42_hasParaphraseOrDefinition -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/lso/intro/beta202304#R42_hasParaphraseOrDefinition">
+    <owl:DatatypeProperty rdf:about="https://w3id.org/lso/intro/beta202408#R42_hasParaphraseOrDefinition">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment xml:lang="en">Links pretty much everything to a data string providing a definition for it. (A shortcut for modelling the definition as an INT2 Actualization of Feature.)</rdfs:comment>
         <rdfs:label xml:lang="en">R42 has paraphrase or definition</rdfs:label>
@@ -922,10 +922,10 @@ Can be replaced by oa:hasSelector to specify the location utilizing the multiple
     
 
 
-    <!-- https://w3id.org/lso/intro/beta202304#R43_hasSpecification -->
+    <!-- https://w3id.org/lso/intro/beta202408#R43_hasSpecification -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/lso/intro/beta202304#R43_hasSpecification">
-        <rdfs:domain rdf:resource="https://w3id.org/lso/intro/beta202304#INT4_Feature"/>
+    <owl:DatatypeProperty rdf:about="https://w3id.org/lso/intro/beta202408#R43_hasSpecification">
+        <rdfs:domain rdf:resource="https://w3id.org/lso/intro/beta202408#INT4_Feature"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment xml:lang="en">Links a textual feature to a data string defining or describing it more closely.</rdfs:comment>
         <rdfs:label xml:lang="en">R42 has specification</rdfs:label>
@@ -933,14 +933,14 @@ Can be replaced by oa:hasSelector to specify the location utilizing the multiple
     
 
 
-    <!-- https://w3id.org/lso/intro/beta202304#R44_hasWording -->
+    <!-- https://w3id.org/lso/intro/beta202408#R44_hasWording -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/lso/intro/beta202304#R44_hasWording">
+    <owl:DatatypeProperty rdf:about="https://w3id.org/lso/intro/beta202408#R44_hasWording">
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="https://w3id.org/lso/intro/beta202304#INT16_Segment"/>
-                    <rdf:Description rdf:about="https://w3id.org/lso/intro/beta202304#INT1_Passage"/>
+                    <rdf:Description rdf:about="https://w3id.org/lso/intro/beta202408#INT16_Segment"/>
+                    <rdf:Description rdf:about="https://w3id.org/lso/intro/beta202408#INT1_Passage"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
@@ -1025,22 +1025,22 @@ Can be replaced by oa:hasSelector to specify the location utilizing the multiple
     
 
 
-    <!-- https://w3id.org/lso/intro/beta202304#INT10_FormalFeature -->
+    <!-- https://w3id.org/lso/intro/beta202408#INT10_FormalFeature -->
 
-    <owl:Class rdf:about="https://w3id.org/lso/intro/beta202304#INT10_FormalFeature">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/beta202304#INT4_Feature"/>
+    <owl:Class rdf:about="https://w3id.org/lso/intro/beta202408#INT10_FormalFeature">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/beta202408#INT4_Feature"/>
         <rdfs:comment xml:lang="en">This class comprises subclasses for every formal aspect of a text or image. It is divided into the subclasses INT Part and INT Composition, the former containing elements possibly structured according to the latter. 
 Instances or subclasses of these two classes are likely also instances / subclasses of other subclasses of INT4 Feature: An INT Part can at the same time be an INT Object (formal and semantic) or an INT Dramatic Entity (formal and rhetorical); questions of perspective and vanishing point can be considered in a formal as well as a rhetorical respect.
 
-As a consequence of the ontology&apos;s origin, INT Part is currently dominated by literary terms which currently makes the addition of custom subclasses for pictorial features necessary.</rdfs:comment>
+As a consequence of the ontology&apos;s origin, INT Part is currently dominated by literary terms which makes the addition of custom subclasses for pictorial features necessary.</rdfs:comment>
         <rdfs:label xml:lang="en">INT10 Formal Feature</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://w3id.org/lso/intro/beta202304#INT11_TypeOfInterrelation -->
+    <!-- https://w3id.org/lso/intro/beta202408#INT11_TypeOfInterrelation -->
 
-    <owl:Class rdf:about="https://w3id.org/lso/intro/beta202304#INT11_TypeOfInterrelation">
+    <owl:Class rdf:about="https://w3id.org/lso/intro/beta202408#INT11_TypeOfInterrelation">
         <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E55_Type"/>
         <rdfs:comment xml:lang="en">This class comprises (as subclasses) the many classifications of interrelations between instances of texts of images (on any ontological level) that are identified, for example, in research literature, but also in greek rhetoric, in genre theory and so on.</rdfs:comment>
         <rdfs:label xml:lang="en">INT11 Type of Interrelation</rdfs:label>
@@ -1048,49 +1048,49 @@ As a consequence of the ontology&apos;s origin, INT Part is currently dominated 
     
 
 
-    <!-- https://w3id.org/lso/intro/beta202304#INT12_CommonInterrelationTypes -->
+    <!-- https://w3id.org/lso/intro/beta202408#INT12_CommonInterrelationTypes -->
 
-    <owl:Class rdf:about="https://w3id.org/lso/intro/beta202304#INT12_CommonInterrelationTypes">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/beta202304#INT11_TypeOfInterrelation"/>
+    <owl:Class rdf:about="https://w3id.org/lso/intro/beta202408#INT12_CommonInterrelationTypes">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/beta202408#INT11_TypeOfInterrelation"/>
         <rdfs:comment xml:lang="en">This class comprises common concepts of interrelations such as &apos;citation&apos;, &apos;plagiarism&apos;, &apos;allusion&apos; and so on; no further definition is necessary.</rdfs:comment>
         <rdfs:label xml:lang="en">INT12 Common Interrelation Types</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://w3id.org/lso/intro/beta202304#INT13_InterrelationInGenreTheory -->
+    <!-- https://w3id.org/lso/intro/beta202408#INT13_InterrelationInGenreTheory -->
 
-    <owl:Class rdf:about="https://w3id.org/lso/intro/beta202304#INT13_InterrelationInGenreTheory">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/beta202304#INT11_TypeOfInterrelation"/>
+    <owl:Class rdf:about="https://w3id.org/lso/intro/beta202408#INT13_InterrelationInGenreTheory">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/beta202408#INT11_TypeOfInterrelation"/>
         <rdfs:comment xml:lang="en">This class comprises types of interrelations that are defined or applied in genre theory.</rdfs:comment>
         <rdfs:label xml:lang="en">INT13 Interrelation in Genre Theory</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://w3id.org/lso/intro/beta202304#INT14_InterrelationInRhetoric -->
+    <!-- https://w3id.org/lso/intro/beta202408#INT14_InterrelationInRhetoric -->
 
-    <owl:Class rdf:about="https://w3id.org/lso/intro/beta202304#INT14_InterrelationInRhetoric">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/beta202304#INT11_TypeOfInterrelation"/>
+    <owl:Class rdf:about="https://w3id.org/lso/intro/beta202408#INT14_InterrelationInRhetoric">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/beta202408#INT11_TypeOfInterrelation"/>
         <rdfs:comment xml:lang="en">This class comprises interrelations (likely: mostly intertextual relations) that are defined in works on rhetoric.</rdfs:comment>
         <rdfs:label xml:lang="en">INT14 Interrelation in Rhetoric</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://w3id.org/lso/intro/beta202304#INT15_IntertextualityInIntTheories -->
+    <!-- https://w3id.org/lso/intro/beta202408#INT15_IntertextualityInIntTheories -->
 
-    <owl:Class rdf:about="https://w3id.org/lso/intro/beta202304#INT15_IntertextualityInIntTheories">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/beta202304#INT11_TypeOfInterrelation"/>
+    <owl:Class rdf:about="https://w3id.org/lso/intro/beta202408#INT15_IntertextualityInIntTheories">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/beta202408#INT11_TypeOfInterrelation"/>
         <rdfs:comment xml:lang="en">This class comprises intertextual relationships that are defined or applied in research literature dedicated to intertextuality theory.</rdfs:comment>
         <rdfs:label xml:lang="en">INT15 Intertextuality in Intertextuality Theories</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://w3id.org/lso/intro/beta202304#INT16_Segment -->
+    <!-- https://w3id.org/lso/intro/beta202408#INT16_Segment -->
 
-    <owl:Class rdf:about="https://w3id.org/lso/intro/beta202304#INT16_Segment">
+    <owl:Class rdf:about="https://w3id.org/lso/intro/beta202408#INT16_Segment">
         <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E90_Symbolic_Object"/>
         <rdfs:comment xml:lang="en">This class comprises expressions (e.g. texts represented as F2 Expressions) or parts thereof as they are represented in F3 Manifestations. INT16 Segments can be located inside the F3 Manifestation by means of page numbers etc. and are thus identifiable (and citable).
 They are not identical to/subclasses of F3 Manifestations, since they only make a part of it; they are not identical to F2 Expressions, since they have distinct bibliographical metadata.
@@ -1101,30 +1101,30 @@ The INT16 Segment can be linked to a F2 Expression or a INT1 Passage through R16
     
 
 
-    <!-- https://w3id.org/lso/intro/beta202304#INT17_FunctionalRelation -->
+    <!-- https://w3id.org/lso/intro/beta202408#INT17_FunctionalRelation -->
 
-    <owl:Class rdf:about="https://w3id.org/lso/intro/beta202304#INT17_FunctionalRelation">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/beta202304#INT11_TypeOfInterrelation"/>
+    <owl:Class rdf:about="https://w3id.org/lso/intro/beta202408#INT17_FunctionalRelation">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/beta202408#INT11_TypeOfInterrelation"/>
         <rdfs:comment xml:lang="en">This class comprises types of interrelations between a text or an image on any ontological level and an architext that have merely classificatory or typological function, including a text/an image being a part of an architext (an epoch, a movement etc.), its initial or final text/image, etc.</rdfs:comment>
         <rdfs:label xml:lang="en">INT17 Functional Relation</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://w3id.org/lso/intro/beta202304#INT18_Reference -->
+    <!-- https://w3id.org/lso/intro/beta202408#INT18_Reference -->
 
-    <owl:Class rdf:about="https://w3id.org/lso/intro/beta202304#INT18_Reference">
+    <owl:Class rdf:about="https://w3id.org/lso/intro/beta202408#INT18_Reference">
         <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
-        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/beta202304#INT9_SemanticFeature"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/beta202408#INT9_SemanticFeature"/>
         <rdfs:comment xml:lang="en">This class comprises mentions of – usually: real – identifiable objects of any kind. It&apos;s use is not restricted to, but makes the most sense in non-fictional texts.</rdfs:comment>
         <rdfs:label xml:lang="en">INT18 Reference</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://w3id.org/lso/intro/beta202304#INT1_Passage -->
+    <!-- https://w3id.org/lso/intro/beta202408#INT1_Passage -->
 
-    <owl:Class rdf:about="https://w3id.org/lso/intro/beta202304#INT1_Passage">
+    <owl:Class rdf:about="https://w3id.org/lso/intro/beta202408#INT1_Passage">
         <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E90_Symbolic_Object"/>
         <rdfs:comment xml:lang="en">The INT1 Passage is a means of modelling an identifiable part of an E73 Information Object or its subclasses – without that part being removed from its source Information Object. 
 
@@ -1137,12 +1137,11 @@ The skos:broadMatch states that the INT1 Passage can be regarded as an oa:Specif
     
 
 
-    <!-- https://w3id.org/lso/intro/beta202304#INT2_ActualizationOfFeature -->
+    <!-- https://w3id.org/lso/intro/beta202408#INT2_ActualizationOfFeature -->
 
-    <owl:Class rdf:about="https://w3id.org/lso/intro/beta202304#INT2_ActualizationOfFeature">
+    <owl:Class rdf:about="https://w3id.org/lso/intro/beta202408#INT2_ActualizationOfFeature">
         <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E28_Conceptual_Object"/>
-        <rdfs:comment xml:lang="en">
-            The fact that a text shows - in its own specific way - a certain feature (which itself is an abstract concept and takes form in many texts), e.g. a motif, an atmosphere, a theme, a figure of speech. Examples:
+        <rdfs:comment xml:lang="en">The fact that a text shows - in its own specific way - a certain feature (which itself is an abstract concept and takes form in many texts), e.g. a motif, an atmosphere, a theme, a figure of speech. Examples:
             - the specific actualization of the motif of patricide in Sophokles&apos; &apos;Ödipus Rex&apos;. 
             - the specific actualization of the Faust-subject in Goethe&apos;s &apos;Faust&apos;. 
             - the specific actualization of the iambic pentameter in Rilke&apos;s &apos;Archaischer Torso Apollos&quot;.
@@ -1152,9 +1151,9 @@ The skos:broadMatch states that the INT1 Passage can be regarded as an oa:Specif
     
 
 
-    <!-- https://w3id.org/lso/intro/beta202304#INT3_Interrelation -->
+    <!-- https://w3id.org/lso/intro/beta202408#INT3_Interrelation -->
 
-    <owl:Class rdf:about="https://w3id.org/lso/intro/beta202304#INT3_Interrelation">
+    <owl:Class rdf:about="https://w3id.org/lso/intro/beta202408#INT3_Interrelation">
         <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E28_Conceptual_Object"/>
         <rdfs:comment xml:lang="en">This class comprises the abstract notion of a relationship between texts and/or images resp. their parts as it is identified by a recipient (which is not the same as the rhetorical entity &apos;quotation&apos;). Every INT3 Interrelation has at least 2 related entities, which are texts/images (on any ontological level) or INT2 Actualizations of Features. An INT3 Interrelation is possibly identified in an INT Interpretation and further defined by a INT11 TypeOfInterrelation.
 
@@ -1165,9 +1164,9 @@ The skos:broadMatch to oa:Annotation indicates that stating the existence of an 
     
 
 
-    <!-- https://w3id.org/lso/intro/beta202304#INT4_Feature -->
+    <!-- https://w3id.org/lso/intro/beta202408#INT4_Feature -->
 
-    <owl:Class rdf:about="https://w3id.org/lso/intro/beta202304#INT4_Feature">
+    <owl:Class rdf:about="https://w3id.org/lso/intro/beta202408#INT4_Feature">
         <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E28_Conceptual_Object"/>
         <rdfs:comment xml:lang="en">This class comprises features that &apos;are in&apos; or &apos;can be found in&apos; or &apos;can be read out of&apos; a text or an image. INT2 Actualizations of these features are the results of a receptive process that identifies the specific form the INT4 Feature – a distinct abstract concept, itself separate from the text or image – takes in the text or image.
             This class therefore has a wide scope. Its domain could be divided into subclasses following any number of different ratios; to avoid the resulting restrictions and/or complex hierarchies, the actual subclasses of the INT4 Receptional Entity represent diverse approaches to its subject matter, covering medial aspects as well as aspect of form and semantics.
@@ -1177,9 +1176,9 @@ The skos:broadMatch to oa:Annotation indicates that stating the existence of an 
     
 
 
-    <!-- https://w3id.org/lso/intro/beta202304#INT6_Architext -->
+    <!-- https://w3id.org/lso/intro/beta202408#INT6_Architext -->
 
-    <owl:Class rdf:about="https://w3id.org/lso/intro/beta202304#INT6_Architext">
+    <owl:Class rdf:about="https://w3id.org/lso/intro/beta202408#INT6_Architext">
         <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E28_Conceptual_Object"/>
         <rdfs:comment xml:lang="en">An INT6 Architextual Entity consists in a number of texts which in some way give reason to see them as connected, related, sharing a common feature. Examples for INT6 Architextual Entities can be 
             - discourses (texts sharing a discoursive element, a topic etc.)
@@ -1192,20 +1191,20 @@ The skos:broadMatch to oa:Annotation indicates that stating the existence of an 
     
 
 
-    <!-- https://w3id.org/lso/intro/beta202304#INT8_RhetoricalFeature -->
+    <!-- https://w3id.org/lso/intro/beta202408#INT8_RhetoricalFeature -->
 
-    <owl:Class rdf:about="https://w3id.org/lso/intro/beta202304#INT8_RhetoricalFeature">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/beta202304#INT4_Feature"/>
+    <owl:Class rdf:about="https://w3id.org/lso/intro/beta202408#INT8_RhetoricalFeature">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/beta202408#INT4_Feature"/>
         <rdfs:comment xml:lang="en">This class comprises every aspect of a text or an image that can be described in terms of rhetorics - ranging from the occurrence of rhetorical tropes to parts of an e.g. research paper like &apos;introduction&apos; or &apos;quotation&apos; (pragmatic entities) to aspects of the narrative act such as &apos;voice&apos; or &apos;narrating time&apos; (narratological entities). Questions of composition in visual arts can often also be classified as a rhetorical feature.</rdfs:comment>
         <rdfs:label xml:lang="en">INT8 Rhetorical Feature</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://w3id.org/lso/intro/beta202304#INT9_SemanticFeature -->
+    <!-- https://w3id.org/lso/intro/beta202408#INT9_SemanticFeature -->
 
-    <owl:Class rdf:about="https://w3id.org/lso/intro/beta202304#INT9_SemanticFeature">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/beta202304#INT4_Feature"/>
+    <owl:Class rdf:about="https://w3id.org/lso/intro/beta202408#INT9_SemanticFeature">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/beta202408#INT4_Feature"/>
         <rdfs:comment xml:lang="en">This class comprises every semantic aspect of a text or image, like the common notions of &apos;plot&apos;, &apos;sujet&apos;, or &apos;character&apos;.
 While most subclasses are still object to refinement and addition – to indicate their provisional status they are not yet numbered in this version of INTRO –, INT18 Reference has been numbered to indicate its consolidated status.</rdfs:comment>
         <rdfs:label xml:lang="en">INT9 Semantic Feature</rdfs:label>
@@ -1213,9 +1212,9 @@ While most subclasses are still object to refinement and addition – to indicat
     
 
 
-    <!-- https://w3id.org/lso/intro/beta202304#INT_Act -->
+    <!-- https://w3id.org/lso/intro/beta202408#INT_Act -->
 
-    <owl:Class rdf:about="https://w3id.org/lso/intro/beta202304#INT_Act">
+    <owl:Class rdf:about="https://w3id.org/lso/intro/beta202408#INT_Act">
         <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/beta202408#INT24_TextualFeature"/>
         <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/beta202408#INT_Part"/>
         <rdfs:label xml:lang="en">INT Act (Drama)</rdfs:label>
@@ -1223,74 +1222,74 @@ While most subclasses are still object to refinement and addition – to indicat
     
 
 
-    <!-- https://w3id.org/lso/intro/beta202304#INT_Atmosphere -->
+    <!-- https://w3id.org/lso/intro/beta202408#INT_Atmosphere -->
 
-    <owl:Class rdf:about="https://w3id.org/lso/intro/beta202304#INT_Atmosphere">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/beta202304#INT9_SemanticFeature"/>
+    <owl:Class rdf:about="https://w3id.org/lso/intro/beta202408#INT_Atmosphere">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/beta202408#INT9_SemanticFeature"/>
         <rdfs:label xml:lang="en">INT Atmosphere</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://w3id.org/lso/intro/beta202304#INT_Character -->
+    <!-- https://w3id.org/lso/intro/beta202408#INT_Character -->
 
-    <owl:Class rdf:about="https://w3id.org/lso/intro/beta202304#INT_Character">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/beta202304#INT9_SemanticFeature"/>
+    <owl:Class rdf:about="https://w3id.org/lso/intro/beta202408#INT_Character">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/beta202408#INT9_SemanticFeature"/>
         <rdfs:label xml:lang="en">INT Character</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://w3id.org/lso/intro/beta202304#INT_Constellation -->
+    <!-- https://w3id.org/lso/intro/beta202408#INT_Constellation -->
 
-    <owl:Class rdf:about="https://w3id.org/lso/intro/beta202304#INT_Constellation">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/beta202304#INT9_SemanticFeature"/>
+    <owl:Class rdf:about="https://w3id.org/lso/intro/beta202408#INT_Constellation">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/beta202408#INT9_SemanticFeature"/>
         <rdfs:label xml:lang="en">INT Constellation</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://w3id.org/lso/intro/beta202304#INT_Definition -->
+    <!-- https://w3id.org/lso/intro/beta202408#INT_Definition -->
 
-    <owl:Class rdf:about="https://w3id.org/lso/intro/beta202304#INT_Definition">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/beta202304#INT9_SemanticFeature"/>
-        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/beta202304#INT_Pragmatic_Feature"/>
+    <owl:Class rdf:about="https://w3id.org/lso/intro/beta202408#INT_Definition">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/beta202408#INT9_SemanticFeature"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/beta202408#INT_Pragmatic_Feature"/>
         <rdfs:label xml:lang="en">INT Definition</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://w3id.org/lso/intro/beta202304#INT_Description -->
+    <!-- https://w3id.org/lso/intro/beta202408#INT_Description -->
 
-    <owl:Class rdf:about="https://w3id.org/lso/intro/beta202304#INT_Description">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/beta202304#INT9_SemanticFeature"/>
-        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/beta202304#INT_Pragmatic_Feature"/>
+    <owl:Class rdf:about="https://w3id.org/lso/intro/beta202408#INT_Description">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/beta202408#INT9_SemanticFeature"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/beta202408#INT_Pragmatic_Feature"/>
         <rdfs:label xml:lang="en">INT Description</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://w3id.org/lso/intro/beta202304#INT_Discipline -->
+    <!-- https://w3id.org/lso/intro/beta202408#INT_Discipline -->
 
-    <owl:Class rdf:about="https://w3id.org/lso/intro/beta202304#INT_Discipline">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/beta202304#INT6_Architext"/>
+    <owl:Class rdf:about="https://w3id.org/lso/intro/beta202408#INT_Discipline">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/beta202408#INT6_Architext"/>
         <rdfs:label xml:lang="en">INT Discipline</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://w3id.org/lso/intro/beta202304#INT_Discourse -->
+    <!-- https://w3id.org/lso/intro/beta202408#INT_Discourse -->
 
-    <owl:Class rdf:about="https://w3id.org/lso/intro/beta202304#INT_Discourse">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/beta202304#INT6_Architext"/>
+    <owl:Class rdf:about="https://w3id.org/lso/intro/beta202408#INT_Discourse">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/beta202408#INT6_Architext"/>
         <rdfs:label xml:lang="en">INT Discourse</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://w3id.org/lso/intro/beta202304#INT_DramaticEntity -->
+    <!-- https://w3id.org/lso/intro/beta202408#INT_DramaticEntity -->
 
-    <owl:Class rdf:about="https://w3id.org/lso/intro/beta202304#INT_DramaticEntity">
+    <owl:Class rdf:about="https://w3id.org/lso/intro/beta202408#INT_DramaticEntity">
         <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/beta202408#INT24_TextualFeature"/>
         <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/beta202408#INT_TextualGenreSpecifics"/>
         <rdfs:comment xml:lang="en">This class comprises concepts from drama theory.</rdfs:comment>
@@ -1299,56 +1298,56 @@ While most subclasses are still object to refinement and addition – to indicat
     
 
 
-    <!-- https://w3id.org/lso/intro/beta202304#INT_Epoch -->
+    <!-- https://w3id.org/lso/intro/beta202408#INT_Epoch -->
 
-    <owl:Class rdf:about="https://w3id.org/lso/intro/beta202304#INT_Epoch">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/beta202304#INT6_Architext"/>
+    <owl:Class rdf:about="https://w3id.org/lso/intro/beta202408#INT_Epoch">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/beta202408#INT6_Architext"/>
         <rdfs:label xml:lang="en">INT Epoch</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://w3id.org/lso/intro/beta202304#INT_Event -->
+    <!-- https://w3id.org/lso/intro/beta202408#INT_Event -->
 
-    <owl:Class rdf:about="https://w3id.org/lso/intro/beta202304#INT_Event">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/beta202304#INT9_SemanticFeature"/>
+    <owl:Class rdf:about="https://w3id.org/lso/intro/beta202408#INT_Event">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/beta202408#INT9_SemanticFeature"/>
         <rdfs:label xml:lang="en">INT Event</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://w3id.org/lso/intro/beta202304#INT_FigurativeFeature -->
+    <!-- https://w3id.org/lso/intro/beta202408#INT_FigurativeFeature -->
 
-    <owl:Class rdf:about="https://w3id.org/lso/intro/beta202304#INT_FigurativeFeature">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/beta202304#INT8_RhetoricalFeature"/>
+    <owl:Class rdf:about="https://w3id.org/lso/intro/beta202408#INT_FigurativeFeature">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/beta202408#INT8_RhetoricalFeature"/>
         <rdfs:comment xml:lang="en">The class comprises figures of speech. Since there are countless classification systems (the most common dividing figures into tropoi - metaphor, metonymy ... - and schemata/figurae, further dividing the latter into figures of thougth and figures of word, further dividing the latter into grammatical and rhetorical figures of word), no subclasses will be provided.</rdfs:comment>
         <rdfs:label xml:lang="en">INT Figurative Feature</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://w3id.org/lso/intro/beta202304#INT_FigurativeMeaning -->
+    <!-- https://w3id.org/lso/intro/beta202408#INT_FigurativeMeaning -->
 
-    <owl:Class rdf:about="https://w3id.org/lso/intro/beta202304#INT_FigurativeMeaning">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/beta202304#INT9_SemanticFeature"/>
+    <owl:Class rdf:about="https://w3id.org/lso/intro/beta202408#INT_FigurativeMeaning">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/beta202408#INT9_SemanticFeature"/>
         <rdfs:label xml:lang="en">INT Figurative Meaning</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://w3id.org/lso/intro/beta202304#INT_Genre -->
+    <!-- https://w3id.org/lso/intro/beta202408#INT_Genre -->
 
-    <owl:Class rdf:about="https://w3id.org/lso/intro/beta202304#INT_Genre">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/beta202304#INT6_Architext"/>
+    <owl:Class rdf:about="https://w3id.org/lso/intro/beta202408#INT_Genre">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/beta202408#INT6_Architext"/>
         <rdfs:label xml:lang="en">INT Genre</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://w3id.org/lso/intro/beta202304#INT_GenreSpecifics -->
+    <!-- https://w3id.org/lso/intro/beta202408#INT_GenreSpecifics -->
 
-    <owl:Class rdf:about="https://w3id.org/lso/intro/beta202304#INT_GenreSpecifics">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/beta202304#INT8_RhetoricalFeature"/>
+    <owl:Class rdf:about="https://w3id.org/lso/intro/beta202408#INT_GenreSpecifics">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/beta202408#INT8_RhetoricalFeature"/>
         <rdfs:comment xml:lang="en">INT Genre Specifics comprises all features that are used to assign a certain genre - whether textual or visual -, are typical of such a genre, or occur frequently in it. Instances might often be also instances of the other subclasses of INT4 Feature. 
 INT Genre Specifics&apos; two subclasses – INT Visual Genre Specifics and INT Textual Genre Specifics – do not imply that each feature must be either–or, in some cases features will be assignable to both classes.</rdfs:comment>
         <rdfs:label xml:lang="en">INT Genre Specifics</rdfs:label>
@@ -1356,39 +1355,39 @@ INT Genre Specifics&apos; two subclasses – INT Visual Genre Specifics and INT 
     
 
 
-    <!-- https://w3id.org/lso/intro/beta202304#INT_IndividualCharacter -->
+    <!-- https://w3id.org/lso/intro/beta202408#INT_IndividualCharacter -->
 
-    <owl:Class rdf:about="https://w3id.org/lso/intro/beta202304#INT_IndividualCharacter">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/beta202304#INT_Character"/>
+    <owl:Class rdf:about="https://w3id.org/lso/intro/beta202408#INT_IndividualCharacter">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/beta202408#INT_Character"/>
         <rdfs:label xml:lang="en">INT Individual Character</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://w3id.org/lso/intro/beta202304#INT_IndividualObject -->
+    <!-- https://w3id.org/lso/intro/beta202408#INT_IndividualObject -->
 
-    <owl:Class rdf:about="https://w3id.org/lso/intro/beta202304#INT_IndividualObject">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/beta202304#INT_Object"/>
+    <owl:Class rdf:about="https://w3id.org/lso/intro/beta202408#INT_IndividualObject">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/beta202408#INT_Object"/>
         <rdfs:label xml:lang="en">INT Individual Object</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://w3id.org/lso/intro/beta202304#INT_IndividualPlace -->
+    <!-- https://w3id.org/lso/intro/beta202408#INT_IndividualPlace -->
 
-    <owl:Class rdf:about="https://w3id.org/lso/intro/beta202304#INT_IndividualPlace">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/beta202304#INT_Place"/>
+    <owl:Class rdf:about="https://w3id.org/lso/intro/beta202408#INT_IndividualPlace">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/beta202408#INT_Place"/>
         <rdfs:label xml:lang="en">INT Individual Place</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://w3id.org/lso/intro/beta202304#INT_Interpretation -->
+    <!-- https://w3id.org/lso/intro/beta202408#INT_Interpretation -->
 
-    <owl:Class rdf:about="https://w3id.org/lso/intro/beta202304#INT_Interpretation">
+    <owl:Class rdf:about="https://w3id.org/lso/intro/beta202408#INT_Interpretation">
         <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
-        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/beta202304#INT9_SemanticFeature"/>
-        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/beta202304#INT_Pragmatic_Feature"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/beta202408#INT9_SemanticFeature"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/beta202408#INT_Pragmatic_Feature"/>
         <rdfs:comment xml:lang="en">The result of a interpretative act, possibly: as perceived in research literature. An interpretation can identify references or actualizations or the like. A number of interpretations can together recreate the structure of, e.g., a research paper. Accordingly, a couple of properties allow linking it to preceding or subsequent interpretations and to the subjects of the interpretation, like intertextual relations or textual features.
 Examples:
             - the statement that Umberto Eco&apos;s &apos;The Name of the Rose&apos; features a detective character. 
@@ -1400,9 +1399,9 @@ Examples:
     
 
 
-    <!-- https://w3id.org/lso/intro/beta202304#INT_LyricalEntity -->
+    <!-- https://w3id.org/lso/intro/beta202408#INT_LyricalEntity -->
 
-    <owl:Class rdf:about="https://w3id.org/lso/intro/beta202304#INT_LyricalEntity">
+    <owl:Class rdf:about="https://w3id.org/lso/intro/beta202408#INT_LyricalEntity">
         <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/beta202408#INT24_TextualFeature"/>
         <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/beta202408#INT_TextualGenreSpecifics"/>
         <rdfs:comment xml:lang="en">This class comprises rhetorical concepts from lyric theory.</rdfs:comment>
@@ -1411,36 +1410,36 @@ Examples:
     
 
 
-    <!-- https://w3id.org/lso/intro/beta202304#INT_Mood -->
+    <!-- https://w3id.org/lso/intro/beta202408#INT_Mood -->
 
-    <owl:Class rdf:about="https://w3id.org/lso/intro/beta202304#INT_Mood">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/beta202304#INT9_SemanticFeature"/>
+    <owl:Class rdf:about="https://w3id.org/lso/intro/beta202408#INT_Mood">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/beta202408#INT9_SemanticFeature"/>
         <rdfs:label xml:lang="en">INT Mood</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://w3id.org/lso/intro/beta202304#INT_Motif -->
+    <!-- https://w3id.org/lso/intro/beta202408#INT_Motif -->
 
-    <owl:Class rdf:about="https://w3id.org/lso/intro/beta202304#INT_Motif">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/beta202304#INT9_SemanticFeature"/>
+    <owl:Class rdf:about="https://w3id.org/lso/intro/beta202408#INT_Motif">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/beta202408#INT9_SemanticFeature"/>
         <rdfs:label xml:lang="en">INT Motif</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://w3id.org/lso/intro/beta202304#INT_Movement -->
+    <!-- https://w3id.org/lso/intro/beta202408#INT_Movement -->
 
-    <owl:Class rdf:about="https://w3id.org/lso/intro/beta202304#INT_Movement">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/beta202304#INT6_Architext"/>
+    <owl:Class rdf:about="https://w3id.org/lso/intro/beta202408#INT_Movement">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/beta202408#INT6_Architext"/>
         <rdfs:label xml:lang="en">INT Movement</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://w3id.org/lso/intro/beta202304#INT_NarratologicalEntity -->
+    <!-- https://w3id.org/lso/intro/beta202408#INT_NarratologicalEntity -->
 
-    <owl:Class rdf:about="https://w3id.org/lso/intro/beta202304#INT_NarratologicalEntity">
+    <owl:Class rdf:about="https://w3id.org/lso/intro/beta202408#INT_NarratologicalEntity">
         <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/beta202408#INT_TextualGenreSpecifics"/>
         <rdfs:comment xml:lang="en">This class comprises narratological concepts insofar as they correlate with rhetorical concepts (like &apos;speech&apos;, &apos;distance&apos;, &apos;perspective&apos; etc.). Due to the plurality of narratological frameworks, no subclasses will be provided at this point.</rdfs:comment>
         <rdfs:label xml:lang="en">INT Narratological Entity</rdfs:label>
@@ -1448,55 +1447,55 @@ Examples:
     
 
 
-    <!-- https://w3id.org/lso/intro/beta202304#INT_Object -->
+    <!-- https://w3id.org/lso/intro/beta202408#INT_Object -->
 
-    <owl:Class rdf:about="https://w3id.org/lso/intro/beta202304#INT_Object">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/beta202304#INT9_SemanticFeature"/>
+    <owl:Class rdf:about="https://w3id.org/lso/intro/beta202408#INT_Object">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/beta202408#INT9_SemanticFeature"/>
         <rdfs:label xml:lang="en">INT Object</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://w3id.org/lso/intro/beta202304#INT_Oeuvre -->
+    <!-- https://w3id.org/lso/intro/beta202408#INT_Oeuvre -->
 
-    <owl:Class rdf:about="https://w3id.org/lso/intro/beta202304#INT_Oeuvre">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/beta202304#INT6_Architext"/>
+    <owl:Class rdf:about="https://w3id.org/lso/intro/beta202408#INT_Oeuvre">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/beta202408#INT6_Architext"/>
         <rdfs:label xml:lang="en">INT Oeuvre</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://w3id.org/lso/intro/beta202304#INT_Opinion -->
+    <!-- https://w3id.org/lso/intro/beta202408#INT_Opinion -->
 
-    <owl:Class rdf:about="https://w3id.org/lso/intro/beta202304#INT_Opinion">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/beta202304#INT9_SemanticFeature"/>
+    <owl:Class rdf:about="https://w3id.org/lso/intro/beta202408#INT_Opinion">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/beta202408#INT9_SemanticFeature"/>
         <rdfs:label xml:lang="en">INT Opinion</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://w3id.org/lso/intro/beta202304#INT_Place -->
+    <!-- https://w3id.org/lso/intro/beta202408#INT_Place -->
 
-    <owl:Class rdf:about="https://w3id.org/lso/intro/beta202304#INT_Place">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/beta202304#INT9_SemanticFeature"/>
+    <owl:Class rdf:about="https://w3id.org/lso/intro/beta202408#INT_Place">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/beta202408#INT9_SemanticFeature"/>
         <rdfs:label xml:lang="en">INT Place</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://w3id.org/lso/intro/beta202304#INT_Plot -->
+    <!-- https://w3id.org/lso/intro/beta202408#INT_Plot -->
 
-    <owl:Class rdf:about="https://w3id.org/lso/intro/beta202304#INT_Plot">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/beta202304#INT9_SemanticFeature"/>
+    <owl:Class rdf:about="https://w3id.org/lso/intro/beta202408#INT_Plot">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/beta202408#INT9_SemanticFeature"/>
         <rdfs:label xml:lang="en">INT Plot</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://w3id.org/lso/intro/beta202304#INT_Pragmatic_Feature -->
+    <!-- https://w3id.org/lso/intro/beta202408#INT_Pragmatic_Feature -->
 
-    <owl:Class rdf:about="https://w3id.org/lso/intro/beta202304#INT_Pragmatic_Feature">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/beta202304#INT8_RhetoricalFeature"/>
+    <owl:Class rdf:about="https://w3id.org/lso/intro/beta202408#INT_Pragmatic_Feature">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/beta202408#INT8_RhetoricalFeature"/>
         <rdfs:comment xml:lang="en">The class includes all features that can be attributed to a text or image with regard to the role that these works play in a plot, for example in a social, political or religious context. These characteristics take account of the fact that the works in question pursue a specific purpose that goes beyond content and form and that is apparent &apos;on the surface‘ or by application of certain conventions or handed-down standards.
 While INTRO-subclasses of this class are limited to those close to the functionality of INTRO and which are to be applied to the relation between primary and secondary (textual) sources, subclasses can of course also include concepts from visual art. A pragmatic feature of a painting might be a donor portrait expressing gratitude, the portrait of a ruler serving propaganda purposes, a bible scene serving as guide for pious action. Pragmatic features of texts include bibliographic references, acknowledgments, and the like.</rdfs:comment>
         <rdfs:label xml:lang="en">INT Pragmatic Feature</rdfs:label>
@@ -1504,9 +1503,9 @@ While INTRO-subclasses of this class are limited to those close to the functiona
     
 
 
-    <!-- https://w3id.org/lso/intro/beta202304#INT_Scene -->
+    <!-- https://w3id.org/lso/intro/beta202408#INT_Scene -->
 
-    <owl:Class rdf:about="https://w3id.org/lso/intro/beta202304#INT_Scene">
+    <owl:Class rdf:about="https://w3id.org/lso/intro/beta202408#INT_Scene">
         <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/beta202408#INT24_TextualFeature"/>
         <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/beta202408#INT_Part"/>
         <rdfs:label xml:lang="en">INT Scene (Drama)</rdfs:label>
@@ -1514,54 +1513,54 @@ While INTRO-subclasses of this class are limited to those close to the functiona
     
 
 
-    <!-- https://w3id.org/lso/intro/beta202304#INT_School -->
+    <!-- https://w3id.org/lso/intro/beta202408#INT_School -->
 
-    <owl:Class rdf:about="https://w3id.org/lso/intro/beta202304#INT_School">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/beta202304#INT6_Architext"/>
+    <owl:Class rdf:about="https://w3id.org/lso/intro/beta202408#INT_School">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/beta202408#INT6_Architext"/>
         <rdfs:label xml:lang="en">INT School</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://w3id.org/lso/intro/beta202304#INT_SpaciallyDefinedArchitext -->
+    <!-- https://w3id.org/lso/intro/beta202408#INT_SpaciallyDefinedArchitext -->
 
-    <owl:Class rdf:about="https://w3id.org/lso/intro/beta202304#INT_SpaciallyDefinedArchitext">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/beta202304#INT6_Architext"/>
+    <owl:Class rdf:about="https://w3id.org/lso/intro/beta202408#INT_SpaciallyDefinedArchitext">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/beta202408#INT6_Architext"/>
         <rdfs:label xml:lang="en">INT Geographically Defined Architext</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://w3id.org/lso/intro/beta202304#INT_State -->
+    <!-- https://w3id.org/lso/intro/beta202408#INT_State -->
 
-    <owl:Class rdf:about="https://w3id.org/lso/intro/beta202304#INT_State">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/beta202304#INT9_SemanticFeature"/>
+    <owl:Class rdf:about="https://w3id.org/lso/intro/beta202408#INT_State">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/beta202408#INT9_SemanticFeature"/>
         <rdfs:label xml:lang="en">INT State</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://w3id.org/lso/intro/beta202304#INT_Subject -->
+    <!-- https://w3id.org/lso/intro/beta202408#INT_Subject -->
 
-    <owl:Class rdf:about="https://w3id.org/lso/intro/beta202304#INT_Subject">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/beta202304#INT9_SemanticFeature"/>
+    <owl:Class rdf:about="https://w3id.org/lso/intro/beta202408#INT_Subject">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/beta202408#INT9_SemanticFeature"/>
         <rdfs:label xml:lang="en">INT Subject</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://w3id.org/lso/intro/beta202304#INT_Subtext -->
+    <!-- https://w3id.org/lso/intro/beta202408#INT_Subtext -->
 
-    <owl:Class rdf:about="https://w3id.org/lso/intro/beta202304#INT_Subtext">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/beta202304#INT9_SemanticFeature"/>
+    <owl:Class rdf:about="https://w3id.org/lso/intro/beta202408#INT_Subtext">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/beta202408#INT9_SemanticFeature"/>
         <rdfs:label xml:lang="en">INT Subtext</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://w3id.org/lso/intro/beta202304#INT_Tableau -->
+    <!-- https://w3id.org/lso/intro/beta202408#INT_Tableau -->
 
-    <owl:Class rdf:about="https://w3id.org/lso/intro/beta202304#INT_Tableau">
+    <owl:Class rdf:about="https://w3id.org/lso/intro/beta202408#INT_Tableau">
         <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/beta202408#INT24_TextualFeature"/>
         <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/beta202408#INT_Part"/>
         <rdfs:label xml:lang="en">INT Tableau (Drama)</rdfs:label>
@@ -1569,91 +1568,91 @@ While INTRO-subclasses of this class are limited to those close to the functiona
     
 
 
-    <!-- https://w3id.org/lso/intro/beta202304#INT_TemporallyDefinedArchitext -->
+    <!-- https://w3id.org/lso/intro/beta202408#INT_TemporallyDefinedArchitext -->
 
-    <owl:Class rdf:about="https://w3id.org/lso/intro/beta202304#INT_TemporallyDefinedArchitext">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/beta202304#INT6_Architext"/>
+    <owl:Class rdf:about="https://w3id.org/lso/intro/beta202408#INT_TemporallyDefinedArchitext">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/beta202408#INT6_Architext"/>
         <rdfs:label xml:lang="en">INT Temporally Defined Architext</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://w3id.org/lso/intro/beta202304#INT_Theme -->
+    <!-- https://w3id.org/lso/intro/beta202408#INT_Theme -->
 
-    <owl:Class rdf:about="https://w3id.org/lso/intro/beta202304#INT_Theme">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/beta202304#INT9_SemanticFeature"/>
+    <owl:Class rdf:about="https://w3id.org/lso/intro/beta202408#INT_Theme">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/beta202408#INT9_SemanticFeature"/>
         <rdfs:label xml:lang="en">INT Theme</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://w3id.org/lso/intro/beta202304#INT_Theory -->
+    <!-- https://w3id.org/lso/intro/beta202408#INT_Theory -->
 
-    <owl:Class rdf:about="https://w3id.org/lso/intro/beta202304#INT_Theory">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/beta202304#INT9_SemanticFeature"/>
+    <owl:Class rdf:about="https://w3id.org/lso/intro/beta202408#INT_Theory">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/beta202408#INT9_SemanticFeature"/>
         <rdfs:label xml:lang="en">INT Theory</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://w3id.org/lso/intro/beta202304#INT_TimeSpan -->
+    <!-- https://w3id.org/lso/intro/beta202408#INT_TimeSpan -->
 
-    <owl:Class rdf:about="https://w3id.org/lso/intro/beta202304#INT_TimeSpan">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/beta202304#INT9_SemanticFeature"/>
+    <owl:Class rdf:about="https://w3id.org/lso/intro/beta202408#INT_TimeSpan">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/beta202408#INT9_SemanticFeature"/>
         <rdfs:label xml:lang="en">INT Timespan</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://w3id.org/lso/intro/beta202304#INT_Topic -->
+    <!-- https://w3id.org/lso/intro/beta202408#INT_Topic -->
 
-    <owl:Class rdf:about="https://w3id.org/lso/intro/beta202304#INT_Topic">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/beta202304#INT9_SemanticFeature"/>
+    <owl:Class rdf:about="https://w3id.org/lso/intro/beta202408#INT_Topic">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/beta202408#INT9_SemanticFeature"/>
         <rdfs:label xml:lang="en">INT Topic</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://w3id.org/lso/intro/beta202304#INT_Topos -->
+    <!-- https://w3id.org/lso/intro/beta202408#INT_Topos -->
 
-    <owl:Class rdf:about="https://w3id.org/lso/intro/beta202304#INT_Topos">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/beta202304#INT9_SemanticFeature"/>
+    <owl:Class rdf:about="https://w3id.org/lso/intro/beta202408#INT_Topos">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/beta202408#INT9_SemanticFeature"/>
         <rdfs:label xml:lang="en">INT Topos</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://w3id.org/lso/intro/beta202304#INT_TypeOfCharacter -->
+    <!-- https://w3id.org/lso/intro/beta202408#INT_TypeOfCharacter -->
 
-    <owl:Class rdf:about="https://w3id.org/lso/intro/beta202304#INT_TypeOfCharacter">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/beta202304#INT_Character"/>
+    <owl:Class rdf:about="https://w3id.org/lso/intro/beta202408#INT_TypeOfCharacter">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/beta202408#INT_Character"/>
         <rdfs:label xml:lang="en">INT Type of Character</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://w3id.org/lso/intro/beta202304#INT_TypeOfPlace -->
+    <!-- https://w3id.org/lso/intro/beta202408#INT_TypeOfPlace -->
 
-    <owl:Class rdf:about="https://w3id.org/lso/intro/beta202304#INT_TypeOfPlace">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/beta202304#INT_Place"/>
+    <owl:Class rdf:about="https://w3id.org/lso/intro/beta202408#INT_TypeOfPlace">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/beta202408#INT_Place"/>
         <rdfs:label xml:lang="en">INT Type of Place</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://w3id.org/lso/intro/beta202304#INT_TypicalObject -->
+    <!-- https://w3id.org/lso/intro/beta202408#INT_TypicalObject -->
 
-    <owl:Class rdf:about="https://w3id.org/lso/intro/beta202304#INT_TypicalObject">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/beta202304#INT_Object"/>
+    <owl:Class rdf:about="https://w3id.org/lso/intro/beta202408#INT_TypicalObject">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/beta202408#INT_Object"/>
         <rdfs:label xml:lang="en">INT Typical Object</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://w3id.org/lso/intro/beta202304#INT_VarietyOfText -->
+    <!-- https://w3id.org/lso/intro/beta202408#INT_VarietyOfText -->
 
-    <owl:Class rdf:about="https://w3id.org/lso/intro/beta202304#INT_VarietyOfText">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/beta202304#INT6_Architext"/>
+    <owl:Class rdf:about="https://w3id.org/lso/intro/beta202408#INT_VarietyOfText">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/beta202408#INT6_Architext"/>
         <rdfs:label xml:lang="en">INT Variety of Text</rdfs:label>
     </owl:Class>
     
@@ -1662,7 +1661,7 @@ While INTRO-subclasses of this class are limited to those close to the functiona
     <!-- https://w3id.org/lso/intro/beta202408#INT21_TextPassage -->
 
     <owl:Class rdf:about="https://w3id.org/lso/intro/beta202408#INT21_TextPassage">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/beta202304#INT1_Passage"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/beta202408#INT1_Passage"/>
         <rdfs:comment xml:lang="en">The INT21 TextPassage is a means of modelling an identifiable part of an E73 Information Object or its subclasses – without that part being removed from its source Information Object.  
 			
 			Examples:
@@ -1680,7 +1679,7 @@ The skos:broadMatch states that the INT21 TextPassage can be regarded as an oa:S
     <!-- https://w3id.org/lso/intro/beta202408#INT22_ImageArea -->
 
     <owl:Class rdf:about="https://w3id.org/lso/intro/beta202408#INT22_ImageArea">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/beta202304#INT1_Passage"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/beta202408#INT1_Passage"/>
         <rdfs:label xml:lang="en">INT22 Image Area</rdfs:label>
         <rdfs:comment xml:lang="en">The INT22 ImageArea is a means of modelling an identifiable part of an image (itself modelled as an E73 Information Object or one of its subclasses) – without that part being removed from its source Information Object. The term &quot;image&quot; refers not to the physical carrier of the image, not to the image sujet, but to the &apos;mental&apos; object constituted by, e.g., looking at an image carrier or recalling an image memory. It in turn can be the basis for the identification of an image sujet. This trias reflects Edmund Husserl&apos;s image theory as discussed in &quot;Phantasie und Bildbewusstsein&quot;, 1904/1905. (Parallel nomenclature can be found e.g. in Wolfram Pichler's and Ralph Ubl's "Bildtheorie zur Einführung", 2014, where the three notions are called – my translation – image vehicle, image object, and image referent.) 
             The image or its parts can have one or many carriers. It is also possible to root an image in different versions of, e.g., a work of art, or in a group of works of art – although this touches upon a grey area between the terms &quot;image&quot; and &quot;sujet&quot;.
@@ -1703,7 +1702,7 @@ The skos:broadMatch states that the INT22 ImageArea can be regarded as an oa:Spe
     <!-- https://w3id.org/lso/intro/beta202408#INT23_VisualFeature -->
 
     <owl:Class rdf:about="https://w3id.org/lso/intro/beta202408#INT23_VisualFeature">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/beta202304#INT4_Feature"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/beta202408#INT4_Feature"/>
         <rdfs:comment xml:lang="en">This class contains visual features of images - but possibly also of texts. Its subclasses are rudimentary, it is very likely that instances of other INT4 Feature subclasses can be classified as visual features at the same time. This might be the case for, e.g., INT Composition, although for these instances classification as an INT26 Shape should also be considered.</rdfs:comment>
         <rdfs:label xml:lang="en">INT23 Visual Feature</rdfs:label>
     </owl:Class>
@@ -1713,7 +1712,7 @@ The skos:broadMatch states that the INT22 ImageArea can be regarded as an oa:Spe
     <!-- https://w3id.org/lso/intro/beta202408#INT24_TextualFeature -->
 
     <owl:Class rdf:about="https://w3id.org/lso/intro/beta202408#INT24_TextualFeature">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/beta202304#INT4_Feature"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/beta202408#INT4_Feature"/>
         <rdfs:label xml:lang="en">INT24 Textual Feature</rdfs:label>
     </owl:Class>
     
@@ -1758,7 +1757,7 @@ The skos:broadMatch states that the INT22 ImageArea can be regarded as an oa:Spe
     <!-- https://w3id.org/lso/intro/beta202408#INT31_IntertextualRelation -->
 
     <owl:Class rdf:about="https://w3id.org/lso/intro/beta202408#INT31_IntertextualRelation">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/beta202304#INT3_Interrelation"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/beta202408#INT3_Interrelation"/>
         <rdfs:label xml:lang="en">INT31 Intertextual Relation</rdfs:label>
     </owl:Class>
     
@@ -1767,7 +1766,7 @@ The skos:broadMatch states that the INT22 ImageArea can be regarded as an oa:Spe
     <!-- https://w3id.org/lso/intro/beta202408#INT32_IntervisualRelation -->
 
     <owl:Class rdf:about="https://w3id.org/lso/intro/beta202408#INT32_IntervisualRelation">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/beta202304#INT3_Interrelation"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/beta202408#INT3_Interrelation"/>
         <rdfs:label xml:lang="en">INT32 Intervisual Relation</rdfs:label>
     </owl:Class>
     
@@ -1776,7 +1775,7 @@ The skos:broadMatch states that the INT22 ImageArea can be regarded as an oa:Spe
     <!-- https://w3id.org/lso/intro/beta202408#INT33_IntermedialRelation -->
 
     <owl:Class rdf:about="https://w3id.org/lso/intro/beta202408#INT33_IntermedialRelation">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/beta202304#INT3_Interrelation"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/beta202408#INT3_Interrelation"/>
         <rdfs:label xml:lang="en">INT33 Intermedial Relation</rdfs:label>
     </owl:Class>
     
@@ -1785,7 +1784,7 @@ The skos:broadMatch states that the INT22 ImageArea can be regarded as an oa:Spe
     <!-- https://w3id.org/lso/intro/beta202408#INT34_IntermedialityInIntermedialityTheories -->
 
     <owl:Class rdf:about="https://w3id.org/lso/intro/beta202408#INT34_IntermedialityInIntermedialityTheories">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/beta202304#INT11_TypeOfInterrelation"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/beta202408#INT11_TypeOfInterrelation"/>
         <rdfs:comment xml:lang="en">This class comprises intermedial relations that can be found in research literature dedicated to intermediality theory.</rdfs:comment>
         <rdfs:label xml:lang="en">INT34 Intermediality in Intermediality Theories</rdfs:label>
     </owl:Class>
@@ -1795,7 +1794,7 @@ The skos:broadMatch states that the INT22 ImageArea can be regarded as an oa:Spe
     <!-- https://w3id.org/lso/intro/beta202408#INT35_IntervisualityInIntervisualityTheories -->
 
     <owl:Class rdf:about="https://w3id.org/lso/intro/beta202408#INT35_IntervisualityInIntervisualityTheories">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/beta202304#INT11_TypeOfInterrelation"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/beta202408#INT11_TypeOfInterrelation"/>
         <rdfs:comment xml:lang="en">This class comprises intervisual relations that can be found in research literature dedicated to intervisuality theory.</rdfs:comment>
         <rdfs:label xml:lang="en">INT35 Intervisuality in Intervisuality Theories</rdfs:label>
     </owl:Class>
@@ -1815,7 +1814,7 @@ The skos:broadMatch states that the INT22 ImageArea can be regarded as an oa:Spe
     <!-- https://w3id.org/lso/intro/beta202408#INT_Composition -->
 
     <owl:Class rdf:about="https://w3id.org/lso/intro/beta202408#INT_Composition">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/beta202304#INT10_FormalFeature"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/beta202408#INT10_FormalFeature"/>
         <rdfs:label xml:lang="en">INT Composition</rdfs:label>
     </owl:Class>
     
@@ -1824,7 +1823,7 @@ The skos:broadMatch states that the INT22 ImageArea can be regarded as an oa:Spe
     <!-- https://w3id.org/lso/intro/beta202408#INT_Identification -->
 
     <owl:Class rdf:about="https://w3id.org/lso/intro/beta202408#INT_Identification">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/beta202304#INT9_SemanticFeature"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/beta202408#INT9_SemanticFeature"/>
         <rdfs:label xml:lang="en">INT Identification</rdfs:label>
     </owl:Class>
     
@@ -1853,7 +1852,7 @@ The skos:broadMatch states that the INT22 ImageArea can be regarded as an oa:Spe
     <!-- https://w3id.org/lso/intro/beta202408#INT_Part -->
 
     <owl:Class rdf:about="https://w3id.org/lso/intro/beta202408#INT_Part">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/beta202304#INT10_FormalFeature"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/beta202408#INT10_FormalFeature"/>
         <rdfs:label xml:lang="en">INT Part</rdfs:label>
     </owl:Class>
     
@@ -1862,7 +1861,7 @@ The skos:broadMatch states that the INT22 ImageArea can be regarded as an oa:Spe
     <!-- https://w3id.org/lso/intro/beta202408#INT_Situation -->
 
     <owl:Class rdf:about="https://w3id.org/lso/intro/beta202408#INT_Situation">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/beta202304#INT9_SemanticFeature"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/beta202408#INT9_SemanticFeature"/>
         <rdfs:label xml:lang="en">INT Situation</rdfs:label>
     </owl:Class>
     
@@ -1871,7 +1870,7 @@ The skos:broadMatch states that the INT22 ImageArea can be regarded as an oa:Spe
     <!-- https://w3id.org/lso/intro/beta202408#INT_TextualGenreSpecifics -->
 
     <owl:Class rdf:about="https://w3id.org/lso/intro/beta202408#INT_TextualGenreSpecifics">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/beta202304#INT_GenreSpecifics"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/beta202408#INT_GenreSpecifics"/>
         <rdfs:label xml:lang="en">INT Textual Genre Specifics</rdfs:label>
     </owl:Class>
     
@@ -1890,7 +1889,7 @@ The skos:broadMatch states that the INT22 ImageArea can be regarded as an oa:Spe
     <!-- https://w3id.org/lso/intro/beta202408#INT_VisualGenreSpecifics -->
 
     <owl:Class rdf:about="https://w3id.org/lso/intro/beta202408#INT_VisualGenreSpecifics">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/beta202304#INT_GenreSpecifics"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/beta202408#INT_GenreSpecifics"/>
         <rdfs:label xml:lang="en">INT Visual Genre Specifics</rdfs:label>
     </owl:Class>
     
