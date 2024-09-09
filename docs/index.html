@@ -11,15 +11,51 @@
             align-items: center;
             height: 100vh;
             margin: 0;
-            font-family: Trebuchet, sans-serif;
-            background-color: #f0f0f0;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #0D1821;
         }
-        h1 {
-            color: #333;
-        }
-    </style>
+        
+					h1 {
+					font-family: 'Arial', sans-serif; 
+					font-size: 5em; 
+					color: #96FFEF; 
+					margin-left: 1%;
+					text-shadow: 
+					0 0 3px #96FFEF, 
+					0 0 6px rgba(150, 255, 239, 0.6),
+					0 0 9px rgba(150, 255, 239, 0.4);
+					text-align: center;
+					}
+					
+    @keyframes fastBlink {
+					0%, 20%, 40%, 60% { opacity: 1; }
+					10%, 30%, 50% { opacity: 0; }
+					100% { opacity: 1; } /* Letzte Pause */
+					}
+					
+					.blink {
+					animation: fastBlink 1.5s infinite; /* Schnelles Blinken und längere Pause */
+					}
+					
+				</style><script>
+					window.addEventListener('load', function() {
+					// Alle h1-Elemente auf der Seite auswählen
+					const headers = document.querySelectorAll('h1');
+					
+					headers.forEach(header => {
+					const text = header.textContent;
+					
+					// Teile den Text in die ersten 3 Zeichen und den Rest
+					const firstThree = text.slice(0, 3);
+					const rest = text.slice(3);
+					
+					// Setze den neuen Inhalt mit einem blinkenden span-Element
+					header.innerHTML = `<span class="blink">${firstThree}</span>${rest}`;
+					});
+					});
+				</script>
     </head>
     <body>
-        <h1>New INTRO Documentation – under construction</h1>
+        <h1>INTRO Documentation – under construction</h1>
     </body>
 </html>
