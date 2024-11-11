@@ -15,10 +15,10 @@
 		<vann:preferredNamespaceURI>https://w3id.org/lso/intro/beta202408#</vann:preferredNamespaceURI>
 		<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">INTRO is an ontology for the fields of literary studies, art studies and intermediality studies for the representation of intertextual, interpictorial, and intermedial relations. It enables the presentation and categorization of diverse features of both textual and pictorial origin and their linking. Its subject area includes the scholarly discourse on these texts/images, interrelations, and features, insofar as research results are also understood as texts with features and relations. (For more information, see "Description").</rdfs:comment>
 		<dc:description>INTRO is an ontology for the fields of literary studies, art studies and intermediality studies for the representation of intertextual, interpictorial, and intermedial relations. It enables the presentation and categorization of diverse features of both textual and pictorial origin and their linking. Its subject area includes the scholarly discourse on these texts/images, interrelations, and features, insofar as research results are also understood as texts with features and relations. 
-			The notions of 'text' and 'image' in this ontology are largely derived from their use in the ontologies INTRO is an extension of. For definitions, see the passages in the documentations of CIDOC crm resp. LRM on the relevant classes (these being CIDOC crm's E73 Information Object and E90 Symbolic Object resp. LRM's F1 Work, F2 Expression, F3 Manifestation). Depending on the theoretical framework, the notion of 'text' can be understood very broadly: It can include images, it can cover large corpora of texts otherwise understood as distinct entities. INTRO makes use of these possibilities in the regard of making use of the notion of 'Architexts' as introduced by Gérard Genette as sets of texts (and in this case images) seen as a unit (by reference to certain features, timeframes, semantic features etc., see INT6 Architext). 
-			One differentiation INTRO is built on is the one between a 'passage' and a 'segment'. These two concepts are parallel to LRMs F2 Expression and F3 Manifestation, in the way that the former (Expression, Passage) embody a more abstract concept of the text and of its parts, while the latter (Manifestation, Segment) refer to the form a text and its parts take when they are manifested in a specific way or version, e.g. at the stage of a certain published edition. Examples include a passage from Goethe's "Faust", Act V, vs. a passage from Act V. of a specific edition of Goethe's "Faust". Only the latter one is a citable entity in the sense that it has a place and a date of publication, a publisher, and a page number attached to it; the former can be manifested in many of the latter. 
-			These differentiations suffice for an outside view of expressions / manifestations and their parts. When confronted with expression form and contents and the like – here combined in the notion of 'feature' –, another level comes into play. A basic orientation can be obtained from Edmund Husserl's notion of image, respectively his separation of the image ("Bild") from its carrier ("Bildding") and its content ("Bildsujet") as discussed in "Phantasie und Bildbewusstsein" (1904/1905; parallel and clarified nomenclature can be found e.g. in Wolfram Pichler's and Ralph Ubl's "Bildtheorie zur Einführung", 2014, where the three notions are called – my translation – image vehicle, image object, and image referent). While Husserl's carrier combines the F4 Item and the F3 Manifestation of an image (which, with regard to paintings, can easily fall together – as painting is, now following Nelson Goodman, an 'autographic' art) and the image itself corresponds to the F2 Expression, all the features an image can actualize fall in his third category ("Bildsujet"). This third category – the question of what is 'in' an image or text, what can be 'seen on' resp. 'read out' of it, etc. – is provided by the interaction of two classes of INTRO: The F4 Feature and the INT2 Actualization of Feature. The 'feature' is the more abstract concept separate from the specific text/image. One and the same feature (e.g. chiaroscuro painting, a hero character, a plotline, etc.) can be identified in multiple texts/images, while the specific actualization of the feature is bound to the respective text/image. 
-			This trias of an expression's manifestation, the expression itself, and its contents (as features) is again expanded by the question of referentiality. There is a notable difference between a feature (usually: a semantic feature) and a possible, but not necessary reference to an external entity. The ontology makes use of a very basic notion of referentiality with regard to texts and images: Actualized features can themselves actualize the feature of being a reference to a real-world entity. (Note that this construction offers a quite simple answer to the question if the reference to a fictitious entity - e.g. a unicorn - is a reference at all. It's not; the unicorn is, in this case, a semantic feature.) 
+			The notions of 'text' and 'image' in this ontology are largely derived from their use in the ontologies INTRO is an extension of. For definitions, see the passages in the documentations of CIDOC crm resp. LRM on the relevant classes (these being CIDOC crm's E73 Information Object, and E90 Symbolic Object resp. LRM's F1 Work, F2 Expression, F3 Manifestation). Depending on the theoretical framework, the notion of 'text' can be understood very broadly: It can include images, it can cover large corpora of texts otherwise understood as distinct entities. INTRO makes use of these possibilities in the regard of including the notion of 'Architexts' as introduced by Gérard Genette as sets of texts (and in this case images) seen as a unit (by reference to certain features, timeframes, semantic features etc., see INT6 Architext).
+			One differentiation INTRO is built on is the one between a 'passage' and a 'segment'. These two concepts are parallel to LRM's F2 Expression/CIDOC CRM's E36 Visual Item on the one hand and LRM's F3 Manifestation on the other hand, in the way that the former (Expression/Visual Item, Passage) embody a more abstract concept of the text/image and of its parts, while the latter (Manifestation, Segment) refer to the form a text/an image and its parts take when they are manifested in a specific way or version, e.g. at the stage of a certain published edition. Examples include a passage from Goethe's "Faust", Act V, vs. a passage from Act V. of a specific edition of Goethe's "Faust". Only the latter one is a citable entity in the sense that it has a place and a date of publication, a publisher, and a page number attached to it; the former can be manifested in many of the latter. 
+			These differentiations suffice for an outside view of expressions / manifestations and their parts. When confronted with expression form and contents and the like – here combined in the notion of 'feature' –, another level comes into play. A basic orientation can be obtained from Edmund Husserl's notion of image, respectively his separation of the image ("Bild") from its carrier ("Bildding") and its content ("Bildsujet") as discussed in "Phantasie und Bildbewusstsein" (1904/1905; parallel and clarified nomenclature can be found e.g. in Wolfram Pichler's and Ralph Ubl's "Bildtheorie zur Einführung", 2014, where the three notions are called – my translation – image vehicle, image object, and image referent; for further examples of this trias in image theory and semiotics, see Simon 2009, p. 41). While Husserl's carrier combines the F4 Item and the F3 Manifestation of an image (which, with regard to paintings, can easily fall together – as painting is, now following Nelson Goodman, an 'autographic' art) and the image itself corresponds to the F2 Expression resp. CIDOC CRM's E36 Visual Item, all the features an image can actualize belong in his third category ("Bildsujet"). This third category – the question of what is 'in' an image or text, what can be 'seen on' resp. 'read out' of it, etc. – is provided by the interaction of two classes of INTRO: The F4 Feature and the INT2 Actualization of Feature. The 'feature' is the more abstract concept separate from the specific text/image. One and the same feature (e.g. chiaroscuro painting, a hero character, a plotline, etc.) can be identified in multiple texts/images, while the specific actualization of the feature is bound to the respective text/image. An image can have one or many carriers, and many images can refer to the same real-life entity. (Rooting a single image in different versions of, e.g., a work of art, or in a series of works of art however touches upon a grey area between the terms &quot;image&quot; and &quot;sujet&quot;). 
+			This trias of an expression's manifestation, the expression itself, and its 'contents' (as features) is again expanded by the question of referentiality. Ralf Simon (2009, p. 48f.) introduces a fourth instance to the original trias, differentiating between the carrier, the image, the image object and the referent, the latter two dividing what was formerly one entity referred to as, e. g., sujet. This states a difference between a (usually:) semantic feature) and a possible, but not necessary reference to an external entity. This modelling is inside INTRO's scope: The ontology makes use of a very basic notion of referentiality with regard to images as well as texts: Actualized features can themselves actualize the feature of being a reference to a real-world entity, by chaining an INT18 Reference entity to, e. g., an INT9 Semantic Feature. Note that this construction offers a quite simple answer to the question if the reference to a fictitious entity - e.g. a unicorn - is possible resp. a reference at all: The unicorn is, in this case, a semantic feature.) 
 			Throughout the ontology, the term 'relation' is to be understood in the broadest sense. The ontology instantiates relations between (textual, pictorial) entities or features thereof; while it does not pose any restrictions on the notion of 'relation', it provides subclasses for expressing the medial aspect (intertextual, interpictorial, intermedial) as well as classes for further specification. The ontology also provides the opportunity to link these specifications (as well as many other of its concepts) to the scholarly discourse they are the subject of. 
 			This way, INTRO covers a large portion of scholarly practice; some of the subclasses of INT9 Semantic Feature in combination with object properties linking these features also allow - to some degree - for the reconstruction of the argumentative structure of, e.g., research papers (as they allow for the reconstruction of the contents of literary works). 
 			
@@ -27,7 +27,9 @@
 			Chryssoula Bekiari et al. (eds., 2024), Definition of the CIDOC Conceptual Reference Model. Version 7.1.3. URL: https://cidoc-crm.org/sites/default/files/cidoc_crm_version_7.1.3.pdf 
 			Nelson Goodman (1976), Languages of Art: An Approach to a Theory of Symbols. 2nd edition. Indianapolis: Hackett Publishing Company. 
 			Edmund Husserl (1980 [1904/1905]), Phantasie und Bildbewusstsein. In: Eduard Marbach (ed.), Phantasie, Bildbewusstsein, Erinnerung. Zur Phänomenologie der anschaulichen Vergegenwärtigungen. Texte aus dem Nachlass (1898-1925). Den Haag, Boston u. London: Martinus Nijhoff (= Husserliana. Gesammelte Werke, Vol. 23), pp. 1-169. 
-			Wolfram Pichler, Ralph Ubl (2014), Bildtheorie zur Einführung. Hamburg: Junius.</dc:description>
+			Wolfram Pichler, Ralph Ubl (2014), Bildtheorie zur Einführung. Hamburg: Junius.
+			Ralf Simon (2009), Der poetische Text als Bildkritik. München: Wilhelm Fink.
+		</dc:description>
 		<rdfs:comment>INTRO on GitHub: https://github.com/BOberreither/INTRO</rdfs:comment>
 		<rdfs:comment>Special Thanks to: Ingo Börner, Laura Untner</rdfs:comment>
 		<rdfs:label xml:lang="en">INTRO</rdfs:label>
@@ -213,6 +215,7 @@
 	<!-- https://w3id.org/lso/intro/beta202408#R10i_isPassageOf -->
 
 	<owl:ObjectProperty rdf:about="https://w3id.org/lso/intro/beta202408#R10i_isPassageOf">
+		<owl:inverseOf rdf:resource="https://w3id.org/lso/intro/beta202408#R10_hasPassage"/>
 		<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
 		<rdfs:domain rdf:resource="https://w3id.org/lso/intro/beta202408#INT1_Passage"/>
 		<rdfs:range>
@@ -254,6 +257,7 @@
 	<!-- https://w3id.org/lso/intro/beta202408#R12i_isReferredToEntity -->
 
 	<owl:ObjectProperty rdf:about="https://w3id.org/lso/intro/beta202408#R12i_isReferredToEntity">
+		<owl:inverseOf rdf:resource="https://w3id.org/lso/intro/beta202408#R12_hasReferredToEntity"/>
 		<rdfs:subPropertyOf rdf:resource="https://w3id.org/lso/intro/beta202408#R24i_isRelatedEntity"/>
 		<rdfs:domain>
 			<owl:Class>
@@ -298,6 +302,7 @@
 	<!-- https://w3id.org/lso/intro/beta202408#R13i_isReferringEntity -->
 
 	<owl:ObjectProperty rdf:about="https://w3id.org/lso/intro/beta202408#R13i_isReferringEntity">
+		<owl:inverseOf rdf:resource="https://w3id.org/lso/intro/beta202408#R13_hasReferringEntity"/>
 		<rdfs:subPropertyOf rdf:resource="https://w3id.org/lso/intro/beta202408#R24i_isRelatedEntity"/>
 		<rdfs:domain>
 			<owl:Class>
@@ -338,6 +343,7 @@
 	<!-- https://w3id.org/lso/intro/beta202408#R16i_isIncorporatedIn -->
 
 	<owl:ObjectProperty rdf:about="https://w3id.org/lso/intro/beta202408#R16i_isIncorporatedIn">
+		<owl:inverseOf rdf:resource="https://w3id.org/lso/intro/beta202408#R16_incorporates"/>
 		<rdfs:domain>
 			<owl:Class>
 				<owl:unionOf rdf:parseType="Collection">
@@ -367,6 +373,7 @@
 	<!-- https://w3id.org/lso/intro/beta202408#R17i_featureActualizedIn -->
 
 	<owl:ObjectProperty rdf:about="https://w3id.org/lso/intro/beta202408#R17i_featureActualizedIn">
+		<owl:inverseOf rdf:resource="https://w3id.org/lso/intro/beta202408#R17_actualizesFeature"/>
 		<rdfs:domain rdf:resource="https://w3id.org/lso/intro/beta202408#INT4_Feature"/>
 		<rdfs:range rdf:resource="https://w3id.org/lso/intro/beta202408#INT2_ActualizationOfFeature"/>
 		<rdfs:label xml:lang="en">R17i feature actualized in</rdfs:label>
@@ -390,8 +397,7 @@
 			</owl:Class>
 		</rdfs:domain>
 		<rdfs:range rdf:resource="https://w3id.org/lso/intro/beta202408#INT2_ActualizationOfFeature"/>
-		<rdfs:comment xml:lang="en">Links a text (on any ontological level) or an INT2 Actualization of Feature to an INT2 Actualization of Feature found on it. (Actualizations found on actualizations - this occurs in cases where, e.g., the actualization of the feature &quot;Individual
-			Character&quot; can be read as the actualization of the feature &quot;Character Type&quot;.)</rdfs:comment>
+		<rdfs:comment xml:lang="en">Links a text or an image (on any ontological level) or an INT2 Actualization of Feature to an INT2 Actualization of Feature found on it. (Actualizations found on actualizations - this occurs in cases where, e.g., the actualization of the feature INT Individual Character can be read as the actualization of the feature INT Character Type or INT18 Reference.)</rdfs:comment>
 		<rdfs:label xml:lang="en">R18 shows actualization</rdfs:label>
 	</owl:ObjectProperty>
 
@@ -400,6 +406,7 @@
 	<!-- https://w3id.org/lso/intro/beta202408#R18i_actualizationFoundOn -->
 
 	<owl:ObjectProperty rdf:about="https://w3id.org/lso/intro/beta202408#R18i_actualizationFoundOn">
+		<owl:inverseOf rdf:resource="https://w3id.org/lso/intro/beta202408#R18_showsActualization"/>
 		<rdfs:domain rdf:resource="https://w3id.org/lso/intro/beta202408#INT2_ActualizationOfFeature"/>
 		<rdfs:range>
 			<owl:Class>
@@ -433,6 +440,7 @@
 	<!-- https://w3id.org/lso/intro/beta202408#R19i_isTypeOf -->
 
 	<owl:ObjectProperty rdf:about="https://w3id.org/lso/intro/beta202408#R19i_isTypeOf">
+		<owl:inverseOf rdf:resource="https://w3id.org/lso/intro/beta202408#R19_hasType"/>
 		<rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P2i_is_type_of"/>
 		<rdfs:domain rdf:resource="https://w3id.org/lso/intro/beta202408#INT11_TypeOfInterrelation"/>
 		<rdfs:range rdf:resource="https://w3id.org/lso/intro/beta202408#INT3_Interrelation"/>
@@ -465,6 +473,7 @@
 	<!-- https://w3id.org/lso/intro/beta202408#R20i_isDiscussedIn -->
 
 	<owl:ObjectProperty rdf:about="https://w3id.org/lso/intro/beta202408#R20i_isDiscussedIn">
+		<owl:inverseOf rdf:resource="https://w3id.org/lso/intro/beta202408#R20_discusses"/>
 		<rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P67i_is_referred_to_by"/>
 		<rdfs:domain>
 			<owl:Class>
@@ -504,6 +513,7 @@
 	<!-- https://w3id.org/lso/intro/beta202408#R21i_isIdentifiedBy -->
 
 	<owl:ObjectProperty rdf:about="https://w3id.org/lso/intro/beta202408#R21i_isIdentifiedBy">
+		<owl:inverseOf rdf:resource="https://w3id.org/lso/intro/beta202408#R21_identifies"/>
 		<rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P67i_is_referred_to_by"/>
 		<rdfs:domain>
 			<owl:Class>
@@ -525,7 +535,7 @@
 		<owl:inverseOf rdf:resource="https://w3id.org/lso/intro/beta202408#R22i_relationIsBasedOnSimilarity"/>
 		<rdfs:domain rdf:resource="https://w3id.org/lso/intro/beta202408#INT4_Feature"/>
 		<rdfs:range rdf:resource="https://w3id.org/lso/intro/beta202408#INT3_Interrelation"/>
-		<rdfs:comment xml:lang="en">Links an INT4 Feature to an INT3 Interrelation it provides the similarity for, the similarity being necessary for the detection of the INT3 Interrelation. States that an INT3 Interrelation is based on a similarity, i.e. the actualization of the same INT4 Feature in two different texts.</rdfs:comment>
+		<rdfs:comment xml:lang="en">Links an INT4 Feature to an INT3 Interrelation it provides the similarity for, the similarity being necessary for the detection of the INT3 Interrelation. States that an INT3 Interrelation is based on a similarity, i.e. the actualization of the same INT4 Feature in two different texts/images.</rdfs:comment>
 		<rdfs:label xml:lang="en">R22 provides similarity for relation</rdfs:label>
 	</owl:ObjectProperty>
 
@@ -534,6 +544,7 @@
 	<!-- https://w3id.org/lso/intro/beta202408#R22i_relationIsBasedOnSimilarity -->
 
 	<owl:ObjectProperty rdf:about="https://w3id.org/lso/intro/beta202408#R22i_relationIsBasedOnSimilarity">
+		<owl:inverseOf rdf:resource="https://w3id.org/lso/intro/beta202408#R22_providesSimilarityForRelation"/>
 		<rdfs:domain rdf:resource="https://w3id.org/lso/intro/beta202408#INT3_Interrelation"/>
 		<rdfs:range rdf:resource="https://w3id.org/lso/intro/beta202408#INT4_Feature"/>
 		<rdfs:label xml:lang="en">R22i relation is based on similarity</rdfs:label>
@@ -574,6 +585,7 @@
 	<!-- https://w3id.org/lso/intro/beta202408#R23i_supportProvidedBy -->
 
 	<owl:ObjectProperty rdf:about="https://w3id.org/lso/intro/beta202408#R23i_supportProvidedBy">
+		<owl:inverseOf rdf:resource="https://w3id.org/lso/intro/beta202408#R23_providesSupportFor"/>
 		<rdfs:domain>
 			<owl:Class>
 				<owl:unionOf rdf:parseType="Collection">
@@ -625,6 +637,7 @@
 	<!-- https://w3id.org/lso/intro/beta202408#R24i_isRelatedEntity -->
 
 	<owl:ObjectProperty rdf:about="https://w3id.org/lso/intro/beta202408#R24i_isRelatedEntity">
+		<owl:inverseOf rdf:resource="https://w3id.org/lso/intro/beta202408#R24_hasRelatedEntity"/>
 		<rdfs:domain>
 			<owl:Class>
 				<owl:unionOf rdf:parseType="Collection">
@@ -657,6 +670,7 @@
 	<!-- https://w3id.org/lso/intro/beta202408#R25i_isSegmentOf -->
 
 	<owl:ObjectProperty rdf:about="https://w3id.org/lso/intro/beta202408#R25i_isSegmentOf">
+		<owl:inverseOf rdf:resource="https://w3id.org/lso/intro/beta202408#R25_hasSegment"/>
 		<rdfs:domain rdf:resource="https://w3id.org/lso/intro/beta202408#INT16_Segment"/>
 		<rdfs:range rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F3_Manifestation"/>
 		<rdfs:label xml:lang="en">R25i is segment of</rdfs:label>
@@ -679,6 +693,7 @@
 	<!-- https://w3id.org/lso/intro/beta202408#R3i_isConstellatedBy -->
 
 	<owl:ObjectProperty rdf:about="https://w3id.org/lso/intro/beta202408#R3i_isConstellatedBy">
+		<owl:inverseOf rdf:resource="https://w3id.org/lso/intro/beta202408#R3_constellates"/>
 		<rdfs:domain rdf:resource="https://w3id.org/lso/intro/beta202408#INT2_ActualizationOfFeature"/>
 		<rdfs:range rdf:resource="https://w3id.org/lso/intro/beta202408#INT_Constellation"/>
 		<rdfs:label xml:lang="en">R3i ist constellated by</rdfs:label>
@@ -709,6 +724,7 @@
 	<!-- https://w3id.org/lso/intro/beta202408#R4i_isDefinedIn -->
 
 	<owl:ObjectProperty rdf:about="https://w3id.org/lso/intro/beta202408#R4i_isDefinedIn">
+		<owl:inverseOf rdf:resource="https://w3id.org/lso/intro/beta202408#R4_defines"/>
 		<rdfs:domain>
 			<owl:Class>
 				<owl:unionOf rdf:parseType="Collection">
@@ -740,6 +756,7 @@
 	<!-- https://w3id.org/lso/intro/beta202408#R8i_isOpinionObjectOf -->
 
 	<owl:ObjectProperty rdf:about="https://w3id.org/lso/intro/beta202408#R8i_isOpinionObjectOf">
+		<owl:inverseOf rdf:resource="https://w3id.org/lso/intro/beta202408#R8_hasOpinionObject"/>
 		<rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P67i_is_referred_to_by"/>
 		<rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
 		<rdfs:range rdf:resource="https://w3id.org/lso/intro/beta202408#INT_Opinion"/>
@@ -764,6 +781,7 @@
 	<!-- https://w3id.org/lso/intro/beta202408#R9i_hasPrecedingFeature -->
 
 	<owl:ObjectProperty rdf:about="https://w3id.org/lso/intro/beta202408#R9i_hasPrecedingFeature">
+		<owl:inverseOf rdf:resource="https://w3id.org/lso/intro/beta202408#R9_hasSubsequentFeature"/>
 		<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
 		<rdfs:domain rdf:resource="https://w3id.org/lso/intro/beta202408#INT4_Feature"/>
 		<rdfs:range rdf:resource="https://w3id.org/lso/intro/beta202408#INT4_Feature"/>
@@ -788,7 +806,7 @@
 		</rdfs:domain>
 		<rdfs:range rdf:resource="https://w3id.org/lso/intro/beta202408#INT21_TextPassage"/>
 		<rdfs:label xml:lang="en">R30 has text passage</rdfs:label>
-		<rdfs:comment xml:lang="en">Links (usually, eceptions are easily conceivable) a text, like a work or an expression, to an INT21 Text Passage from that text, e.g. a book to a passage on page three of this book.</rdfs:comment>
+		<rdfs:comment xml:lang="en">Links (usually, exceptions are easily conceivable) a text, like a work or an expression, to an INT21 Text Passage from that text, e.g. a book to a passage on page three of this book.</rdfs:comment>
 	</owl:ObjectProperty>
 
 
@@ -796,6 +814,7 @@
 	<!-- https://w3id.org/lso/intro/beta202408#R30i_isTextPassageOf -->
 
 	<owl:ObjectProperty rdf:about="https://w3id.org/lso/intro/beta202408#R30i_isTextPassageOf">
+		<owl:inverseOf rdf:resource="https://w3id.org/lso/intro/beta202408#R30_hasTextPassage"/>
 		<rdfs:subPropertyOf rdf:resource="https://w3id.org/lso/intro/beta202408#R10i_isPassageOf"/>
 		<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
 		<rdfs:domain rdf:resource="https://w3id.org/lso/intro/beta202408#INT21_TextPassage"/>
@@ -836,6 +855,7 @@
 	<!-- https://w3id.org/lso/intro/beta202408#R31i_isImageAreaOf -->
 
 	<owl:ObjectProperty rdf:about="https://w3id.org/lso/intro/beta202408#R31i_isImageAreaOf">
+		<owl:inverseOf rdf:resource="https://w3id.org/lso/intro/beta202408#R31_hasImageArea"/>
 		<rdfs:subPropertyOf rdf:resource="https://w3id.org/lso/intro/beta202408#R10i_isPassageOf"/>
 		<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
 		<rdfs:domain rdf:resource="https://w3id.org/lso/intro/beta202408#INT22_ImageArea"/>
@@ -916,7 +936,7 @@
 	<owl:DatatypeProperty rdf:about="https://w3id.org/lso/intro/beta202408#R43_hasSpecification">
 		<rdfs:domain rdf:resource="https://w3id.org/lso/intro/beta202408#INT4_Feature"/>
 		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-		<rdfs:comment xml:lang="en">Links a textual feature to a data string defining or describing it more closely.</rdfs:comment>
+		<rdfs:comment xml:lang="en">Links a feature to a data string defining or describing it more closely.</rdfs:comment>
 		<rdfs:label xml:lang="en">R42 has specification</rdfs:label>
 	</owl:DatatypeProperty>
 
@@ -1032,11 +1052,13 @@
 
 	<owl:Class rdf:about="https://w3id.org/lso/intro/beta202408#INT2_ActualizationOfFeature">
 		<rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E28_Conceptual_Object"/>
-		<rdfs:comment xml:lang="en">The fact that a text shows - in its own specific way - a certain feature (which itself is an abstract concept and takes form in many texts), e.g. a motif, an atmosphere, a theme, a figure of speech. 
+		<rdfs:comment xml:lang="en">The fact that a text or an image shows - in its own specific way - a certain feature (which itself is an abstract concept and takes form in many texts/images), e.g. a motif, an atmosphere, a theme, a figure of speech. 
 			Examples: 
 			- the specific actualization of the motif of patricide in Sophokles&apos; &apos;Ödipus Rex&apos;. 
 			- the specific actualization of the Faust-subject in Goethe&apos;s &apos;Faust&apos;. 
-			- the specific actualization of the iambic pentameter in Rilke&apos;s &apos;Archaischer Torso Apollos&quot;.</rdfs:comment>
+			- the specific actualization of the iambic pentameter in Rilke&apos;s &apos;Archaischer Torso Apollos&quot;.
+			- the specific actualization of the Ophelia-character in John Everett Millais' painting "Ophelia" (1852).	
+		</rdfs:comment>
 		<rdfs:label xml:lang="en">INT2 Actualization of Feature</rdfs:label>
 	</owl:Class>
 
@@ -1068,13 +1090,13 @@
 
 	<owl:Class rdf:about="https://w3id.org/lso/intro/beta202408#INT6_Architext">
 		<rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E28_Conceptual_Object"/>
-		<rdfs:comment xml:lang="en">An INT6 Architextual Entity consists in a number of texts which in some way give reason to see them as connected, related, sharing a common feature. 
+		<rdfs:comment xml:lang="en">An INT6 Architextual Entity consists in a number of texts/images which in some way give reason to see them as connected, related, sharing a common feature. 
 			Examples for INT6 Architextual Entities can be 
-			- discourses (texts sharing a discoursive element, a topic etc.) 
-			- genres (texts sharing genre conventions) 
-			- a discipline (texts deriving from the same disciplinary background) 
-			- an oeuvre (texts written by the same person) 
-			- national literatures (texts whose authors share a nationality) etc.</rdfs:comment>
+			- discourses (members sharing a discoursive element, a topic etc.) 
+			- genres (members sharing genre conventions) 
+			- a discipline (members deriving from the same disciplinary background) 
+			- an oeuvre (members created by the same person) 
+			- national literatures/arts (members whose creators share a nationality) etc.</rdfs:comment>
 		<rdfs:label xml:lang="en">INT6 Architext</rdfs:label>
 	</owl:Class>
 
@@ -1165,7 +1187,7 @@
 
 	<owl:Class rdf:about="https://w3id.org/lso/intro/beta202408#INT16_Segment">
 		<rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E90_Symbolic_Object"/>
-		<rdfs:comment xml:lang="en">This class comprises expressions (e.g. texts represented as F2 Expressions) or parts thereof as they are represented in F3 Manifestations. INT16 Segments can be located inside the F3 Manifestation by means of page numbers etc. and are thus identifiable (and citable). They are not identical to/subclasses of F3 Manifestations, since they only make a part of it; they are not identical to F2 Expressions, since they have distinct bibliographical metadata. The INT16 Segment can be linked to a F2 Expression or an INT1 Passage through R16 incorporates. It can be linked to a physical carrier (like LRMs &quot;F5_Item&quot;) through P128 is carried by.</rdfs:comment>
+		<rdfs:comment xml:lang="en">This class comprises expressions (e.g. texts represented as F2 Expressions) or parts thereof as they are represented in F3 Manifestations. INT16 Segments can be located inside the F3 Manifestation by means of page numbers etc. and are thus identifiable (and citable). They are not identical to/subclasses of F3 Manifestations, since they only make a part of it; they are not identical to F2 Expressions, since they have distinct metadata linking them to, e. g., a certain edition of a work. The INT16 Segment can be linked to an F2 Expression (resp. a E36 Visual Item) or an INT1 Passage through R16 incorporates. It can be linked to a physical carrier (like LRMs &quot;F5_Item&quot;) through P128 is carried by.</rdfs:comment>
 		<rdfs:label xml:lang="en">INT16 Segment</rdfs:label>
 		<skos:broadMatch rdf:resource="http://www.w3.org/ns/oa#SpecificResource"/>
 	</owl:Class>
@@ -1187,7 +1209,8 @@
 	<owl:Class rdf:about="https://w3id.org/lso/intro/beta202408#INT18_Reference">
 		<rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
 		<rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/beta202408#INT9_SemanticFeature"/>
-		<rdfs:comment xml:lang="en">This class comprises mentions of – usually: real – identifiable objects of any kind. It&apos;s use is not restricted to, but makes the most sense in non-fictional texts.</rdfs:comment>
+		<rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/beta202408#INT_PragmaticFeature"/>
+		<rdfs:comment xml:lang="en">This class comprises references to – usually: real – identifiable objects of any kind. It is not restricted to non-fictional texts resp. images depicting real life objects or events, but can be most easily identified there.</rdfs:comment>
 		<rdfs:label xml:lang="en">INT18 Reference</rdfs:label>
 	</owl:Class>
 
@@ -1214,15 +1237,13 @@
 	<owl:Class rdf:about="https://w3id.org/lso/intro/beta202408#INT22_ImageArea">
 		<rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/beta202408#INT1_Passage"/>
 		<rdfs:label xml:lang="en">INT22 Image Area</rdfs:label>
-		<rdfs:comment xml:lang="en">The INT22 ImageArea is a means of modelling an identifiable part of an image (itself modelled as an E73 Information Object or one of its subclasses) – without that part being removed from its source Information Object. The term &quot;image&quot; refers not to the physical carrier of the image, not to the image sujet, but to the &apos;mental&apos; object constituted by, e.g., looking at an image carrier or recalling an image memory. It in turn can be the basis for the identification of an image sujet. This trias reflects Edmund Husserl&apos;s image theory as discussed in &quot;Phantasie und Bildbewusstsein&quot;, 1904/1905. (Parallel nomenclature can be found e.g. in Wolfram Pichler's and Ralph Ubl's "Bildtheorie zur Einführung", 2014, where the three notions are called – my translation – image vehicle, image object, and image referent.) The image or its parts can have one or many carriers. It is also possible to root an image in different versions of, e.g., a work of art, or in a group of works of art – although this touches upon a grey area between the terms &quot;image&quot; and &quot;sujet&quot;.
+		<rdfs:comment xml:lang="en">The INT22 ImageArea is a means of modelling an identifiable part of an image (itself modelled as an E73 Information Object or one of its subclasses) – without that part being removed from its source Information Object.
 			Examples: 
 			- The part of Leonardo&apos;s Mona Lisa showing Mona Lisa&apos;s smile. 
 			- The bottom 3/5 of Rothko&apos;s Painting &quot;Orange And Yellow&quot; (1956), dominated by the fuzzy orange rectangle. 
 			- The part of the &quot;Smiley Face&quot; originally invented by Harvey Ball that shows the Smiley&apos;s left eye. 
-			Borderline Examples: 
-			- The part of Piranesi&apos;s The Drawbridge in both versions showing a drawbridge. 
-			- The part of Monet&apos;s Water Lilies series showing water lilies.
-			
+			- The part of Piranesi&apos;s The Drawbridge, 2nd version, showing a drawbridge.
+						
 			The skos:broadMatch states that the INT22 ImageArea can be regarded as an oa:SpecificResource in the sense that it is a section of a resource. 
 			The skos:broadMatch between R41 hasLocation and oa:hasSelector indicates that by replacing R42 hasLocation with oa:hasSelector, multiple selector options from the Web Annotation Ontology can be utilized to specify the INT22 ImageArea&apos;s location.</rdfs:comment>
 		<skos:broadMatch rdf:resource="http://www.w3.org/ns/oa#SpecificResource"/>
@@ -1234,7 +1255,7 @@
 
 	<owl:Class rdf:about="https://w3id.org/lso/intro/beta202408#INT23_VisualFeature">
 		<rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/beta202408#INT4_Feature"/>
-		<rdfs:comment xml:lang="en">This class contains visual features of images - but possibly also of texts. Its subclasses are rudimentary, it is very likely that instances of other INT4 Feature subclasses can be classified as visual features at the same time. This might be the case for, e.g., INT Composition, although for these instances classification as an INT26 Shape should also be considered.</rdfs:comment>
+		<rdfs:comment xml:lang="en">This class contains visual features of images - but possibly also of texts. Its subclasses are rudimentary, it is very likely that instances of other INT4 Feature subclasses can be classified as visual features at the same time. This might be the case for, e.g., INT Composition (although for these instances classification as an INT26 Shape should also be considered).</rdfs:comment>
 		<rdfs:label xml:lang="en">INT23 Visual Feature</rdfs:label>
 	</owl:Class>
 
@@ -1295,11 +1316,11 @@
 
 
 
-	<!-- https://w3id.org/lso/intro/beta202408#INT32_IntervisualRelation -->
+	<!-- https://w3id.org/lso/intro/beta202408#INT32_InterpictorialRelation -->
 
-	<owl:Class rdf:about="https://w3id.org/lso/intro/beta202408#INT32_IntervisualRelation">
+	<owl:Class rdf:about="https://w3id.org/lso/intro/beta202408#INT32_InterpictorialRelation">
 		<rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/beta202408#INT3_Interrelation"/>
-		<rdfs:label xml:lang="en">INT32 Intervisual Relation</rdfs:label>
+		<rdfs:label xml:lang="en">INT32 Interpictorial Relation</rdfs:label>
 	</owl:Class>
 
 
@@ -1323,12 +1344,12 @@
 
 
 
-	<!-- https://w3id.org/lso/intro/beta202408#INT35_IntervisualityInIntervisualityTheories -->
+	<!-- https://w3id.org/lso/intro/beta202408#INT35_InterpictorialityInInterpictorialityTheories -->
 
-	<owl:Class rdf:about="https://w3id.org/lso/intro/beta202408#INT35_IntervisualityInIntervisualityTheories">
+	<owl:Class rdf:about="https://w3id.org/lso/intro/beta202408#INT35_InterpictorialityInInterpictorialityTheories">
 		<rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/beta202408#INT11_TypeOfInterrelation"/>
-		<rdfs:comment xml:lang="en">This class comprises intervisual relations that can be found in research literature dedicated to intervisuality theory.</rdfs:comment>
-		<rdfs:label xml:lang="en">INT35 Intervisuality in Intervisuality Theories</rdfs:label>
+		<rdfs:comment xml:lang="en">This class comprises interpictorial relations that can be found in research literature dedicated to interpictoriality theory.</rdfs:comment>
+		<rdfs:label xml:lang="en">INT35 Interpictoriality in Interpictoriality Theories</rdfs:label>
 	</owl:Class>
 
 
@@ -1374,7 +1395,7 @@
 
 	<owl:Class rdf:about="https://w3id.org/lso/intro/beta202408#INT_Definition">
 		<rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/beta202408#INT9_SemanticFeature"/>
-		<rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/beta202408#INT_Pragmatic_Feature"/>
+		<rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/beta202408#INT_PragmaticFeature"/>
 		<rdfs:label xml:lang="en">INT Definition</rdfs:label>
 	</owl:Class>
 
@@ -1384,7 +1405,7 @@
 
 	<owl:Class rdf:about="https://w3id.org/lso/intro/beta202408#INT_Description">
 		<rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/beta202408#INT9_SemanticFeature"/>
-		<rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/beta202408#INT_Pragmatic_Feature"/>
+		<rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/beta202408#INT_PragmaticFeature"/>
 		<rdfs:label xml:lang="en">INT Description</rdfs:label>
 	</owl:Class>
 
@@ -1507,7 +1528,7 @@
 	<owl:Class rdf:about="https://w3id.org/lso/intro/beta202408#INT_Interpretation">
 		<rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
 		<rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/beta202408#INT9_SemanticFeature"/>
-		<rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/beta202408#INT_Pragmatic_Feature"/>
+		<rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/beta202408#INT_PragmaticFeature"/>
 		<rdfs:comment xml:lang="en">The result of a interpretative act, possibly: as perceived in research literature. An interpretation can identify references or actualizations or the like. A number of interpretations can together recreate the structure of, e.g., a research paper. Accordingly, apart from linking INT Interpretations to the subjects of the interpretation, like intertextual relations or textual features, they can be linked to each other via R9 has subsequent feature resp. R9i has preceding feature. 
 			Examples: 
 			- the statement that Umberto Eco&apos;s &apos;The Name of the Rose&apos; features a detective character. 
@@ -1609,12 +1630,11 @@
 		<rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/beta202408#INT9_SemanticFeature"/>
 		<rdfs:label xml:lang="en">INT Plot</rdfs:label>
 	</owl:Class>
+	
 
+	<!-- https://w3id.org/lso/intro/beta202408#INT_PragmaticFeature -->
 
-
-	<!-- https://w3id.org/lso/intro/beta202408#INT_Pragmatic_Feature -->
-
-	<owl:Class rdf:about="https://w3id.org/lso/intro/beta202408#INT_Pragmatic_Feature">
+	<owl:Class rdf:about="https://w3id.org/lso/intro/beta202408#INT_PragmaticFeature">
 		<rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/beta202408#INT8_RhetoricalFeature"/>
 		<rdfs:comment xml:lang="en">The class includes all features that can be attributed to a text or image with regard to the role that these works play in a plot, for example in a social, political or religious context. These characteristics take account of the fact that the works in question pursue a specific purpose that goes beyond content and form and that is apparent &apos;on the surface‘ or by application of certain conventions or handed-down standards. While INTRO-subclasses of this class are limited to those close to the functionality of INTRO and which are to be applied to the relation between primary and secondary (textual) sources, subclasses can of course also include concepts from visual art. A pragmatic feature of a painting might be a donor portrait expressing gratitude, the portrait of a ruler serving propaganda purposes, a bible scene serving as guide for pious action. Pragmatic features of texts include bibliographic references, acknowledgments, and the like.</rdfs:comment>
 		<rdfs:label xml:lang="en">INT Pragmatic Feature</rdfs:label>
@@ -1890,24 +1910,54 @@
 		<rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
 	</owl:NamedIndividual>
 
-
-
-	<!-- https://w3id.org/lso/intro/beta202001 -->
-
-	<owl:NamedIndividual rdf:about="https://w3id.org/lso/intro/beta202001">
+	<!-- https://w3id.org/lso/intro/beta202408 -->
+	
+	<owl:NamedIndividual rdf:about="https://w3id.org/lso/intro/beta202408">
 		<rdf:type rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F2_Expression"/>
-		<dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-01-01</dc:date>
-		<rdfs:comment xml:lang="en">Changes from version beta201901 to version beta202001: Some classes and relations could be resolved into types of intertextual relations; this concerned in particular the class INT5 Characteristic and adherent object relations. 
-			- Deleted class INT5 Characteristic, accordingly: deleted relations R1, R2, R14-16; changes on relations: R21, R23, R24 - Deleted relations R5, R6, R7 
-			- Added class INT17 Functional Relation as a subclass of INT11 Type of Intertextual Relation. (2020-01) </rdfs:comment>
-		<rdfs:label xml:lang="en">INTRO beta202001</rdfs:label>
-		<owl:versionInfo>beta202001</owl:versionInfo>
+		<lrm:R76_is_derivative_of rdf:resource="https://w3id.org/lso/intro/beta202304"/>
+		<dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-08-01</dc:date>
+		<rdfs:comment xml:lang="en">Changes from version beta202304 to version beta202408:
+			Expanded to an Intertextual, Interpictorial, and Intermedial Relations Ontology
+			- Changed class INT3 Intertextual Relationship to INT3 Interrelation with subclasses intertextual, intermedial, and interpictorial relation (INT31-33).
+			- Renamed class INT4 ReceptionalEntity to INT4 Feature.
+			- Added INT23 Visual Feature and INT24 Textual Feature as subclasses of INT4 Feature.
+			- Drastically decluttered INT10 Formal Feature.
+			- Added subclass INT Textual Genre Specifics and INT Visual Genre Specifics to INT Genre Specifics; previous direct subclasses INT Dramatic Entity, INT Lyrical Entity, and INT Narratological Entity are now subclasses of INT Textual Genre Specifics. 
+			- Decluttered INT Pragmatic Feature, added subclass INT18 Reference.
+			- Added INT Identification and INT Situation as subclasses of INT9 Semantic Feature.
+			- Renamed INT6 Architextual Entity to INT6 Architext. Reduced subclasses.
+			- Renamed INT11 Type of Intertextual Relationship to INT11 Type of Interrelation.
+			- Renamed subclasses of INT11 Type of Interrelation, added subclasses INT34 Intermediality in Intermediality Theories and INT35 Interpictoriality in Interpictoriality Theories.
+			- Renamed INT1 Text Passage to INT1 Passage; changed superclass from F2 Expression to E90 Symbolic Object.
+			- Added INT21 Text Passage and INT22 Image Area as subclasses of INT1 Passage. Changed object property R10 has Text Passage to R10 has Passage, added subproperties R30 has text passage and R31 has image area.
+			- Changed property domains/ranges accordingly.
+			
+			Web Annotation Ontology Alignment:
+			- Added skos:broadMatch to Properties R24 has related entity and R41 has location.
+			- Added skos:broadMatch to Classes INT1 Passage, INT3 Interrelation, INT16 Segment, INT21 TextPassage, and INT22 Image Area.
+		</rdfs:comment>
+		<rdfs:label xml:lang="en">INTRO beta202408</rdfs:label>
+		<owl:priorVersion rdf:resource="https://w3id.org/lso/intro/beta202304"/>
+		<owl:versionInfo>beta202408</owl:versionInfo>
 	</owl:NamedIndividual>
-
-
-
+	
+	<!-- https://w3id.org/lso/intro/beta202304 -->
+	
+	<owl:NamedIndividual rdf:about="https://w3id.org/lso/intro/beta202304">
+		<rdf:type rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F2_Expression"/>
+		<lrm:R76_is_derivative_of rdf:resource="https://w3id.org/lso/intro/beta202210"/>
+		<dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2023-04-01</dc:date>
+		<rdfs:comment xml:lang="en">Changes from version beta202210 to version beta202304: 
+			- A new property R16_incorporates and its inverse have been added to link the INT16_Segment - an E90_Symbolic_Object - to an E73_Information_Object it incorporates; a similar property already exists in CIDOC - P165_incorporates - but is limited to E73_Information_Object as a domain. A INT16_Segment can&apos;t be clearly classified as an E73_Information_Object. (2023-01) 
+			- A new subclass of INT9 Semantic Feature has been created: INT18 Reference. 
+			- &quot;INT_Event&quot; and &quot;INT_State&quot; are no longer subclasses of &quot;INT_Plot&quot; but sibling classes (and subclasses of &quot;INT9_SemanticFeature&quot;) - since they are actually not a kind of plot, but rather an element in a plot. (2022-11) </rdfs:comment>
+		<rdfs:label xml:lang="en">INTRO beta202304</rdfs:label>
+		<owl:priorVersion rdf:resource="https://w3id.org/lso/intro/beta202210"/>
+		<owl:versionInfo>beta202304</owl:versionInfo>
+	</owl:NamedIndividual>
+	
 	<!-- https://w3id.org/lso/intro/beta202210 -->
-
+	
 	<owl:NamedIndividual rdf:about="https://w3id.org/lso/intro/beta202210">
 		<rdf:type rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F2_Expression"/>
 		<lrm:R76_is_derivative_of rdf:resource="https://w3id.org/lso/intro/beta202001"/>
@@ -1927,30 +1977,29 @@
 		<owl:priorVersion rdf:resource="https://w3id.org/lso/intro/beta202001"/>
 		<owl:versionInfo>beta202210</owl:versionInfo>
 	</owl:NamedIndividual>
+	
 
+	<!-- https://w3id.org/lso/intro/beta202001 -->
 
-
-	<!-- https://w3id.org/lso/intro/beta202304 -->
-
-	<owl:NamedIndividual rdf:about="https://w3id.org/lso/intro/beta202304">
+	<owl:NamedIndividual rdf:about="https://w3id.org/lso/intro/beta202001">
 		<rdf:type rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F2_Expression"/>
-		<lrm:R76_is_derivative_of rdf:resource="https://w3id.org/lso/intro/beta202210"/>
-		<dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2023-04-01</dc:date>
-		<rdfs:comment xml:lang="en">Changes from version beta202210 to version beta202304: 
-			- A new property R16_incorporates and its inverse have been added to link the INT16_Segment - an E90_Symbolic_Object - to an E73_Information_Object it incorporates; a similar property already exists in CIDOC - P165_incorporates - but is limited to E73_Information_Object as a domain. A INT16_Segment can&apos;t be clearly classified as an E73_Information_Object. (2023-01) 
-			- A new subclass of INT9 Semantic Feature has been created: INT18 Reference. 
-			- &quot;INT_Event&quot; and &quot;INT_State&quot; are no longer subclasses of &quot;INT_Plot&quot; but sibling classes (and subclasses of &quot;INT9_SemanticFeature&quot;) - since they are actually not a kind of plot, but rather an element in a plot. (2022-11) </rdfs:comment>
-		<rdfs:label xml:lang="en">INTRO beta202304</rdfs:label>
-		<owl:priorVersion rdf:resource="https://w3id.org/lso/intro/beta202210"/>
-		<owl:versionInfo>beta202304</owl:versionInfo>
+		<dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-01-01</dc:date>
+		<rdfs:comment xml:lang="en">Changes from version beta201901 to version beta202001: Some classes and relations could be resolved into types of intertextual relations; this concerned in particular the class INT5 Characteristic and adherent object relations. 
+			- Deleted class INT5 Characteristic, accordingly: deleted relations R1, R2, R14-16; changes on relations: R21, R23, R24 - Deleted relations R5, R6, R7 
+			- Added class INT17 Functional Relation as a subclass of INT11 Type of Intertextual Relation. (2020-01) </rdfs:comment>
+		<rdfs:label xml:lang="en">INTRO beta202001</rdfs:label>
+		<owl:versionInfo>beta202001</owl:versionInfo>
 	</owl:NamedIndividual>
 
 
 
-	<!-- https://w3id.org/lso/intro/beta202408 -->
+	
 
-	<owl:NamedIndividual rdf:about="https://w3id.org/lso/intro/beta202408">
-		<rdf:type rdf:resource="http://purl.org/vocommons/voaf#Vocabulary"/>
-	</owl:NamedIndividual>
+
+	
+
+
+
+	
 </rdf:RDF>
 <!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
