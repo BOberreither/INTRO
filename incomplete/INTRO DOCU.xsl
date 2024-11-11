@@ -57,6 +57,7 @@
 					h1 {
 					font-family: 'Arial', sans-serif; 
 					font-size: 5em; 
+					padding-top: 0.5em;
 					color: #96FFEF; 
 					margin-left: 1%;
 					text-shadow: 
@@ -269,7 +270,6 @@
 					</xsl:for-each>
 				</div>
 				<h3>Data Properties</h3>
-				<!-- Classes TOC -->
 				<div class="toc">
 					<xsl:for-each select="/rdf:RDF/owl:DatatypeProperty[contains(@rdf:about, 'intro/beta')]">
 						<xsl:element name="a">
@@ -277,6 +277,17 @@
 								<xsl:value-of select="./concat('#', substring-after(@rdf:about, '#'))"/>
 							</xsl:attribute>
 							<xsl:value-of select="./rdfs:label[1]"/>
+						</xsl:element>
+					</xsl:for-each>
+				</div>
+				<h3>Version History</h3>
+				<div class="toc">
+					<xsl:for-each select="/rdf:RDF/owl:NamedIndividual[rdf:type/@rdf:resource='http://iflastandards.info/ns/lrm/lrmoo/F2_Expression']">
+						<xsl:element name="a">
+							<xsl:attribute name="href">
+								<xsl:value-of select="concat('#', ./dc:date/text())"/>
+							</xsl:attribute>
+							<xsl:value-of select="rdfs:label"/>
 						</xsl:element>
 					</xsl:for-each>
 				</div>
@@ -725,6 +736,48 @@
 						<a href="#top">(Back to Top)</a>
 					</small>
 				</xsl:for-each>
+				
+				<h2>Version History</h2>
+				<xsl:for-each select="/rdf:RDF/owl:NamedIndividual[rdf:type/@rdf:resource='http://iflastandards.info/ns/lrm/lrmoo/F2_Expression']">
+					<!-- h3 with label -->
+					<!-- variable - gesamte ID aus rdf:about -->
+					<xsl:variable name="currentID" select="./dc:date/text()"/>
+					<!-- Variable für div-IDs -->
+					<xsl:variable name="div_id" select="./dc:date/text()"/>
+					<!-- Loop through rdfs:label -->
+					<xsl:for-each select="rdfs:label[1][@xml:lang = 'en']">
+						<xsl:element name="h3">
+							<xsl:attribute name="id">
+								<xsl:value-of select="$div_id"/>
+							</xsl:attribute>
+							<xsl:value-of select="."/>
+						</xsl:element>
+					</xsl:for-each>
+					
+					<div class="declaration">
+						<!-- First div for Prior Version -->
+						<div>
+							<strong>Prior Version: </strong>
+							<xsl:element name="a">
+								<xsl:attribute name="href">
+									<xsl:value-of select="owl:priorVersion/@rdf:resource"/>
+								</xsl:attribute>
+								<xsl:value-of select="owl:priorVersion/@rdf:resource"/>
+							</xsl:element>
+						</div>
+						
+						<!-- Second div for rdfs:comment -->
+						<div>
+							<xsl:call-template name="normalize-and-replace">
+								<xsl:with-param name="text" select="rdfs:comment"/>
+							</xsl:call-template>
+						</div>
+					</div>
+					<small>
+						<a href="#top">(Back to Top)</a>
+					</small>
+				</xsl:for-each>
+				
 			</body>
 		</html>
 	</xsl:template>
