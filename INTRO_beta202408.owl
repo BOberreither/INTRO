@@ -1935,6 +1935,9 @@
 			Web Annotation Ontology Alignment:
 			- Added skos:broadMatch to Properties R24 has related entity and R41 has location.
 			- Added skos:broadMatch to Classes INT1 Passage, INT3 Interrelation, INT16 Segment, INT21 TextPassage, and INT22 Image Area.
+			
+			LRMoo Alignment:
+			- Changed former FRBRoo classes F1 Work, F2 Expression, F22 Self-Contained Expression and F24 Publication Expression to LRMoo F1 Work, F2 Expression, and F3 Manifestation (according to mapping in LRMoo's documentation under https://cidoc-crm.org/lrmoo/sites/default/files/LRMoo_V1.0.pdf).
 		</rdfs:comment>
 		<rdfs:label xml:lang="en">INTRO beta202408</rdfs:label>
 		<owl:priorVersion rdf:resource="https://w3id.org/lso/intro/beta202304"/>
