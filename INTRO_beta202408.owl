@@ -765,27 +765,27 @@
 
 
 
-	<!-- https://w3id.org/lso/intro/beta202408#R9_hasSubsequentFeature -->
+	<!-- https://w3id.org/lso/intro/beta202408#R9_hasSubsequentActualization -->
 
-	<owl:ObjectProperty rdf:about="https://w3id.org/lso/intro/beta202408#R9_hasSubsequentFeature">
-		<owl:inverseOf rdf:resource="https://w3id.org/lso/intro/beta202408#R9i_hasPrecedingFeature"/>
+	<owl:ObjectProperty rdf:about="https://w3id.org/lso/intro/beta202408#R9_hasSubsequentActualization">
+		<owl:inverseOf rdf:resource="https://w3id.org/lso/intro/beta202408#R9i_hasPrecedingActualization"/>
 		<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
-		<rdfs:domain rdf:resource="https://w3id.org/lso/intro/beta202408#INT4_Feature"/>
-		<rdfs:range rdf:resource="https://w3id.org/lso/intro/beta202408#INT4_Feature"/>
-		<rdfs:comment xml:lang="en">Links an INT4 Feature to another INT4 Feature immediately following it (logically or chronologically); this object property was mostly designed for the representation of the structure of research papers, where one definition, interpretation, etc., follows another.</rdfs:comment>
-		<rdfs:label xml:lang="en">R9 has subsequent feature</rdfs:label>
+		<rdfs:domain rdf:resource="https://w3id.org/lso/intro/beta202408#INT2_ActualizationOfFeature"/>
+		<rdfs:range rdf:resource="https://w3id.org/lso/intro/beta202408#INT4_ActualizationOfFeature"/>
+		<rdfs:comment xml:lang="en">Links an INT2 Actualization of Feature to another INT4 following it (logically or chronologically); this object property was mostly designed for the representation of the structure of research papers, where one definition, interpretation, etc., follows another.</rdfs:comment>
+		<rdfs:label xml:lang="en">R9 has subsequent actualization</rdfs:label>
 	</owl:ObjectProperty>
 
 
 
 	<!-- https://w3id.org/lso/intro/beta202408#R9i_hasPrecedingFeature -->
 
-	<owl:ObjectProperty rdf:about="https://w3id.org/lso/intro/beta202408#R9i_hasPrecedingFeature">
-		<owl:inverseOf rdf:resource="https://w3id.org/lso/intro/beta202408#R9_hasSubsequentFeature"/>
+	<owl:ObjectProperty rdf:about="https://w3id.org/lso/intro/beta202408#R9i_hasPrecedingActualization">
+		<owl:inverseOf rdf:resource="https://w3id.org/lso/intro/beta202408#R9_hasSubsequentActualization"/>
 		<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
 		<rdfs:domain rdf:resource="https://w3id.org/lso/intro/beta202408#INT4_Feature"/>
 		<rdfs:range rdf:resource="https://w3id.org/lso/intro/beta202408#INT4_Feature"/>
-		<rdfs:label xml:lang="en">R9i has preceding feature</rdfs:label>
+		<rdfs:label xml:lang="en">R9i has preceding actualization</rdfs:label>
 	</owl:ObjectProperty>
 
 
@@ -1931,6 +1931,9 @@
 			- Renamed INT1 Text Passage to INT1 Passage; changed superclass from F2 Expression to E90 Symbolic Object.
 			- Added INT21 Text Passage and INT22 Image Area as subclasses of INT1 Passage. Changed object property R10 has Text Passage to R10 has Passage, added subproperties R30 has text passage and R31 has image area.
 			- Changed property domains/ranges accordingly.
+			
+			- Renamed INT Interpretament to INT Interpretation.
+			- Changed R9 has preceding interpretament and inverse to R9 hasPrecedingActualization and R9 hasSubsequentActualization, changed domain/range to INT2 Actualization of Feature.
 			
 			Web Annotation Ontology Alignment:
 			- Added skos:broadMatch to Properties R24 has related entity and R41 has location.
