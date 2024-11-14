@@ -771,7 +771,7 @@
 		<owl:inverseOf rdf:resource="https://w3id.org/lso/intro/beta202408#R9i_hasPrecedingActualization"/>
 		<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
 		<rdfs:domain rdf:resource="https://w3id.org/lso/intro/beta202408#INT2_ActualizationOfFeature"/>
-		<rdfs:range rdf:resource="https://w3id.org/lso/intro/beta202408#INT4_ActualizationOfFeature"/>
+		<rdfs:range rdf:resource="https://w3id.org/lso/intro/beta202408#INT2_ActualizationOfFeature"/>
 		<rdfs:comment xml:lang="en">Links an INT2 Actualization of Feature to another INT4 following it (logically or chronologically); this object property was mostly designed for the representation of the structure of research papers, where one definition, interpretation, etc., follows another.</rdfs:comment>
 		<rdfs:label xml:lang="en">R9 has subsequent actualization</rdfs:label>
 	</owl:ObjectProperty>
@@ -783,8 +783,8 @@
 	<owl:ObjectProperty rdf:about="https://w3id.org/lso/intro/beta202408#R9i_hasPrecedingActualization">
 		<owl:inverseOf rdf:resource="https://w3id.org/lso/intro/beta202408#R9_hasSubsequentActualization"/>
 		<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
-		<rdfs:domain rdf:resource="https://w3id.org/lso/intro/beta202408#INT4_Feature"/>
-		<rdfs:range rdf:resource="https://w3id.org/lso/intro/beta202408#INT4_Feature"/>
+		<rdfs:domain rdf:resource="https://w3id.org/lso/intro/beta202408#INT2_ActualizationOfFeature"/>
+		<rdfs:range rdf:resource="https://w3id.org/lso/intro/beta202408#INT2_ActualizationOfFeature"/>
 		<rdfs:label xml:lang="en">R9i has preceding actualization</rdfs:label>
 	</owl:ObjectProperty>
 
