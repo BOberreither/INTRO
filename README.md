@@ -99,7 +99,7 @@ Pending work includes:
 ## <a name="further"/>INTRO Further Information
 For more information, see the documentation under http://w3id.org/lso/intro/beta202408.
 
-## <a name="usecases"/>TYPICAL USE CASES (under revision)
+## <a name="usecases"/>TYPICAL USE CASES
 
 ### A text refers to an image.
 <details>
