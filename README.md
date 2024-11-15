@@ -15,6 +15,23 @@ Latest Version IRI: https://w3id.org/lso/intro/beta202408#
 - <a href="https://www.romanticperiodpoetry.org/">Romantic Period Poetry Archive</a>
 - <a href="https://www.researchgate.net/publication/378862360_Paradigmen_einer_digitalen_Rezeptionswissenschaft_Produktiv-literarische_Rezeptionsphanomene_als_Linked_Data_am_Beispiel_der_deutschsprachigen_literarischen_Sappho-Rezeption">German-language literary reception of Sappho</a>
 
+**PUBLICATIONS/TALKS ON INTRO:**
+- Oberreither, B. (2024, *upcoming*), Text and Image Are the Same, or Close Enough at Least. Reflections on
+Expanding an Ontology for Intertextual Relations Towards Intermediality. Presentation. Linked Open Data and
+Literary Studies, Nov. 19–Nov. 20, 2024, Berlin.
+- Oberreither, B. (2023), ‚A Linked Data Vocabulary for Intertextuality in Literary Studies, with
+Some Considerations Regarding Digital Editions‘, in H. Klug und R. Bleier (Hg.), Digitale Edition
+in Österreich. Schriftenreihe des DIE, Bd. 16. Norderstedt: Books on Demand, S. 69–87. URN:
+urn:nbn:de:hbz:38-704496, URL: https://kups.ub.uni-koeln.de/70449/.
+- Oberreither, B. (2020), ‚Zwei Überlegungen zur Konzeption einer Linked-Data-Ontologie für die
+Literaturwissenschaften‘, in M. Ernst u. a. (Hg.), digital humanities austria 2018. empowering
+researchers (DHA 2018). Proceedings, S. 134–139. DOI: https://doi.org/10.1553/dha-proceedings2018.
+- Oberreither, B. (2019), INTRO – The Intertextual Relations Ontology. Workshop, organized by KONDE (Kompetenznetzwerk
+Digitale Edition), Jan. 15, 2019, Graz.
+- Oberreither, B. (2018), Linked Data and Knowledge Modelling in Literary Studies. An Ontology for the Representation
+of Knowledge on Intertextuality in Literature. Presentation. EADH 2018 (European Association
+for Digital Humanities Conference), Dec. 6–Dec. 9, 2018, Galway.
+
 
 ## CONTENTS
 
