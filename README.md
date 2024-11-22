@@ -16,7 +16,7 @@ Latest Version IRI: https://w3id.org/lso/intro/beta202408#
 - <a href="https://www.researchgate.net/publication/378862360_Paradigmen_einer_digitalen_Rezeptionswissenschaft_Produktiv-literarische_Rezeptionsphanomene_als_Linked_Data_am_Beispiel_der_deutschsprachigen_literarischen_Sappho-Rezeption">German-language literary reception of Sappho</a>
 
 **PUBLICATIONS/TALKS ON INTRO:**
-- Oberreither, B. (2024, *upcoming*), Text and Image Are the Same, or Close Enough at Least. Reflections on
+- Oberreither, B. (2024), Text and Image Are the Same, or Close Enough at Least. Reflections on
 Expanding an Ontology for Intertextual Relations Towards Intermediality. Presentation. Linked Open Data and
 Literary Studies, Nov. 19–Nov. 20, 2024, Berlin.
 - Oberreither, B. (2023), ‚A Linked Data Vocabulary for Intertextuality in Literary Studies, with
