@@ -110,7 +110,7 @@ For more information, see the documentation under http://w3id.org/lso/intro/beta
 </details>
 
 <details>
-   <summary>Click code snippet</summary>  
+   <summary>Click for code snippet</summary>  
 
 ```
 @prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .      
@@ -161,7 +161,7 @@ dlb:text945_creation a lrm:F28_Expression_Creation ;
 </details>
 
 <details>
-   <summary>Click code snippet</summary>
+   <summary>Click for code snippet</summary>
 
    ```
 @prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
@@ -222,7 +222,7 @@ dlb:text945 a lrm:F2_Expression ;
 </details>
 
 <details>
-   <summary>Click code snippet</summary>
+   <summary>Click for code snippet</summary>
 
 ```
 @prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
