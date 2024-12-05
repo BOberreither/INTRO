@@ -18,7 +18,7 @@ Latest Version IRI: https://w3id.org/lso/intro/beta202408#
 **PUBLICATIONS/TALKS ON INTRO:**
 - Oberreither, B. (2024), Text and Image Are the Same, or Close Enough at Least. Reflections on
 Expanding an Ontology for Intertextual Relations Towards Intermediality. Presentation. Linked Open Data and
-Literary Studies, Nov. 19–Nov. 20, 2024, Berlin.
+Literary Studies, Nov. 19–Nov. 20, 2024, Berlin [see <a href="https://www.temporal-communities.de/research/digital-communities/resources/lod-resources/Bernhard_Oberreither_Text_and_Image.pdf">here</a> for slides].
 - Oberreither, B. (2023), ‚A Linked Data Vocabulary for Intertextuality in Literary Studies, with
 Some Considerations Regarding Digital Editions‘, in H. Klug und R. Bleier (Hg.), Digitale Edition
 in Österreich. Schriftenreihe des DIE, Bd. 16. Norderstedt: Books on Demand, S. 69–87. URN:
