@@ -586,6 +586,7 @@
       <div class="declaration">
          <div><strong>URI: </strong>https://w3id.org/lso/intro/beta202408#R10_hasPassage</div>
          <div class="comment">Links a text or an image – usually: a work or an expression – to an INT1 Passage from that text or image, e.g. a book to a passage on page three of this book, or a painting to an area on this paining.</div>
+         <div><strong>Has subproperty / subproperties: </strong><a href="#R30_hasTextPassage">R30 has text passage</a>, <a href="#R31_hasImageArea">R31 has image area</a></div>
          <div><strong>Inverse Property: </strong><a href="#R10i_isPassageOf">R10i is passage of</a></div>
          <div><strong>Domain: </strong>http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object, <a href="#INT1_Passage">INT1 Passage</a></div>
          <div><strong>Range: </strong><a href="#INT1_Passage">INT1 Passage</a></div>
@@ -593,6 +594,7 @@
       </div><small><a href="#top">(Back to Top)</a></small><h3 id="R10i_isPassageOf">R10i is passage of</h3>
       <div class="declaration">
          <div><strong>URI: </strong>https://w3id.org/lso/intro/beta202408#R10i_isPassageOf</div>
+         <div><strong>Has subproperty / subproperties: </strong><a href="#R30i_isTextPassageOf">R30i is text passage of</a>, <a href="#R31i_isImageAreaOf">R31i is image area of</a></div>
          <div><strong>Inverse Property: </strong><a href="#R10_hasPassage">R10 has passage</a></div>
          <div><strong>Domain: </strong><a href="#INT1_Passage">INT1 Passage</a></div>
          <div><strong>Range: </strong>http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object, <a href="#INT1_Passage">INT1 Passage</a></div>
@@ -601,12 +603,14 @@
       <div class="declaration">
          <div><strong>URI: </strong>https://w3id.org/lso/intro/beta202408#R12_hasReferredToEntity</div>
          <div class="comment">Links an INT3 Interrelation to the entity referred to in the relationship (a text or image on any ontological level or a feature actualized in the text resp. image in question).</div>
+         <div><strong>Subproperty of: </strong><a href="#R24_hasRelatedEntity">R24 has related entity</a></div>
          <div><strong>Inverse Property: </strong><a href="#R12i_isReferredToEntity">R12i is referred to entity</a></div>
          <div><strong>Domain: </strong><a href="#INT3_Interrelation">INT3 Interrelation</a></div>
          <div><strong>Range: </strong>http://iflastandards.info/ns/lrm/lrmoo/F1_Work, http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object, <a href="#INT1_Passage">INT1 Passage</a>, <a href="#INT2_ActualizationOfFeature">INT2 Actualization of Feature</a>, <a href="#INT6_Architext">INT6 Architext</a></div>
       </div><small><a href="#top">(Back to Top)</a></small><h3 id="R12i_isReferredToEntity">R12i is referred to entity</h3>
       <div class="declaration">
          <div><strong>URI: </strong>https://w3id.org/lso/intro/beta202408#R12i_isReferredToEntity</div>
+         <div><strong>Subproperty of: </strong><a href="#R24i_isRelatedEntity">R24i is related entity</a></div>
          <div><strong>Inverse Property: </strong><a href="#R12_hasReferredToEntity">R12 has referred to entity</a></div>
          <div><strong>Domain: </strong>http://iflastandards.info/ns/lrm/lrmoo/F1_Work, http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object, <a href="#INT1_Passage">INT1 Passage</a>, <a href="#INT2_ActualizationOfFeature">INT2 Actualization of Feature</a>, <a href="#INT6_Architext">INT6 Architext</a></div>
          <div><strong>Range: </strong><a href="#INT3_Interrelation">INT3 Interrelation</a></div>
@@ -614,12 +618,14 @@
       <div class="declaration">
          <div><strong>URI: </strong>https://w3id.org/lso/intro/beta202408#R13_hasReferringEntity</div>
          <div class="comment">Links an INT3 Interrelation to a referring entity (a text or image on any ontological level or a feature actualized in the text resp. image in question).</div>
+         <div><strong>Subproperty of: </strong><a href="#R24_hasRelatedEntity">R24 has related entity</a></div>
          <div><strong>Inverse Property: </strong><a href="#R13i_isReferringEntity">R13i is referring entity</a></div>
          <div><strong>Domain: </strong><a href="#INT3_Interrelation">INT3 Interrelation</a></div>
          <div><strong>Range: </strong>http://iflastandards.info/ns/lrm/lrmoo/F1_Work, http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object, <a href="#INT1_Passage">INT1 Passage</a>, <a href="#INT2_ActualizationOfFeature">INT2 Actualization of Feature</a>, <a href="#INT6_Architext">INT6 Architext</a></div>
       </div><small><a href="#top">(Back to Top)</a></small><h3 id="R13i_isReferringEntity">R13i is referring entity</h3>
       <div class="declaration">
          <div><strong>URI: </strong>https://w3id.org/lso/intro/beta202408#R13i_isReferringEntity</div>
+         <div><strong>Subproperty of: </strong><a href="#R24i_isRelatedEntity">R24i is related entity</a></div>
          <div><strong>Inverse Property: </strong><a href="#R13_hasReferringEntity">R13 has referring entity</a></div>
          <div><strong>Domain: </strong>http://iflastandards.info/ns/lrm/lrmoo/F1_Work, http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object, <a href="#INT1_Passage">INT1 Passage</a>, <a href="#INT2_ActualizationOfFeature">INT2 Actualization of Feature</a>, <a href="#INT6_Architext">INT6 Architext</a></div>
          <div><strong>Range: </strong><a href="#INT3_Interrelation">INT3 Interrelation</a></div>
@@ -666,12 +672,14 @@
       <div class="declaration">
          <div><strong>URI: </strong>https://w3id.org/lso/intro/beta202408#R19_hasType</div>
          <div class="comment">Links an INT3 Interrelation to its INT11 Type of Interrelation.</div>
+         <div><strong>Subproperty of: </strong>http://www.cidoc-crm.org/cidoc-crm/P2_has_type</div>
          <div><strong>Inverse Property: </strong><a href="#R19i_isTypeOf">R19i is type of</a></div>
          <div><strong>Domain: </strong><a href="#INT3_Interrelation">INT3 Interrelation</a></div>
          <div><strong>Range: </strong><a href="#INT11_TypeOfInterrelation">INT11 Type of Interrelation</a></div>
       </div><small><a href="#top">(Back to Top)</a></small><h3 id="R19i_isTypeOf">R19i is type of</h3>
       <div class="declaration">
          <div><strong>URI: </strong>https://w3id.org/lso/intro/beta202408#R19i_isTypeOf</div>
+         <div><strong>Subproperty of: </strong>http://www.cidoc-crm.org/cidoc-crm/P2i_is_type_of</div>
          <div><strong>Inverse Property: </strong><a href="#R19_hasType">R19 has type</a></div>
          <div><strong>Domain: </strong><a href="#INT11_TypeOfInterrelation">INT11 Type of Interrelation</a></div>
          <div><strong>Range: </strong><a href="#INT3_Interrelation">INT3 Interrelation</a></div>
@@ -679,12 +687,14 @@
       <div class="declaration">
          <div><strong>URI: </strong>https://w3id.org/lso/intro/beta202408#R20_discusses</div>
          <div class="comment">Links an INT Interpretation to the instance of text or image (on any ontological level) it discusses.</div>
+         <div><strong>Subproperty of: </strong>http://www.cidoc-crm.org/cidoc-crm/P67_refers_to</div>
          <div><strong>Inverse Property: </strong><a href="#R20i_isDiscussedIn">R20i is discussed in</a></div>
          <div><strong>Domain: </strong><a href="#INT_Interpretation">INT Interpretation</a></div>
          <div><strong>Range: </strong>http://iflastandards.info/ns/lrm/lrmoo/F1_Work, http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object, <a href="#INT6_Architext">INT6 Architext</a></div>
       </div><small><a href="#top">(Back to Top)</a></small><h3 id="R20i_isDiscussedIn">R20i is discussed in</h3>
       <div class="declaration">
          <div><strong>URI: </strong>https://w3id.org/lso/intro/beta202408#R20i_isDiscussedIn</div>
+         <div><strong>Subproperty of: </strong>http://www.cidoc-crm.org/cidoc-crm/P67i_is_referred_to_by</div>
          <div><strong>Inverse Property: </strong><a href="#R20_discusses">R20 discusses</a></div>
          <div><strong>Domain: </strong>http://iflastandards.info/ns/lrm/lrmoo/F1_Work, http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object, <a href="#INT6_Architext">INT6 Architext</a></div>
          <div><strong>Range: </strong><a href="#INT_Interpretation">INT Interpretation</a></div>
@@ -692,12 +702,14 @@
       <div class="declaration">
          <div><strong>URI: </strong>https://w3id.org/lso/intro/beta202408#R21_identifies</div>
          <div class="comment">Links an INT Identification or INT Interpretation to the INT3 Interrelation or the INT2 Actualization of Feature it identifies.</div>
+         <div><strong>Subproperty of: </strong>http://www.cidoc-crm.org/cidoc-crm/P67_refers_to</div>
          <div><strong>Inverse Property: </strong><a href="#R21i_isIdentifiedBy">R21i is identified by</a></div>
          <div><strong>Domain: </strong><a href="#INT_Interpretation">INT Interpretation</a></div>
          <div><strong>Range: </strong><a href="#INT2_ActualizationOfFeature">INT2 Actualization of Feature</a>, <a href="#INT3_Interrelation">INT3 Interrelation</a></div>
       </div><small><a href="#top">(Back to Top)</a></small><h3 id="R21i_isIdentifiedBy">R21i is identified by</h3>
       <div class="declaration">
          <div><strong>URI: </strong>https://w3id.org/lso/intro/beta202408#R21i_isIdentifiedBy</div>
+         <div><strong>Subproperty of: </strong>http://www.cidoc-crm.org/cidoc-crm/P67i_is_referred_to_by</div>
          <div><strong>Inverse Property: </strong><a href="#R21_identifies">R21 identifies</a></div>
          <div><strong>Domain: </strong><a href="#INT2_ActualizationOfFeature">INT2 Actualization of Feature</a>, <a href="#INT3_Interrelation">INT3 Interrelation</a></div>
          <div><strong>Range: </strong><a href="#INT_Interpretation">INT Interpretation</a></div>
@@ -731,6 +743,7 @@
       <div class="declaration">
          <div><strong>URI: </strong>https://w3id.org/lso/intro/beta202408#R24_hasRelatedEntity</div>
          <div class="comment">Links any INT3 Interrelation to a text or image (on any ontological level) or INT2 Actualization of Feature that is part of the INT3 Interrelation. The skos:broadMatch states that this property is a more specific version of oa:hasTarget in the sense that the INT3 Interrelation can be seen as an annotation, the texts/images linked by this relationship as their targets.</div>
+         <div><strong>Has subproperty / subproperties: </strong><a href="#R12_hasReferredToEntity">R12 has referred to entity</a>, <a href="#R13_hasReferringEntity">R13 has referring entity</a></div>
          <div><strong>Inverse Property: </strong><a href="#R24i_isRelatedEntity">R24i is related entity</a></div>
          <div><strong>Domain: </strong><a href="#INT3_Interrelation">INT3 Interrelation</a></div>
          <div><strong>Range: </strong>http://iflastandards.info/ns/lrm/lrmoo/F1_Work, http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object, <a href="#INT1_Passage">INT1 Passage</a>, <a href="#INT2_ActualizationOfFeature">INT2 Actualization of Feature</a>, <a href="#INT6_Architext">INT6 Architext</a></div>
@@ -738,6 +751,7 @@
       </div><small><a href="#top">(Back to Top)</a></small><h3 id="R24i_isRelatedEntity">R24i is related entity</h3>
       <div class="declaration">
          <div><strong>URI: </strong>https://w3id.org/lso/intro/beta202408#R24i_isRelatedEntity</div>
+         <div><strong>Has subproperty / subproperties: </strong><a href="#R12i_isReferredToEntity">R12i is referred to entity</a>, <a href="#R13i_isReferringEntity">R13i is referring entity</a></div>
          <div><strong>Inverse Property: </strong><a href="#R24_hasRelatedEntity">R24 has related entity</a></div>
          <div><strong>Domain: </strong>http://iflastandards.info/ns/lrm/lrmoo/F1_Work, http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object, <a href="#INT1_Passage">INT1 Passage</a>, <a href="#INT2_ActualizationOfFeature">INT2 Actualization of Feature</a>, <a href="#INT6_Architext">INT6 Architext</a></div>
          <div><strong>Range: </strong><a href="#INT3_Interrelation">INT3 Interrelation</a></div>
@@ -784,12 +798,14 @@
       <div class="declaration">
          <div><strong>URI: </strong>https://w3id.org/lso/intro/beta202408#R8_hasOpinionObject</div>
          <div class="comment">Links an INT Opinion to its object - for example an opinion with the theme fashion (to make it an opinion about fashion).</div>
+         <div><strong>Subproperty of: </strong>http://www.cidoc-crm.org/cidoc-crm/P67_refers_to</div>
          <div><strong>Inverse Property: </strong><a href="#R8i_isOpinionObjectOf">R8i is opinion object of</a></div>
          <div><strong>Domain: </strong><a href="#INT_Opinion">INT Opinion</a></div>
          <div><strong>Range: </strong>http://www.w3.org/2002/07/owl#Thing</div>
       </div><small><a href="#top">(Back to Top)</a></small><h3 id="R8i_isOpinionObjectOf">R8i is opinion object of</h3>
       <div class="declaration">
          <div><strong>URI: </strong>https://w3id.org/lso/intro/beta202408#R8i_isOpinionObjectOf</div>
+         <div><strong>Subproperty of: </strong>http://www.cidoc-crm.org/cidoc-crm/P67i_is_referred_to_by</div>
          <div><strong>Inverse Property: </strong><a href="#R8_hasOpinionObject">R8 has opinion object</a></div>
          <div><strong>Domain: </strong>http://www.w3.org/2002/07/owl#Thing</div>
          <div><strong>Range: </strong><a href="#INT_Opinion">INT Opinion</a></div>
@@ -812,6 +828,7 @@
       <div class="declaration">
          <div><strong>URI: </strong>https://w3id.org/lso/intro/beta202408#R30_hasTextPassage</div>
          <div class="comment">Links (usually, exceptions are easily conceivable) a text, like a work or an expression, to an INT21 Text Passage from that text, e.g. a book to a passage on page three of this book.</div>
+         <div><strong>Subproperty of: </strong><a href="#R10_hasPassage">R10 has passage</a></div>
          <div><strong>Inverse Property: </strong><a href="#R30i_isTextPassageOf">R30i is text passage of</a></div>
          <div><strong>Domain: </strong>http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object, <a href="#INT1_Passage">INT1 Passage</a></div>
          <div><strong>Range: </strong><a href="#INT21_TextPassage">INT21 Text Passage</a></div>
@@ -819,6 +836,7 @@
       </div><small><a href="#top">(Back to Top)</a></small><h3 id="R30i_isTextPassageOf">R30i is text passage of</h3>
       <div class="declaration">
          <div><strong>URI: </strong>https://w3id.org/lso/intro/beta202408#R30i_isTextPassageOf</div>
+         <div><strong>Subproperty of: </strong><a href="#R10i_isPassageOf">R10i is passage of</a></div>
          <div><strong>Inverse Property: </strong><a href="#R30_hasTextPassage">R30 has text passage</a></div>
          <div><strong>Domain: </strong><a href="#INT21_TextPassage">INT21 Text Passage</a></div>
          <div><strong>Range: </strong>http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object, <a href="#INT1_Passage">INT1 Passage</a></div>
@@ -827,6 +845,7 @@
       <div class="declaration">
          <div><strong>URI: </strong>https://w3id.org/lso/intro/beta202408#R31_hasImageArea</div>
          <div class="comment">Links (usually, eceptions are easily conceivable) an image, like a work or an expression, to an INT22 Image Area from that image, e.g. a painting to an area on this paining.</div>
+         <div><strong>Subproperty of: </strong><a href="#R10_hasPassage">R10 has passage</a></div>
          <div><strong>Inverse Property: </strong><a href="#R31i_isImageAreaOf">R31i is image area of</a></div>
          <div><strong>Domain: </strong>http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object, <a href="#INT1_Passage">INT1 Passage</a></div>
          <div><strong>Range: </strong><a href="#INT22_ImageArea">INT22 Image Area</a></div>
@@ -834,6 +853,7 @@
       </div><small><a href="#top">(Back to Top)</a></small><h3 id="R31i_isImageAreaOf">R31i is image area of</h3>
       <div class="declaration">
          <div><strong>URI: </strong>https://w3id.org/lso/intro/beta202408#R31i_isImageAreaOf</div>
+         <div><strong>Subproperty of: </strong><a href="#R10i_isPassageOf">R10i is passage of</a></div>
          <div><strong>Inverse Property: </strong><a href="#R31_hasImageArea">R31 has image area</a></div>
          <div><strong>Domain: </strong><a href="#INT22_ImageArea">INT22 Image Area</a></div>
          <div><strong>Range: </strong>http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object, <a href="#INT1_Passage">INT1 Passage</a></div>
