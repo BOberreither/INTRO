@@ -15,7 +15,7 @@ jobs:
       - name: Install dependencies
         run: |
           sudo apt-get update
-          sudo apt-get install -y wget xvfb libgtk-3-0 libxss1 libasound2 libnss3 libx11-xcb1
+          sudo apt-get install -y wget xvfb libgtk-3-0 libxss1 libnss3 libx11-xcb1
 
       - name: Download draw.io desktop (CLI)
         run: |
