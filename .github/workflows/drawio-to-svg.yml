@@ -19,7 +19,7 @@ jobs:
 
       - name: Download draw.io desktop (CLI)
         run: |
-          wget https://github.com/jgraph/drawio-desktop/releases/download/v21.6.3/draw.io-amd64-21.6.3.deb
+          wget https://github.com/jgraph/drawio-desktop/releases/download/v27.0.9/drawio-amd64-27.0.9.deb
           sudo dpkg -i draw.io-amd64-21.6.3.deb || true
           sudo apt-get install -f -y
 
