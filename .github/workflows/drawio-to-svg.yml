@@ -21,13 +21,13 @@ jobs:
       - name: Download draw.io AppImage
         run: |
           wget https://github.com/jgraph/drawio-desktop/releases/download/v27.0.9/drawio-x86_64-27.0.9.AppImage
-          chmod +x draw.io-27.0.9-x86_64.AppImage
+          chmod +x drawio-x86_64-27.0.9.AppImage
 
       - name: Convert .drawio to .svg
         run: |
           for file in img/*.drawio; do
             base=$(basename "$file" .drawio)
-            xvfb-run --auto-servernum ./draw.io-27.0.9-x86_64.AppImage --no-sandbox -x -f svg -o img/${base}.svg "$file"
+            xvfb-run --auto-servernum ./drawio-x86_64-27.0.9.AppImage --no-sandbox -x -f svg -o img/${base}.svg "$file"
           done
 
       - name: Commit and push SVG files
