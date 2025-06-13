@@ -1,4 +1,4 @@
-name: Export Draw.io to SVG
+name: Convert .drawio to .svg
 
 on:
   push:
@@ -6,33 +6,34 @@ on:
       - 'img/*.drawio'
 
 jobs:
-  export-svg:
+  convert:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout Repository
+      - name: Checkout repository
         uses: actions/checkout@v4
 
       - name: Install dependencies
         run: |
           sudo apt-get update
-          sudo apt-get install -y wget xvfb libgtk-3-0 libxss1 libnss3 libx11-xcb1
+          sudo apt-get install -y wget unzip xvfb libgtk-3-0 libxss1 libnss3 libx11-xcb1
 
-      - name: Download draw.io desktop (CLI)
+      - name: Download portable draw.io
         run: |
-          wget https://github.com/jgraph/drawio-desktop/releases/download/v27.0.9/drawio-amd64-27.0.9.deb
-          sudo dpkg -i draw.io-amd64-21.6.3.deb || true
-          sudo apt-get install -f -y
+          wget https://github.com/jgraph/drawio-desktop/releases/download/v24.4.7/drawio-x86_64-24.4.7.tar.gz
+          mkdir drawio
+          tar -xzf drawio-x86_64-24.4.7.tar.gz -C drawio --strip-components=1
 
       - name: Convert .drawio to .svg
         run: |
           for file in img/*.drawio; do
-            xvfb-run --auto-servernum /opt/drawio/drawio -x -f svg -o img "$file"
+            filename=$(basename "$file" .drawio)
+            xvfb-run --auto-servernum ./drawio/drawio -x -f svg -o img "$file"
           done
 
       - name: Commit and push SVG files
         run: |
-          git config user.name "github-actions"
-          git config user.email "github-actions@github.com"
+          git config user.name github-actions
+          git config user.email github-actions@github.com
           git add img/*.svg
-          git commit -m "Auto-export SVG from Draw.io" || echo "No changes to commit"
+          git commit -m "Auto-convert .drawio to .svg" || echo "No changes to commit"
           git push
