@@ -1,0 +1,38 @@
+name: Convert .drawio to .svg
+
+on:
+  push:
+    paths:
+      - 'img/*.drawio'
+
+jobs:
+  convert:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Install drawio CLI
+        run: npm install -g @hediet/cli-drawio
+
+      - name: Convert .drawio to .svg
+        run: |
+          for file in img/*.drawio; do
+            base=$(basename "$file" .drawio)
+            drawio --export "$file" --format svg --output "img/$base.svg"
+          done
+
+      - name: Commit and push SVGs
+        run: |
+          git config --global user.name "github-actions"
+          git config --global user.email "actions@github.com"
+          git add img/*.svg
+          git diff --cached --quiet || git commit -m "Auto-convert drawio to svg"
+          git push
+        continue-on-error: true
