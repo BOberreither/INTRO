@@ -23,6 +23,10 @@ jobs:
           wget https://github.com/jgraph/drawio-desktop/releases/download/v27.0.9/drawio-x86_64-27.0.9.AppImage
           chmod +x drawio-x86_64-27.0.9.AppImage
 
+      - name: Extract AppImage (ohne FUSE)
+        run: |
+          ./drawio-x86_64-27.0.9.AppImage --appimage-extract
+
       - name: Convert .drawio to .svg
         run: |
           for file in img/*.drawio; do
