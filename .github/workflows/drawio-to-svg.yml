@@ -23,12 +23,10 @@ jobs:
           sudo dpkg -i draw.io-amd64-21.6.3.deb || true
           sudo apt-get install -f -y
 
-      - name: Convert .drawio files to .svg
+      - name: Convert .drawio to .svg
         run: |
           for file in img/*.drawio; do
-            [ -f "$file" ] || continue
-            base=$(basename "$file" .drawio)
-            xvfb-run drawio --export --format svg --output "img/${base}.svg" "$file"
+            xvfb-run --auto-servernum /opt/drawio/drawio -x -f svg -o img "$file"
           done
 
       - name: Commit and push SVG files
