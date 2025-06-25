@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36 Edg/131.0.0.0" version="27.1.5">
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36 Edg/131.0.0.0" version="27.1.6">
   <diagram name="Seite-1" id="jSJ701ttfHyzZoRzbqu0">
     <mxGraphModel dx="2520" dy="917" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -219,6 +219,9 @@
             <mxGeometry x="87" y="316" width="101" height="40" as="geometry" />
           </mxCell>
         </UserObject>
+        <mxCell id="HRenDH4WRHBZINVPFwNC-1" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="LwwzHbmZy4C10oGqhaBs-25" target="LwwzHbmZy4C10oGqhaBs-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
         <UserObject label="E73 Information Object" tags="cidoc" id="LwwzHbmZy4C10oGqhaBs-25">
           <mxCell style="rounded=1;html=1;perimeterSpacing=0;arcSize=50;container=0;whiteSpace=wrap;fontFamily=Verdana;spacingTop=0;spacingBottom=0;spacing=2;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11.5;" parent="1" vertex="1">
             <mxGeometry x="200" y="316" width="101" height="40" as="geometry" />
@@ -279,11 +282,11 @@
             <mxGeometry x="-21" y="446" width="101" height="40" as="geometry" />
           </mxCell>
         </UserObject>
-        <mxCell id="PyuMrnsRH1ZgQ6UVO1De-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="PyuMrnsRH1ZgQ6UVO1De-1" target="LwwzHbmZy4C10oGqhaBs-25">
+        <mxCell id="PyuMrnsRH1ZgQ6UVO1De-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" parent="1" source="PyuMrnsRH1ZgQ6UVO1De-1" target="LwwzHbmZy4C10oGqhaBs-25" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <UserObject label="E36 Visual Item" tags="cidoc" id="PyuMrnsRH1ZgQ6UVO1De-1">
-          <mxCell style="rounded=1;html=1;perimeterSpacing=0;arcSize=50;container=0;whiteSpace=wrap;fontFamily=Verdana;spacingTop=0;spacingBottom=0;spacing=2;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11.5;" vertex="1" parent="1">
+          <mxCell style="rounded=1;html=1;perimeterSpacing=0;arcSize=50;container=0;whiteSpace=wrap;fontFamily=Verdana;spacingTop=0;spacingBottom=0;spacing=2;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11.5;" parent="1" vertex="1">
             <mxGeometry x="200" y="510" width="101" height="40" as="geometry" />
           </mxCell>
         </UserObject>
