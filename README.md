@@ -86,7 +86,7 @@ INTRO is capable of modeling knowledge in different degrees of granularity: It a
 
 ## <a name="alignments"/>ONTOLOGY ALIGNMENT
 
-INTRO is designed as extension of [CIDOC CRM](https://cidoc-crm.org/html/cidoc_crm_v7.1.3.html) and [LRMoo](https://www.cidoc-crm.org/extensions/lrmoo/html/LRMoo_v1.0.html) (previously known as FRBRoo), it is also aligned with the [Web Anotation Ontology](https://www.w3.org/ns/oa).
+INTRO is designed as extension of [CIDOC CRM](https://cidoc-crm.org/html/cidoc_crm_v7.1.3.html) and [LRMoo](https://www.cidoc-crm.org/extensions/lrmoo/html/LRMoo_v1.0.html) (previously known as FRBRoo), it is also aligned with the [Web Annotation Ontology](https://www.w3.org/ns/oa).
 
 ## <a name="socomplicated"/>By the way: Does it have to be so complicated?
 
