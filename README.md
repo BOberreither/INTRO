@@ -2,9 +2,15 @@
 
 Ontology IRI: https://w3id.org/lso/intro/currentbeta#
 
-Latest Version IRI: https://w3id.org/lso/intro/beta202408#
+Latest Version IRI: https://w3id.org/lso/intro/beta202506#
 
 ## NEWS
+
+**UPCOMING EVENT  – INTRO at the DH2025:**<br/>
+**When Worlds Collide: A Literary Linked Open Data Model Critiqueathon (Workshop)**<br/>
+Ingo Boerner, Bernhard Oberreither, Federico Pianzola, Lukas Plank, Julia Röttgermann, Salvador Ros, Christof Schöch, Daniil Skorinkin, Peer Trilcke<br/>
+Tuesday, 15 July 2025 (9.00-12.30), NOVA FCSH/Universidade NOVA de Lisboa
+
 
 **NEW VERSION ONLINE - INTRO extended to include INTERMEDIALITY**
 
@@ -14,6 +20,7 @@ Latest Version IRI: https://w3id.org/lso/intro/beta202408#
 - <a href="https://semantickraus.acdh.oeaw.ac.at">SemanticKraus - Connecting Kraus Scholarship to the Semantic Web</a>
 - <a href="https://www.romanticperiodpoetry.org/">Romantic Period Poetry Archive</a>
 - <a href="https://www.researchgate.net/publication/378862360_Paradigmen_einer_digitalen_Rezeptionswissenschaft_Produktiv-literarische_Rezeptionsphanomene_als_Linked_Data_am_Beispiel_der_deutschsprachigen_literarischen_Sappho-Rezeption">German-language literary reception of Sappho</a>
+
 
 **PUBLICATIONS/TALKS ON INTRO:**
 - Oberreither, B. (2024), Text and Image Are the Same, or Close Enough at Least. Reflections on
