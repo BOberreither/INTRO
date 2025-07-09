@@ -1223,7 +1223,9 @@ Depending on the theoretical framework, the notion of 'text' can be understood v
 			– genres (members sharing genre conventions) 
 			– a discipline (members deriving from the same disciplinary background) 
 			– an oeuvre (members created by the same person) 
-			– national literatures/arts (members whose creators share a nationality) etc.</rdfs:comment>
+			– national literatures/arts (members whose creators share a nationality) etc.
+		
+		The fact that a single text/image (e. g., an LRMoo F2 Expression) is part of an INT6 Architext can be modelled as an INT3 Interrelation with a custom INT11 Type of Interrelation. Alternatively, generic properties expressing the "part of"-relation can be used, for example "is part of" and "has part" (http://semanticscience.org/resource/SIO_000068 and http://semanticscience.org/resource/SIO_000028, respectively) from the "Semanticscience Integrated Ontology".</rdfs:comment>
 		<rdfs:label xml:lang="en">INT6 Architext</rdfs:label>
 	</owl:Class>
 
