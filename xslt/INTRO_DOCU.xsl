@@ -168,7 +168,7 @@
 					}
 					
 					/* Box Styles */
-					.general, .toc, .declaration {
+					.general, .toc, .primaryToc, .declaration {
 					background-color: #E4E4E4; /* Lighter than background */
 					border: 1px solid #ccc;
 					padding: 1em;
@@ -182,6 +182,11 @@
 					grid-template-columns: 1fr; /* Eine Spalte bei kleineren Bildschirmen */
 					gap: 1em;
 					}
+					
+					.tocItem {
+					padding: 0.5em 0;
+					}
+					
 					
 					@media (min-width: 600px) {
 					.toc {
@@ -300,9 +305,18 @@
 						<xsl:value-of select="./dc:rights/text()"/>
 					</div>
 					
+					<h3>Table of Contents</h3>
+					<div class="primaryToc">
+						<div class="tocItem"><a href="#description">INTRO – Description</a></div>
+						<div class="tocItem"><a href="#classes">Classes</a></div>
+						<div class="tocItem"><a href="#objectProperties">Object Properties</a></div>
+						<div class="tocItem"><a href="#dataProperties">Data Properties</a></div>
+						<div class="tocItem"><a href="#versionHistory">Version History</a></div>
+					</div>
+					
 					
 					<!-- Description: -->
-					<h2>INTRO – Description</h2>
+					<h2 id="description">INTRO – Description</h2>
 					<div class="general">
 
 											
@@ -315,9 +329,14 @@
 						</xsl:for-each>
 					</div>
 				</xsl:for-each>
+				<small>
+					<a href="#top">(Back to Top)</a>
+				</small>
 
-				<h2>Table of Contents</h2>
-				<h3>Classes</h3>
+
+
+				<!-- h2 for "Classes" -->
+				<h2 id="classes">Classes</h2>
 				<!-- Classes TOC -->
 				<div class="toc">
 					<xsl:for-each select="/rdf:RDF/owl:Class[contains(@rdf:about, 'intro/beta')]">
@@ -329,45 +348,9 @@
 						</xsl:element>
 					</xsl:for-each>
 				</div>
-				<h3>Object Properties</h3>
-				<div class="toc">
-					<xsl:for-each select="/rdf:RDF/owl:ObjectProperty[contains(@rdf:about, 'intro/beta')]">
-						<xsl:element name="a">
-							<xsl:attribute name="href">
-								<xsl:value-of select="./concat('#', substring-after(@rdf:about, '#'))"/>
-							</xsl:attribute>
-							<xsl:value-of select="./rdfs:label[1]"/>
-						</xsl:element>
-					</xsl:for-each>
-				</div>
-				<h3>Data Properties</h3>
-				<div class="toc">
-					<xsl:for-each select="/rdf:RDF/owl:DatatypeProperty[contains(@rdf:about, 'intro/beta')]">
-						<xsl:element name="a">
-							<xsl:attribute name="href">
-								<xsl:value-of select="./concat('#', substring-after(@rdf:about, '#'))"/>
-							</xsl:attribute>
-							<xsl:value-of select="./rdfs:label[1]"/>
-						</xsl:element>
-					</xsl:for-each>
-				</div>
-				<h3>Version History</h3>
-				<div class="toc">
-					<xsl:for-each select="/rdf:RDF/owl:NamedIndividual[rdf:type/@rdf:resource='http://iflastandards.info/ns/lrm/lrmoo/F2_Expression']">
-						<xsl:element name="a">
-							<xsl:attribute name="href">
-								<xsl:value-of select="concat('#', ./dc:date/text())"/>
-							</xsl:attribute>
-							<xsl:value-of select="rdfs:label"/>
-						</xsl:element>
-					</xsl:for-each>
-				</div>
-
-
-				<!-- h2 for "Classes" -->
-				<h2>Classes</h2>
-				
-				
+				<small>
+					<a href="#top">(Back to Top)</a>
+				</small>
 
 				<!-- Loop through owl:Class -->
 				<xsl:for-each select="/rdf:RDF/owl:Class[contains(@rdf:about, 'intro/beta')]">
@@ -503,7 +486,20 @@
 				</xsl:for-each>
 
 				<!-- h2 for "Object Properties" -->
-				<h2>Object Properties</h2>
+				<h2 id="objectProperties">Object Properties</h2>
+				<div class="toc">
+					<xsl:for-each select="/rdf:RDF/owl:ObjectProperty[contains(@rdf:about, 'intro/beta')]">
+						<xsl:element name="a">
+							<xsl:attribute name="href">
+								<xsl:value-of select="./concat('#', substring-after(@rdf:about, '#'))"/>
+							</xsl:attribute>
+							<xsl:value-of select="./rdfs:label[1]"/>
+						</xsl:element>
+					</xsl:for-each>
+				</div>
+				<small>
+					<a href="#top">(Back to Top)</a>
+				</small>
 
 				<!-- Loop through owl:ObjectProperty -->
 				<xsl:for-each select="/rdf:RDF/owl:ObjectProperty[contains(@rdf:about, 'intro/beta')]">
@@ -720,7 +716,21 @@
 				</xsl:for-each>
 
 				<!-- h2 for "Data Properties" -->
-				<h2>Data Properties</h2>
+				<h2 id="dataProperties">Data Properties</h2>
+				<div class="toc">
+					<xsl:for-each select="/rdf:RDF/owl:DatatypeProperty[contains(@rdf:about, 'intro/beta')]">
+						<xsl:element name="a">
+							<xsl:attribute name="href">
+								<xsl:value-of select="./concat('#', substring-after(@rdf:about, '#'))"/>
+							</xsl:attribute>
+							<xsl:value-of select="./rdfs:label[1]"/>
+						</xsl:element>
+					</xsl:for-each>
+				</div>
+				<small>
+					<a href="#top">(Back to Top)</a>
+				</small>
+				
 				<xsl:for-each select="/rdf:RDF/owl:DatatypeProperty[contains(@rdf:about, 'intro/beta')]">
 					<!-- Variable für div-IDs -->
 					<xsl:variable name="div_id" select="./substring-after(@rdf:about, '#')"/>
@@ -858,7 +868,22 @@
 					</small>
 				</xsl:for-each>
 				
-				<h2>Version History</h2>
+				<!-- Version History -->
+				<h2 id="versionHistory">Version History</h2>
+				<div class="toc">
+					<xsl:for-each select="/rdf:RDF/owl:NamedIndividual[rdf:type/@rdf:resource='http://iflastandards.info/ns/lrm/lrmoo/F2_Expression']">
+						<xsl:element name="a">
+							<xsl:attribute name="href">
+								<xsl:value-of select="concat('#', ./dc:date/text())"/>
+							</xsl:attribute>
+							<xsl:value-of select="rdfs:label"/>
+						</xsl:element>
+					</xsl:for-each>
+				</div>
+				<small>
+					<a href="#top">(Back to Top)</a>
+				</small>
+				
 				<xsl:for-each select="/rdf:RDF/owl:NamedIndividual[rdf:type/@rdf:resource='http://iflastandards.info/ns/lrm/lrmoo/F2_Expression']">
 					<!-- h3 with label -->
 					<!-- variable - gesamte ID aus rdf:about -->
