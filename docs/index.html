@@ -476,13 +476,15 @@
          <div><strong>URI: </strong>https://w3id.org/lso/intro/beta202506#INT18_Reference</div>
          <div class="comment">This class comprises references to – usually: real – identifiable objects of any kind.
             It is not restricted to non-fictional texts resp. images depicting real life objects
-            or events, but can be most easily applied there. The CIDOC CRM property P67 refers
-            to is recommended to establish the link to the entity referred to. However, there
-            are two options: P67 can link this INT18 Reference (or any other feature) to the external
-            entity, but it can also link the corresponding actualization of said feature to the
-            external entity. This depends on the respective theoretical framework and is not specified
-            in the context of this ontology. The scope of this class also includes references
-            to other images/texts, if one wants to model an interrelation this way.</div>
+            or events, but can be most easily applied there.<br/>The CIDOC CRM property P67 refers to is recommended to establish the link to the referred
+            to entity. There are two options with slightly different semantic and alignment implications:
+            P67 refers to can link this INT18 Reference (or any other feature) to the external
+            entity, which would make the INT18 Reference an E89 Propositional Object (due to P67's
+            domain and range).<br/>However, this is in conflict with the conceptual similarity of the F4 Feature and
+            its subclasses to CIDOC CRM's E55 Type. INTRO's suggested – but in no way prescribed
+            – solution is to instead attach P67 refers to to the INT2 Actualization of Feature
+            linked to INT18 Reference.<br/>The scope of this class also includes references to other images/texts, if one wants
+            to model an interrelation this way.</div>
          <div><strong>Subclass of: </strong><a href="#INT9_SemanticFeature">INT9 Semantic Feature</a></div>
          <div><strong>Subclass of: </strong><a href="#INT_PragmaticFeature">INT Pragmatic Feature</a></div>
       </div><small><a href="#top">(Back to Top)</a></small><h3 id="INT21_TextPassage">INT21 Text Passage</h3>
