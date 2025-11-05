@@ -6,12 +6,6 @@ Latest Version IRI: https://w3id.org/lso/intro/beta202506#
 
 ## NEWS
 
-**UPCOMING EVENT  – INTRO at the DH2025:**<br/>
-**When Worlds Collide: A Literary Linked Open Data Model Critiqueathon (Workshop)**<br/>
-Ingo Boerner, Bernhard Oberreither, Federico Pianzola, Lukas Plank, Julia Röttgermann, Salvador Ros, Christof Schöch, Daniil Skorinkin, Peer Trilcke<br/>
-Tuesday, 15 July 2025 (9.00-12.30), NOVA FCSH/Universidade NOVA de Lisboa
-
-
 **NEW VERSION ONLINE - INTRO extended to include INTERMEDIALITY**
 
 **PROUD TO BE AWESOME:** INTRO is on the CLARIAH list of <a href="https://github.com/CLARIAH/awesome-humanities-ontologies">Awesome Ontologies for Digital Humanities</a>!
@@ -23,6 +17,7 @@ Tuesday, 15 July 2025 (9.00-12.30), NOVA FCSH/Universidade NOVA de Lisboa
 
 
 **PUBLICATIONS/TALKS ON INTRO:**
+- When Worlds Collide: A Literary Linked Open Data Model Critiqueathon. Workshop by Ingo Boerner et al., DH2025, 15 July 2025 (9.00-12.30), NOVA FCSH/Universidade NOVA de Lisboa
 - Oberreither, B. (2024), Text and Image Are the Same, or Close Enough at Least. Reflections on
 Expanding an Ontology for Intertextual Relations Towards Intermediality. Presentation. Linked Open Data and
 Literary Studies, Nov. 19–Nov. 20, 2024, Berlin [see <a href="https://www.temporal-communities.de/research/digital-communities/resources/lod-resources/Bernhard_Oberreither_Text_and_Image.pdf">here</a> for slides].
