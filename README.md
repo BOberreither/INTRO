@@ -15,8 +15,11 @@ Latest Version IRI: https://w3id.org/lso/intro/beta202506#
 - <a href="https://www.romanticperiodpoetry.org/">Romantic Period Poetry Archive</a>
 - <a href="https://www.researchgate.net/publication/378862360_Paradigmen_einer_digitalen_Rezeptionswissenschaft_Produktiv-literarische_Rezeptionsphanomene_als_Linked_Data_am_Beispiel_der_deutschsprachigen_literarischen_Sappho-Rezeption">German-language literary reception of Sappho</a>
 
+If your project uses INTRO, write us a line – we're always interested in your work!
+
 
 **PUBLICATIONS/TALKS ON INTRO:**
+- Oberreither, B., Untner, L., and Serles, K. (2026), ‚Semantic Modelling of Intermedial and Intertextual References in Comics: A Case Study on Max Baitinger's Sibylla (2021)‘, DHd 2026 – Extended Abstract, [see <a href="https://zenodo.org/records/18696375">here</a> for the full text].
 - When Worlds Collide: A Literary Linked Open Data Model Critiqueathon. Workshop by Ingo Boerner et al., DH2025, 15 July 2025 (9.00-12.30), NOVA FCSH/Universidade NOVA de Lisboa
 - Oberreither, B. (2024), Text and Image Are the Same, or Close Enough at Least. Reflections on
 Expanding an Ontology for Intertextual Relations Towards Intermediality. Presentation. Linked Open Data and
