@@ -76,6 +76,7 @@
 			<head>
 				<title>INTRO Documentation</title>
 				<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+				<link rel="icon" type="image/png" href="https://raw.githubusercontent.com/BOberreither/INTRO/master/img/INTRO_logo.png"/>
 				<style>
 					/* Global Styles */
 					body {
