@@ -2161,7 +2161,7 @@ Please note: R4 is a sub-property of CIDOC CRM's P67 refers to, whose domain is 
 			R44 has wording – changed domain from INT1 Passage and INT16 Segment to INT21 Text Passage and INT16 Segment; added rdfs:range xsd:string; added rdfs:subPropertyOf P190 has symbolic content (declared as owl:DatatypeProperty). Rationale: P190 links an E90 Symbolic Object to its content as a string, which is the exact wording.
 
 			INT3 Interrelation – changed superclass from E28 Conceptual Object to E89 Propositional Object; adapted dc:description. Rationale: since R24 is a sub-property of P129, every INT3 Interrelation was inferred to be an E89 anyway; this makes it explicit.
-			INT1 Passage – declared owl:disjointWith INT16 Segment. Rationale: they belong to different levels (text/image vs. manifestation); this prevents chaining R10 and R25 (both under the transitive P106) via an individual that is both.
+			INT1 Passage – declared owl:disjointWith INT16 Segment. Rationale: they belong to different levels (text/image vs. manifestation); this prevents an individual from being both a passage and a segment.
 		</rdfs:comment>
 		<rdfs:label xml:lang="en">INTRO v1.0</rdfs:label>
 		<owl:priorVersion rdf:resource="https://w3id.org/lso/intro/beta202506"/>
