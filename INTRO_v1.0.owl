@@ -5,13 +5,13 @@
 	<owl:Ontology rdf:about="https://w3id.org/lso/intro/v1.0">
 		<owl:versionIRI rdf:resource="https://w3id.org/lso/intro/v1.0"/>
 		<cc:licence rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
-		<lrm:R76_is_derivative_of rdf:resource="https://w3id.org/lso/intro/beta202408"/>
+		<lrm:R76_is_derivative_of rdf:resource="https://w3id.org/lso/intro/beta202506"/>
 		<dc:creator rdf:resource="https://d-nb.info/gnd/1036708799"/>
 		<dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bernhard Oberreither</dc:creator>
 		<dc:contributor rdf:resource="https://d-nb.info/gnd/1289549982"/>
 		<dc:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Laura Untner</dc:contributor>
 		<dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-04-01</dc:issued>
-		<dc:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-06-25</dc:modified>
+		<dc:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-11-27</dc:modified>
 		<dc:rights>This ontology is distributed under the creative commons attribution 4.0 international licence (CC-BY 4.0).</dc:rights>
 		<dc:title xml:lang="en">INTRO – the intertextual, interpictorial, and intermedial relations ontology</dc:title>
 		<vann:preferredNamespacePrefix>intro</vann:preferredNamespacePrefix>

@@ -138,14 +138,12 @@
    </head>
    <body>
       <h1>INTRO – the intertextual, interpictorial, and intermedial relations ontology</h1>
-      <div class="general"><strong>Last modified: </strong>2025-06-25<br><br><div class="comment"><strong>About: </strong>INTRO is an ontology for the fields of literary studies, art studies and intermediality
+      <div class="general"><strong>Last modified: </strong>2026-11-27<br><br><div class="comment"><strong>About: </strong>INTRO is an ontology for the fields of literary studies, art studies and intermediality
             studies for the representation of intertextual, interpictorial, and intermedial relations.
             It enables the presentation and categorization of diverse features of both textual
             and pictorial origin and their linking. Its subject area includes the scholarly discourse
             on these texts/images, interrelations, and features, insofar as research results are
-            also understood as texts with features and relations. For more information, see "Description".<br>Special Thanks to: Ingo Börner<br></div><br><strong>INTRO on Github: </strong><a href="https://github.com/BOberreither/INTRO">https://github.com/BOberreither/INTRO</a><br><br><strong>Creator: </strong><a href="https://d-nb.info/gnd/1036708799">Bernhard Oberreither</a><br><strong>Contributor: </strong><a href="https://d-nb.info/gnd/1289549982">Laura Untner</a><br><br><strong>Version Info: </strong>BETA 202506 – Subclasses are subject to refinement and addition; provisional state
-         indicated by "INT"-IRIs/Labels without number. A version history can be found at the
-         end of the document.<br><br><strong>Licence: </strong><a href="https://creativecommons.org/licenses/by/4.0/">https://creativecommons.org/licenses/by/4.0/</a><br>This ontology is distributed under the creative commons attribution 4.0 international
+            also understood as texts with features and relations. For more information, see "Description".<br>Special Thanks to: Ingo Börner<br></div><br><strong>INTRO on Github: </strong><a href="https://github.com/BOberreither/INTRO">https://github.com/BOberreither/INTRO</a><br><br><strong>Creator: </strong><a href="https://d-nb.info/gnd/1036708799">Bernhard Oberreither</a><br><strong>Contributor: </strong><a href="https://d-nb.info/gnd/1289549982">Laura Untner</a><br><br><strong>Version Info: </strong>INTRO version 1.0. A version history can be found at the end of the document.<br><br><strong>Licence: </strong><a href="https://creativecommons.org/licenses/by/4.0/">https://creativecommons.org/licenses/by/4.0/</a><br>This ontology is distributed under the creative commons attribution 4.0 international
          licence (CC-BY 4.0).</div>
       <h3>Table of Contents</h3>
       <div class="primaryToc">
@@ -171,7 +169,7 @@
             INTRO's object properties relate extensively to central LRMoo classes: the F1 Work,
             the F2 Expression, and the F3 Manifestation. INTRO’s classes for parts of texts (on
             different levels) are subclasses of the E90 Symbolic Object. The INT3 Interrelation
-            is a E28 Conceptual Object. Types for closer description of interrelations (intertextual,
+            is an E89 Propositional Object. Types for closer description of interrelations (intertextual,
             intermedial, interpictorial relations) are sub(sub)classes of CIDOC CRM’s E55 Type.<br/>With the class INT4 Feature, also a subclass of E28 Conceptual Object, INTRO provides
             a rough classification of textual / pictorial features that quickly comes into play
             when modelling interrelations and that covers everything from formal to semantic or
@@ -180,8 +178,8 @@
             </figure><br/><br/><strong>Notions and Granularities of 'Text'</strong><br/>Depending on the theoretical framework, the notion of 'text' can be understood very
             broadly: It can cover texts as distinct entities on different ontological levels (as
             provided by LRMoo), but also large corpora of such texts. Regarding the latter, INTRO
-            makes use the notion of 'Architexts' as introduced by Gérard Genette, referring to
-            sets of texts (or images) seen as a unit (by reference to certain, e. g., national
+            makes use of the notion of 'Architexts' as introduced by Gérard Genette, referring
+            to sets of texts (or images) seen as a unit (by reference to certain, e. g., national
             contexts, timeframes, semantic features etc.).<br/>One differentiation INTRO is built on is the one between a 'passage' and a 'segment'.
             This differentiation runs parallel to the one between LRM's F2 Expression (resp. CIDOC
             CRM's E36 Visual Item) and the F3 Manifestation on the other hand, where the former
@@ -229,10 +227,10 @@
             <figure><img src="https://raw.githubusercontent.com/BOberreither/INTRO/master/img/INTRO_actualization.svg"><figcaption>Figure 3: The feature and its actualization.</figcaption>
             </figure><br/><br/><strong>The Interrelation</strong><br/>Throughout the ontology, the term 'relation' or 'interrelation' is to be understood
             in the broadest sense. The ontology instantiates relations between (textual, pictorial)
-            entities or features thereof in the class INT3 Relation. While INTRO does not pose
-            any theoretical or methodological restrictions on the notion of 'relation', it provides
-            subclasses for expressing the medial aspect (intertextual, interpictorial, intermedial)
-            and links to typologies of interrelations modelled as INT11 Type of Interrelation.<br/>Figure 4 shows different granularities of the modelling of the interrelation (by example
+            entities or features thereof in the class INT3 Interrelation. While INTRO does not
+            pose any theoretical or methodological restrictions on the notion of 'relation', it
+            provides subclasses for expressing the medial aspect (intertextual, interpictorial,
+            intermedial) and links to typologies of interrelations modelled as INT11 Type of Interrelation.<br/>Figure 4 shows different granularities of the modelling of the interrelation (by example
             of an intertextual relation) as well as different ways to specify the relation itself:
             In 4a, the link is located at its most granular level, linking not texts or passages,
             but actualized features on passages. This represents the case when an, e. g., semantic
@@ -282,7 +280,7 @@
       </div><small><a href="#top">(Back to Top)</a></small><h2 id="classes">Classes</h2>
       <div class="toc"><a href="#INT1_Passage">INT1 Passage</a><a href="#INT2_ActualizationOfFeature">INT2 Actualization of Feature</a><a href="#INT3_Interrelation">INT3 Interrelation</a><a href="#INT4_Feature">INT4 Feature</a><a href="#INT6_Architext">INT6 Architext</a><a href="#INT8_RhetoricalFeature">INT8 Rhetorical Feature</a><a href="#INT9_SemanticFeature">INT9 Semantic Feature</a><a href="#INT10_FormalFeature">INT10 Formal Feature</a><a href="#INT11_TypeOfInterrelation">INT11 Type of Interrelation</a><a href="#INT12_CommonInterrelationTypes">INT12 Common Interrelation Types</a><a href="#INT13_InterrelationInGenreTheory">INT13 Interrelation in Genre Theory</a><a href="#INT14_InterrelationInRhetoric">INT14 Interrelation in Rhetoric</a><a href="#INT15_IntertextualityInIntertextualityTheories">INT15 Intertextuality in Intertextuality Theories</a><a href="#INT16_Segment">INT16 Segment</a><a href="#INT17_FunctionalRelation">INT17 Functional Relation</a><a href="#INT18_Reference">INT18 Reference</a><a href="#INT21_TextPassage">INT21 Text Passage</a><a href="#INT22_ImageArea">INT22 Image Area</a><a href="#INT23_VisualFeature">INT23 Visual Feature</a><a href="#INT24_TextualFeature">INT24 Textual Feature</a><a href="#INT25_Color">INT25 Color</a><a href="#INT26_Shape">INT26 Shape</a><a href="#INT27_Texture">INT27 Texture</a><a href="#INT28_Ratio">INT28 Ratio</a><a href="#INT31_IntertextualRelation">INT31 Intertextual Relation</a><a href="#INT32_InterpictorialRelation">INT32 Interpictorial Relation</a><a href="#INT33_IntermedialRelation">INT33 Intermedial Relation</a><a href="#INT34_IntermedialityInIntermedialityTheories">INT34 Intermediality in Intermediality Theories</a><a href="#INT35_InterpictorialityInInterpictorialityTheories">INT35 Interpictoriality in Interpictoriality Theories</a><a href="#INT_Act">INT Act (Drama)</a><a href="#INT_Atmosphere">INT Atmosphere</a><a href="#INT_Character">INT Character</a><a href="#INT_Constellation">INT Constellation</a><a href="#INT_Definition">INT Definition</a><a href="#INT_Description">INT Description</a><a href="#INT_Discipline">INT Discipline</a><a href="#INT_Discourse">INT Discourse</a><a href="#INT_DramaticEntity">INT Dramatic Entity</a><a href="#INT_Epoch">INT Epoch</a><a href="#INT_Event">INT Event</a><a href="#INT_FigurativeFeature">INT Figurative Feature</a><a href="#INT_FigurativeMeaning">INT Figurative Meaning</a><a href="#INT_Genre">INT Genre</a><a href="#INT_GenreSpecifics">INT Genre Specifics</a><a href="#INT_IndividualCharacter">INT Individual Character</a><a href="#INT_IndividualObject">INT Individual Object</a><a href="#INT_IndividualPlace">INT Individual Place</a><a href="#INT_Interpretation">INT Interpretation</a><a href="#INT_LyricalEntity">INT Lyrical Entity</a><a href="#INT_Mood">INT Mood</a><a href="#INT_Motif">INT Motif</a><a href="#INT_Movement">INT Movement</a><a href="#INT_NarratologicalEntity">INT Narratological Entity</a><a href="#INT_Object">INT Object</a><a href="#INT_Oeuvre">INT Oeuvre</a><a href="#INT_Opinion">INT Opinion</a><a href="#INT_Place">INT Place</a><a href="#INT_Plot">INT Plot</a><a href="#INT_PragmaticFeature">INT Pragmatic Feature</a><a href="#INT_Scene">INT Scene (Drama)</a><a href="#INT_School">INT School</a><a href="#INT_SpaciallyDefinedArchitext">INT Geographically Defined Architext</a><a href="#INT_State">INT State</a><a href="#INT_Subject">INT Subject</a><a href="#INT_Subtext">INT Subtext</a><a href="#INT_Tableau">INT Tableau (Drama)</a><a href="#INT_TemporallyDefinedArchitext">INT Temporally Defined Architext</a><a href="#INT_TextType">INT Text Type</a><a href="#INT_Theme">INT Theme</a><a href="#INT_Theory">INT Theory</a><a href="#INT_TimeSpan">INT Timespan</a><a href="#INT_Topic">INT Topic</a><a href="#INT_Topos">INT Topos</a><a href="#INT_TypeOfCharacter">INT Type of Character</a><a href="#INT_TypeOfPlace">INT Type of Place</a><a href="#INT_TypicalObject">INT Typical Object</a><a href="#INT_VarietyOfText">INT Variety of Text</a><a href="#INT_Chapter">INT Chapter (Prose)</a><a href="#INT_Composition">INT Composition</a><a href="#INT_Identification">INT Identification</a><a href="#INT_Line">INT Line (Poetry)</a><a href="#INT_Paragraph">INT Paragraph (Prose)</a><a href="#INT_Part">INT Part</a><a href="#INT_Situation">INT Situation</a><a href="#INT_TextualGenreSpecifics">INT Textual Genre Specifics</a><a href="#INT_Verse">INT Verse (Poetry)</a><a href="#INT_VisualGenreSpecifics">INT Visual Genre Specifics</a></div><small><a href="#top">(Back to Top)</a></small><h3 id="INT1_Passage">INT1 Passage</h3>
       <div class="declaration">
-         <div><strong>URI: </strong>https://w3id.org/lso/intro/beta202506#INT1_Passage</div>
+         <div><strong>URI: </strong>https://w3id.org/lso/intro/v1.0#INT1_Passage</div>
          <div class="comment">The INT1 Passage is a means of modelling an identifiable part of an E73 Information
             Object or its subclasses – without that part being removed from its source Information
             Object. While INTRO focusses on textual and pictorial phenomena and relations as well
@@ -293,12 +291,13 @@
             Ontology can be utilized to specify the INT1 Passage's location.</div>
          <div><strong>Subclass of: </strong>http://www.cidoc-crm.org/cidoc-crm/E90_Symbolic_Object</div>
          <div><strong>Has subclass(es): </strong><a href="#INT21_TextPassage">INT21 Text Passage</a>, <a href="#INT22_ImageArea">INT22 Image Area</a></div>
-         <div><strong>In domain of: </strong><a href="#R10_hasPassage">R10 has passage</a>, <a href="#R10i_isPassageOf">R10i is passage of</a>, <a href="#R12i_isReferredToEntity">R12i is referred to entity</a>, <a href="#R13i_isReferringEntity">R13i is referring entity</a>, <a href="#R16i_isIncorporatedIn">R16i is incorporated in</a>, <a href="#R18_showsActualization">R18 shows actualization</a>, <a href="#R20_discusses">R20 discusses</a>, <a href="#R20i_isDiscussedIn">R20i is discussed in</a>, <a href="#R21_identifies">R21 identifies</a>, <a href="#R23_providesSupportFor">R23 provides support for</a>, <a href="#R24i_isRelatedEntity">R24i is related entity</a>, <a href="#R4_defines">R4 defines</a>, <a href="#R30_hasTextPassage">R30 has text passage</a>, <a href="#R31_hasImageArea">R31 has image area</a>, <a href="#R41_hasLocation">R41 has location</a>, <a href="#R44_hasWording">R44 has wording</a></div>
+         <div><strong>Disjoint with: </strong><a href="#INT16_Segment">INT16 Segment</a></div>
+         <div><strong>In domain of: </strong><a href="#R10_hasPassage">R10 has passage</a>, <a href="#R10i_isPassageOf">R10i is passage of</a>, <a href="#R12i_isReferredToEntity">R12i is referred to entity</a>, <a href="#R13i_isReferringEntity">R13i is referring entity</a>, <a href="#R16i_isIncorporatedIn">R16i is incorporated in</a>, <a href="#R18_showsActualization">R18 shows actualization</a>, <a href="#R20_discusses">R20 discusses</a>, <a href="#R20i_isDiscussedIn">R20i is discussed in</a>, <a href="#R21_identifies">R21 identifies</a>, <a href="#R23_providesSupportFor">R23 provides support for</a>, <a href="#R24i_isRelatedEntity">R24i is related entity</a>, <a href="#R4_defines">R4 defines</a>, <a href="#R30_hasTextPassage">R30 has text passage</a>, <a href="#R31_hasImageArea">R31 has image area</a>, <a href="#R41_hasLocation">R41 has location</a></div>
          <div><strong>In range of: </strong><a href="#R10_hasPassage">R10 has passage</a>, <a href="#R10i_isPassageOf">R10i is passage of</a>, <a href="#R12_hasReferredToEntity">R12 has referred to entity</a>, <a href="#R13_hasReferringEntity">R13 has referring entity</a>, <a href="#R16_incorporates">R16 incorporates</a>, <a href="#R18i_actualizationFoundOn">R18i actualization found on</a>, <a href="#R20_discusses">R20 discusses</a>, <a href="#R20i_isDiscussedIn">R20i is discussed in</a>, <a href="#R21i_isIdentifiedBy">R21i is identified by</a>, <a href="#R23i_supportProvidedBy">R23i support provided by</a>, <a href="#R24_hasRelatedEntity">R24 has related entity</a>, <a href="#R4i_isDefinedIn">R4i is defined in</a>, <a href="#R30i_isTextPassageOf">R30i is text passage of</a>, <a href="#R31i_isImageAreaOf">R31i is image area of</a></div>
          <div><strong>skos:broadMatch: </strong>http://www.w3.org/ns/oa#SpecificResource</div>
       </div><small><a href="#top">(Back to Top)</a></small><h3 id="INT2_ActualizationOfFeature">INT2 Actualization of Feature</h3>
       <div class="declaration">
-         <div><strong>URI: </strong>https://w3id.org/lso/intro/beta202506#INT2_ActualizationOfFeature</div>
+         <div><strong>URI: </strong>https://w3id.org/lso/intro/v1.0#INT2_ActualizationOfFeature</div>
          <div class="comment">The fact that a text or an image shows – in its own specific way – a certain feature
             (which itself is an abstract concept and takes form in many texts/images), e. g.,
             a motif, an atmosphere, a theme, a figure of speech.<br/>Examples:<br/>– the specific actualization of the motif of patricide in Sophokles' "Ödipus Rex".<br/>– the specific actualization of the Faust-subject in Goethe's "Faust".<br/>– the specific actualization of the iambic pentameter in Rilke's "Archaischer Torso
@@ -310,7 +309,7 @@
          <div><strong>In range of: </strong><a href="#R12_hasReferredToEntity">R12 has referred to entity</a>, <a href="#R13_hasReferringEntity">R13 has referring entity</a>, <a href="#R17i_featureActualizedIn">R17i feature actualized in</a>, <a href="#R18_showsActualization">R18 shows actualization</a>, <a href="#R18i_actualizationFoundOn">R18i actualization found on</a>, <a href="#R20_discusses">R20 discusses</a>, <a href="#R20i_isDiscussedIn">R20i is discussed in</a>, <a href="#R21_identifies">R21 identifies</a>, <a href="#R21i_isIdentifiedBy">R21i is identified by</a>, <a href="#R23_providesSupportFor">R23 provides support for</a>, <a href="#R23i_supportProvidedBy">R23i support provided by</a>, <a href="#R24_hasRelatedEntity">R24 has related entity</a>, <a href="#R3_constellates">R3 constellates</a>, <a href="#R3i_isConstellatedBy">R3i is constellated by</a>, <a href="#R4i_isDefinedIn">R4i is defined in</a>, <a href="#R8i_isOpinionObjectOf">R8i is opinion object of</a>, <a href="#R9_hasSubsequentActualization">R9 has subsequent actualization</a>, <a href="#R9i_hasPrecedingActualization">R9i has preceding actualization</a></div>
       </div><small><a href="#top">(Back to Top)</a></small><h3 id="INT3_Interrelation">INT3 Interrelation</h3>
       <div class="declaration">
-         <div><strong>URI: </strong>https://w3id.org/lso/intro/beta202506#INT3_Interrelation</div>
+         <div><strong>URI: </strong>https://w3id.org/lso/intro/v1.0#INT3_Interrelation</div>
          <div class="comment">This class comprises the abstract notion of a relationship between texts and/or images
             resp. parts thereof. It is the reification of an intertextual, interpictorial, or
             intermedial relation. It is not identical to, e. g., a quote, but a quote can be considered
@@ -322,17 +321,19 @@
             of the INT3 Interrelation does not exclude relations between other media.<br/>Every INT3 Interrelation has at least 2 related entities, which are texts/images (on
             any ontological level, including parts thereof) or INT2 Actualizations of Features
             on these texts/images. An INT3 Interrelation is possibly identified in an INT2 Actualization
-            of an INT Interpretation and further defined by an INT11 TypeOfInterrelation.<br/><br/>The skos:broadMatch to oa:Annotation indicates that stating the existence of an intertextual
+            of an INT Interpretation and further defined by an INT11 TypeOfInterrelation.<br/><br/>As the reification of a relation, the INT3 Interrelation is a subclass of E89 Propositional
+            Object: it makes a statement about its related entities (see R24 has related entity,
+            a sub-property of P129 is about, whose domain is E89 Propositional Object).<br/><br/>The skos:broadMatch to oa:Annotation indicates that stating the existence of an intertextual
             relation can be seen as a kind of annotation made to resources, in this case: at least
             two, the related entities (texts and/or images).</div>
-         <div><strong>Subclass of: </strong>http://www.cidoc-crm.org/cidoc-crm/E28_Conceptual_Object</div>
+         <div><strong>Subclass of: </strong>http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object</div>
          <div><strong>Has subclass(es): </strong><a href="#INT31_IntertextualRelation">INT31 Intertextual Relation</a>, <a href="#INT32_InterpictorialRelation">INT32 Interpictorial Relation</a>, <a href="#INT33_IntermedialRelation">INT33 Intermedial Relation</a></div>
          <div><strong>In domain of: </strong><a href="#R12_hasReferredToEntity">R12 has referred to entity</a>, <a href="#R13_hasReferringEntity">R13 has referring entity</a>, <a href="#R19_hasType">R19 has type</a>, <a href="#R20i_isDiscussedIn">R20i is discussed in</a>, <a href="#R21i_isIdentifiedBy">R21i is identified by</a>, <a href="#R22i_relationIsBasedOnSimilarity">R22i relation is based on similarity</a>, <a href="#R23i_supportProvidedBy">R23i support provided by</a>, <a href="#R24_hasRelatedEntity">R24 has related entity</a></div>
          <div><strong>In range of: </strong><a href="#R12i_isReferredToEntity">R12i is referred to entity</a>, <a href="#R13i_isReferringEntity">R13i is referring entity</a>, <a href="#R19i_isTypeOf">R19i is type of</a>, <a href="#R20_discusses">R20 discusses</a>, <a href="#R21_identifies">R21 identifies</a>, <a href="#R22_providesSimilarityForRelation">R22 provides similarity for relation</a>, <a href="#R23_providesSupportFor">R23 provides support for</a>, <a href="#R24i_isRelatedEntity">R24i is related entity</a></div>
          <div><strong>skos:broadMatch: </strong>http://www.w3.org/ns/oa#Annotation</div>
       </div><small><a href="#top">(Back to Top)</a></small><h3 id="INT4_Feature">INT4 Feature</h3>
       <div class="declaration">
-         <div><strong>URI: </strong>https://w3id.org/lso/intro/beta202506#INT4_Feature</div>
+         <div><strong>URI: </strong>https://w3id.org/lso/intro/v1.0#INT4_Feature</div>
          <div class="comment">This class comprises features that 'are in' or 'can be found in' or 'can be read out
             of' a text or an image. The INT4 Feature is a distinct abstract concept, itself separate
             from the text or image. INT2 Actualizations of an INT4 Feature are the individual
@@ -358,11 +359,11 @@
             as well. In fact, the INT4 Feature can be seen as a way of 'typing' the INT2 Actualization.<br/></div>
          <div><strong>Subclass of: </strong>http://www.cidoc-crm.org/cidoc-crm/E28_Conceptual_Object</div>
          <div><strong>Has subclass(es): </strong><a href="#INT8_RhetoricalFeature">INT8 Rhetorical Feature</a>, <a href="#INT9_SemanticFeature">INT9 Semantic Feature</a>, <a href="#INT10_FormalFeature">INT10 Formal Feature</a>, <a href="#INT23_VisualFeature">INT23 Visual Feature</a>, <a href="#INT24_TextualFeature">INT24 Textual Feature</a></div>
-         <div><strong>In domain of: </strong><a href="#R17i_featureActualizedIn">R17i feature actualized in</a>, <a href="#R20i_isDiscussedIn">R20i is discussed in</a>, <a href="#R22_providesSimilarityForRelation">R22 provides similarity for relation</a>, <a href="#R23i_supportProvidedBy">R23i support provided by</a>, <a href="#R4i_isDefinedIn">R4i is defined in</a>, <a href="#R43_hasSpecification">R43 has specification</a></div>
-         <div><strong>In range of: </strong><a href="#R17_actualizesFeature">R17 actualizes feature</a>, <a href="#R20_discusses">R20 discusses</a>, <a href="#R22i_relationIsBasedOnSimilarity">R22i relation is based on similarity</a>, <a href="#R23_providesSupportFor">R23 provides support for</a>, <a href="#R4_defines">R4 defines</a></div>
+         <div><strong>In domain of: </strong><a href="#R17i_featureActualizedIn">R17i feature actualized in</a>, <a href="#R20i_isDiscussedIn">R20i is discussed in</a>, <a href="#R22_providesSimilarityForRelation">R22 provides similarity for relation</a>, <a href="#R4i_isDefinedIn">R4i is defined in</a>, <a href="#R43_hasSpecification">R43 has specification</a></div>
+         <div><strong>In range of: </strong><a href="#R17_actualizesFeature">R17 actualizes feature</a>, <a href="#R20_discusses">R20 discusses</a>, <a href="#R22i_relationIsBasedOnSimilarity">R22i relation is based on similarity</a>, <a href="#R4_defines">R4 defines</a></div>
       </div><small><a href="#top">(Back to Top)</a></small><h3 id="INT6_Architext">INT6 Architext</h3>
       <div class="declaration">
-         <div><strong>URI: </strong>https://w3id.org/lso/intro/beta202506#INT6_Architext</div>
+         <div><strong>URI: </strong>https://w3id.org/lso/intro/v1.0#INT6_Architext</div>
          <div class="comment">An INT6 Architext consists in a number of texts/images which in some way give reason
             to see them as connected, related, sharing a common feature. The class is inspired
             by and closely related to the term of the same name coined by Gerard Génette.<br/>Examples for INT6 Architexts are<br/>– discourses (members sharing a discoursive element, a topic etc.)<br/>– genres (members sharing genre conventions)<br/>– a discipline (members deriving from the same disciplinary background)<br/>– an oeuvre (members created by the same person)<br/>– national literatures/arts (members whose creators share a nationality) etc.<br/><br/>The fact that a single text/image (e. g., an LRMoo F2 Expression) is part of an INT6
@@ -377,7 +378,7 @@
          <div><strong>In range of: </strong><a href="#R12_hasReferredToEntity">R12 has referred to entity</a>, <a href="#R13_hasReferringEntity">R13 has referring entity</a>, <a href="#R18i_actualizationFoundOn">R18i actualization found on</a>, <a href="#R20_discusses">R20 discusses</a>, <a href="#R20i_isDiscussedIn">R20i is discussed in</a>, <a href="#R21i_isIdentifiedBy">R21i is identified by</a>, <a href="#R23i_supportProvidedBy">R23i support provided by</a>, <a href="#R24_hasRelatedEntity">R24 has related entity</a>, <a href="#R4_defines">R4 defines</a>, <a href="#R4i_isDefinedIn">R4i is defined in</a></div>
       </div><small><a href="#top">(Back to Top)</a></small><h3 id="INT8_RhetoricalFeature">INT8 Rhetorical Feature</h3>
       <div class="declaration">
-         <div><strong>URI: </strong>https://w3id.org/lso/intro/beta202506#INT8_RhetoricalFeature</div>
+         <div><strong>URI: </strong>https://w3id.org/lso/intro/v1.0#INT8_RhetoricalFeature</div>
          <div class="comment">This class comprises every aspect of a text or an image that can be described in terms
             of rhetorics, meaning its "How?" and "To what end?". This includes features ranging
             from the occurrence of rhetorical tropes to aspects of composition in visual arts
@@ -389,7 +390,7 @@
          <div><strong>Has subclass(es): </strong><a href="#INT_FigurativeFeature">INT Figurative Feature</a>, <a href="#INT_GenreSpecifics">INT Genre Specifics</a>, <a href="#INT_PragmaticFeature">INT Pragmatic Feature</a></div>
       </div><small><a href="#top">(Back to Top)</a></small><h3 id="INT9_SemanticFeature">INT9 Semantic Feature</h3>
       <div class="declaration">
-         <div><strong>URI: </strong>https://w3id.org/lso/intro/beta202506#INT9_SemanticFeature</div>
+         <div><strong>URI: </strong>https://w3id.org/lso/intro/v1.0#INT9_SemanticFeature</div>
          <div class="comment">This class comprises every semantic aspect of a text or image, like the common notions
             of 'plot', 'sujet', or 'character'. While most subclasses are still object to refinement
             and addition – to indicate their provisional status they are not yet numbered in this
@@ -399,7 +400,7 @@
          <div><strong>Has subclass(es): </strong><a href="#INT18_Reference">INT18 Reference</a>, <a href="#INT_Atmosphere">INT Atmosphere</a>, <a href="#INT_Character">INT Character</a>, <a href="#INT_Constellation">INT Constellation</a>, <a href="#INT_Definition">INT Definition</a>, <a href="#INT_Description">INT Description</a>, <a href="#INT_Event">INT Event</a>, <a href="#INT_FigurativeMeaning">INT Figurative Meaning</a>, <a href="#INT_Interpretation">INT Interpretation</a>, <a href="#INT_Mood">INT Mood</a>, <a href="#INT_Motif">INT Motif</a>, <a href="#INT_Object">INT Object</a>, <a href="#INT_Opinion">INT Opinion</a>, <a href="#INT_Place">INT Place</a>, <a href="#INT_Plot">INT Plot</a>, <a href="#INT_State">INT State</a>, <a href="#INT_Subject">INT Subject</a>, <a href="#INT_Subtext">INT Subtext</a>, <a href="#INT_Theme">INT Theme</a>, <a href="#INT_Theory">INT Theory</a>, <a href="#INT_TimeSpan">INT Timespan</a>, <a href="#INT_Topic">INT Topic</a>, <a href="#INT_Topos">INT Topos</a>, <a href="#INT_Identification">INT Identification</a>, <a href="#INT_Situation">INT Situation</a></div>
       </div><small><a href="#top">(Back to Top)</a></small><h3 id="INT10_FormalFeature">INT10 Formal Feature</h3>
       <div class="declaration">
-         <div><strong>URI: </strong>https://w3id.org/lso/intro/beta202506#INT10_FormalFeature</div>
+         <div><strong>URI: </strong>https://w3id.org/lso/intro/v1.0#INT10_FormalFeature</div>
          <div class="comment">This class comprises subclasses for every formal aspect of a text or image. It is
             divided into the subclasses INT Part and INT Composition, the former containing elements
             possibly structured according to the latter. Instances or subclasses of these two
@@ -413,7 +414,7 @@
          <div><strong>Has subclass(es): </strong><a href="#INT_Composition">INT Composition</a>, <a href="#INT_Part">INT Part</a></div>
       </div><small><a href="#top">(Back to Top)</a></small><h3 id="INT11_TypeOfInterrelation">INT11 Type of Interrelation</h3>
       <div class="declaration">
-         <div><strong>URI: </strong>https://w3id.org/lso/intro/beta202506#INT11_TypeOfInterrelation</div>
+         <div><strong>URI: </strong>https://w3id.org/lso/intro/v1.0#INT11_TypeOfInterrelation</div>
          <div class="comment">This class provides the possibility to type interrelations. Instances of the class
             or its subclasses represent the many types interrelations can be assigned and that
             are identified, for example, in research literature, but also in greek rhetoric, in
@@ -426,31 +427,31 @@
          <div><strong>In range of: </strong><a href="#R19_hasType">R19 has type</a>, <a href="#R4_defines">R4 defines</a></div>
       </div><small><a href="#top">(Back to Top)</a></small><h3 id="INT12_CommonInterrelationTypes">INT12 Common Interrelation Types</h3>
       <div class="declaration">
-         <div><strong>URI: </strong>https://w3id.org/lso/intro/beta202506#INT12_CommonInterrelationTypes</div>
+         <div><strong>URI: </strong>https://w3id.org/lso/intro/v1.0#INT12_CommonInterrelationTypes</div>
          <div class="comment">This class comprises common concepts of interrelations such as 'citation', 'plagiarism',
             'allusion' and so on; no further definition is necessary.</div>
          <div><strong>Subclass of: </strong><a href="#INT11_TypeOfInterrelation">INT11 Type of Interrelation</a></div>
       </div><small><a href="#top">(Back to Top)</a></small><h3 id="INT13_InterrelationInGenreTheory">INT13 Interrelation in Genre Theory</h3>
       <div class="declaration">
-         <div><strong>URI: </strong>https://w3id.org/lso/intro/beta202506#INT13_InterrelationInGenreTheory</div>
+         <div><strong>URI: </strong>https://w3id.org/lso/intro/v1.0#INT13_InterrelationInGenreTheory</div>
          <div class="comment">This class comprises types of interrelations that are defined or applied in genre
             theory.</div>
          <div><strong>Subclass of: </strong><a href="#INT11_TypeOfInterrelation">INT11 Type of Interrelation</a></div>
       </div><small><a href="#top">(Back to Top)</a></small><h3 id="INT14_InterrelationInRhetoric">INT14 Interrelation in Rhetoric</h3>
       <div class="declaration">
-         <div><strong>URI: </strong>https://w3id.org/lso/intro/beta202506#INT14_InterrelationInRhetoric</div>
+         <div><strong>URI: </strong>https://w3id.org/lso/intro/v1.0#INT14_InterrelationInRhetoric</div>
          <div class="comment">This class comprises types of interrelations (most likely: intertextual relations)
             that are defined in works on rhetoric.</div>
          <div><strong>Subclass of: </strong><a href="#INT11_TypeOfInterrelation">INT11 Type of Interrelation</a></div>
       </div><small><a href="#top">(Back to Top)</a></small><h3 id="INT15_IntertextualityInIntertextualityTheories">INT15 Intertextuality in Intertextuality Theories</h3>
       <div class="declaration">
-         <div><strong>URI: </strong>https://w3id.org/lso/intro/beta202506#INT15_IntertextualityInIntertextualityTheories</div>
+         <div><strong>URI: </strong>https://w3id.org/lso/intro/v1.0#INT15_IntertextualityInIntertextualityTheories</div>
          <div class="comment">This class comprises types of intertextual relationships that are defined or applied
             in research literature dedicated to intertextuality theory.</div>
          <div><strong>Subclass of: </strong><a href="#INT11_TypeOfInterrelation">INT11 Type of Interrelation</a></div>
       </div><small><a href="#top">(Back to Top)</a></small><h3 id="INT16_Segment">INT16 Segment</h3>
       <div class="declaration">
-         <div><strong>URI: </strong>https://w3id.org/lso/intro/beta202506#INT16_Segment</div>
+         <div><strong>URI: </strong>https://w3id.org/lso/intro/v1.0#INT16_Segment</div>
          <div class="comment">This class comprises expressions (e. g., texts represented as F2 Expressions) or parts
             thereof as they are represented in F3 Manifestations. INT16 Segments can be located
             inside the F3 Manifestation by means of page numbers etc. and are thus identifiable
@@ -461,12 +462,13 @@
             R16 incorporates. It can be linked to a physical carrier (like LRMs "F5_Item") through
             P128 is carried by.</div>
          <div><strong>Subclass of: </strong>http://www.cidoc-crm.org/cidoc-crm/E90_Symbolic_Object</div>
+         <div><strong>Disjoint with: </strong><a href="#INT1_Passage">INT1 Passage</a></div>
          <div><strong>In domain of: </strong><a href="#R16_incorporates">R16 incorporates</a>, <a href="#R25_hasSegment">R25 has segment</a>, <a href="#R25i_isSegmentOf">R25i is segment of</a>, <a href="#R41_hasLocation">R41 has location</a>, <a href="#R44_hasWording">R44 has wording</a></div>
          <div><strong>In range of: </strong><a href="#R16i_isIncorporatedIn">R16i is incorporated in</a>, <a href="#R25_hasSegment">R25 has segment</a>, <a href="#R25i_isSegmentOf">R25i is segment of</a></div>
          <div><strong>skos:broadMatch: </strong>http://www.w3.org/ns/oa#SpecificResource</div>
       </div><small><a href="#top">(Back to Top)</a></small><h3 id="INT17_FunctionalRelation">INT17 Functional Relation</h3>
       <div class="declaration">
-         <div><strong>URI: </strong>https://w3id.org/lso/intro/beta202506#INT17_FunctionalRelation</div>
+         <div><strong>URI: </strong>https://w3id.org/lso/intro/v1.0#INT17_FunctionalRelation</div>
          <div class="comment">This class comprises types of interrelations between a text or an image on any ontological
             level and an architext that have merely classificatory or typological function, including
             a text/an image being a part of an architext (an epoch, a movement etc.), its initial
@@ -474,14 +476,14 @@
          <div><strong>Subclass of: </strong><a href="#INT11_TypeOfInterrelation">INT11 Type of Interrelation</a></div>
       </div><small><a href="#top">(Back to Top)</a></small><h3 id="INT18_Reference">INT18 Reference</h3>
       <div class="declaration">
-         <div><strong>URI: </strong>https://w3id.org/lso/intro/beta202506#INT18_Reference</div>
+         <div><strong>URI: </strong>https://w3id.org/lso/intro/v1.0#INT18_Reference</div>
          <div class="comment">This class comprises references to – usually: real – identifiable objects of any kind.
             It is not restricted to non-fictional texts resp. images depicting real life objects
             or events, but can be most easily applied there.<br/>The CIDOC CRM property P67 refers to is recommended to establish the link to the referred
             to entity. There are two options with slightly different semantic and alignment implications:
             P67 refers to can link this INT18 Reference (or any other feature) to the external
             entity, which would make the INT18 Reference an E89 Propositional Object (due to P67's
-            domain and range).<br/>However, this is in conflict with the conceptual similarity of the F4 Feature and
+            domain and range).<br/>However, this is in conflict with the conceptual similarity of the INT4 Feature and
             its subclasses to CIDOC CRM's E55 Type. INTRO's suggested – but in no way prescribed
             – solution is to instead attach P67 refers to to the INT2 Actualization of Feature
             linked to INT18 Reference.<br/>The scope of this class also includes references to other images/texts, if one wants
@@ -490,7 +492,7 @@
          <div><strong>Subclass of: </strong><a href="#INT_PragmaticFeature">INT Pragmatic Feature</a></div>
       </div><small><a href="#top">(Back to Top)</a></small><h3 id="INT21_TextPassage">INT21 Text Passage</h3>
       <div class="declaration">
-         <div><strong>URI: </strong>https://w3id.org/lso/intro/beta202506#INT21_TextPassage</div>
+         <div><strong>URI: </strong>https://w3id.org/lso/intro/v1.0#INT21_TextPassage</div>
          <div class="comment">The INT21 TextPassage is a means of modelling an identifiable part of an E73 Information
             Object or its subclasses – without that part being removed from its source Information
             Object.<br/>Examples:<br/>– The words 'Abandon all hope ye who enter here' from Canto III of Dante's Inferno.<br/>– The first four lines of Rilke's poem "Archaischer Torso Apollos"<br/>– The last item on a shopping list.<br/>The skos:broadMatch states that the INT21 TextPassage can be regarded as an oa:SpecificResource
@@ -498,12 +500,12 @@
             R41 hasLocation with oa:hasSelector, multiple selector options from the Web Annotation
             Ontology can be utilized to specify the INT21 TextPassage's location.</div>
          <div><strong>Subclass of: </strong><a href="#INT1_Passage">INT1 Passage</a></div>
-         <div><strong>In domain of: </strong><a href="#R30i_isTextPassageOf">R30i is text passage of</a></div>
+         <div><strong>In domain of: </strong><a href="#R30i_isTextPassageOf">R30i is text passage of</a>, <a href="#R44_hasWording">R44 has wording</a></div>
          <div><strong>In range of: </strong><a href="#R30_hasTextPassage">R30 has text passage</a></div>
          <div><strong>skos:broadMatch: </strong>http://www.w3.org/ns/oa#SpecificResource</div>
       </div><small><a href="#top">(Back to Top)</a></small><h3 id="INT22_ImageArea">INT22 Image Area</h3>
       <div class="declaration">
-         <div><strong>URI: </strong>https://w3id.org/lso/intro/beta202506#INT22_ImageArea</div>
+         <div><strong>URI: </strong>https://w3id.org/lso/intro/v1.0#INT22_ImageArea</div>
          <div class="comment">The INT22 ImageArea is a means of modelling an identifiable part of an image (itself
             modelled as an E73 Information Object or one of its subclasses) – without that part
             being removed from its source Information Object. It is not an 'image fragment'.<br/>Examples:<br/>– The part of Leonardo's Mona Lisa showing Mona Lisa's smile.<br/>– The bottom 3/5 of Rothko's painting "Orange And Yellow", dominated by the fuzzy
@@ -518,7 +520,7 @@
          <div><strong>skos:broadMatch: </strong>http://www.w3.org/ns/oa#SpecificResource</div>
       </div><small><a href="#top">(Back to Top)</a></small><h3 id="INT23_VisualFeature">INT23 Visual Feature</h3>
       <div class="declaration">
-         <div><strong>URI: </strong>https://w3id.org/lso/intro/beta202506#INT23_VisualFeature</div>
+         <div><strong>URI: </strong>https://w3id.org/lso/intro/v1.0#INT23_VisualFeature</div>
          <div class="comment">This class contains visual features of images – but possibly also of texts. Its subclasses
             are rudimentary, it is very likely that instances of other INT4 Feature subclasses
             can be classified as visual features at the same time. This might be the case for,
@@ -533,7 +535,7 @@
          <div><strong>Has subclass(es): </strong><a href="#INT25_Color">INT25 Color</a>, <a href="#INT26_Shape">INT26 Shape</a>, <a href="#INT27_Texture">INT27 Texture</a>, <a href="#INT28_Ratio">INT28 Ratio</a></div>
       </div><small><a href="#top">(Back to Top)</a></small><h3 id="INT24_TextualFeature">INT24 Textual Feature</h3>
       <div class="declaration">
-         <div><strong>URI: </strong>https://w3id.org/lso/intro/beta202506#INT24_TextualFeature</div>
+         <div><strong>URI: </strong>https://w3id.org/lso/intro/v1.0#INT24_TextualFeature</div>
          <div class="comment">This class contains textual features, usually found on texts – but possibly also on
             images. It is very likely that instances of other INT4 Feature subclasses can be classified
             as textual features at the same time.<br/>Examples:<br/>– A poetic stanza or certain type thereof.<br/>– A poetic verse or certain type thereof.<br/>– A book chapter.<br/>– A dramatic scene.<br/>– A rhyme or certain type thereof.<br/>INT24 TextualFeature's subclasses can in many cases be mapped to or supplemented by
@@ -542,29 +544,29 @@
          <div><strong>Has subclass(es): </strong><a href="#INT_Act">INT Act (Drama)</a>, <a href="#INT_DramaticEntity">INT Dramatic Entity</a>, <a href="#INT_LyricalEntity">INT Lyrical Entity</a>, <a href="#INT_Scene">INT Scene (Drama)</a>, <a href="#INT_Tableau">INT Tableau (Drama)</a>, <a href="#INT_Chapter">INT Chapter (Prose)</a>, <a href="#INT_Line">INT Line (Poetry)</a>, <a href="#INT_Paragraph">INT Paragraph (Prose)</a>, <a href="#INT_Verse">INT Verse (Poetry)</a></div>
       </div><small><a href="#top">(Back to Top)</a></small><h3 id="INT25_Color">INT25 Color</h3>
       <div class="declaration">
-         <div><strong>URI: </strong>https://w3id.org/lso/intro/beta202506#INT25_Color</div>
+         <div><strong>URI: </strong>https://w3id.org/lso/intro/v1.0#INT25_Color</div>
          <div class="comment">This class contains colors as visual features.<br/></div>
          <div><strong>Subclass of: </strong><a href="#INT23_VisualFeature">INT23 Visual Feature</a></div>
       </div><small><a href="#top">(Back to Top)</a></small><h3 id="INT26_Shape">INT26 Shape</h3>
       <div class="declaration">
-         <div><strong>URI: </strong>https://w3id.org/lso/intro/beta202506#INT26_Shape</div>
+         <div><strong>URI: </strong>https://w3id.org/lso/intro/v1.0#INT26_Shape</div>
          <div class="comment">This class contains shapes as visual features.<br/></div>
          <div><strong>Subclass of: </strong><a href="#INT23_VisualFeature">INT23 Visual Feature</a></div>
       </div><small><a href="#top">(Back to Top)</a></small><h3 id="INT27_Texture">INT27 Texture</h3>
       <div class="declaration">
-         <div><strong>URI: </strong>https://w3id.org/lso/intro/beta202506#INT27_Texture</div>
+         <div><strong>URI: </strong>https://w3id.org/lso/intro/v1.0#INT27_Texture</div>
          <div class="comment">This class contains textures as visual features (which are at the same time not to
             be understood as a material feature).<br/></div>
          <div><strong>Subclass of: </strong><a href="#INT23_VisualFeature">INT23 Visual Feature</a></div>
       </div><small><a href="#top">(Back to Top)</a></small><h3 id="INT28_Ratio">INT28 Ratio</h3>
       <div class="declaration">
-         <div><strong>URI: </strong>https://w3id.org/lso/intro/beta202506#INT28_Ratio</div>
+         <div><strong>URI: </strong>https://w3id.org/lso/intro/v1.0#INT28_Ratio</div>
          <div class="comment">This class contains ratios – like the golden ratio, or a 2 by 4 ratio – as visual
             features.<br/></div>
          <div><strong>Subclass of: </strong><a href="#INT23_VisualFeature">INT23 Visual Feature</a></div>
       </div><small><a href="#top">(Back to Top)</a></small><h3 id="INT31_IntertextualRelation">INT31 Intertextual Relation</h3>
       <div class="declaration">
-         <div><strong>URI: </strong>https://w3id.org/lso/intro/beta202506#INT31_IntertextualRelation</div>
+         <div><strong>URI: </strong>https://w3id.org/lso/intro/v1.0#INT31_IntertextualRelation</div>
          <div class="comment">This class comprises the abstract notion of a relationship between texts resp. parts
             thereof. It is not identical to, e. g., a quote, but a quote can be considered a typical
             case. However, the class does not demand any specific theoretical prerequisites for
@@ -581,7 +583,7 @@
          <div><strong>skos:broadMatch: </strong>http://www.w3.org/ns/oa#Annotation</div>
       </div><small><a href="#top">(Back to Top)</a></small><h3 id="INT32_InterpictorialRelation">INT32 Interpictorial Relation</h3>
       <div class="declaration">
-         <div><strong>URI: </strong>https://w3id.org/lso/intro/beta202506#INT32_InterpictorialRelation</div>
+         <div><strong>URI: </strong>https://w3id.org/lso/intro/v1.0#INT32_InterpictorialRelation</div>
          <div class="comment">This class comprises the abstract notion of a relationship between images resp. parts
             thereof. It is not identical to, e. g., an interpictorial quote, but such a quote
             can be considered a typical case. However, the class does not demand any specific
@@ -600,7 +602,7 @@
          <div><strong>skos:broadMatch: </strong>http://www.w3.org/ns/oa#Annotation</div>
       </div><small><a href="#top">(Back to Top)</a></small><h3 id="INT33_IntermedialRelation">INT33 Intermedial Relation</h3>
       <div class="declaration">
-         <div><strong>URI: </strong>https://w3id.org/lso/intro/beta202506#INT33_IntermedialRelation</div>
+         <div><strong>URI: </strong>https://w3id.org/lso/intro/v1.0#INT33_IntermedialRelation</div>
          <div class="comment">This class comprises the abstract notion of a relationship between images and texts,
             resp. parts thereof. It is the reification of an intermedial relation. The class does
             not demand any specific theoretical prerequisites for the relation (like any notion
@@ -625,69 +627,69 @@
          <div><strong>skos:broadMatch: </strong>http://www.w3.org/ns/oa#Annotation</div>
       </div><small><a href="#top">(Back to Top)</a></small><h3 id="INT34_IntermedialityInIntermedialityTheories">INT34 Intermediality in Intermediality Theories</h3>
       <div class="declaration">
-         <div><strong>URI: </strong>https://w3id.org/lso/intro/beta202506#INT34_IntermedialityInIntermedialityTheories</div>
+         <div><strong>URI: </strong>https://w3id.org/lso/intro/v1.0#INT34_IntermedialityInIntermedialityTheories</div>
          <div class="comment">This class comprises types of intermedial relations that can be found in research
             literature dedicated to intermediality theory.</div>
          <div><strong>Subclass of: </strong><a href="#INT11_TypeOfInterrelation">INT11 Type of Interrelation</a></div>
       </div><small><a href="#top">(Back to Top)</a></small><h3 id="INT35_InterpictorialityInInterpictorialityTheories">INT35 Interpictoriality in Interpictoriality Theories</h3>
       <div class="declaration">
-         <div><strong>URI: </strong>https://w3id.org/lso/intro/beta202506#INT35_InterpictorialityInInterpictorialityTheories</div>
+         <div><strong>URI: </strong>https://w3id.org/lso/intro/v1.0#INT35_InterpictorialityInInterpictorialityTheories</div>
          <div class="comment">This class comprises types of interpictorial relations that can be found in research
             literature dedicated to interpictoriality theory.</div>
          <div><strong>Subclass of: </strong><a href="#INT11_TypeOfInterrelation">INT11 Type of Interrelation</a></div>
       </div><small><a href="#top">(Back to Top)</a></small><h3 id="INT_Act">INT Act (Drama)</h3>
       <div class="declaration">
-         <div><strong>URI: </strong>https://w3id.org/lso/intro/beta202506#INT_Act</div>
+         <div><strong>URI: </strong>https://w3id.org/lso/intro/v1.0#INT_Act</div>
          <div><strong>Subclass of: </strong><a href="#INT24_TextualFeature">INT24 Textual Feature</a></div>
          <div><strong>Subclass of: </strong><a href="#INT_Part">INT Part</a></div>
       </div><small><a href="#top">(Back to Top)</a></small><h3 id="INT_Atmosphere">INT Atmosphere</h3>
       <div class="declaration">
-         <div><strong>URI: </strong>https://w3id.org/lso/intro/beta202506#INT_Atmosphere</div>
+         <div><strong>URI: </strong>https://w3id.org/lso/intro/v1.0#INT_Atmosphere</div>
          <div><strong>Subclass of: </strong><a href="#INT9_SemanticFeature">INT9 Semantic Feature</a></div>
       </div><small><a href="#top">(Back to Top)</a></small><h3 id="INT_Character">INT Character</h3>
       <div class="declaration">
-         <div><strong>URI: </strong>https://w3id.org/lso/intro/beta202506#INT_Character</div>
+         <div><strong>URI: </strong>https://w3id.org/lso/intro/v1.0#INT_Character</div>
          <div><strong>Subclass of: </strong><a href="#INT9_SemanticFeature">INT9 Semantic Feature</a></div>
          <div><strong>Has subclass(es): </strong><a href="#INT_IndividualCharacter">INT Individual Character</a>, <a href="#INT_TypeOfCharacter">INT Type of Character</a></div>
       </div><small><a href="#top">(Back to Top)</a></small><h3 id="INT_Constellation">INT Constellation</h3>
       <div class="declaration">
-         <div><strong>URI: </strong>https://w3id.org/lso/intro/beta202506#INT_Constellation</div>
+         <div><strong>URI: </strong>https://w3id.org/lso/intro/v1.0#INT_Constellation</div>
          <div><strong>Subclass of: </strong><a href="#INT9_SemanticFeature">INT9 Semantic Feature</a></div>
       </div><small><a href="#top">(Back to Top)</a></small><h3 id="INT_Definition">INT Definition</h3>
       <div class="declaration">
-         <div><strong>URI: </strong>https://w3id.org/lso/intro/beta202506#INT_Definition</div>
+         <div><strong>URI: </strong>https://w3id.org/lso/intro/v1.0#INT_Definition</div>
          <div><strong>Subclass of: </strong><a href="#INT9_SemanticFeature">INT9 Semantic Feature</a></div>
          <div><strong>Subclass of: </strong><a href="#INT_PragmaticFeature">INT Pragmatic Feature</a></div>
       </div><small><a href="#top">(Back to Top)</a></small><h3 id="INT_Description">INT Description</h3>
       <div class="declaration">
-         <div><strong>URI: </strong>https://w3id.org/lso/intro/beta202506#INT_Description</div>
+         <div><strong>URI: </strong>https://w3id.org/lso/intro/v1.0#INT_Description</div>
          <div><strong>Subclass of: </strong><a href="#INT9_SemanticFeature">INT9 Semantic Feature</a></div>
          <div><strong>Subclass of: </strong><a href="#INT_PragmaticFeature">INT Pragmatic Feature</a></div>
       </div><small><a href="#top">(Back to Top)</a></small><h3 id="INT_Discipline">INT Discipline</h3>
       <div class="declaration">
-         <div><strong>URI: </strong>https://w3id.org/lso/intro/beta202506#INT_Discipline</div>
+         <div><strong>URI: </strong>https://w3id.org/lso/intro/v1.0#INT_Discipline</div>
          <div><strong>Subclass of: </strong><a href="#INT6_Architext">INT6 Architext</a></div>
       </div><small><a href="#top">(Back to Top)</a></small><h3 id="INT_Discourse">INT Discourse</h3>
       <div class="declaration">
-         <div><strong>URI: </strong>https://w3id.org/lso/intro/beta202506#INT_Discourse</div>
+         <div><strong>URI: </strong>https://w3id.org/lso/intro/v1.0#INT_Discourse</div>
          <div><strong>Subclass of: </strong><a href="#INT6_Architext">INT6 Architext</a></div>
       </div><small><a href="#top">(Back to Top)</a></small><h3 id="INT_DramaticEntity">INT Dramatic Entity</h3>
       <div class="declaration">
-         <div><strong>URI: </strong>https://w3id.org/lso/intro/beta202506#INT_DramaticEntity</div>
+         <div><strong>URI: </strong>https://w3id.org/lso/intro/v1.0#INT_DramaticEntity</div>
          <div class="comment">This class comprises concepts from drama theory.</div>
          <div><strong>Subclass of: </strong><a href="#INT24_TextualFeature">INT24 Textual Feature</a></div>
          <div><strong>Subclass of: </strong><a href="#INT_TextualGenreSpecifics">INT Textual Genre Specifics</a></div>
       </div><small><a href="#top">(Back to Top)</a></small><h3 id="INT_Epoch">INT Epoch</h3>
       <div class="declaration">
-         <div><strong>URI: </strong>https://w3id.org/lso/intro/beta202506#INT_Epoch</div>
+         <div><strong>URI: </strong>https://w3id.org/lso/intro/v1.0#INT_Epoch</div>
          <div><strong>Subclass of: </strong><a href="#INT6_Architext">INT6 Architext</a></div>
       </div><small><a href="#top">(Back to Top)</a></small><h3 id="INT_Event">INT Event</h3>
       <div class="declaration">
-         <div><strong>URI: </strong>https://w3id.org/lso/intro/beta202506#INT_Event</div>
+         <div><strong>URI: </strong>https://w3id.org/lso/intro/v1.0#INT_Event</div>
          <div><strong>Subclass of: </strong><a href="#INT9_SemanticFeature">INT9 Semantic Feature</a></div>
       </div><small><a href="#top">(Back to Top)</a></small><h3 id="INT_FigurativeFeature">INT Figurative Feature</h3>
       <div class="declaration">
-         <div><strong>URI: </strong>https://w3id.org/lso/intro/beta202506#INT_FigurativeFeature</div>
+         <div><strong>URI: </strong>https://w3id.org/lso/intro/v1.0#INT_FigurativeFeature</div>
          <div class="comment">The class comprises figures of speech. Since there are countless classification systems
             (the most common dividing figures into tropoi – metaphor, metonymy ... – and schemata/figurae,
             further dividing the latter into figures of thought and figures of word, further dividing
@@ -696,15 +698,15 @@
          <div><strong>Subclass of: </strong><a href="#INT8_RhetoricalFeature">INT8 Rhetorical Feature</a></div>
       </div><small><a href="#top">(Back to Top)</a></small><h3 id="INT_FigurativeMeaning">INT Figurative Meaning</h3>
       <div class="declaration">
-         <div><strong>URI: </strong>https://w3id.org/lso/intro/beta202506#INT_FigurativeMeaning</div>
+         <div><strong>URI: </strong>https://w3id.org/lso/intro/v1.0#INT_FigurativeMeaning</div>
          <div><strong>Subclass of: </strong><a href="#INT9_SemanticFeature">INT9 Semantic Feature</a></div>
       </div><small><a href="#top">(Back to Top)</a></small><h3 id="INT_Genre">INT Genre</h3>
       <div class="declaration">
-         <div><strong>URI: </strong>https://w3id.org/lso/intro/beta202506#INT_Genre</div>
+         <div><strong>URI: </strong>https://w3id.org/lso/intro/v1.0#INT_Genre</div>
          <div><strong>Subclass of: </strong><a href="#INT6_Architext">INT6 Architext</a></div>
       </div><small><a href="#top">(Back to Top)</a></small><h3 id="INT_GenreSpecifics">INT Genre Specifics</h3>
       <div class="declaration">
-         <div><strong>URI: </strong>https://w3id.org/lso/intro/beta202506#INT_GenreSpecifics</div>
+         <div><strong>URI: </strong>https://w3id.org/lso/intro/v1.0#INT_GenreSpecifics</div>
          <div class="comment">INT Genre Specifics comprises all features that are used to assign a certain genre
             – whether textual or visual -, are typical of such a genre, or occur frequently in
             it. Instances might often be also instances of the other subclasses of INT4 Feature.
@@ -715,79 +717,79 @@
          <div><strong>Has subclass(es): </strong><a href="#INT_NarratologicalEntity">INT Narratological Entity</a>, <a href="#INT_TextualGenreSpecifics">INT Textual Genre Specifics</a>, <a href="#INT_VisualGenreSpecifics">INT Visual Genre Specifics</a></div>
       </div><small><a href="#top">(Back to Top)</a></small><h3 id="INT_IndividualCharacter">INT Individual Character</h3>
       <div class="declaration">
-         <div><strong>URI: </strong>https://w3id.org/lso/intro/beta202506#INT_IndividualCharacter</div>
+         <div><strong>URI: </strong>https://w3id.org/lso/intro/v1.0#INT_IndividualCharacter</div>
          <div><strong>Subclass of: </strong><a href="#INT_Character">INT Character</a></div>
       </div><small><a href="#top">(Back to Top)</a></small><h3 id="INT_IndividualObject">INT Individual Object</h3>
       <div class="declaration">
-         <div><strong>URI: </strong>https://w3id.org/lso/intro/beta202506#INT_IndividualObject</div>
+         <div><strong>URI: </strong>https://w3id.org/lso/intro/v1.0#INT_IndividualObject</div>
          <div><strong>Subclass of: </strong><a href="#INT_Object">INT Object</a></div>
       </div><small><a href="#top">(Back to Top)</a></small><h3 id="INT_IndividualPlace">INT Individual Place</h3>
       <div class="declaration">
-         <div><strong>URI: </strong>https://w3id.org/lso/intro/beta202506#INT_IndividualPlace</div>
+         <div><strong>URI: </strong>https://w3id.org/lso/intro/v1.0#INT_IndividualPlace</div>
          <div><strong>Subclass of: </strong><a href="#INT_Place">INT Place</a></div>
       </div><small><a href="#top">(Back to Top)</a></small><h3 id="INT_Interpretation">INT Interpretation</h3>
       <div class="declaration">
-         <div><strong>URI: </strong>https://w3id.org/lso/intro/beta202506#INT_Interpretation</div>
+         <div><strong>URI: </strong>https://w3id.org/lso/intro/v1.0#INT_Interpretation</div>
          <div class="comment">The result of a interpretative act, possibly: as perceived in research literature.
             An interpretation can identify references or actualizations or the like. A number
             of interpretations can together recreate the structure of, e. g., a research paper.
             Accordingly, apart from linking INT Interpretations to the subjects of the interpretation,
             like intertextual relations or textual features, they can be linked to each other
-            via R9 has subsequent feature resp. R9i has preceding feature.<br/>Examples:<br/>– the statement that Umberto Eco's 'The Name of the Rose' features a detective character.<br/>– the statement that Umberto Eco's 'The Name of the Rose' contains references to Arthur
+            via R9 has subsequent actualization resp. R9i has preceding actualization.<br/>Examples:<br/>– the statement that Umberto Eco's 'The Name of the Rose' features a detective character.<br/>– the statement that Umberto Eco's 'The Name of the Rose' contains references to Arthur
             Conan Doyle's 'Sherlock Holmes'.<br/>– the statement that Umberto Eco's 'The Name of the Rose' is set in the 14th century.<br/>– the conclusion that Umberto Eco's 'The Name of the Rose' belongs to the genre 'postmodern
             crime novel'.</div>
          <div><strong>Subclass of: </strong><a href="#INT9_SemanticFeature">INT9 Semantic Feature</a></div>
          <div><strong>Subclass of: </strong><a href="#INT_PragmaticFeature">INT Pragmatic Feature</a></div>
       </div><small><a href="#top">(Back to Top)</a></small><h3 id="INT_LyricalEntity">INT Lyrical Entity</h3>
       <div class="declaration">
-         <div><strong>URI: </strong>https://w3id.org/lso/intro/beta202506#INT_LyricalEntity</div>
+         <div><strong>URI: </strong>https://w3id.org/lso/intro/v1.0#INT_LyricalEntity</div>
          <div class="comment">This class comprises rhetorical concepts from lyric theory.</div>
          <div><strong>Subclass of: </strong><a href="#INT24_TextualFeature">INT24 Textual Feature</a></div>
          <div><strong>Subclass of: </strong><a href="#INT_TextualGenreSpecifics">INT Textual Genre Specifics</a></div>
       </div><small><a href="#top">(Back to Top)</a></small><h3 id="INT_Mood">INT Mood</h3>
       <div class="declaration">
-         <div><strong>URI: </strong>https://w3id.org/lso/intro/beta202506#INT_Mood</div>
+         <div><strong>URI: </strong>https://w3id.org/lso/intro/v1.0#INT_Mood</div>
          <div><strong>Subclass of: </strong><a href="#INT9_SemanticFeature">INT9 Semantic Feature</a></div>
       </div><small><a href="#top">(Back to Top)</a></small><h3 id="INT_Motif">INT Motif</h3>
       <div class="declaration">
-         <div><strong>URI: </strong>https://w3id.org/lso/intro/beta202506#INT_Motif</div>
+         <div><strong>URI: </strong>https://w3id.org/lso/intro/v1.0#INT_Motif</div>
          <div><strong>Subclass of: </strong><a href="#INT9_SemanticFeature">INT9 Semantic Feature</a></div>
       </div><small><a href="#top">(Back to Top)</a></small><h3 id="INT_Movement">INT Movement</h3>
       <div class="declaration">
-         <div><strong>URI: </strong>https://w3id.org/lso/intro/beta202506#INT_Movement</div>
+         <div><strong>URI: </strong>https://w3id.org/lso/intro/v1.0#INT_Movement</div>
          <div><strong>Subclass of: </strong><a href="#INT6_Architext">INT6 Architext</a></div>
       </div><small><a href="#top">(Back to Top)</a></small><h3 id="INT_NarratologicalEntity">INT Narratological Entity</h3>
       <div class="declaration">
-         <div><strong>URI: </strong>https://w3id.org/lso/intro/beta202506#INT_NarratologicalEntity</div>
+         <div><strong>URI: </strong>https://w3id.org/lso/intro/v1.0#INT_NarratologicalEntity</div>
          <div class="comment">This class comprises narratological concepts insofar as they correlate with rhetorical
             concepts (like 'speech', 'distance', 'perspective' etc.). Due to the plurality of
             narratological frameworks, no subclasses are provided.</div>
          <div><strong>Subclass of: </strong><a href="#INT_GenreSpecifics">INT Genre Specifics</a></div>
       </div><small><a href="#top">(Back to Top)</a></small><h3 id="INT_Object">INT Object</h3>
       <div class="declaration">
-         <div><strong>URI: </strong>https://w3id.org/lso/intro/beta202506#INT_Object</div>
+         <div><strong>URI: </strong>https://w3id.org/lso/intro/v1.0#INT_Object</div>
          <div><strong>Subclass of: </strong><a href="#INT9_SemanticFeature">INT9 Semantic Feature</a></div>
          <div><strong>Has subclass(es): </strong><a href="#INT_IndividualObject">INT Individual Object</a>, <a href="#INT_TypicalObject">INT Typical Object</a></div>
       </div><small><a href="#top">(Back to Top)</a></small><h3 id="INT_Oeuvre">INT Oeuvre</h3>
       <div class="declaration">
-         <div><strong>URI: </strong>https://w3id.org/lso/intro/beta202506#INT_Oeuvre</div>
+         <div><strong>URI: </strong>https://w3id.org/lso/intro/v1.0#INT_Oeuvre</div>
          <div><strong>Subclass of: </strong><a href="#INT6_Architext">INT6 Architext</a></div>
       </div><small><a href="#top">(Back to Top)</a></small><h3 id="INT_Opinion">INT Opinion</h3>
       <div class="declaration">
-         <div><strong>URI: </strong>https://w3id.org/lso/intro/beta202506#INT_Opinion</div>
+         <div><strong>URI: </strong>https://w3id.org/lso/intro/v1.0#INT_Opinion</div>
          <div><strong>Subclass of: </strong><a href="#INT9_SemanticFeature">INT9 Semantic Feature</a></div>
       </div><small><a href="#top">(Back to Top)</a></small><h3 id="INT_Place">INT Place</h3>
       <div class="declaration">
-         <div><strong>URI: </strong>https://w3id.org/lso/intro/beta202506#INT_Place</div>
+         <div><strong>URI: </strong>https://w3id.org/lso/intro/v1.0#INT_Place</div>
          <div><strong>Subclass of: </strong><a href="#INT9_SemanticFeature">INT9 Semantic Feature</a></div>
          <div><strong>Has subclass(es): </strong><a href="#INT_IndividualPlace">INT Individual Place</a>, <a href="#INT_TypeOfPlace">INT Type of Place</a></div>
       </div><small><a href="#top">(Back to Top)</a></small><h3 id="INT_Plot">INT Plot</h3>
       <div class="declaration">
-         <div><strong>URI: </strong>https://w3id.org/lso/intro/beta202506#INT_Plot</div>
+         <div><strong>URI: </strong>https://w3id.org/lso/intro/v1.0#INT_Plot</div>
          <div><strong>Subclass of: </strong><a href="#INT9_SemanticFeature">INT9 Semantic Feature</a></div>
       </div><small><a href="#top">(Back to Top)</a></small><h3 id="INT_PragmaticFeature">INT Pragmatic Feature</h3>
       <div class="declaration">
-         <div><strong>URI: </strong>https://w3id.org/lso/intro/beta202506#INT_PragmaticFeature</div>
+         <div><strong>URI: </strong>https://w3id.org/lso/intro/v1.0#INT_PragmaticFeature</div>
          <div class="comment">The class includes all features that can be attributed to a text or image with regard
             to the role that these works play in a plot, for example in a social, political or
             religious context. These characteristics take account of the fact that the works in
@@ -804,131 +806,133 @@
          <div><strong>Has subclass(es): </strong><a href="#INT18_Reference">INT18 Reference</a>, <a href="#INT_Definition">INT Definition</a>, <a href="#INT_Description">INT Description</a>, <a href="#INT_Interpretation">INT Interpretation</a></div>
       </div><small><a href="#top">(Back to Top)</a></small><h3 id="INT_Scene">INT Scene (Drama)</h3>
       <div class="declaration">
-         <div><strong>URI: </strong>https://w3id.org/lso/intro/beta202506#INT_Scene</div>
+         <div><strong>URI: </strong>https://w3id.org/lso/intro/v1.0#INT_Scene</div>
          <div><strong>Subclass of: </strong><a href="#INT24_TextualFeature">INT24 Textual Feature</a></div>
          <div><strong>Subclass of: </strong><a href="#INT_Part">INT Part</a></div>
       </div><small><a href="#top">(Back to Top)</a></small><h3 id="INT_School">INT School</h3>
       <div class="declaration">
-         <div><strong>URI: </strong>https://w3id.org/lso/intro/beta202506#INT_School</div>
+         <div><strong>URI: </strong>https://w3id.org/lso/intro/v1.0#INT_School</div>
          <div><strong>Subclass of: </strong><a href="#INT6_Architext">INT6 Architext</a></div>
       </div><small><a href="#top">(Back to Top)</a></small><h3 id="INT_SpaciallyDefinedArchitext">INT Geographically Defined Architext</h3>
       <div class="declaration">
-         <div><strong>URI: </strong>https://w3id.org/lso/intro/beta202506#INT_SpaciallyDefinedArchitext</div>
+         <div><strong>URI: </strong>https://w3id.org/lso/intro/v1.0#INT_SpaciallyDefinedArchitext</div>
          <div><strong>Subclass of: </strong><a href="#INT6_Architext">INT6 Architext</a></div>
       </div><small><a href="#top">(Back to Top)</a></small><h3 id="INT_State">INT State</h3>
       <div class="declaration">
-         <div><strong>URI: </strong>https://w3id.org/lso/intro/beta202506#INT_State</div>
+         <div><strong>URI: </strong>https://w3id.org/lso/intro/v1.0#INT_State</div>
          <div><strong>Subclass of: </strong><a href="#INT9_SemanticFeature">INT9 Semantic Feature</a></div>
       </div><small><a href="#top">(Back to Top)</a></small><h3 id="INT_Subject">INT Subject</h3>
       <div class="declaration">
-         <div><strong>URI: </strong>https://w3id.org/lso/intro/beta202506#INT_Subject</div>
+         <div><strong>URI: </strong>https://w3id.org/lso/intro/v1.0#INT_Subject</div>
          <div><strong>Subclass of: </strong><a href="#INT9_SemanticFeature">INT9 Semantic Feature</a></div>
       </div><small><a href="#top">(Back to Top)</a></small><h3 id="INT_Subtext">INT Subtext</h3>
       <div class="declaration">
-         <div><strong>URI: </strong>https://w3id.org/lso/intro/beta202506#INT_Subtext</div>
+         <div><strong>URI: </strong>https://w3id.org/lso/intro/v1.0#INT_Subtext</div>
          <div><strong>Subclass of: </strong><a href="#INT9_SemanticFeature">INT9 Semantic Feature</a></div>
       </div><small><a href="#top">(Back to Top)</a></small><h3 id="INT_Tableau">INT Tableau (Drama)</h3>
       <div class="declaration">
-         <div><strong>URI: </strong>https://w3id.org/lso/intro/beta202506#INT_Tableau</div>
+         <div><strong>URI: </strong>https://w3id.org/lso/intro/v1.0#INT_Tableau</div>
          <div><strong>Subclass of: </strong><a href="#INT24_TextualFeature">INT24 Textual Feature</a></div>
          <div><strong>Subclass of: </strong><a href="#INT_Part">INT Part</a></div>
       </div><small><a href="#top">(Back to Top)</a></small><h3 id="INT_TemporallyDefinedArchitext">INT Temporally Defined Architext</h3>
       <div class="declaration">
-         <div><strong>URI: </strong>https://w3id.org/lso/intro/beta202506#INT_TemporallyDefinedArchitext</div>
+         <div><strong>URI: </strong>https://w3id.org/lso/intro/v1.0#INT_TemporallyDefinedArchitext</div>
          <div><strong>Subclass of: </strong><a href="#INT6_Architext">INT6 Architext</a></div>
       </div><small><a href="#top">(Back to Top)</a></small><h3 id="INT_TextType">INT Text Type</h3>
       <div class="declaration">
-         <div><strong>URI: </strong>https://w3id.org/lso/intro/beta202506#INT_TextType</div>
+         <div><strong>URI: </strong>https://w3id.org/lso/intro/v1.0#INT_TextType</div>
          <div><strong>Subclass of: </strong><a href="#INT6_Architext">INT6 Architext</a></div>
       </div><small><a href="#top">(Back to Top)</a></small><h3 id="INT_Theme">INT Theme</h3>
       <div class="declaration">
-         <div><strong>URI: </strong>https://w3id.org/lso/intro/beta202506#INT_Theme</div>
+         <div><strong>URI: </strong>https://w3id.org/lso/intro/v1.0#INT_Theme</div>
          <div><strong>Subclass of: </strong><a href="#INT9_SemanticFeature">INT9 Semantic Feature</a></div>
       </div><small><a href="#top">(Back to Top)</a></small><h3 id="INT_Theory">INT Theory</h3>
       <div class="declaration">
-         <div><strong>URI: </strong>https://w3id.org/lso/intro/beta202506#INT_Theory</div>
+         <div><strong>URI: </strong>https://w3id.org/lso/intro/v1.0#INT_Theory</div>
          <div><strong>Subclass of: </strong><a href="#INT9_SemanticFeature">INT9 Semantic Feature</a></div>
       </div><small><a href="#top">(Back to Top)</a></small><h3 id="INT_TimeSpan">INT Timespan</h3>
       <div class="declaration">
-         <div><strong>URI: </strong>https://w3id.org/lso/intro/beta202506#INT_TimeSpan</div>
+         <div><strong>URI: </strong>https://w3id.org/lso/intro/v1.0#INT_TimeSpan</div>
          <div><strong>Subclass of: </strong><a href="#INT9_SemanticFeature">INT9 Semantic Feature</a></div>
       </div><small><a href="#top">(Back to Top)</a></small><h3 id="INT_Topic">INT Topic</h3>
       <div class="declaration">
-         <div><strong>URI: </strong>https://w3id.org/lso/intro/beta202506#INT_Topic</div>
+         <div><strong>URI: </strong>https://w3id.org/lso/intro/v1.0#INT_Topic</div>
          <div><strong>Subclass of: </strong><a href="#INT9_SemanticFeature">INT9 Semantic Feature</a></div>
       </div><small><a href="#top">(Back to Top)</a></small><h3 id="INT_Topos">INT Topos</h3>
       <div class="declaration">
-         <div><strong>URI: </strong>https://w3id.org/lso/intro/beta202506#INT_Topos</div>
+         <div><strong>URI: </strong>https://w3id.org/lso/intro/v1.0#INT_Topos</div>
          <div><strong>Subclass of: </strong><a href="#INT9_SemanticFeature">INT9 Semantic Feature</a></div>
       </div><small><a href="#top">(Back to Top)</a></small><h3 id="INT_TypeOfCharacter">INT Type of Character</h3>
       <div class="declaration">
-         <div><strong>URI: </strong>https://w3id.org/lso/intro/beta202506#INT_TypeOfCharacter</div>
+         <div><strong>URI: </strong>https://w3id.org/lso/intro/v1.0#INT_TypeOfCharacter</div>
          <div><strong>Subclass of: </strong><a href="#INT_Character">INT Character</a></div>
       </div><small><a href="#top">(Back to Top)</a></small><h3 id="INT_TypeOfPlace">INT Type of Place</h3>
       <div class="declaration">
-         <div><strong>URI: </strong>https://w3id.org/lso/intro/beta202506#INT_TypeOfPlace</div>
+         <div><strong>URI: </strong>https://w3id.org/lso/intro/v1.0#INT_TypeOfPlace</div>
          <div><strong>Subclass of: </strong><a href="#INT_Place">INT Place</a></div>
       </div><small><a href="#top">(Back to Top)</a></small><h3 id="INT_TypicalObject">INT Typical Object</h3>
       <div class="declaration">
-         <div><strong>URI: </strong>https://w3id.org/lso/intro/beta202506#INT_TypicalObject</div>
+         <div><strong>URI: </strong>https://w3id.org/lso/intro/v1.0#INT_TypicalObject</div>
          <div><strong>Subclass of: </strong><a href="#INT_Object">INT Object</a></div>
       </div><small><a href="#top">(Back to Top)</a></small><h3 id="INT_VarietyOfText">INT Variety of Text</h3>
       <div class="declaration">
-         <div><strong>URI: </strong>https://w3id.org/lso/intro/beta202506#INT_VarietyOfText</div>
+         <div><strong>URI: </strong>https://w3id.org/lso/intro/v1.0#INT_VarietyOfText</div>
          <div><strong>Subclass of: </strong><a href="#INT6_Architext">INT6 Architext</a></div>
       </div><small><a href="#top">(Back to Top)</a></small><h3 id="INT_Chapter">INT Chapter (Prose)</h3>
       <div class="declaration">
-         <div><strong>URI: </strong>https://w3id.org/lso/intro/beta202506#INT_Chapter</div>
+         <div><strong>URI: </strong>https://w3id.org/lso/intro/v1.0#INT_Chapter</div>
          <div><strong>Subclass of: </strong><a href="#INT24_TextualFeature">INT24 Textual Feature</a></div>
          <div><strong>Subclass of: </strong><a href="#INT_Part">INT Part</a></div>
       </div><small><a href="#top">(Back to Top)</a></small><h3 id="INT_Composition">INT Composition</h3>
       <div class="declaration">
-         <div><strong>URI: </strong>https://w3id.org/lso/intro/beta202506#INT_Composition</div>
+         <div><strong>URI: </strong>https://w3id.org/lso/intro/v1.0#INT_Composition</div>
          <div><strong>Subclass of: </strong><a href="#INT10_FormalFeature">INT10 Formal Feature</a></div>
       </div><small><a href="#top">(Back to Top)</a></small><h3 id="INT_Identification">INT Identification</h3>
       <div class="declaration">
-         <div><strong>URI: </strong>https://w3id.org/lso/intro/beta202506#INT_Identification</div>
+         <div><strong>URI: </strong>https://w3id.org/lso/intro/v1.0#INT_Identification</div>
          <div><strong>Subclass of: </strong><a href="#INT9_SemanticFeature">INT9 Semantic Feature</a></div>
       </div><small><a href="#top">(Back to Top)</a></small><h3 id="INT_Line">INT Line (Poetry)</h3>
       <div class="declaration">
-         <div><strong>URI: </strong>https://w3id.org/lso/intro/beta202506#INT_Line</div>
+         <div><strong>URI: </strong>https://w3id.org/lso/intro/v1.0#INT_Line</div>
          <div><strong>Subclass of: </strong><a href="#INT24_TextualFeature">INT24 Textual Feature</a></div>
          <div><strong>Subclass of: </strong><a href="#INT_Part">INT Part</a></div>
       </div><small><a href="#top">(Back to Top)</a></small><h3 id="INT_Paragraph">INT Paragraph (Prose)</h3>
       <div class="declaration">
-         <div><strong>URI: </strong>https://w3id.org/lso/intro/beta202506#INT_Paragraph</div>
+         <div><strong>URI: </strong>https://w3id.org/lso/intro/v1.0#INT_Paragraph</div>
          <div><strong>Subclass of: </strong><a href="#INT24_TextualFeature">INT24 Textual Feature</a></div>
          <div><strong>Subclass of: </strong><a href="#INT_Part">INT Part</a></div>
       </div><small><a href="#top">(Back to Top)</a></small><h3 id="INT_Part">INT Part</h3>
       <div class="declaration">
-         <div><strong>URI: </strong>https://w3id.org/lso/intro/beta202506#INT_Part</div>
+         <div><strong>URI: </strong>https://w3id.org/lso/intro/v1.0#INT_Part</div>
          <div><strong>Subclass of: </strong><a href="#INT10_FormalFeature">INT10 Formal Feature</a></div>
          <div><strong>Has subclass(es): </strong><a href="#INT_Act">INT Act (Drama)</a>, <a href="#INT_Scene">INT Scene (Drama)</a>, <a href="#INT_Tableau">INT Tableau (Drama)</a>, <a href="#INT_Chapter">INT Chapter (Prose)</a>, <a href="#INT_Line">INT Line (Poetry)</a>, <a href="#INT_Paragraph">INT Paragraph (Prose)</a>, <a href="#INT_Verse">INT Verse (Poetry)</a></div>
       </div><small><a href="#top">(Back to Top)</a></small><h3 id="INT_Situation">INT Situation</h3>
       <div class="declaration">
-         <div><strong>URI: </strong>https://w3id.org/lso/intro/beta202506#INT_Situation</div>
+         <div><strong>URI: </strong>https://w3id.org/lso/intro/v1.0#INT_Situation</div>
          <div><strong>Subclass of: </strong><a href="#INT9_SemanticFeature">INT9 Semantic Feature</a></div>
       </div><small><a href="#top">(Back to Top)</a></small><h3 id="INT_TextualGenreSpecifics">INT Textual Genre Specifics</h3>
       <div class="declaration">
-         <div><strong>URI: </strong>https://w3id.org/lso/intro/beta202506#INT_TextualGenreSpecifics</div>
+         <div><strong>URI: </strong>https://w3id.org/lso/intro/v1.0#INT_TextualGenreSpecifics</div>
          <div><strong>Subclass of: </strong><a href="#INT_GenreSpecifics">INT Genre Specifics</a></div>
          <div><strong>Has subclass(es): </strong><a href="#INT_DramaticEntity">INT Dramatic Entity</a>, <a href="#INT_LyricalEntity">INT Lyrical Entity</a></div>
       </div><small><a href="#top">(Back to Top)</a></small><h3 id="INT_Verse">INT Verse (Poetry)</h3>
       <div class="declaration">
-         <div><strong>URI: </strong>https://w3id.org/lso/intro/beta202506#INT_Verse</div>
+         <div><strong>URI: </strong>https://w3id.org/lso/intro/v1.0#INT_Verse</div>
          <div><strong>Subclass of: </strong><a href="#INT24_TextualFeature">INT24 Textual Feature</a></div>
          <div><strong>Subclass of: </strong><a href="#INT_Part">INT Part</a></div>
       </div><small><a href="#top">(Back to Top)</a></small><h3 id="INT_VisualGenreSpecifics">INT Visual Genre Specifics</h3>
       <div class="declaration">
-         <div><strong>URI: </strong>https://w3id.org/lso/intro/beta202506#INT_VisualGenreSpecifics</div>
+         <div><strong>URI: </strong>https://w3id.org/lso/intro/v1.0#INT_VisualGenreSpecifics</div>
          <div><strong>Subclass of: </strong><a href="#INT_GenreSpecifics">INT Genre Specifics</a></div>
       </div><small><a href="#top">(Back to Top)</a></small><h2 id="objectProperties">Object Properties</h2>
       <div class="toc"><a href="#R10_hasPassage">R10 has passage</a><a href="#R10i_isPassageOf">R10i is passage of</a><a href="#R12_hasReferredToEntity">R12 has referred to entity</a><a href="#R12i_isReferredToEntity">R12i is referred to entity</a><a href="#R13_hasReferringEntity">R13 has referring entity</a><a href="#R13i_isReferringEntity">R13i is referring entity</a><a href="#R16_incorporates">R16 incorporates</a><a href="#R16i_isIncorporatedIn">R16i is incorporated in</a><a href="#R17_actualizesFeature">R17 actualizes feature</a><a href="#R17i_featureActualizedIn">R17i feature actualized in</a><a href="#R18_showsActualization">R18 shows actualization</a><a href="#R18i_actualizationFoundOn">R18i actualization found on</a><a href="#R19_hasType">R19 has type</a><a href="#R19i_isTypeOf">R19i is type of</a><a href="#R20_discusses">R20 discusses</a><a href="#R20i_isDiscussedIn">R20i is discussed in</a><a href="#R21_identifies">R21 identifies</a><a href="#R21i_isIdentifiedBy">R21i is identified by</a><a href="#R22_providesSimilarityForRelation">R22 provides similarity for relation</a><a href="#R22i_relationIsBasedOnSimilarity">R22i relation is based on similarity</a><a href="#R23_providesSupportFor">R23 provides support for</a><a href="#R23i_supportProvidedBy">R23i support provided by</a><a href="#R24_hasRelatedEntity">R24 has related entity</a><a href="#R24i_isRelatedEntity">R24i is related entity</a><a href="#R25_hasSegment">R25 has segment</a><a href="#R25i_isSegmentOf">R25i is segment of</a><a href="#R3_constellates">R3 constellates</a><a href="#R3i_isConstellatedBy">R3i is constellated by</a><a href="#R4_defines">R4 defines</a><a href="#R4i_isDefinedIn">R4i is defined in</a><a href="#R8_hasOpinionObject">R8 has opinion object</a><a href="#R8i_isOpinionObjectOf">R8i is opinion object of</a><a href="#R9_hasSubsequentActualization">R9 has subsequent actualization</a><a href="#R9i_hasPrecedingActualization">R9i has preceding actualization</a><a href="#R30_hasTextPassage">R30 has text passage</a><a href="#R30i_isTextPassageOf">R30i is text passage of</a><a href="#R31_hasImageArea">R31 has image area</a><a href="#R31i_isImageAreaOf">R31i is image area of</a></div><small><a href="#top">(Back to Top)</a></small><h3 id="R10_hasPassage">R10 has passage</h3>
       <div class="declaration">
-         <div><strong>URI: </strong>https://w3id.org/lso/intro/beta202506#R10_hasPassage</div>
-         <div class="comment">Links a text or an image – usually: a work or an expression – to an INT1 Passage from
-            that text or image, e. g., a book to a passage on page three of this book, or a painting
-            to an area on this paining.</div>
+         <div><strong>URI: </strong>https://w3id.org/lso/intro/v1.0#R10_hasPassage</div>
+         <div class="comment">Links a text or an image – usually: an expression – to an INT1 Passage from that text
+            or image, e. g., a text to a passage of this text, or a painting to an area on this
+            painting. Including INT1 Passage in the domain allows declaring that a passage contains
+            (smaller) passages.</div>
+         <div><strong>Subproperty of: </strong>http://www.cidoc-crm.org/cidoc-crm/P106_is_composed_of</div>
          <div><strong>Has Subproperty / Subproperties: </strong><a href="#R30_hasTextPassage">R30 has text passage</a>, <a href="#R31_hasImageArea">R31 has image area</a></div>
          <div><strong>Inverse Property: </strong><a href="#R10i_isPassageOf">R10i is passage of</a></div>
          <div><strong>Domain: </strong>http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object, <a href="#INT1_Passage">INT1 Passage</a></div>
@@ -936,7 +940,8 @@
          <div><strong>Type: </strong>TransitiveProperty</div>
       </div><small><a href="#top">(Back to Top)</a></small><h3 id="R10i_isPassageOf">R10i is passage of</h3>
       <div class="declaration">
-         <div><strong>URI: </strong>https://w3id.org/lso/intro/beta202506#R10i_isPassageOf</div>
+         <div><strong>URI: </strong>https://w3id.org/lso/intro/v1.0#R10i_isPassageOf</div>
+         <div><strong>Subproperty of: </strong>http://www.cidoc-crm.org/cidoc-crm/P106i_forms_part_of</div>
          <div><strong>Has Subproperty / Subproperties: </strong><a href="#R30i_isTextPassageOf">R30i is text passage of</a>, <a href="#R31i_isImageAreaOf">R31i is image area of</a></div>
          <div><strong>Inverse Property: </strong><a href="#R10_hasPassage">R10 has passage</a></div>
          <div><strong>Domain: </strong><a href="#INT1_Passage">INT1 Passage</a></div>
@@ -944,7 +949,7 @@
          <div><strong>Type: </strong>TransitiveProperty</div>
       </div><small><a href="#top">(Back to Top)</a></small><h3 id="R12_hasReferredToEntity">R12 has referred to entity</h3>
       <div class="declaration">
-         <div><strong>URI: </strong>https://w3id.org/lso/intro/beta202506#R12_hasReferredToEntity</div>
+         <div><strong>URI: </strong>https://w3id.org/lso/intro/v1.0#R12_hasReferredToEntity</div>
          <div class="comment">Links an INT3 Interrelation to the entity referred to in the relationship (a text
             or image on any ontological level or a feature actualized in the text resp. image
             in question).</div>
@@ -954,14 +959,14 @@
          <div><strong>Range: </strong>http://iflastandards.info/ns/lrm/lrmoo/F1_Work, http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object, <a href="#INT1_Passage">INT1 Passage</a>, <a href="#INT2_ActualizationOfFeature">INT2 Actualization of Feature</a>, <a href="#INT6_Architext">INT6 Architext</a></div>
       </div><small><a href="#top">(Back to Top)</a></small><h3 id="R12i_isReferredToEntity">R12i is referred to entity</h3>
       <div class="declaration">
-         <div><strong>URI: </strong>https://w3id.org/lso/intro/beta202506#R12i_isReferredToEntity</div>
+         <div><strong>URI: </strong>https://w3id.org/lso/intro/v1.0#R12i_isReferredToEntity</div>
          <div><strong>Subproperty of: </strong><a href="#R24i_isRelatedEntity">R24i is related entity</a></div>
          <div><strong>Inverse Property: </strong><a href="#R12_hasReferredToEntity">R12 has referred to entity</a></div>
          <div><strong>Domain: </strong>http://iflastandards.info/ns/lrm/lrmoo/F1_Work, http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object, <a href="#INT1_Passage">INT1 Passage</a>, <a href="#INT2_ActualizationOfFeature">INT2 Actualization of Feature</a>, <a href="#INT6_Architext">INT6 Architext</a></div>
          <div><strong>Range: </strong><a href="#INT3_Interrelation">INT3 Interrelation</a></div>
       </div><small><a href="#top">(Back to Top)</a></small><h3 id="R13_hasReferringEntity">R13 has referring entity</h3>
       <div class="declaration">
-         <div><strong>URI: </strong>https://w3id.org/lso/intro/beta202506#R13_hasReferringEntity</div>
+         <div><strong>URI: </strong>https://w3id.org/lso/intro/v1.0#R13_hasReferringEntity</div>
          <div class="comment">Links an INT3 Interrelation to a referring entity (a text or image on any ontological
             level or a feature actualized in the text resp. image in question).</div>
          <div><strong>Subproperty of: </strong><a href="#R24_hasRelatedEntity">R24 has related entity</a></div>
@@ -970,28 +975,28 @@
          <div><strong>Range: </strong>http://iflastandards.info/ns/lrm/lrmoo/F1_Work, http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object, <a href="#INT1_Passage">INT1 Passage</a>, <a href="#INT2_ActualizationOfFeature">INT2 Actualization of Feature</a>, <a href="#INT6_Architext">INT6 Architext</a></div>
       </div><small><a href="#top">(Back to Top)</a></small><h3 id="R13i_isReferringEntity">R13i is referring entity</h3>
       <div class="declaration">
-         <div><strong>URI: </strong>https://w3id.org/lso/intro/beta202506#R13i_isReferringEntity</div>
+         <div><strong>URI: </strong>https://w3id.org/lso/intro/v1.0#R13i_isReferringEntity</div>
          <div><strong>Subproperty of: </strong><a href="#R24i_isRelatedEntity">R24i is related entity</a></div>
          <div><strong>Inverse Property: </strong><a href="#R13_hasReferringEntity">R13 has referring entity</a></div>
          <div><strong>Domain: </strong>http://iflastandards.info/ns/lrm/lrmoo/F1_Work, http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object, <a href="#INT1_Passage">INT1 Passage</a>, <a href="#INT2_ActualizationOfFeature">INT2 Actualization of Feature</a>, <a href="#INT6_Architext">INT6 Architext</a></div>
          <div><strong>Range: </strong><a href="#INT3_Interrelation">INT3 Interrelation</a></div>
       </div><small><a href="#top">(Back to Top)</a></small><h3 id="R16_incorporates">R16 incorporates</h3>
       <div class="declaration">
-         <div><strong>URI: </strong>https://w3id.org/lso/intro/beta202506#R16_incorporates</div>
-         <div class="comment">Links an INT16 Segment to the text or image on any ontological level (passage, expression,
-            work) it incorporates.</div>
+         <div><strong>URI: </strong>https://w3id.org/lso/intro/v1.0#R16_incorporates</div>
+         <div class="comment">Links an INT16 Segment to the text or image on different ontological levels (passage,
+            expression) it incorporates.</div>
          <div><strong>Inverse Property: </strong><a href="#R16i_isIncorporatedIn">R16i is incorporated in</a></div>
          <div><strong>Domain: </strong><a href="#INT16_Segment">INT16 Segment</a></div>
          <div><strong>Range: </strong>http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object, <a href="#INT1_Passage">INT1 Passage</a></div>
       </div><small><a href="#top">(Back to Top)</a></small><h3 id="R16i_isIncorporatedIn">R16i is incorporated in</h3>
       <div class="declaration">
-         <div><strong>URI: </strong>https://w3id.org/lso/intro/beta202506#R16i_isIncorporatedIn</div>
+         <div><strong>URI: </strong>https://w3id.org/lso/intro/v1.0#R16i_isIncorporatedIn</div>
          <div><strong>Inverse Property: </strong><a href="#R16_incorporates">R16 incorporates</a></div>
          <div><strong>Domain: </strong>http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object, <a href="#INT1_Passage">INT1 Passage</a></div>
          <div><strong>Range: </strong><a href="#INT16_Segment">INT16 Segment</a></div>
       </div><small><a href="#top">(Back to Top)</a></small><h3 id="R17_actualizesFeature">R17 actualizes feature</h3>
       <div class="declaration">
-         <div><strong>URI: </strong>https://w3id.org/lso/intro/beta202506#R17_actualizesFeature</div>
+         <div><strong>URI: </strong>https://w3id.org/lso/intro/v1.0#R17_actualizesFeature</div>
          <div class="comment">Links the specific INT2 Actualization of Feature to the (abstract concept of the)
             feature it actualizes, an INT4 Feature.</div>
          <div><strong>Inverse Property: </strong><a href="#R17i_featureActualizedIn">R17i feature actualized in</a></div>
@@ -999,13 +1004,13 @@
          <div><strong>Range: </strong><a href="#INT4_Feature">INT4 Feature</a></div>
       </div><small><a href="#top">(Back to Top)</a></small><h3 id="R17i_featureActualizedIn">R17i feature actualized in</h3>
       <div class="declaration">
-         <div><strong>URI: </strong>https://w3id.org/lso/intro/beta202506#R17i_featureActualizedIn</div>
+         <div><strong>URI: </strong>https://w3id.org/lso/intro/v1.0#R17i_featureActualizedIn</div>
          <div><strong>Inverse Property: </strong><a href="#R17_actualizesFeature">R17 actualizes feature</a></div>
          <div><strong>Domain: </strong><a href="#INT4_Feature">INT4 Feature</a></div>
          <div><strong>Range: </strong><a href="#INT2_ActualizationOfFeature">INT2 Actualization of Feature</a></div>
       </div><small><a href="#top">(Back to Top)</a></small><h3 id="R18_showsActualization">R18 shows actualization</h3>
       <div class="declaration">
-         <div><strong>URI: </strong>https://w3id.org/lso/intro/beta202506#R18_showsActualization</div>
+         <div><strong>URI: </strong>https://w3id.org/lso/intro/v1.0#R18_showsActualization</div>
          <div class="comment">Links a text or an image (on any ontological level) or an INT2 Actualization of Feature
             to an INT2 Actualization of Feature found on it. (Actualizations found on actualizations
             – this occurs in cases where, e. g., the actualization of the feature INT Individual
@@ -1016,13 +1021,13 @@
          <div><strong>Range: </strong><a href="#INT2_ActualizationOfFeature">INT2 Actualization of Feature</a></div>
       </div><small><a href="#top">(Back to Top)</a></small><h3 id="R18i_actualizationFoundOn">R18i actualization found on</h3>
       <div class="declaration">
-         <div><strong>URI: </strong>https://w3id.org/lso/intro/beta202506#R18i_actualizationFoundOn</div>
+         <div><strong>URI: </strong>https://w3id.org/lso/intro/v1.0#R18i_actualizationFoundOn</div>
          <div><strong>Inverse Property: </strong><a href="#R18_showsActualization">R18 shows actualization</a></div>
          <div><strong>Domain: </strong><a href="#INT2_ActualizationOfFeature">INT2 Actualization of Feature</a></div>
          <div><strong>Range: </strong>http://iflastandards.info/ns/lrm/lrmoo/F1_Work, http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object, <a href="#INT1_Passage">INT1 Passage</a>, <a href="#INT2_ActualizationOfFeature">INT2 Actualization of Feature</a>, <a href="#INT6_Architext">INT6 Architext</a></div>
       </div><small><a href="#top">(Back to Top)</a></small><h3 id="R19_hasType">R19 has type</h3>
       <div class="declaration">
-         <div><strong>URI: </strong>https://w3id.org/lso/intro/beta202506#R19_hasType</div>
+         <div><strong>URI: </strong>https://w3id.org/lso/intro/v1.0#R19_hasType</div>
          <div class="comment">Links an INT3 Interrelation to its INT11 Type of Interrelation.</div>
          <div><strong>Subproperty of: </strong>http://www.cidoc-crm.org/cidoc-crm/P2_has_type</div>
          <div><strong>Inverse Property: </strong><a href="#R19i_isTypeOf">R19i is type of</a></div>
@@ -1030,88 +1035,105 @@
          <div><strong>Range: </strong><a href="#INT11_TypeOfInterrelation">INT11 Type of Interrelation</a></div>
       </div><small><a href="#top">(Back to Top)</a></small><h3 id="R19i_isTypeOf">R19i is type of</h3>
       <div class="declaration">
-         <div><strong>URI: </strong>https://w3id.org/lso/intro/beta202506#R19i_isTypeOf</div>
+         <div><strong>URI: </strong>https://w3id.org/lso/intro/v1.0#R19i_isTypeOf</div>
          <div><strong>Subproperty of: </strong>http://www.cidoc-crm.org/cidoc-crm/P2i_is_type_of</div>
          <div><strong>Inverse Property: </strong><a href="#R19_hasType">R19 has type</a></div>
          <div><strong>Domain: </strong><a href="#INT11_TypeOfInterrelation">INT11 Type of Interrelation</a></div>
          <div><strong>Range: </strong><a href="#INT3_Interrelation">INT3 Interrelation</a></div>
       </div><small><a href="#top">(Back to Top)</a></small><h3 id="R20_discusses">R20 discusses</h3>
       <div class="declaration">
-         <div><strong>URI: </strong>https://w3id.org/lso/intro/beta202506#R20_discusses</div>
+         <div><strong>URI: </strong>https://w3id.org/lso/intro/v1.0#R20_discusses</div>
          <div class="comment">Links an INT2 Actualization of Feature (that is possibly, but not necessarily, specified
             by a link to the feature INT Interpretation) or a text on different levels of granularity
-            to the instance of text or image (on any ontological level) it discusses.</div>
+            (F1 Work, E73 Information Object, INT1 Passage, INT6 Architext) to the entity it discusses:
+            an instance of text or image (on any ontological level), an INT3 Interrelation, or
+            an INT4 Feature.<br/><br/>Please note: R20 is a sub-property of CIDOC CRM's P67 refers to, whose domain is E89
+            Propositional Object. Using R20 therefore makes its domain (the discussing INT1 Passage,
+            INT2 Actualization of Feature, or INT6 Architext) an instance of E89 Propositional
+            Object by inference (F1 Work and E73 Information Object already are). This should
+            be kept in mind when modelling.</div>
          <div><strong>Subproperty of: </strong>http://www.cidoc-crm.org/cidoc-crm/P67_refers_to</div>
          <div><strong>Inverse Property: </strong><a href="#R20i_isDiscussedIn">R20i is discussed in</a></div>
          <div><strong>Domain: </strong>http://iflastandards.info/ns/lrm/lrmoo/F1_Work, http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object, <a href="#INT6_Architext">INT6 Architext</a>, <a href="#INT2_ActualizationOfFeature">INT2 Actualization of Feature</a>, <a href="#INT1_Passage">INT1 Passage</a></div>
          <div><strong>Range: </strong>http://iflastandards.info/ns/lrm/lrmoo/F1_Work, http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object, <a href="#INT6_Architext">INT6 Architext</a>, <a href="#INT1_Passage">INT1 Passage</a>, <a href="#INT2_ActualizationOfFeature">INT2 Actualization of Feature</a>, <a href="#INT3_Interrelation">INT3 Interrelation</a>, <a href="#INT4_Feature">INT4 Feature</a></div>
       </div><small><a href="#top">(Back to Top)</a></small><h3 id="R20i_isDiscussedIn">R20i is discussed in</h3>
       <div class="declaration">
-         <div><strong>URI: </strong>https://w3id.org/lso/intro/beta202506#R20i_isDiscussedIn</div>
+         <div><strong>URI: </strong>https://w3id.org/lso/intro/v1.0#R20i_isDiscussedIn</div>
          <div><strong>Subproperty of: </strong>http://www.cidoc-crm.org/cidoc-crm/P67i_is_referred_to_by</div>
          <div><strong>Inverse Property: </strong><a href="#R20_discusses">R20 discusses</a></div>
          <div><strong>Domain: </strong>http://iflastandards.info/ns/lrm/lrmoo/F1_Work, http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object, <a href="#INT1_Passage">INT1 Passage</a>, <a href="#INT6_Architext">INT6 Architext</a>, <a href="#INT2_ActualizationOfFeature">INT2 Actualization of Feature</a>, <a href="#INT3_Interrelation">INT3 Interrelation</a>, <a href="#INT4_Feature">INT4 Feature</a></div>
          <div><strong>Range: </strong>http://iflastandards.info/ns/lrm/lrmoo/F1_Work, http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object, <a href="#INT1_Passage">INT1 Passage</a>, <a href="#INT6_Architext">INT6 Architext</a>, <a href="#INT2_ActualizationOfFeature">INT2 Actualization of Feature</a></div>
       </div><small><a href="#top">(Back to Top)</a></small><h3 id="R21_identifies">R21 identifies</h3>
       <div class="declaration">
-         <div><strong>URI: </strong>https://w3id.org/lso/intro/beta202506#R21_identifies</div>
+         <div><strong>URI: </strong>https://w3id.org/lso/intro/v1.0#R21_identifies</div>
          <div class="comment">Links an INT2 Actualization of Feature (that is possibly, but not necessarily, specified
             by a link to the features INT Identification or INT Interpretation) or a text on different
             levels of granularity to the INT3 Interrelation or the INT2 Actualization of Feature
-            it identifies.</div>
+            it identifies.<br/><br/>Please note: R21 is a sub-property of CIDOC CRM's P67 refers to, whose domain is E89
+            Propositional Object. Using R21 therefore makes its domain (the identifying INT1 Passage,
+            INT2 Actualization of Feature, or INT6 Architext) an instance of E89 Propositional
+            Object by inference (F1 Work and E73 Information Object already are). This should
+            be kept in mind when modelling.</div>
          <div><strong>Subproperty of: </strong>http://www.cidoc-crm.org/cidoc-crm/P67_refers_to</div>
          <div><strong>Inverse Property: </strong><a href="#R21i_isIdentifiedBy">R21i is identified by</a></div>
          <div><strong>Domain: </strong>http://iflastandards.info/ns/lrm/lrmoo/F1_Work, http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object, <a href="#INT1_Passage">INT1 Passage</a>, <a href="#INT6_Architext">INT6 Architext</a>, <a href="#INT2_ActualizationOfFeature">INT2 Actualization of Feature</a></div>
          <div><strong>Range: </strong><a href="#INT2_ActualizationOfFeature">INT2 Actualization of Feature</a>, <a href="#INT3_Interrelation">INT3 Interrelation</a></div>
       </div><small><a href="#top">(Back to Top)</a></small><h3 id="R21i_isIdentifiedBy">R21i is identified by</h3>
       <div class="declaration">
-         <div><strong>URI: </strong>https://w3id.org/lso/intro/beta202506#R21i_isIdentifiedBy</div>
+         <div><strong>URI: </strong>https://w3id.org/lso/intro/v1.0#R21i_isIdentifiedBy</div>
          <div><strong>Subproperty of: </strong>http://www.cidoc-crm.org/cidoc-crm/P67i_is_referred_to_by</div>
          <div><strong>Inverse Property: </strong><a href="#R21_identifies">R21 identifies</a></div>
          <div><strong>Domain: </strong><a href="#INT2_ActualizationOfFeature">INT2 Actualization of Feature</a>, <a href="#INT3_Interrelation">INT3 Interrelation</a></div>
          <div><strong>Range: </strong>http://iflastandards.info/ns/lrm/lrmoo/F1_Work, http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object, <a href="#INT1_Passage">INT1 Passage</a>, <a href="#INT6_Architext">INT6 Architext</a>, <a href="#INT2_ActualizationOfFeature">INT2 Actualization of Feature</a></div>
       </div><small><a href="#top">(Back to Top)</a></small><h3 id="R22_providesSimilarityForRelation">R22 provides similarity for relation</h3>
       <div class="declaration">
-         <div><strong>URI: </strong>https://w3id.org/lso/intro/beta202506#R22_providesSimilarityForRelation</div>
+         <div><strong>URI: </strong>https://w3id.org/lso/intro/v1.0#R22_providesSimilarityForRelation</div>
          <div class="comment">Links an INT4 Feature to an INT3 Interrelation it provides the similarity for, the
             similarity being the basis for the detection of the INT3 Interrelation. The property
             states that an INT3 Interrelation is based on a similarity, i. e. the actualization
             of the same INT4 Feature in two different texts/images; it constitutes an abbreviation
-            of the modelling of two INT2 Actualizations of Feature of the same F4 Feature in the
-            respective texts/images.<br/>The term 'similarity' is to be understood in the widest possible way.<br/></div>
+            of the modelling of two INT2 Actualizations of Feature of the same INT4 Feature in
+            the respective texts/images.<br/>The term 'similarity' is to be understood in the widest possible way.<br/></div>
          <div><strong>Inverse Property: </strong><a href="#R22i_relationIsBasedOnSimilarity">R22i relation is based on similarity</a></div>
          <div><strong>Domain: </strong><a href="#INT4_Feature">INT4 Feature</a></div>
          <div><strong>Range: </strong><a href="#INT3_Interrelation">INT3 Interrelation</a></div>
       </div><small><a href="#top">(Back to Top)</a></small><h3 id="R22i_relationIsBasedOnSimilarity">R22i relation is based on similarity</h3>
       <div class="declaration">
-         <div><strong>URI: </strong>https://w3id.org/lso/intro/beta202506#R22i_relationIsBasedOnSimilarity</div>
+         <div><strong>URI: </strong>https://w3id.org/lso/intro/v1.0#R22i_relationIsBasedOnSimilarity</div>
          <div><strong>Inverse Property: </strong><a href="#R22_providesSimilarityForRelation">R22 provides similarity for relation</a></div>
          <div><strong>Domain: </strong><a href="#INT3_Interrelation">INT3 Interrelation</a></div>
          <div><strong>Range: </strong><a href="#INT4_Feature">INT4 Feature</a></div>
       </div><small><a href="#top">(Back to Top)</a></small><h3 id="R23_providesSupportFor">R23 provides support for</h3>
       <div class="declaration">
-         <div><strong>URI: </strong>https://w3id.org/lso/intro/beta202506#R23_providesSupportFor</div>
+         <div><strong>URI: </strong>https://w3id.org/lso/intro/v1.0#R23_providesSupportFor</div>
          <div class="comment">Relates a source (a text on any ontological level or an actualization of a feature
             on said source) to the outcome of a receptional or interpretative act (an INT2 Actualization
-            of Feature, an INT4 Feature like an INT Interpretation, an INT3 Interrelation) to
-            support it.</div>
+            of Feature –&nbsp;possibly of an INT Interpretation – or an INT3 Interrelation) to support
+            it.<br/><br/>Please note: R23 is a sub-property of CIDOC CRM's P67i is referred to by, whose range
+            is E89 Propositional Object. Using R23 therefore makes its range an instance of E89
+            Propositional Object by inference (this applies to the INT2 Actualization of Feature;
+            for the INT3 Interrelation, this is already the case). This should be kept in mind
+            when modelling.</div>
+         <div><strong>Subproperty of: </strong>http://www.cidoc-crm.org/cidoc-crm/P67i_is_referred_to_by</div>
          <div><strong>Inverse Property: </strong><a href="#R23i_supportProvidedBy">R23i support provided by</a></div>
          <div><strong>Domain: </strong>http://iflastandards.info/ns/lrm/lrmoo/F1_Work, http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object, <a href="#INT1_Passage">INT1 Passage</a>, <a href="#INT2_ActualizationOfFeature">INT2 Actualization of Feature</a>, <a href="#INT6_Architext">INT6 Architext</a></div>
-         <div><strong>Range: </strong><a href="#INT2_ActualizationOfFeature">INT2 Actualization of Feature</a>, <a href="#INT3_Interrelation">INT3 Interrelation</a>, <a href="#INT4_Feature">INT4 Feature</a></div>
+         <div><strong>Range: </strong><a href="#INT2_ActualizationOfFeature">INT2 Actualization of Feature</a>, <a href="#INT3_Interrelation">INT3 Interrelation</a></div>
       </div><small><a href="#top">(Back to Top)</a></small><h3 id="R23i_supportProvidedBy">R23i support provided by</h3>
       <div class="declaration">
-         <div><strong>URI: </strong>https://w3id.org/lso/intro/beta202506#R23i_supportProvidedBy</div>
+         <div><strong>URI: </strong>https://w3id.org/lso/intro/v1.0#R23i_supportProvidedBy</div>
+         <div><strong>Subproperty of: </strong>http://www.cidoc-crm.org/cidoc-crm/P67_refers_to</div>
          <div><strong>Inverse Property: </strong><a href="#R23_providesSupportFor">R23 provides support for</a></div>
-         <div><strong>Domain: </strong><a href="#INT2_ActualizationOfFeature">INT2 Actualization of Feature</a>, <a href="#INT3_Interrelation">INT3 Interrelation</a>, <a href="#INT4_Feature">INT4 Feature</a></div>
+         <div><strong>Domain: </strong><a href="#INT2_ActualizationOfFeature">INT2 Actualization of Feature</a>, <a href="#INT3_Interrelation">INT3 Interrelation</a></div>
          <div><strong>Range: </strong>http://iflastandards.info/ns/lrm/lrmoo/F1_Work, http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object, <a href="#INT1_Passage">INT1 Passage</a>, <a href="#INT2_ActualizationOfFeature">INT2 Actualization of Feature</a>, <a href="#INT6_Architext">INT6 Architext</a></div>
       </div><small><a href="#top">(Back to Top)</a></small><h3 id="R24_hasRelatedEntity">R24 has related entity</h3>
       <div class="declaration">
-         <div><strong>URI: </strong>https://w3id.org/lso/intro/beta202506#R24_hasRelatedEntity</div>
+         <div><strong>URI: </strong>https://w3id.org/lso/intro/v1.0#R24_hasRelatedEntity</div>
          <div class="comment">Links any INT3 Interrelation to a text or image (on any ontological level) or INT2
             Actualization of Feature that is part of the INT3 Interrelation. The skos:broadMatch
             states that this property is a more specific version of oa:hasTarget in the sense
             that the INT3 Interrelation can be seen as an annotation, the texts/images linked
             by this relationship as their targets.</div>
+         <div><strong>Subproperty of: </strong>http://www.cidoc-crm.org/cidoc-crm/P129_is_about</div>
          <div><strong>Has Subproperty / Subproperties: </strong><a href="#R12_hasReferredToEntity">R12 has referred to entity</a>, <a href="#R13_hasReferringEntity">R13 has referring entity</a></div>
          <div><strong>Inverse Property: </strong><a href="#R24i_isRelatedEntity">R24i is related entity</a></div>
          <div><strong>Domain: </strong><a href="#INT3_Interrelation">INT3 Interrelation</a></div>
@@ -1119,28 +1141,34 @@
          <div><strong>skos:broadMatch: </strong>http://www.w3.org/ns/oa#hasTarget</div>
       </div><small><a href="#top">(Back to Top)</a></small><h3 id="R24i_isRelatedEntity">R24i is related entity</h3>
       <div class="declaration">
-         <div><strong>URI: </strong>https://w3id.org/lso/intro/beta202506#R24i_isRelatedEntity</div>
+         <div><strong>URI: </strong>https://w3id.org/lso/intro/v1.0#R24i_isRelatedEntity</div>
+         <div><strong>Subproperty of: </strong>http://www.cidoc-crm.org/cidoc-crm/P129i_is_subject_of</div>
          <div><strong>Has Subproperty / Subproperties: </strong><a href="#R12i_isReferredToEntity">R12i is referred to entity</a>, <a href="#R13i_isReferringEntity">R13i is referring entity</a></div>
          <div><strong>Inverse Property: </strong><a href="#R24_hasRelatedEntity">R24 has related entity</a></div>
          <div><strong>Domain: </strong>http://iflastandards.info/ns/lrm/lrmoo/F1_Work, http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object, <a href="#INT1_Passage">INT1 Passage</a>, <a href="#INT2_ActualizationOfFeature">INT2 Actualization of Feature</a>, <a href="#INT6_Architext">INT6 Architext</a></div>
          <div><strong>Range: </strong><a href="#INT3_Interrelation">INT3 Interrelation</a></div>
       </div><small><a href="#top">(Back to Top)</a></small><h3 id="R25_hasSegment">R25 has segment</h3>
       <div class="declaration">
-         <div><strong>URI: </strong>https://w3id.org/lso/intro/beta202506#R25_hasSegment</div>
+         <div><strong>URI: </strong>https://w3id.org/lso/intro/v1.0#R25_hasSegment</div>
          <div class="comment">Links a F3 Manifestation or an INT16 Segment to an INT16 Segment it contains (the
-            segment in turn R16 incorporates an INT1 Passage or an F2 Expression).</div>
+            segment in turn R16 incorporates an INT1 Passage or an F2 Expression). Adding the
+            INT16 Segment to the domain allows to model the fact that INT16 Segments can contain
+            each other (one representing a chapter or a text in an anthology could contain one
+            that represents a part of the chapter or text).</div>
+         <div><strong>Subproperty of: </strong>http://www.cidoc-crm.org/cidoc-crm/P106_is_composed_of</div>
          <div><strong>Inverse Property: </strong><a href="#R25i_isSegmentOf">R25i is segment of</a></div>
          <div><strong>Domain: </strong>http://iflastandards.info/ns/lrm/lrmoo/F3_Manifestation, <a href="#INT16_Segment">INT16 Segment</a></div>
          <div><strong>Range: </strong><a href="#INT16_Segment">INT16 Segment</a></div>
       </div><small><a href="#top">(Back to Top)</a></small><h3 id="R25i_isSegmentOf">R25i is segment of</h3>
       <div class="declaration">
-         <div><strong>URI: </strong>https://w3id.org/lso/intro/beta202506#R25i_isSegmentOf</div>
+         <div><strong>URI: </strong>https://w3id.org/lso/intro/v1.0#R25i_isSegmentOf</div>
+         <div><strong>Subproperty of: </strong>http://www.cidoc-crm.org/cidoc-crm/P106i_forms_part_of</div>
          <div><strong>Inverse Property: </strong><a href="#R25_hasSegment">R25 has segment</a></div>
          <div><strong>Domain: </strong><a href="#INT16_Segment">INT16 Segment</a></div>
          <div><strong>Range: </strong>http://iflastandards.info/ns/lrm/lrmoo/F3_Manifestation, <a href="#INT16_Segment">INT16 Segment</a></div>
       </div><small><a href="#top">(Back to Top)</a></small><h3 id="R3_constellates">R3 constellates</h3>
       <div class="declaration">
-         <div><strong>URI: </strong>https://w3id.org/lso/intro/beta202506#R3_constellates</div>
+         <div><strong>URI: </strong>https://w3id.org/lso/intro/v1.0#R3_constellates</div>
          <div class="comment">Links an INT2 Actualization of Feature of the feature INT Constellation to the elements
             (INT2 Actualizations of Feature) that together form that constellation.</div>
          <div><strong>Inverse Property: </strong><a href="#R3i_isConstellatedBy">R3i is constellated by</a></div>
@@ -1148,47 +1176,56 @@
          <div><strong>Range: </strong><a href="#INT2_ActualizationOfFeature">INT2 Actualization of Feature</a></div>
       </div><small><a href="#top">(Back to Top)</a></small><h3 id="R3i_isConstellatedBy">R3i is constellated by</h3>
       <div class="declaration">
-         <div><strong>URI: </strong>https://w3id.org/lso/intro/beta202506#R3i_isConstellatedBy</div>
+         <div><strong>URI: </strong>https://w3id.org/lso/intro/v1.0#R3i_isConstellatedBy</div>
          <div><strong>Inverse Property: </strong><a href="#R3_constellates">R3 constellates</a></div>
          <div><strong>Domain: </strong><a href="#INT2_ActualizationOfFeature">INT2 Actualization of Feature</a></div>
          <div><strong>Range: </strong><a href="#INT2_ActualizationOfFeature">INT2 Actualization of Feature</a></div>
       </div><small><a href="#top">(Back to Top)</a></small><h3 id="R4_defines">R4 defines</h3>
       <div class="declaration">
-         <div><strong>URI: </strong>https://w3id.org/lso/intro/beta202506#R4_defines</div>
+         <div><strong>URI: </strong>https://w3id.org/lso/intro/v1.0#R4_defines</div>
          <div class="comment">Relates an actualization (usually: of the semantic feature 'INT Definition') or a
             text on any level of granularity to an INT11 Type of Interrelation, to INT4 Features,
             or to INT6 Architexts to provide them with a definition. It could, e. g., link a definition
             in Foucault's writings to the concept 'discourse' as it is represented by an instance
-            of INT6 Architext.</div>
+            of INT6 Architext.<br/><br/>Please note: R4 is a sub-property of CIDOC CRM's P67 refers to, whose domain is E89
+            Propositional Object. Using R4 therefore makes its domain (the defining INT1 Passage,
+            INT2 Actualization of Feature, or INT6 Architext) an instance of E89 Propositional
+            Object by inference (F1 Work and E73 Information Object already are). This should
+            be kept in mind when modelling.</div>
+         <div><strong>Subproperty of: </strong>http://www.cidoc-crm.org/cidoc-crm/P67_refers_to</div>
          <div><strong>Inverse Property: </strong><a href="#R4i_isDefinedIn">R4i is defined in</a></div>
          <div><strong>Domain: </strong><a href="#INT2_ActualizationOfFeature">INT2 Actualization of Feature</a>, <a href="#INT1_Passage">INT1 Passage</a>, <a href="#INT6_Architext">INT6 Architext</a>, http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object, http://iflastandards.info/ns/lrm/lrmoo/F1_Work</div>
          <div><strong>Range: </strong><a href="#INT11_TypeOfInterrelation">INT11 Type of Interrelation</a>, <a href="#INT4_Feature">INT4 Feature</a>, <a href="#INT6_Architext">INT6 Architext</a></div>
       </div><small><a href="#top">(Back to Top)</a></small><h3 id="R4i_isDefinedIn">R4i is defined in</h3>
       <div class="declaration">
-         <div><strong>URI: </strong>https://w3id.org/lso/intro/beta202506#R4i_isDefinedIn</div>
+         <div><strong>URI: </strong>https://w3id.org/lso/intro/v1.0#R4i_isDefinedIn</div>
+         <div><strong>Subproperty of: </strong>http://www.cidoc-crm.org/cidoc-crm/P67i_is_referred_to_by</div>
          <div><strong>Inverse Property: </strong><a href="#R4_defines">R4 defines</a></div>
          <div><strong>Domain: </strong><a href="#INT11_TypeOfInterrelation">INT11 Type of Interrelation</a>, <a href="#INT4_Feature">INT4 Feature</a>, <a href="#INT6_Architext">INT6 Architext</a></div>
          <div><strong>Range: </strong><a href="#INT2_ActualizationOfFeature">INT2 Actualization of Feature</a>, <a href="#INT1_Passage">INT1 Passage</a>, <a href="#INT6_Architext">INT6 Architext</a>, http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object, http://iflastandards.info/ns/lrm/lrmoo/F1_Work</div>
       </div><small><a href="#top">(Back to Top)</a></small><h3 id="R8_hasOpinionObject">R8 has opinion object</h3>
       <div class="declaration">
-         <div><strong>URI: </strong>https://w3id.org/lso/intro/beta202506#R8_hasOpinionObject</div>
+         <div><strong>URI: </strong>https://w3id.org/lso/intro/v1.0#R8_hasOpinionObject</div>
          <div class="comment">Links an INT2 Actualization of Feature that is possibly, but not necessarily, linked
             to the feature INT Opinion, to an opinion object – for example an opinion with the
-            theme fashion (to make it an opinion about fashion).</div>
+            theme fashion (to make it an opinion about fashion).<br/><br/>Please note: R8 is a sub-property of CIDOC CRM's P67 refers to, whose domain is E89
+            Propositional Object. Using R8 therefore makes its domain (the INT2 Actualization
+            of Feature) an instance of E89 Propositional Object by inference. This should be kept
+            in mind when modelling.</div>
          <div><strong>Subproperty of: </strong>http://www.cidoc-crm.org/cidoc-crm/P67_refers_to</div>
          <div><strong>Inverse Property: </strong><a href="#R8i_isOpinionObjectOf">R8i is opinion object of</a></div>
          <div><strong>Domain: </strong><a href="#INT2_ActualizationOfFeature">INT2 Actualization of Feature</a></div>
          <div><strong>Range: </strong>http://www.w3.org/2002/07/owl#Thing</div>
       </div><small><a href="#top">(Back to Top)</a></small><h3 id="R8i_isOpinionObjectOf">R8i is opinion object of</h3>
       <div class="declaration">
-         <div><strong>URI: </strong>https://w3id.org/lso/intro/beta202506#R8i_isOpinionObjectOf</div>
+         <div><strong>URI: </strong>https://w3id.org/lso/intro/v1.0#R8i_isOpinionObjectOf</div>
          <div><strong>Subproperty of: </strong>http://www.cidoc-crm.org/cidoc-crm/P67i_is_referred_to_by</div>
          <div><strong>Inverse Property: </strong><a href="#R8_hasOpinionObject">R8 has opinion object</a></div>
          <div><strong>Domain: </strong>http://www.w3.org/2002/07/owl#Thing</div>
          <div><strong>Range: </strong><a href="#INT2_ActualizationOfFeature">INT2 Actualization of Feature</a></div>
       </div><small><a href="#top">(Back to Top)</a></small><h3 id="R9_hasSubsequentActualization">R9 has subsequent actualization</h3>
       <div class="declaration">
-         <div><strong>URI: </strong>https://w3id.org/lso/intro/beta202506#R9_hasSubsequentActualization</div>
+         <div><strong>URI: </strong>https://w3id.org/lso/intro/v1.0#R9_hasSubsequentActualization</div>
          <div class="comment">Links an INT2 Actualization of Feature to another INT4 following it (logically or
             chronologically); this object property was mostly designed for the representation
             of the structure of research papers, where one definition, interpretation, etc., follows
@@ -1199,17 +1236,16 @@
          <div><strong>Type: </strong>TransitiveProperty</div>
       </div><small><a href="#top">(Back to Top)</a></small><h3 id="R9i_hasPrecedingActualization">R9i has preceding actualization</h3>
       <div class="declaration">
-         <div><strong>URI: </strong>https://w3id.org/lso/intro/beta202506#R9i_hasPrecedingActualization</div>
+         <div><strong>URI: </strong>https://w3id.org/lso/intro/v1.0#R9i_hasPrecedingActualization</div>
          <div><strong>Inverse Property: </strong><a href="#R9_hasSubsequentActualization">R9 has subsequent actualization</a></div>
          <div><strong>Domain: </strong><a href="#INT2_ActualizationOfFeature">INT2 Actualization of Feature</a></div>
          <div><strong>Range: </strong><a href="#INT2_ActualizationOfFeature">INT2 Actualization of Feature</a></div>
          <div><strong>Type: </strong>TransitiveProperty</div>
       </div><small><a href="#top">(Back to Top)</a></small><h3 id="R30_hasTextPassage">R30 has text passage</h3>
       <div class="declaration">
-         <div><strong>URI: </strong>https://w3id.org/lso/intro/beta202506#R30_hasTextPassage</div>
-         <div class="comment">Links (usually, exceptions are easily conceivable) a text, like a work or an expression,
-            to an INT21 Text Passage from that text, e. g., a book to a passage on page three
-            of this book.</div>
+         <div><strong>URI: </strong>https://w3id.org/lso/intro/v1.0#R30_hasTextPassage</div>
+         <div class="comment">Links (usually, exceptions are easily conceivable) a text, like an expression, to
+            an INT21 Text Passage from that text, e. g., a text to a passage of this text.</div>
          <div><strong>Subproperty of: </strong><a href="#R10_hasPassage">R10 has passage</a></div>
          <div><strong>Inverse Property: </strong><a href="#R30i_isTextPassageOf">R30i is text passage of</a></div>
          <div><strong>Domain: </strong>http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object, <a href="#INT1_Passage">INT1 Passage</a></div>
@@ -1217,7 +1253,7 @@
          <div><strong>Type: </strong>TransitiveProperty</div>
       </div><small><a href="#top">(Back to Top)</a></small><h3 id="R30i_isTextPassageOf">R30i is text passage of</h3>
       <div class="declaration">
-         <div><strong>URI: </strong>https://w3id.org/lso/intro/beta202506#R30i_isTextPassageOf</div>
+         <div><strong>URI: </strong>https://w3id.org/lso/intro/v1.0#R30i_isTextPassageOf</div>
          <div><strong>Subproperty of: </strong><a href="#R10i_isPassageOf">R10i is passage of</a></div>
          <div><strong>Inverse Property: </strong><a href="#R30_hasTextPassage">R30 has text passage</a></div>
          <div><strong>Domain: </strong><a href="#INT21_TextPassage">INT21 Text Passage</a></div>
@@ -1225,7 +1261,7 @@
          <div><strong>Type: </strong>TransitiveProperty</div>
       </div><small><a href="#top">(Back to Top)</a></small><h3 id="R31_hasImageArea">R31 has image area</h3>
       <div class="declaration">
-         <div><strong>URI: </strong>https://w3id.org/lso/intro/beta202506#R31_hasImageArea</div>
+         <div><strong>URI: </strong>https://w3id.org/lso/intro/v1.0#R31_hasImageArea</div>
          <div class="comment">Links (usually, eceptions are easily conceivable) an image, like a work or an expression,
             to an INT22 Image Area from that image, e. g., a painting to an area on this paining.</div>
          <div><strong>Subproperty of: </strong><a href="#R10_hasPassage">R10 has passage</a></div>
@@ -1235,7 +1271,7 @@
          <div><strong>Type: </strong>TransitiveProperty</div>
       </div><small><a href="#top">(Back to Top)</a></small><h3 id="R31i_isImageAreaOf">R31i is image area of</h3>
       <div class="declaration">
-         <div><strong>URI: </strong>https://w3id.org/lso/intro/beta202506#R31i_isImageAreaOf</div>
+         <div><strong>URI: </strong>https://w3id.org/lso/intro/v1.0#R31i_isImageAreaOf</div>
          <div><strong>Subproperty of: </strong><a href="#R10i_isPassageOf">R10i is passage of</a></div>
          <div><strong>Inverse Property: </strong><a href="#R31_hasImageArea">R31 has image area</a></div>
          <div><strong>Domain: </strong><a href="#INT22_ImageArea">INT22 Image Area</a></div>
@@ -1244,14 +1280,14 @@
       </div><small><a href="#top">(Back to Top)</a></small><h2 id="dataProperties">Data Properties</h2>
       <div class="toc"><a href="#R40_hasBibliographicalData">R40 has bibliographical data</a><a href="#R41_hasLocation">R41 has location</a><a href="#R42_hasParaphraseOrDefinition">R42 has paraphrase or definition</a><a href="#R43_hasSpecification">R43 has specification</a><a href="#R44_hasWording">R44 has wording</a></div><small><a href="#top">(Back to Top)</a></small><h3 id="R40_hasBibliographicalData">R40 has bibliographical data</h3>
       <div class="declaration">
-         <div><strong>URI: </strong>https://w3id.org/lso/intro/beta202506#R40_hasBibliographicalData</div>
+         <div><strong>URI: </strong>https://w3id.org/lso/intro/v1.0#R40_hasBibliographicalData</div>
          <div class="comment">Links a text or image (work, expression, ...) to its bibliographical data, represented
             as a data string. (A shortcut for the actual modelling of bibliographical data.)</div>
          <div><strong>Domain: </strong>http://iflastandards.info/ns/lrm/lrmoo/F1_Work, http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object</div>
          <div><strong>Range: </strong>string</div>
       </div><small><a href="#top">(Back to Top)</a></small><h3 id="R41_hasLocation">R41 has location</h3>
       <div class="declaration">
-         <div><strong>URI: </strong>https://w3id.org/lso/intro/beta202506#R41_hasLocation</div>
+         <div><strong>URI: </strong>https://w3id.org/lso/intro/v1.0#R41_hasLocation</div>
          <div class="comment">Defines the location of an INT16 Segment in, e. g., a F3 Manifestation, e. g., by
             giving page or paragraph numbers. Can be replaced by oa:hasSelector to specify the
             location utilizing the multiple options provided by the Web Annotation Ontology<br/>(https://www.w3.org/TR/annotation-vocab/#web-annotation-ontology).</div>
@@ -1260,24 +1296,57 @@
          <div><strong>skos:broadMatch: </strong>http://www.w3.org/ns/oa#hasSelector</div>
       </div><small><a href="#top">(Back to Top)</a></small><h3 id="R42_hasParaphraseOrDefinition">R42 has paraphrase or definition</h3>
       <div class="declaration">
-         <div><strong>URI: </strong>https://w3id.org/lso/intro/beta202506#R42_hasParaphraseOrDefinition</div>
+         <div><strong>URI: </strong>https://w3id.org/lso/intro/v1.0#R42_hasParaphraseOrDefinition</div>
          <div class="comment">Links pretty much everything to a data string providing a definition for it. (A shortcut
-            for modelling the definition as an INT2 Actualization of Feature.)</div>
+            for modelling the definition as an INT2 Actualization of Feature.) As P3.1 has type
+            cannot be expressed in OWL, sub-properties of P3 are used instead.</div>
+         <div><strong>Subproperty of: </strong>http://www.cidoc-crm.org/cidoc-crm/P3_has_note</div>
          <div><strong>Range: </strong>string</div>
       </div><small><a href="#top">(Back to Top)</a></small><h3 id="R43_hasSpecification">R43 has specification</h3>
       <div class="declaration">
-         <div><strong>URI: </strong>https://w3id.org/lso/intro/beta202506#R43_hasSpecification</div>
-         <div class="comment">Links a feature to a data string defining or describing it more closely.</div>
+         <div><strong>URI: </strong>https://w3id.org/lso/intro/v1.0#R43_hasSpecification</div>
+         <div class="comment">Links a feature to a data string defining or describing it more closely. As P3.1 has
+            type cannot be expressed in OWL, sub-properties of P3 are used instead.</div>
+         <div><strong>Subproperty of: </strong>http://www.cidoc-crm.org/cidoc-crm/P3_has_note</div>
          <div><strong>Domain: </strong><a href="#INT4_Feature">INT4 Feature</a></div>
          <div><strong>Range: </strong>string</div>
       </div><small><a href="#top">(Back to Top)</a></small><h3 id="R44_hasWording">R44 has wording</h3>
       <div class="declaration">
-         <div><strong>URI: </strong>https://w3id.org/lso/intro/beta202506#R44_hasWording</div>
+         <div><strong>URI: </strong>https://w3id.org/lso/intro/v1.0#R44_hasWording</div>
          <div class="comment">Links an INT21 Text Passage or an INT16 Segment to a data string providing its exact
             wording.</div>
-         <div><strong>Domain: </strong><a href="#INT16_Segment">INT16 Segment</a>, <a href="#INT1_Passage">INT1 Passage</a></div>
+         <div><strong>Subproperty of: </strong>http://www.cidoc-crm.org/cidoc-crm/P190_has_symbolic_content</div>
+         <div><strong>Domain: </strong><a href="#INT16_Segment">INT16 Segment</a>, <a href="#INT21_TextPassage">INT21 Text Passage</a></div>
+         <div><strong>Range: </strong>string</div>
       </div><small><a href="#top">(Back to Top)</a></small><h2 id="versionHistory">Version History</h2>
-      <div class="toc"><a href="#2025-06-01">INTRO beta202506</a><a href="#2024-08-01">INTRO beta202408</a><a href="#2023-04-01">INTRO beta202304</a><a href="#2022-10-01">INTRO beta202210</a><a href="#2020-01-01">INTRO beta202001</a></div><small><a href="#top">(Back to Top)</a></small><h3 id="2025-06-01">INTRO beta202506</h3>
+      <div class="toc"><a href="#2026-11-07">INTRO v1.0</a><a href="#2025-06-01">INTRO beta202506</a><a href="#2024-08-01">INTRO beta202408</a><a href="#2023-04-01">INTRO beta202304</a><a href="#2022-10-01">INTRO beta202210</a><a href="#2020-01-01">INTRO beta202001</a></div><small><a href="#top">(Back to Top)</a></small><h3 id="2026-11-07">INTRO v1.0</h3>
+      <div class="declaration">
+         <div><strong>Prior Version: </strong><a href="https://w3id.org/lso/intro/beta202506">https://w3id.org/lso/intro/beta202506</a></div>
+         <div>Changes from version beta202506 to version v1.0:<br/><br/>R10 has passage – added rdfs:subPropertyOf P106 is composed of (R10i: P106i forms
+            part of). Rationale: P106 relates an E90 Symbolic Object to a part that is itself
+            an E90 Symbolic Object, which is what an INT1 Passage is.<br/>R22 provides similarity for relation – corrected rdfs:comment (F4 Feature → INT4 Feature).<br/>R23 provides support for – added rdfs:subPropertyOf P67i is referred to by (R23i:
+            P67 refers to); removed INT4 Feature from the range of R23 and the domain of R23i;
+            adapted rdfs:comment. Rationale: the supported INT2 or INT3 refers to its source;
+            INT4 Feature would otherwise be inferred to be an E89 Propositional Object, which
+            conflicts with its closeness to E55 Type.<br/>R24 has related entity – added rdfs:subPropertyOf P129 is about (R24i: P129i is subject
+            of). Rationale: an INT3 Interrelation has the entities it relates as its subject matter.
+            R12 and R13 inherit the relation.<br/>R25 has segment – added rdfs:subPropertyOf P106 is composed of (R25i: P106i forms
+            part of). Rationale: an INT16 Segment is part of the F3 Manifestation or INT16 Segment
+            containing it. R16 incorporates is deliberately not a sub-property of P106 (nor of
+            P165): the transitive P106 would chain R25, R16, and R10 across the levels of manifestation
+            and content.<br/>R4 defines – added rdfs:subPropertyOf P67 refers to (R4i: P67i is referred to by);
+            adapted rdfs:comment. Rationale: a defining text refers to what it defines. The domain
+            equals that of R20 and R21, so the inference to E89 Propositional Object is not new.<br/>R42 has paraphrase or definition, R43 has specification – added rdfs:subPropertyOf
+            P3 has note (declared as owl:DatatypeProperty). Rationale: both are typed notes, the
+            intended use of sub-properties of P3.<br/>R44 has wording – changed domain from INT1 Passage and INT16 Segment to INT21 Text
+            Passage and INT16 Segment; added rdfs:range xsd:string; added rdfs:subPropertyOf P190
+            has symbolic content (declared as owl:DatatypeProperty). Rationale: P190 links an
+            E90 Symbolic Object to its content as a string, which is the exact wording.<br/><br/>INT3 Interrelation – changed superclass from E28 Conceptual Object to E89 Propositional
+            Object; adapted dc:description. Rationale: since R24 is a sub-property of P129, every
+            INT3 Interrelation was inferred to be an E89 anyway; this makes it explicit.<br/>INT1 Passage – declared owl:disjointWith INT16 Segment. Rationale: they belong to
+            different levels (text/image vs. manifestation); this prevents an individual from
+            being both a passage and a segment.<br/></div>
+      </div><small><a href="#top">(Back to Top)</a></small><h3 id="2025-06-01">INTRO beta202506</h3>
       <div class="declaration">
          <div><strong>Prior Version: </strong><a href="https://w3id.org/lso/intro/beta202408">https://w3id.org/lso/intro/beta202408</a></div>
          <div>Changes from version beta202408 to version beta202506:<br/>dc:description extended, added figures 1-4<br/><br/>R20 discusses – changed domain from INT Interpretation to INT1 Passage, INT2 ActualizationOfFeature,
@@ -1290,7 +1359,7 @@
             F1 Work, and E73 Information Object; adapted rdfs:comment accordingly (corresponding
             change to R4i is defined in)<br/>R8 has opinion object – changed domain from INT Opinion to INT2 Actualization of Feature,
             adapted rdfs:comment accordingly (corresponding change to R8i is opinion object of)<br/><br/>INT1 Passage – updated rdfs:comment<br/>INT2 Actualization of Feature – updated rdfs:comment<br/>INT3 Interrelation – updated rdfs:comment<br/>INT4 Feature – updated rdfs:comment<br/>INT6 Architext – updated rdfs:comment<br/>INT11 Type of Interrelation – updated rdfs:comment<br/>INT14 Interrelation in Rhetoric – updated rdfs:comment<br/>INT15 Intertextuality in Intertextuality Theories – expanded URI (no abbreviation
-            now), updated rdfs:comment<br/>INT18 Reference – removed the E89 Propositional Obect as superclass<br/>INT22 Image Area – updated rdfs:comment<br/>INT23 Visual Feature – updated rdfs:comment<br/>INT24 Textual Feature – updated rdfs:comment<br/>INT25 Color – updated rdfs:comment<br/>INT26 Shape – updated rdfs:comment<br/>INT27 Texture – updated rdfs:comment<br/>INT28 Ratio – updated rdfs:comment<br/>INT31 IntertextualRelation – updated rdfs:comment, added skos:broadmatch oa:Annotation<br/>INT32 InterpictorialRelation – updated rdfs:comment, added skos:broadmatch oa:Annotation<br/>INT33 IntermedialRelation – updated rdfs:comment<br/>INT34 IntermedialityInIntermedialityTheories – updated rdfs:comment<br/>INT35 InterpictorialityInInterpictorialityTheories – updated rdfs:comment<br/>INT Interpretation – removed the E89 Propositional Obect as superclass<br/>INT Narratological Entity – changed superclass from INT Textual Genre Specifics to
+            now), updated rdfs:comment<br/>INT18 Reference – removed the E89 Propositional Object as superclass<br/>INT22 Image Area – updated rdfs:comment<br/>INT23 Visual Feature – updated rdfs:comment<br/>INT24 Textual Feature – updated rdfs:comment<br/>INT25 Color – updated rdfs:comment<br/>INT26 Shape – updated rdfs:comment<br/>INT27 Texture – updated rdfs:comment<br/>INT28 Ratio – updated rdfs:comment<br/>INT31 IntertextualRelation – updated rdfs:comment, added skos:broadmatch oa:Annotation<br/>INT32 InterpictorialRelation – updated rdfs:comment, added skos:broadmatch oa:Annotation<br/>INT33 IntermedialRelation – updated rdfs:comment<br/>INT34 IntermedialityInIntermedialityTheories – updated rdfs:comment<br/>INT35 InterpictorialityInInterpictorialityTheories – updated rdfs:comment<br/>INT Interpretation – removed the E89 Propositional Object as superclass<br/>INT Narratological Entity – changed superclass from INT Textual Genre Specifics to
             INT Genre Specifics<br/></div>
       </div><small><a href="#top">(Back to Top)</a></small><h3 id="2024-08-01">INTRO beta202408</h3>
       <div class="declaration">
