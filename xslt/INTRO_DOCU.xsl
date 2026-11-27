@@ -8,6 +8,10 @@
 	<!-- Output HTML -->
 	<xsl:output method="html" encoding="UTF-8" indent="yes"/>
 
+	<!-- Namespace of the documented ontology version (e.g. 'https://w3id.org/lso/intro/v1.0#'), taken from the ontology header.
+	Only entities defined in this namespace are listed, independent of the version naming (beta2025xx, v1.0, ...). -->
+	<xsl:variable name="introNS" select="concat(/rdf:RDF/owl:Ontology[1]/@rdf:about, '#')"/>
+
 
 	<!-- Template to normalize and insert images, while preserving line breaks -->
 	<xsl:template name="normalize-and-replace">
@@ -340,7 +344,7 @@
 				<h2 id="classes">Classes</h2>
 				<!-- Classes TOC -->
 				<div class="toc">
-					<xsl:for-each select="/rdf:RDF/owl:Class[contains(@rdf:about, 'intro/beta')]">
+					<xsl:for-each select="/rdf:RDF/owl:Class[starts-with(@rdf:about, $introNS)]">
 						<xsl:element name="a">
 							<xsl:attribute name="href">
 								<xsl:value-of select="./concat('#', substring-after(@rdf:about, '#'))"/>
@@ -354,7 +358,7 @@
 				</small>
 
 				<!-- Loop through owl:Class -->
-				<xsl:for-each select="/rdf:RDF/owl:Class[contains(@rdf:about, 'intro/beta')]">
+				<xsl:for-each select="/rdf:RDF/owl:Class[starts-with(@rdf:about, $introNS)]">
 					
 					<!-- variable - gesamte ID aus rdf:about -->
 					<xsl:variable name="currentID" select="@rdf:about"/>
@@ -435,6 +439,32 @@
 							</div>
 						</xsl:if>
 						
+						<!-- owl:disjointWith (symmetric: declared on this class or on the other class) -->
+						<xsl:variable name="disjointClasses" select="//owl:Class[@rdf:about = current()/owl:disjointWith/@rdf:resource or owl:disjointWith/@rdf:resource = $currentID]"/>
+						<xsl:if test="$disjointClasses">
+							<div>
+								<strong>Disjoint with: </strong>
+								<xsl:for-each select="$disjointClasses">
+									<xsl:choose>
+										<xsl:when test="contains(@rdf:about, 'intro')">
+											<xsl:element name="a">
+												<xsl:attribute name="href">
+													<xsl:value-of select="concat('#', substring-after(@rdf:about, '#'))"/>
+												</xsl:attribute>
+												<xsl:value-of select="rdfs:label[1]"/>
+											</xsl:element>
+										</xsl:when>
+										<xsl:otherwise>
+											<xsl:value-of select="@rdf:about"/>
+										</xsl:otherwise>
+									</xsl:choose>
+									<xsl:if test="position() != last()">
+										<xsl:text>, </xsl:text>
+									</xsl:if>
+								</xsl:for-each>
+							</div>
+						</xsl:if>
+
 						<!-- Loop through all properties to find properties it's in the domain of -->
 						
 						<xsl:if test="//*[contains(./name(), 'Property')][(rdfs:domain/@rdf:resource = $currentID) or (rdfs:domain//rdf:Description/@rdf:about = $currentID)]">
@@ -489,7 +519,7 @@
 				<!-- h2 for "Object Properties" -->
 				<h2 id="objectProperties">Object Properties</h2>
 				<div class="toc">
-					<xsl:for-each select="/rdf:RDF/owl:ObjectProperty[contains(@rdf:about, 'intro/beta')]">
+					<xsl:for-each select="/rdf:RDF/owl:ObjectProperty[starts-with(@rdf:about, $introNS)]">
 						<xsl:element name="a">
 							<xsl:attribute name="href">
 								<xsl:value-of select="./concat('#', substring-after(@rdf:about, '#'))"/>
@@ -503,7 +533,7 @@
 				</small>
 
 				<!-- Loop through owl:ObjectProperty -->
-				<xsl:for-each select="/rdf:RDF/owl:ObjectProperty[contains(@rdf:about, 'intro/beta')]">
+				<xsl:for-each select="/rdf:RDF/owl:ObjectProperty[starts-with(@rdf:about, $introNS)]">
 					<!-- Variable für div-IDs -->
 					<xsl:variable name="div_id" select="./substring-after(@rdf:about, '#')"/>
 
@@ -719,7 +749,7 @@
 				<!-- h2 for "Data Properties" -->
 				<h2 id="dataProperties">Data Properties</h2>
 				<div class="toc">
-					<xsl:for-each select="/rdf:RDF/owl:DatatypeProperty[contains(@rdf:about, 'intro/beta')]">
+					<xsl:for-each select="/rdf:RDF/owl:DatatypeProperty[starts-with(@rdf:about, $introNS)]">
 						<xsl:element name="a">
 							<xsl:attribute name="href">
 								<xsl:value-of select="./concat('#', substring-after(@rdf:about, '#'))"/>
@@ -732,7 +762,7 @@
 					<a href="#top">(Back to Top)</a>
 				</small>
 				
-				<xsl:for-each select="/rdf:RDF/owl:DatatypeProperty[contains(@rdf:about, 'intro/beta')]">
+				<xsl:for-each select="/rdf:RDF/owl:DatatypeProperty[starts-with(@rdf:about, $introNS)]">
 					<!-- Variable für div-IDs -->
 					<xsl:variable name="div_id" select="./substring-after(@rdf:about, '#')"/>
 
@@ -760,6 +790,27 @@
 								<xsl:call-template name="normalize-and-replace">
 									<xsl:with-param name="text" select="."/>
 								</xsl:call-template>
+							</div>
+						</xsl:for-each>
+
+						<!-- Loop through rdfs:subPropertyOf -->
+						<xsl:for-each select="rdfs:subPropertyOf">
+							<div>
+								<strong>Subproperty of: </strong>
+								<xsl:choose>
+									<xsl:when test="contains(@rdf:resource, 'lso/intro')">
+										<xsl:element name="a">
+											<xsl:attribute name="href">
+												<xsl:value-of select="concat('#', substring-after(@rdf:resource, '#'))"/>
+											</xsl:attribute>
+											<xsl:variable name="currentTarget" select="@rdf:resource"/>
+											<xsl:value-of select="//*[@rdf:about = $currentTarget and rdfs:label]/rdfs:label/text()"/>
+										</xsl:element>
+									</xsl:when>
+									<xsl:otherwise>
+										<xsl:value-of select="@rdf:resource"/>
+									</xsl:otherwise>
+								</xsl:choose>
 							</div>
 						</xsl:for-each>
 
