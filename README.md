@@ -1,12 +1,14 @@
 # INTRO - the Intertextual, Interpictorial, and Intermedial Relations Ontology
 
-Ontology IRI: https://w3id.org/lso/intro/currentbeta#
+Ontology IRI: https://w3id.org/lso/intro/
 
-Latest Version IRI: https://w3id.org/lso/intro/beta202506#
+Latest Version IRI: https://w3id.org/lso/intro/v1.0
+
+Term IRIs do not contain a version, e.g. `https://w3id.org/lso/intro/INT1_Passage`. (The earlier beta versions keep their versioned IRIs, e.g. `https://w3id.org/lso/intro/beta202506#INT1_Passage`.)
 
 ## NEWS
 
-**NEW VERSION ONLINE - INTRO extended to include INTERMEDIALITY**
+**NEW VERSION ONLINE - INTRO v1.0** (all changes are listed in the version history of the <a href="https://boberreither.github.io/INTRO/#versionHistory">documentation</a>)
 
 **PROUD TO BE AWESOME:** INTRO is on the CLARIAH list of <a href="https://github.com/CLARIAH/awesome-humanities-ontologies">Awesome Ontologies for Digital Humanities</a>!
 
@@ -89,7 +91,7 @@ INTRO is designed as extension of [CIDOC CRM](https://cidoc-crm.org/html/cidoc_c
 ## <a name="socomplicated"/>By the way: Does it have to be so complicated?
 
 **Answer 1: YES.** INTRO is built to represent (a fraction of) our day-to-day work, which consists in intellectual operations with a degree of complexity we have grown accustomed to - up to a point where we are unaware of the large number of different acts we perform each time. Modelling them with an ontology inevitably calls to mind all these steps implicit in our work, and only by doing so an ontology can represent our research outcome adequately. So yes, some complexity is unavoidable.<br><br>
-**Answer 2: NO.** INTRO is an ontology like all the others: As long as you don't violate class and property definitions, take what you need - and leave the rest. Take one *INT3 Interrelation*, link it with *r24 has related entity* to some text (modeled with LRMoo, FRBRoo, bibframe, dublin core ...), and you're good to go. Maybe add one *INT11 Type of Interrelation* via *r19 has type*.
+**Answer 2: NO.** INTRO is an ontology like all the others: As long as you don't violate class and property definitions, take what you need - and leave the rest. Take one *INT3 Interrelation*, link it with *R24 has related entity* to some text (modeled with LRMoo, FRBRoo, bibframe, dublin core ...), and you're good to go. Maybe add one *INT11 Type of Interrelation* via *R19 has type*.
 
 ## <a name="whatsnext"/>What's next?
 
@@ -102,7 +104,7 @@ Pending work includes:
 <center>*******************************************</center>
 
 ## <a name="further"/>INTRO Further Information
-For more information, see the documentation under http://w3id.org/lso/intro/beta202408.
+For more information, see the documentation under https://w3id.org/lso/intro/v1.0.
 
 ## <a name="usecases"/>TYPICAL USE CASES
 
@@ -120,7 +122,7 @@ For more information, see the documentation under http://w3id.org/lso/intro/beta
 ```
 @prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .      
 @prefix dlb: <http://dlb.org/data/> .
-@prefix intro: <https://w3id.org/lso/intro/beta202408#> .
+@prefix intro: <https://w3id.org/lso/intro/> .
 @prefix lrm: <http://iflastandards.info/ns/lrm/lrmoo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
@@ -171,7 +173,7 @@ dlb:text945_creation a lrm:F28_Expression_Creation ;
    ```
 @prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
 @prefix dlb: <http://dlb.org/data/> .
-@prefix intro: <https://w3id.org/lso/intro/beta202408#> .
+@prefix intro: <https://w3id.org/lso/intro/> .
 @prefix lrm: <http://iflastandards.info/ns/lrm/lrmoo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
@@ -181,7 +183,7 @@ dlb:rel0001 a intro:INT33_IntermedialRelation ;
     intro:R19_hasType dlb:covertAllusion .
 
 dlb:text945_creation a lrm:F28_Expression_Creation ;
-    lrm:R17i_was_created_by dlb:text945 ;
+    lrm:R17_created dlb:text945 ;
     crm:P14_carried_out_by dlb:pers255 .
 
 dlb:art106 a lrm:F2_Expression ;
@@ -232,7 +234,7 @@ dlb:text945 a lrm:F2_Expression ;
 ```
 @prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
 @prefix dlb: <http://dlb.org/data/> .
-@prefix intro: <https://w3id.org/lso/intro/beta202408#> .
+@prefix intro: <https://w3id.org/lso/intro/> .
 @prefix lrm: <http://iflastandards.info/ns/lrm/lrmoo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
@@ -276,7 +278,8 @@ dlb:text945 a lrm:F2_Expression ;
 dlb:text945_creation a lrm:F28_Expression_Creation ;
     crm:P14_carried_out_by dlb:pers255 .
 
-dlb:passage1480_act a intro:INT2_ActualizationOfFeature .
+dlb:passage1480_act a intro:INT2_ActualizationOfFeature ;
+    intro:R17_actualizesFeature dlb:architecture .
 
 ```
 
@@ -288,14 +291,14 @@ dlb:passage1480_act a intro:INT2_ActualizationOfFeature .
 Modeling: An `INT31 Intertextual Relation` `R13 has referring entity` Text A and `R12 has referred to entity` Text B, both texts being - for instance - F2 Expressions.
 
 ### Text A refers to Text B  by showing a certain text feature, e.g.: a fictional character that occurred in text B.
-Modeling: An `INT2 Actualization of Feature` is `r18 found on` a text A - e.g. a F2 Expression -, and `r17 actualizes` an `INT9 Semantic Feature` (e.g. ‚villain‘, ‚Faust‘, …).<br>
-Also, an `INT2 Actualization of Feature` is `r18 found on` another text, text B - e.g. a F2 Expression -, and `r17 actualizes` the same `INT9 Semantic Feature`.<br>
+Modeling: An `INT2 Actualization of Feature` is `R18i actualization found on` a text A - e.g. a F2 Expression -, and `R17 actualizes feature` an `INT9 Semantic Feature` (e.g. ‚villain‘, ‚Faust‘, …).<br>
+Also, an `INT2 Actualization of Feature` is `R18i actualization found on` another text, text B - e.g. a F2 Expression -, and `R17 actualizes feature` the same `INT9 Semantic Feature`.<br>
 An acutalization of `INT Interpretation` `R21 identifies` an `INT31 Intertextual Relation` which `R13 has referring entity` `INT2 Actualization of Feature` (on text A) and `R12 has referred to entity` `INT2 Actualization of Feature` (on Text B).
 
 ### A feature of a passage in text A can be explained with the help of some standard reference book (text B) - for instance: a rhetorical figure with the help of Lausberg's standard work on the topic.
 Modeling (one option): 
-An `INT2 Actualization of Feature` of an `INT Interpretation` in text A `identifies` an `INT2 Actualization of Feature` `r18 found on` an `INT21 Text Passage` - which `R30 is text passage of` text B, an F2 Expression -, and `r17 actualizes` an `INT8 Rhetorical Feature` (e.g. a ‚hyperbole‘). <br>
-Another `INT2 Actualization of Feature` is `r18 found on` an `INT21 Text Passage` which `R30 is text passage of` text B (e.g. Lausberg's standard work), an F24 Publication Expression -, and `r17 actualizes` an `INT9 Semantic Feature`, a definition. This `INT2 Actualization of Feature` `r4 defines` the `INT8 Rhetorical Feature` ‚hyperbole‘ and `r23 provides support for` the `INT Interpretation`.
+An `INT2 Actualization of Feature` of an `INT Interpretation` in text A `R21 identifies` an `INT2 Actualization of Feature` `R18i actualization found on` an `INT21 Text Passage` - which `R30i is text passage of` text A, an F2 Expression -, and `R17 actualizes feature` an `INT8 Rhetorical Feature` (e.g. a ‚hyperbole‘). <br>
+Another `INT2 Actualization of Feature` is `R18i actualization found on` an `INT21 Text Passage` which `R30i is text passage of` text B (e.g. Lausberg's standard work), an F24 Publication Expression -, and `R17 actualizes feature` an `INT9 Semantic Feature`, a definition. This `INT2 Actualization of Feature` `R4 defines` the `INT8 Rhetorical Feature` ‚hyperbole‘ and `R23 provides support for` the `INT2 Actualization of Feature` of the `INT Interpretation`.
 
 ### (more following ...)
 

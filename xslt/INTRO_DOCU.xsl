@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:dc="http://purl.org/dc/elements/1.1/"
-	xmlns:skos="http://www.w3.org/2004/02/skos/core#" xmlns:cc="http://creativecommons.org/ns#" exclude-result-prefixes="xsl rdf owl rdfs dc skos cc" version="2.0">
+	xmlns:skos="http://www.w3.org/2004/02/skos/core#" xmlns:cc="http://creativecommons.org/ns#" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:f="urn:intro:docu:functions" exclude-result-prefixes="xsl rdf owl rdfs dc skos cc xs f" version="2.0">
 	
 	<!-- This XSLT serves the 'one rdf explains all' (ORDEAL) approach to ontology documentation and is specified for INTRO.
 	To add to the fields provided by the ontolgy's owl file, certain substrings are transformed to include image files or add section titles. -->
@@ -8,9 +8,18 @@
 	<!-- Output HTML -->
 	<xsl:output method="html" encoding="UTF-8" indent="yes"/>
 
-	<!-- Namespace of the documented ontology version (e.g. 'https://w3id.org/lso/intro/v1.0#'), taken from the ontology header.
-	Only entities defined in this namespace are listed, independent of the version naming (beta2025xx, v1.0, ...). -->
-	<xsl:variable name="introNS" select="concat(/rdf:RDF/owl:Ontology[1]/@rdf:about, '#')"/>
+	<!-- Namespace of the documented ontology, derived from the ontology header: With a slash ontology IRI
+	(e.g. 'https://w3id.org/lso/intro/', terms like '.../intro/INT1_Passage') the IRI itself is the namespace;
+	with a hash-based one (e.g. '.../intro/beta202506', terms like '.../beta202506#INT1_Passage') it is the IRI plus '#'.
+	Only entities defined in this namespace are listed. -->
+	<xsl:variable name="ontologyIRI" select="string(/rdf:RDF/owl:Ontology[1]/@rdf:about)"/>
+	<xsl:variable name="introNS" select="if (ends-with($ontologyIRI, '/')) then $ontologyIRI else concat($ontologyIRI, '#')"/>
+
+	<!-- Local name of an IRI: the part after '#', otherwise the last path segment. Used for anchors/ids. -->
+	<xsl:function name="f:id" as="xs:string">
+		<xsl:param name="iri" as="xs:string?"/>
+		<xsl:sequence select="if (contains($iri, '#')) then substring-after($iri, '#') else string(tokenize($iri, '/')[last()])"/>
+	</xsl:function>
 
 
 	<!-- Template to normalize and insert images, while preserving line breaks -->
@@ -347,7 +356,7 @@
 					<xsl:for-each select="/rdf:RDF/owl:Class[starts-with(@rdf:about, $introNS)]">
 						<xsl:element name="a">
 							<xsl:attribute name="href">
-								<xsl:value-of select="./concat('#', substring-after(@rdf:about, '#'))"/>
+								<xsl:value-of select="./concat('#', f:id(@rdf:about))"/>
 							</xsl:attribute>
 							<xsl:value-of select="./rdfs:label[1]"/>
 						</xsl:element>
@@ -363,7 +372,7 @@
 					<!-- variable - gesamte ID aus rdf:about -->
 					<xsl:variable name="currentID" select="@rdf:about"/>
 					<!-- Variable für div-IDs -->
-					<xsl:variable name="div_id" select="./substring-after(@rdf:about, '#')"/>
+					<xsl:variable name="div_id" select="./f:id(@rdf:about)"/>
 					<!-- Loop through rdfs:label -->
 					<xsl:for-each select="rdfs:label[1][@xml:lang = 'en']">
 						<xsl:element name="h3">
@@ -399,7 +408,7 @@
 									<xsl:when test="contains(@rdf:resource, 'intro')">
 										<xsl:element name="a">
 											<xsl:attribute name="href">
-												<xsl:value-of select="./concat('#', substring-after(@rdf:resource, '#'))"/>
+												<xsl:value-of select="./concat('#', f:id(@rdf:resource))"/>
 											</xsl:attribute>
 											<xsl:variable name="currentTarget" select="@rdf:resource"/>
 											<xsl:value-of select="//*[@rdf:about = $currentTarget and rdfs:label]/rdfs:label/text()"/>
@@ -423,7 +432,7 @@
 										<xsl:when test="contains(@rdf:about, 'intro')">
 											<xsl:element name="a">
 												<xsl:attribute name="href">
-													<xsl:value-of select="./concat('#', substring-after(@rdf:about, '#'))"/>
+													<xsl:value-of select="./concat('#', f:id(@rdf:about))"/>
 												</xsl:attribute>
 												<xsl:value-of select="./rdfs:label/text()"/>
 											</xsl:element>
@@ -449,7 +458,7 @@
 										<xsl:when test="contains(@rdf:about, 'intro')">
 											<xsl:element name="a">
 												<xsl:attribute name="href">
-													<xsl:value-of select="concat('#', substring-after(@rdf:about, '#'))"/>
+													<xsl:value-of select="concat('#', f:id(@rdf:about))"/>
 												</xsl:attribute>
 												<xsl:value-of select="rdfs:label[1]"/>
 											</xsl:element>
@@ -473,7 +482,7 @@
 								<xsl:for-each select="//*[contains(./name(), 'Property')][(rdfs:domain/@rdf:resource = $currentID) or (rdfs:domain//rdf:Description/@rdf:about = $currentID)]">
 										<xsl:element name="a">
 											<xsl:attribute name="href">
-												<xsl:value-of select="./concat('#', substring-after(@rdf:about, '#'))"/>
+												<xsl:value-of select="./concat('#', f:id(@rdf:about))"/>
 											</xsl:attribute>
 											<xsl:value-of select="./rdfs:label/text()"/>
 										</xsl:element>
@@ -492,7 +501,7 @@
 								<xsl:for-each select="//owl:ObjectProperty[(rdfs:range/@rdf:resource = $currentID) or (rdfs:range//rdf:Description/@rdf:about = $currentID)]">
 									<xsl:element name="a">
 										<xsl:attribute name="href">
-											<xsl:value-of select="./concat('#', substring-after(@rdf:about, '#'))"/>
+											<xsl:value-of select="./concat('#', f:id(@rdf:about))"/>
 										</xsl:attribute>
 										<xsl:value-of select="./rdfs:label/text()"/>
 									</xsl:element>
@@ -522,7 +531,7 @@
 					<xsl:for-each select="/rdf:RDF/owl:ObjectProperty[starts-with(@rdf:about, $introNS)]">
 						<xsl:element name="a">
 							<xsl:attribute name="href">
-								<xsl:value-of select="./concat('#', substring-after(@rdf:about, '#'))"/>
+								<xsl:value-of select="./concat('#', f:id(@rdf:about))"/>
 							</xsl:attribute>
 							<xsl:value-of select="./rdfs:label[1]"/>
 						</xsl:element>
@@ -535,7 +544,7 @@
 				<!-- Loop through owl:ObjectProperty -->
 				<xsl:for-each select="/rdf:RDF/owl:ObjectProperty[starts-with(@rdf:about, $introNS)]">
 					<!-- Variable für div-IDs -->
-					<xsl:variable name="div_id" select="./substring-after(@rdf:about, '#')"/>
+					<xsl:variable name="div_id" select="./f:id(@rdf:about)"/>
 
 					<!-- Loop through rdfs:label to create h3 -->
 					<xsl:for-each select="rdfs:label[1][@xml:lang = 'en']">
@@ -572,7 +581,7 @@
 								<xsl:choose>
 									<xsl:when test=".[contains(@rdf:resource, 'lso/intro')]"><xsl:element name="a">
 									<xsl:attribute name="href">
-										<xsl:value-of select="./concat('#', substring-after(@rdf:resource, '#'))"/>
+										<xsl:value-of select="./concat('#', f:id(@rdf:resource))"/>
 									</xsl:attribute>
 									<xsl:variable name="currentTarget" select="@rdf:resource"/>
 									<xsl:value-of select="//*[@rdf:about = $currentTarget and rdfs:label]/rdfs:label/text()"/>
@@ -597,7 +606,7 @@
 										<xsl:when test="contains(@rdf:about, 'lso/intro')">
 											<xsl:element name="a">
 												<xsl:attribute name="href">
-													<xsl:value-of select="./concat('#', substring-after(@rdf:about, '#'))"/>
+													<xsl:value-of select="./concat('#', f:id(@rdf:about))"/>
 												</xsl:attribute>
 												<xsl:value-of select="./rdfs:label/text()"/>
 											</xsl:element>
@@ -619,7 +628,7 @@
 								<strong>Inverse Property: </strong>
 								<xsl:element name="a">
 									<xsl:attribute name="href">
-										<xsl:value-of select="./concat('#', substring-after(@rdf:resource, '#'))"/>
+										<xsl:value-of select="./concat('#', f:id(@rdf:resource))"/>
 									</xsl:attribute>
 									<xsl:variable name="currentTarget" select="@rdf:resource"/>
 									<xsl:value-of select="//*[@rdf:about = $currentTarget and rdfs:label]/rdfs:label/text()"/>
@@ -638,7 +647,7 @@
 											<xsl:when test="contains(@rdf:resource, 'intro')">
 												<xsl:element name="a">
 													<xsl:attribute name="href">
-														<xsl:value-of select="./concat('#', substring-after(@rdf:resource, '#'))"/>
+														<xsl:value-of select="./concat('#', f:id(@rdf:resource))"/>
 													</xsl:attribute>
 													<xsl:variable name="currentTarget" select="@rdf:resource"/>
 													<xsl:value-of select="//*[@rdf:about = $currentTarget and rdfs:label]/rdfs:label/text()"/>
@@ -657,7 +666,7 @@
 												<xsl:when test="contains(@rdf:about, 'intro')">
 													<xsl:element name="a">
 														<xsl:attribute name="href">
-															<xsl:value-of select="./concat('#', substring-after(@rdf:about, '#'))"/>
+															<xsl:value-of select="./concat('#', f:id(@rdf:about))"/>
 														</xsl:attribute>
 														<xsl:variable name="currentTarget" select="@rdf:about"/>
 														<xsl:value-of select="//*[@rdf:about = $currentTarget and rdfs:label]/rdfs:label/text()"/>
@@ -684,7 +693,7 @@
 											<xsl:when test="contains(@rdf:resource, 'intro')">
 												<xsl:element name="a">
 													<xsl:attribute name="href">
-														<xsl:value-of select="./concat('#', substring-after(@rdf:resource, '#'))"/>
+														<xsl:value-of select="./concat('#', f:id(@rdf:resource))"/>
 													</xsl:attribute>
 													<xsl:variable name="currentTarget" select="@rdf:resource"/>
 													<xsl:value-of select="//*[@rdf:about = $currentTarget and rdfs:label]/rdfs:label/text()"/>
@@ -703,7 +712,7 @@
 												<xsl:when test="contains(@rdf:about, 'intro')">
 													<xsl:element name="a">
 														<xsl:attribute name="href">
-															<xsl:value-of select="./concat('#', substring-after(@rdf:about, '#'))"/>
+															<xsl:value-of select="./concat('#', f:id(@rdf:about))"/>
 														</xsl:attribute>
 														<xsl:variable name="currentTarget" select="@rdf:about"/>
 														<xsl:value-of select="//*[@rdf:about = $currentTarget and rdfs:label]/rdfs:label/text()"/>
@@ -724,7 +733,7 @@
 								<strong>Type: </strong>
 								<xsl:choose>
 									<xsl:when test="contains(@rdf:resource, '#')">
-										<xsl:value-of select="substring-after(@rdf:resource, '#')"/>
+										<xsl:value-of select="f:id(@rdf:resource)"/>
 									</xsl:when>
 									<xsl:otherwise>
 										<xsl:value-of select="@rdf:resource"/>
@@ -752,7 +761,7 @@
 					<xsl:for-each select="/rdf:RDF/owl:DatatypeProperty[starts-with(@rdf:about, $introNS)]">
 						<xsl:element name="a">
 							<xsl:attribute name="href">
-								<xsl:value-of select="./concat('#', substring-after(@rdf:about, '#'))"/>
+								<xsl:value-of select="./concat('#', f:id(@rdf:about))"/>
 							</xsl:attribute>
 							<xsl:value-of select="./rdfs:label[1]"/>
 						</xsl:element>
@@ -764,7 +773,7 @@
 				
 				<xsl:for-each select="/rdf:RDF/owl:DatatypeProperty[starts-with(@rdf:about, $introNS)]">
 					<!-- Variable für div-IDs -->
-					<xsl:variable name="div_id" select="./substring-after(@rdf:about, '#')"/>
+					<xsl:variable name="div_id" select="./f:id(@rdf:about)"/>
 
 					<!-- Loop through rdfs:label -->
 					<xsl:for-each select="rdfs:label[1][@xml:lang = 'en']">
@@ -801,7 +810,7 @@
 									<xsl:when test="contains(@rdf:resource, 'lso/intro')">
 										<xsl:element name="a">
 											<xsl:attribute name="href">
-												<xsl:value-of select="concat('#', substring-after(@rdf:resource, '#'))"/>
+												<xsl:value-of select="concat('#', f:id(@rdf:resource))"/>
 											</xsl:attribute>
 											<xsl:variable name="currentTarget" select="@rdf:resource"/>
 											<xsl:value-of select="//*[@rdf:about = $currentTarget and rdfs:label]/rdfs:label/text()"/>
@@ -818,7 +827,7 @@
 						<xsl:for-each select="owl:inverseOf">
 							<div>
 								<strong>Inverse Property: </strong>
-								<xsl:value-of select="substring-after(@rdf:resource, '#')"/>
+								<xsl:value-of select="f:id(@rdf:resource)"/>
 							</div>
 						</xsl:for-each>
 
@@ -833,7 +842,7 @@
 											<xsl:when test="contains(@rdf:resource, 'intro')">
 												<xsl:element name="a">
 													<xsl:attribute name="href">
-														<xsl:value-of select="./concat('#', substring-after(@rdf:resource, '#'))"/>
+														<xsl:value-of select="./concat('#', f:id(@rdf:resource))"/>
 													</xsl:attribute>
 													<xsl:variable name="currentTarget" select="@rdf:resource"/>
 													<xsl:value-of select="//*[@rdf:about = $currentTarget and rdfs:label]/rdfs:label/text()"/>
@@ -852,7 +861,7 @@
 												<xsl:when test="contains(@rdf:about, 'intro')">
 													<xsl:element name="a">
 														<xsl:attribute name="href">
-															<xsl:value-of select="./concat('#', substring-after(@rdf:about, '#'))"/>
+															<xsl:value-of select="./concat('#', f:id(@rdf:about))"/>
 														</xsl:attribute>
 														<xsl:variable name="currentTarget" select="@rdf:about"/>
 														<xsl:value-of select="//*[@rdf:about = $currentTarget and rdfs:label]/rdfs:label/text()"/>
@@ -874,14 +883,14 @@
 								<strong>Range: </strong>
 								<xsl:choose>
 									<xsl:when test="@rdf:resource">
-										<xsl:value-of select="substring-after(@rdf:resource, '#')"/>
+										<xsl:value-of select="f:id(@rdf:resource)"/>
 									</xsl:when>
 									<xsl:otherwise>
 										<xsl:for-each select=".//rdf:Description">
 											<xsl:if test="position() > 1">, </xsl:if>
 											<xsl:choose>
 												<xsl:when test="contains(@rdf:about, '#')">
-													<xsl:value-of select="substring-after(@rdf:about, '#')"/>
+													<xsl:value-of select="f:id(@rdf:about)"/>
 												</xsl:when>
 												<xsl:otherwise>
 													<xsl:value-of select="@rdf:about"/>
@@ -898,7 +907,7 @@
 								<strong>rdf:type: </strong>
 								<xsl:choose>
 									<xsl:when test="contains(@rdf:resource, '#')">
-										<xsl:value-of select="substring-after(@rdf:resource, '#')"/>
+										<xsl:value-of select="f:id(@rdf:resource)"/>
 									</xsl:when>
 									<xsl:otherwise>
 										<xsl:value-of select="@rdf:resource"/>
